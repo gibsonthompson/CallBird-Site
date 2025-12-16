@@ -184,7 +184,7 @@ a:hover {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border-color);
-    padding: 1rem 0;
+    padding: 1.25rem 0;
 }
 
 .nav-content {
@@ -205,14 +205,14 @@ a:hover {
 }
 
 .logo-image {
-    height: 60px;
+    height: 80px;
     width: auto;
     display: block;
 }
 
 @media (max-width: 768px) {
     .logo-image {
-        height: 50px;
+        height: 65px;
     }
 }
 
