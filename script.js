@@ -141,7 +141,7 @@ document.getElementById('exit-popup').addEventListener('click', (e) => {
 });
 
 // ==================== STICKY CTA ====================
-function handleStickyC TA() {
+function handleStickyCTA() {
     const stickyCTA = document.getElementById('sticky-cta');
     const pricingSection = document.getElementById('pricing');
     
