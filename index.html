@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="$49/month AI receptionist for small businesses. Setup in 10 minutes. Never miss a customer call again.">
+    <title>CallBird AI - $49/Month AI Receptionist | 10-Minute Setup</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird" class="logo-image">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="tel:+16783161454" class="btn-ghost">Call Us</a>
+                    <a href="https://start.callbirdai.com" class="btn-primary">Start Free Trial</a>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span>Trusted by 200+ businesses</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="price-highlight">$49/Month</span> AI Receptionist
+                    <span class="subtitle">(While Competitors Charge $300+)</span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    Your AI answers calls, books appointments, and texts you summaries—all from an app. Setup in 10 minutes.
+                </p>
+
+                <!-- Interactive Demo CTA -->
+                <div class="demo-cta">
+                    <div class="demo-box">
+                        <div class="demo-icon">🎧</div>
+                        <div class="demo-content">
+                            <h3>HEAR IT WORK RIGHT NOW</h3>
+                            <a href="tel:+17708092820" class="demo-phone">📞 Call: 770-809-2820</a>
+                            <p class="demo-instructions">
+                                "Pretend you need a plumber. Our AI will handle your call like a real receptionist in 30 seconds."
+                            </p>
+                            <button class="btn-secondary" onclick="showAudioSamples()">🔊 Or Listen to Sample Calls Below</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trust Bar -->
+                <div class="trust-bar">
+                    <div class="trust-item">✓ 10-Minute Setup</div>
+                    <div class="trust-item">✓ No Credit Card Required</div>
+                    <div class="trust-item">✓ 24/7 Call Answering</div>
+                </div>
+
+                <!-- Primary CTAs -->
+                <div class="hero-ctas">
+                    <a href="https://start.callbirdai.com" class="btn-large btn-primary">Start Free Trial - 7 Days</a>
+                    <a href="#demo-video" class="btn-large btn-ghost">Watch 60-Second Demo</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Animated Background -->
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="hero-pattern"></div>
+        </div>
+    </section>
+
+    <!-- Sample Calls Section -->
+    <section id="sample-calls" class="sample-calls">
+        <div class="container">
+            <div class="section-header">
+                <h2>Hear CallBird Handle Real Customer Calls</h2>
+                <p>Don't take our word for it—listen to our AI receptionist in action. These are real conversations from businesses like yours.</p>
+            </div>
+
+            <div class="audio-grid">
+                <!-- Audio Player 1 -->
+                <div class="audio-card">
+                    <div class="audio-header">
+                        <div class="audio-icon">🔧</div>
+                        <div class="audio-info">
+                            <h3>Emergency Plumbing Call</h3>
+                            <span class="audio-time">0:52 • 11:42 PM</span>
+                        </div>
+                    </div>
+                    <div class="audio-player">
+                        <button class="play-btn" onclick="toggleAudio('audio1')">
+                            <span class="play-icon">▶</span>
+                        </button>
+                        <div class="audio-progress">
+                            <div class="audio-progress-bar" id="progress1"></div>
+                        </div>
+                        <span class="audio-duration">0:52</span>
+                        <audio id="audio1" preload="none">
+                            <source src="audio/sample1.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                    <div class="audio-transcript">
+                        <p><strong>Customer:</strong> "I have a burst pipe, can someone come out tonight?"</p>
+                        <p><strong>CallBird:</strong> "I'm so sorry to hear that. Yes, we have emergency service available. Can I get your address?"</p>
+                    </div>
+                    <p class="audio-caption">
+                        CallBird handled this after-hours emergency, sent the owner a text alert, and dispatched the on-call plumber—all automatically.
+                    </p>
+                </div>
+
+                <!-- Audio Player 2 -->
+                <div class="audio-card">
+                    <div class="audio-header">
+                        <div class="audio-icon">🦷</div>
+                        <div class="audio-info">
+                            <h3>Dental Appointment Booking</h3>
+                            <span class="audio-time">1:08 • 2:34 PM</span>
+                        </div>
+                    </div>
+                    <div class="audio-player">
+                        <button class="play-btn" onclick="toggleAudio('audio2')">
+                            <span class="play-icon">▶</span>
+                        </button>
+                        <div class="audio-progress">
+                            <div class="audio-progress-bar" id="progress2"></div>
+                        </div>
+                        <span class="audio-duration">1:08</span>
+                        <audio id="audio2" preload="none">
+                            <source src="audio/sample2.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                    <div class="audio-transcript">
+                        <p><strong>Customer:</strong> "I need to schedule a cleaning, do you have anything next week?"</p>
+                        <p><strong>CallBird:</strong> "Absolutely! I'm checking our calendar now. We have Tuesday at 2pm or Thursday at 10am available..."</p>
+                    </div>
+                    <p class="audio-caption">
+                        This appointment was automatically added to the dentist's Google Calendar. The patient received a confirmation text. No human involved.
+                    </p>
+                </div>
+
+                <!-- Audio Player 3 -->
+                <div class="audio-card">
+                    <div class="audio-header">
+                        <div class="audio-icon">🍕</div>
+                        <div class="audio-info">
+                            <h3>Restaurant Menu Inquiry</h3>
+                            <span class="audio-time">0:41 • 7:14 PM</span>
+                        </div>
+                    </div>
+                    <div class="audio-player">
+                        <button class="play-btn" onclick="toggleAudio('audio3')">
+                            <span class="play-icon">▶</span>
+                        </button>
+                        <div class="audio-progress">
+                            <div class="audio-progress-bar" id="progress3"></div>
+                        </div>
+                        <span class="audio-duration">0:41</span>
+                        <audio id="audio3" preload="none">
+                            <source src="audio/sample3.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
+                    <div class="audio-transcript">
+                        <p><strong>Customer:</strong> "Do you have gluten-free options? And are you open tonight?"</p>
+                        <p><strong>CallBird:</strong> "Yes! We have several gluten-free pasta dishes and pizza with gluten-free crust. We're open until 10pm tonight..."</p>
+                    </div>
+                    <p class="audio-caption">
+                        CallBird answered from the restaurant's website menu information. The owner got a text: "Customer asked about gluten-free options at 7:14pm."
+                    </p>
+                </div>
+            </div>
+
+            <!-- Live Stats -->
+            <div class="live-stats">
+                <div class="stat-item">
+                    <div class="stat-icon">⚡</div>
+                    <div class="stat-number">10 min</div>
+                    <div class="stat-label">Setup Time</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">⏱️</div>
+                    <div class="stat-number">1.2 sec</div>
+                    <div class="stat-label">Avg Response Time</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">📅</div>
+                    <div class="stat-number" data-count="200">200+</div>
+                    <div class="stat-label">Businesses Served</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">😊</div>
+                    <div class="stat-number">96%</div>
+                    <div class="stat-label">Customer Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem/Solution Section -->
+    <section class="problem-solution">
+        <div class="container">
+            <div class="section-header">
+                <h2>You're Losing Customers Every Time Your Phone Rings</h2>
+            </div>
+
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">❌</div>
+                    <h3>62% of Business Calls Go Unanswered</h3>
+                    <p>"You're on a job, with a customer, or driving. The call goes to voicemail."</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">❌</div>
+                    <h3>Hiring a Receptionist Costs $3,000+/Month</h3>
+                    <p>"You can't afford full-time staff, but you need someone to answer professionally."</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">❌</div>
+                    <h3>Traditional Answering Services Cost $300-500/Mo</h3>
+                    <p>"They're scripted, robotic, and can't book appointments or access your calendar."</p>
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h2>CallBird Is Your $49/Month AI Receptionist That Never Sleeps</h2>
+                <p class="solution-text">
+                    No more missed opportunities. No more paying thousands for staff. No more generic answering services.
+                </p>
+                <p class="solution-text">
+                    CallBird answers every call with a human-sounding AI trained specifically on your business. It books appointments, answers questions, and handles emergencies—24/7, 365 days a year.
+                </p>
+                <p class="solution-highlight">
+                    <strong>And here's the best part:</strong> Every conversation shows up in your CallBird app with a full transcript. Plus, you get an instant text summary the moment each call ends.
+                </p>
+                <p class="solution-text">
+                    You stay in control without being chained to your phone.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>From Signup to Your First Call: Under 10 Minutes</h2>
+                <p class="subtitle">No, Really. We Timed It.</p>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">📋</div>
+                    <h3>Tell Us About Your Business</h3>
+                    <p>2-minute signup form. Just your business name, industry, and phone number. That's it.</p>
+                    <div class="step-time">⏱️ 2 minutes</div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">🤖</div>
+                    <h3>We Build Your AI Receptionist</h3>
+                    <p>Our system reads your website, learns your services, and creates your custom AI voice. You can customize the greeting, tone, and what it says.</p>
+                    <div class="step-time">⏱️ 5 minutes</div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">📞</div>
+                    <h3>Forward Your Calls</h3>
+                    <p>We give you a dedicated CallBird number, or forward your existing business line to us. Works with any phone system.</p>
+                    <div class="step-time">⏱️ 30 seconds</div>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">📱</div>
+                    <h3>Download the CallBird App</h3>
+                    <p>Available on iOS and Android. See every conversation, listen to call recordings, read transcripts, and manage appointments—all in one place.</p>
+                    <div class="step-time">⏱️ 2 minutes</div>
+                </div>
+            </div>
+
+            <div class="cta-box">
+                <a href="https://start.callbirdai.com" class="btn-large btn-primary">Start Your 7-Day Free Trial</a>
+                <p class="cta-subtext">No credit card required. Your AI receptionist is ready in 10 minutes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CallBird App Section -->
+    <section class="app-showcase">
+        <div class="container">
+            <div class="section-header">
+                <h2>See Every Conversation. Manage Everything from Your Phone.</h2>
+                <p>Unlike old-school answering services that just take messages, CallBird gives you a complete command center for every customer interaction.</p>
+            </div>
+
+            <div class="app-features">
+                <div class="app-screenshot">
+                    <div class="dashboard-mockup">
+                        <img src="https://i.imgur.com/Y3X06He.png" alt="CallBird Dashboard - Call Management Interface" class="dashboard-image">
+                    </div>
+                </div>
+
+                <div class="app-benefits">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">📱</div>
+                        <h3>Mobile App</h3>
+                        <p>iOS & Android. Access anywhere, anytime. Manage calls on the go.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">📞</div>
+                        <h3>Call Recordings</h3>
+                        <p>Listen to any call anytime. Review quality, train staff, or settle disputes.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">📊</div>
+                        <h3>Analytics Dashboard</h3>
+                        <p>Track call volume, peak times, conversion rates, and customer satisfaction.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🔔</div>
+                        <h3>Instant Alerts</h3>
+                        <p>Get text notifications for every call with customer details and actions taken.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SMS Notification Example -->
+            <div class="sms-example">
+                <div class="sms-mockup">
+                    <div class="sms-header">Messages</div>
+                    <div class="sms-content">
+                        <div class="sms-message">
+                            <strong>CallBird</strong>
+                            <p>New call from Sarah Martinez at 2:47pm</p>
+                            <p><strong>Requested:</strong> House painting estimate<br>
+                            <strong>Phone:</strong> (555) 123-4567<br>
+                            <strong>Email:</strong> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1d6e7c6f7c7533705d78707c7471337e7270">[email&#160;protected]</a><br>
+                            <strong>Appointment booked:</strong> Thursday 3/14 at 10am</p>
+                            <a href="#" class="sms-link">View Full Call in App →</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sms-caption">
+                    <p><strong>You get a text summary within seconds of each call ending.</strong> Never miss important details.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Everything You Need. Nothing You Don't.</h2>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📅</div>
+                    <h3>Smart Appointment Booking</h3>
+                    <p>Your AI accesses your Google Calendar, Outlook, or our built-in scheduler in real-time. Customers book appointments during the call. You get a calendar invite. They get a confirmation text.</p>
+                    <div class="feature-integrations">
+                        <span>✓ Google Calendar</span>
+                        <span>✓ Outlook</span>
+                        <span>✓ Apple Calendar</span>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>Instant Text Summaries</h3>
+                    <p>The second a call ends, you get a text with customer name and contact info, what they wanted, what action was taken, and a link to full transcript.</p>
+                    <p class="feature-highlight">No more digging through voicemails or missed call lists.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Emergency Call Transfer</h3>
+                    <p>CallBird knows when to loop you in. Urgent calls, complex questions, or VIP customers get transferred immediately to your cell phone—with full context so you know what the call is about.</p>
+                    <div class="feature-example">
+                        Example: "Transfer all calls with 'emergency' in them"
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3>Industry-Specific Training</h3>
+                    <p>We don't give you a generic AI. Your CallBird is trained on your website content, service list and pricing, FAQ answers, and booking policies.</p>
+                    <p class="feature-highlight">It answers questions accurately because it knows YOUR business.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🌙</div>
+                    <h3>After-Hours Coverage</h3>
+                    <p>Most new customers call outside 9-5. CallBird answers at 11pm on Saturday just as professionally as 2pm on Tuesday.</p>
+                    <div class="feature-stat">
+                        <strong>Real stat:</strong> 34% of booked appointments happen after 6pm or on weekends
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎤</div>
+                    <h3>Call Recording & Transcripts</h3>
+                    <p>Every single call is recorded (downloadable MP3), transcribed word-for-word, searchable in your app, and stored securely for 90 days.</p>
+                    <p class="feature-use">Perfect for training, quality control, or settling disputes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section class="industries">
+        <div class="container">
+            <div class="section-header">
+                <h2>Built for Small Businesses Who Can't Afford to Miss Calls</h2>
+            </div>
+
+            <div class="industries-grid">
+                <div class="industry-card">
+                    <div class="industry-icon">🔧</div>
+                    <h3>Home Services</h3>
+                    <p class="industry-subtitle">Plumbers • Electricians • HVAC • Contractors</p>
+                    <p>"CallBird books service calls, handles emergency requests, and collects job details while you're on site."</p>
+                    <div class="industry-result">
+                        <strong>Average result:</strong> 23 more appointments/month
+                    </div>
+                </div>
+
+                <div class="industry-card">
+                    <div class="industry-icon">🦷</div>
+                    <h3>Medical & Dental</h3>
+                    <p class="industry-subtitle">Dentists • Doctors • Chiropractors • Therapists</p>
+                    <p>"HIPAA-compliant appointment booking. Patients get confirmed without tying up your front desk."</p>
+                    <div class="industry-result">
+                        <strong>Average result:</strong> 40% fewer no-shows
+                    </div>
+                </div>
+
+                <div class="industry-card">
+                    <div class="industry-icon">🍕</div>
+                    <h3>Restaurants & Food</h3>
+                    <p class="industry-subtitle">Restaurants • Cafes • Catering • Food Trucks</p>
+                    <p>"Answer questions about hours, menu items, dietary options, and take-out availability 24/7."</p>
+                    <div class="industry-result">
+                        <strong>Average result:</strong> 15% increase in orders
+                    </div>
+                </div>
+
+                <div class="industry-card">
+                    <div class="industry-icon">🏢</div>
+                    <h3>Professional Services</h3>
+                    <p class="industry-subtitle">Lawyers • Accountants • Consultants • Coaches</p>
+                    <p>"Qualify leads, book consultations, and screen calls so you only talk to serious prospects."</p>
+                    <div class="industry-result">
+                        <strong>Average result:</strong> 3x more consultations
+                    </div>
+                </div>
+
+                <div class="industry-card">
+                    <div class="industry-icon">🏪</div>
+                    <h3>Retail & E-Commerce</h3>
+                    <p class="industry-subtitle">Local shops • Boutiques • Service businesses</p>
+                    <p>"Answer product questions, store hours, and availability while you help in-store customers."</p>
+                    <div class="industry-result">
+                        <strong>Average result:</strong> 28% less abandonment
+                    </div>
+                </div>
+
+                <div class="industry-card">
+                    <div class="industry-icon">🐕</div>
+                    <h3>Veterinary Clinics</h3>
+                    <p class="industry-subtitle">Vets • Animal Hospitals • Grooming</p>
+                    <p>"Book appointments, triage emergency cases, and refill prescription requests automatically."</p>
+                    <div class="industry-result">
+                        <strong>Average result:</strong> 50+ hours saved/month
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="comparison">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why CallBird Beats Every Other Option</h2>
+            </div>
+
+            <div class="comparison-table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th class="highlight-col">
+                                <div class="table-header-highlight">CallBird</div>
+                            </th>
+                            <th>Human Receptionist</th>
+                            <th>Ruby/Smith.ai</th>
+                            <th>Just Voicemail</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Monthly Cost</strong></td>
+                            <td class="highlight-col"><strong>$49-197</strong></td>
+                            <td>$3,000-4,500</td>
+                            <td>$299-600</td>
+                            <td>$0</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Setup Time</strong></td>
+                            <td class="highlight-col"><strong>10 min</strong></td>
+                            <td>2-4 weeks</td>
+                            <td>3-5 days</td>
+                            <td>Instant</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Available</strong></td>
+                            <td class="highlight-col"><strong>24/7/365</strong></td>
+                            <td>Business hours</td>
+                            <td>24/7</td>
+                            <td>24/7</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Books Appointments</strong></td>
+                            <td class="highlight-col">✓ Yes</td>
+                            <td>✓ Yes</td>
+                            <td>✓ Yes</td>
+                            <td>✗ No</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Access Your Calendar</strong></td>
+                            <td class="highlight-col">✓ Yes</td>
+                            <td>✓ Yes</td>
+                            <td>✗ No</td>
+                            <td>✗ No</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Instant Text Summaries</strong></td>
+                            <td class="highlight-col">✓ Yes</td>
+                            <td>✗ No</td>
+                            <td>✗ No</td>
+                            <td>✗ No</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mobile App Dashboard</strong></td>
+                            <td class="highlight-col">✓ Yes</td>
+                            <td>✗ No</td>
+                            <td>✗ No</td>
+                            <td>✗ No</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Trained on YOUR Business</strong></td>
+                            <td class="highlight-col">✓ Yes</td>
+                            <td>After weeks</td>
+                            <td>✗ Generic</td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Handles Multiple Calls</strong></td>
+                            <td class="highlight-col">✓ Unlimited</td>
+                            <td>✗ One at a time</td>
+                            <td>✗ Limited</td>
+                            <td>✓ Unlimited</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="comparison-summary">
+                <h3>The Bottom Line</h3>
+                <p><strong>You have three choices:</strong></p>
+                <ol>
+                    <li><strong>Hire staff:</strong> Professional, but $36,000-54,000 per year + benefits + time off</li>
+                    <li><strong>Traditional answering service:</strong> Available 24/7, but generic, can't book appointments, $300-600/month</li>
+                    <li><strong>CallBird:</strong> Custom AI trained on your business, books appointments, texts you summaries, all from an app—$49/month</li>
+                </ol>
+                <p class="comparison-conclusion">The choice is obvious.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Join 200+ Businesses Who Never Miss a Call</h2>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <h3>"We were missing 30% of our calls before CallBird"</h3>
+                    <p>"Now every patient gets through, our appointment book stays full, and I'm not chained to the front desk. The text summaries are game-changing—I know exactly who called and what they need before I even call back."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👨‍⚕️</div>
+                        <div class="author-info">
+                            <strong>Dr. Sarah Chen</strong>
+                            <span>Riverside Dental Practice</span>
+                            <span class="author-stats">Using CallBird for 4 months • 487 calls handled</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <h3>"Setup literally took 8 minutes"</h3>
+                    <p>"I signed up, forwarded my phone, and CallBird was answering calls before I finished lunch. The first call was a $3,200 kitchen remodel job. Paid for itself in an hour."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👷</div>
+                        <div class="author-info">
+                            <strong>Carlos Martinez</strong>
+                            <span>Elite Home Renovations</span>
+                            <span class="author-stats">Using CallBird for 2 months • 156 calls • 23 appointments booked</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <h3>"Emergency calls get through, routine stuff is handled"</h3>
+                    <p>"As a vet, I need to know when there's a real emergency. CallBird transfers those immediately, but handles appointment bookings and prescription refills automatically. My staff loves it because their phone isn't ringing off the hook."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👨‍⚕️</div>
+                        <div class="author-info">
+                            <strong>Dr. James Park</strong>
+                            <span>Oakwood Animal Hospital</span>
+                            <span class="author-stats">Using CallBird for 6 months • 892 calls • 4.9/5 rating</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Simple Pricing. No Hidden Fees.</h2>
+                <p>All plans include the CallBird app, text summaries, call recordings, and 7-day free trial.</p>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Starter Plan -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Starter</h3>
+                        <div class="pricing-price">
+                            <span class="price-currency">$</span>
+                            <span class="price-amount">49</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                        <p class="pricing-subtitle">Perfect for solo operators and small teams</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ 1 AI phone number</li>
+                        <li>✓ Up to 50 calls per month</li>
+                        <li>✓ Basic appointment booking</li>
+                        <li>✓ Google Calendar integration</li>
+                        <li>✓ Emergency call transfer</li>
+                        <li>✓ Text summaries after each call</li>
+                        <li>✓ CallBird mobile app access</li>
+                        <li>✓ Call recordings & transcripts</li>
+                        <li>✓ Email support</li>
+                    </ul>
+                    <a href="https://start.callbirdai.com" class="btn-pricing">Start 7-Day Free Trial</a>
+                </div>
+
+                <!-- Professional Plan (Most Popular) -->
+                <div class="pricing-card pricing-popular">
+                    <div class="pricing-badge">⭐ Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Professional</h3>
+                        <div class="pricing-price">
+                            <span class="price-currency">$</span>
+                            <span class="price-amount">99</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                        <p class="pricing-subtitle">For growing businesses with higher call volume</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><strong>Everything in Starter, plus:</strong></li>
+                        <li>✓ Up to 300 calls per month</li>
+                        <li>✓ Advanced appointment booking</li>
+                        <li>✓ Multiple calendar integration</li>
+                        <li>✓ Custom business hours</li>
+                        <li>✓ Lead qualification questions</li>
+                        <li>✓ Priority call transfer rules</li>
+                        <li>✓ Analytics dashboard</li>
+                        <li>✓ Priority email support</li>
+                    </ul>
+                    <a href="https://start.callbirdai.com" class="btn-pricing btn-primary">Start 7-Day Free Trial</a>
+                    <p class="pricing-recommendation">Most businesses choose Professional</p>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Enterprise</h3>
+                        <div class="pricing-price">
+                            <span class="price-currency">$</span>
+                            <span class="price-amount">197</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                        <p class="pricing-subtitle">For high-volume and multi-location operations</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><strong>Everything in Professional, plus:</strong></li>
+                        <li>✓ Unlimited calls per month</li>
+                        <li>✓ Up to 5 AI phone numbers</li>
+                        <li>✓ Advanced CRM integration</li>
+                        <li>✓ Custom AI training</li>
+                        <li>✓ Multi-language support</li>
+                        <li>✓ Dedicated account manager</li>
+                        <li>✓ Custom reporting</li>
+                        <li>✓ Priority 24/7 phone support</li>
+                        <li>✓ API access</li>
+                    </ul>
+                    <div class="pricing-note">Best value for high call volume</div>
+                    <a href="https://start.callbirdai.com" class="btn-pricing">Start 7-Day Free Trial</a>
+                </div>
+            </div>
+
+            <div class="pricing-guarantee">
+                <p><strong>All plans include:</strong> 7-day free trial (no credit card required) • Cancel anytime (no contracts) • Setup in under 10 minutes • 30-day money-back guarantee • Free migration support</p>
+                <p class="pricing-custom">Have 500+ calls per month? <a href="#contact">Contact us for custom pricing →</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Questions? We've Got Answers.</h2>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>How quickly can I get my AI phone number?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Your CallBird number is ready within <strong>10 minutes</strong> of completing signup. That's not a typo—10 minutes from signup to answering your first call.</p>
+                        <p><strong>Here's the timeline:</strong></p>
+                        <ul>
+                            <li>Minute 1-2: You fill out the signup form</li>
+                            <li>Minute 3-7: We create your AI and train it on your website</li>
+                            <li>Minute 8-9: You get your phone number and forward settings</li>
+                            <li>Minute 10: Your first call is answered by CallBird</li>
+                        </ul>
+                        <p>Some customers have gotten their first real customer call within 15 minutes of signing up.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Does CallBird integrate with my existing calendar?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! CallBird works with:</p>
+                        <ul>
+                            <li>Google Calendar (easiest integration)</li>
+                            <li>Microsoft Outlook</li>
+                            <li>Apple Calendar</li>
+                            <li>CallBird's built-in calendar</li>
+                        </ul>
+                        <p><strong>When CallBird books an appointment, it:</strong></p>
+                        <ol>
+                            <li>Checks your calendar for availability in real-time</li>
+                            <li>Books the appointment</li>
+                            <li>Sends you a calendar invite</li>
+                            <li>Texts the customer a confirmation</li>
+                            <li>Sends you a text summary</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>What happens if CallBird gets a call it can't handle?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>CallBird has three built-in safety nets:</p>
+                        <p><strong>1. Instant Transfer:</strong> For emergencies or complex questions, CallBird transfers the call to your cell phone immediately. You'll hear "I have [customer name] on the line calling about [topic]" so you have context.</p>
+                        <p><strong>2. Take a Message:</strong> If you're unavailable, CallBird collects their name, number, email, and reason for calling. You get a detailed text summary.</p>
+                        <p><strong>3. Smart Escalation:</strong> You can set rules like "Transfer all calls with 'emergency' in them" or "Transfer VIP customers automatically"</p>
+                        <p>In 6 months of operation, <strong>96% of calls are fully handled by AI.</strong> The other 4% get transferred with full context.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>How does the AI know about my business?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>During setup (takes about 5 minutes), CallBird:</p>
+                        <ol>
+                            <li><strong>Reads your website:</strong> Learns about your services, pricing, hours, location</li>
+                            <li><strong>Asks you key questions:</strong> "What's your most common customer question?" "How do you want to be greeted?"</li>
+                            <li><strong>Learns your booking rules:</strong> "30-minute appointments" or "2-hour service windows"</li>
+                            <li><strong>Stores your FAQs:</strong> You can add custom Q&A pairs</li>
+                        </ol>
+                        <p>The more you use CallBird, the smarter it gets. Every call transcript is reviewed by our AI system to improve responses.</p>
+                        <p><strong>You can also update the AI knowledge base anytime in the app.</strong> Add new services, change pricing, update hours—takes 30 seconds.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Can I customize how CallBird answers calls?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely. You control:</p>
+                        <p><strong>Greeting:</strong> Custom greetings you write yourself</p>
+                        <p><strong>Voice:</strong> Male or female, friendly/professional/casual tone, speaking speed</p>
+                        <p><strong>Responses:</strong> What services to mention first, how to handle pricing questions, when to transfer vs. take a message</p>
+                        <p><strong>Business Rules:</strong> Hours of operation, appointment lengths, buffer time, blackout dates</p>
+                        <p>Everything is editable in the CallBird app. Changes take effect in under 60 seconds.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Do I need to change my phone number?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No. You have three options:</p>
+                        <p><strong>Option 1: Use CallBird's Number</strong><br>
+                        We give you a new dedicated number. Use it on your website, Google Business Profile, ads. Keep your existing number for current customers.</p>
+                        <p><strong>Option 2: Forward Your Existing Number</strong><br>
+                        Keep using your current business number. Set up call forwarding to CallBird (takes 60 seconds). All calls go through CallBird first.</p>
+                        <p><strong>Option 3: Hybrid (Most Popular)</strong><br>
+                        Forward your main line to CallBird when you're busy/closed. Keep answering directly when you're available. Toggle forwarding on/off from the CallBird app.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="final-cta-content">
+                <h2>Stop Losing Customers to Voicemail</h2>
+                <p class="final-cta-text">
+                    Every missed call is money out the door. While you're on the job, helping a customer, in a meeting, closed for the night, or on vacation—<strong>your competitors are answering their phones.</strong>
+                </p>
+                <p class="final-cta-text">
+                    CallBird makes sure you never lose another opportunity because your phone went to voicemail.
+                </p>
+
+                <div class="final-cta-boxes">
+                    <div class="cta-box-primary">
+                        <h3>🎧 Try CallBird Right Now (30 Seconds)</h3>
+                        <a href="tel:+17708092820" class="cta-phone-large">📞 Call: 770-809-2820</a>
+                        <p>"Hear it work before you sign up"</p>
+                    </div>
+
+                    <div class="cta-box-divider">or</div>
+
+                    <div class="cta-box-secondary" id="trial">
+                        <a href="#signup" class="btn-large btn-primary">Start Your 7-Day Free Trial</a>
+                        <div class="cta-benefits">
+                            <span>✓ Setup in 10 minutes</span>
+                            <span>✓ No credit card required</span>
+                            <span>✓ Cancel anytime</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="final-trust">
+                    <p><strong>Join 200+ businesses using CallBird:</strong></p>
+                    <div class="trust-stats">
+                        <span>✓ 96% customer satisfaction</span>
+                        <span>✓ 30-day money-back guarantee</span>
+                        <span>✓ A2P 10DLC compliant</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird" class="logo-image">
+                    </div>
+                    <p class="footer-tagline">AI receptionist that never sleeps</p>
+                    <div class="footer-contact">
+                        <p>Atlanta, GA</p>
+                        <p><a href="tel:+16783161454">(678) 316-1454</a></p>
+                        <p><a href="/cdn-cgi/l/email-protection#691a1c1919061b1d290a0805050b001b0d0800470a0604"><span class="__cf_email__" data-cfemail="0a797f7a7a65787e4a696b66666863786e6b6324696567">[email&#160;protected]</span></a></p>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Industries</h4>
+                    <ul class="footer-links">
+                        <li><a href="#industries">Home Services</a></li>
+                        <li><a href="#industries">Medical & Dental</a></li>
+                        <li><a href="#industries">Restaurants</a></li>
+                        <li><a href="#industries">Professional Services</a></li>
+                        <li><a href="#industries">Retail</a></li>
+                        <li><a href="#industries">Veterinary</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 CallBird AI. All Rights Reserved.</p>
+                <p>A2P 10DLC Compliant • SOC 2 Type II Certified</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Exit Intent Popup -->
+    <div id="exit-popup" class="popup-overlay">
+        <div class="popup-content">
+            <button class="popup-close" onclick="closePopup()">&times;</button>
+            <div class="popup-icon">⏸️</div>
+            <h3>Wait! See CallBird Answer a Real Call</h3>
+            <p>Most people are convinced in 30 seconds.</p>
+            <div class="popup-actions">
+                <a href="tel:+17708092820" class="btn-primary">📞 Call 770-809-2820 Now</a>
+                <button class="btn-ghost" onclick="closePopup()">Maybe Later</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Bottom CTA (appears on scroll) -->
+    <div id="sticky-cta" class="sticky-cta">
+        <div class="container">
+            <div class="sticky-cta-content">
+                <span>👋 Ready to try CallBird?</span>
+                <div class="sticky-cta-actions">
+                    <a href="https://start.callbirdai.com" class="btn-primary btn-small">Start Free Trial</a>
+                    <a href="tel:+17708092820" class="bt
