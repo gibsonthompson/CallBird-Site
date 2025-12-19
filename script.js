@@ -1,7 +1,8 @@
 // ==================== AUDIO PLAYER FUNCTIONALITY ====================
 function toggleAudio(audioId) {
     const audio = document.getElementById(audioId);
-    const button = audio.previousElementSibling.previousElementSibling.querySelector('.play-btn');
+    const audioPlayer = audio.parentElement; // Get the parent .audio-player div
+    const button = audioPlayer.querySelector('.play-btn'); // Find button within parent
     const playIcon = button.querySelector('.play-icon');
     const progressBar = document.getElementById('progress' + audioId.slice(-1));
     
@@ -10,8 +11,9 @@ function toggleAudio(audioId) {
         document.querySelectorAll('audio').forEach(a => {
             if (a.id !== audioId) {
                 a.pause();
-                const btn = document.querySelector(`#${a.id}`).previousElementSibling.previousElementSibling.querySelector('.play-btn .play-icon');
-                btn.textContent = '▶';
+                const otherPlayer = a.parentElement;
+                const otherIcon = otherPlayer.querySelector('.play-btn .play-icon');
+                if (otherIcon) otherIcon.textContent = '▶';
             }
         });
         
