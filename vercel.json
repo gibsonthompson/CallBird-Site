@@ -2,7 +2,10 @@
   "rewrites": [
     { "source": "/blog", "destination": "/blog.html" },
     { "source": "/blog/ai-receptionist-guide", "destination": "/blog-ai-receptionist-guide.html" },
-    { "source": "/blog-ai-receptionist-guide", "destination": "/blog-ai-receptionist-guide.html" }
+    { "source": "/blog-ai-receptionist-guide", "destination": "/blog-ai-receptionist-guide.html" },
+    { "source": "/dental", "destination": "/dental-ai-receptionist.html" },
+    { "source": "/dentist", "destination": "/dental-ai-receptionist.html" },
+    { "source": "/dental-ai-receptionist", "destination": "/dental-ai-receptionist.html" }
   ],
   "headers": [
     {
