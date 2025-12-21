@@ -719,6 +719,10 @@ a:hover {
     margin-bottom: 3rem;
 }
 
+.hero-bg {
+    pointer-events: none;
+}
+
 .step-card {
     background: white;
     padding: 2rem;
