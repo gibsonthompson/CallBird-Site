@@ -1,11 +1,169 @@
 {
   "rewrites": [
-    { "source": "/blog", "destination": "/blog.html" },
-    { "source": "/blog/ai-receptionist-guide", "destination": "/blog-ai-receptionist-guide.html" },
-    { "source": "/blog-ai-receptionist-guide", "destination": "/blog-ai-receptionist-guide.html" },
-    { "source": "/dental", "destination": "/dental-ai-receptionist.html" },
-    { "source": "/dentist", "destination": "/dental-ai-receptionist.html" },
-    { "source": "/dental-ai-receptionist", "destination": "/dental-ai-receptionist.html" }
+    {
+      "source": "/blog",
+      "destination": "/blog.html"
+    },
+    {
+      "source": "/blog/ai-receptionist-guide",
+      "destination": "/blog-ai-receptionist-guide.html"
+    },
+    {
+      "source": "/dental",
+      "destination": "/dental-ai-receptionist.html"
+    },
+    {
+      "source": "/dentist",
+      "destination": "/dental-ai-receptionist.html"
+    },
+    {
+      "source": "/dentists",
+      "destination": "/dental-ai-receptionist.html"
+    },
+    {
+      "source": "/contractors",
+      "destination": "/home-services-ai-receptionist.html"
+    },
+    {
+      "source": "/home-services",
+      "destination": "/home-services-ai-receptionist.html"
+    },
+    {
+      "source": "/hvac",
+      "destination": "/home-services-ai-receptionist.html"
+    },
+    {
+      "source": "/plumbing",
+      "destination": "/home-services-ai-receptionist.html"
+    },
+    {
+      "source": "/electrician",
+      "destination": "/home-services-ai-receptionist.html"
+    },
+    {
+      "source": "/restaurants",
+      "destination": "/restaurants-ai-receptionist.html"
+    },
+    {
+      "source": "/restaurant",
+      "destination": "/restaurants-ai-receptionist.html"
+    },
+    {
+      "source": "/food-service",
+      "destination": "/restaurants-ai-receptionist.html"
+    },
+    {
+      "source": "/legal",
+      "destination": "/legal-ai-receptionist.html"
+    },
+    {
+      "source": "/law-firm",
+      "destination": "/legal-ai-receptionist.html"
+    },
+    {
+      "source": "/attorney",
+      "destination": "/legal-ai-receptionist.html"
+    },
+    {
+      "source": "/lawyer",
+      "destination": "/legal-ai-receptionist.html"
+    },
+    {
+      "source": "/retail",
+      "destination": "/retail-ai-receptionist.html"
+    },
+    {
+      "source": "/store",
+      "destination": "/retail-ai-receptionist.html"
+    },
+    {
+      "source": "/shop",
+      "destination": "/retail-ai-receptionist.html"
+    },
+    {
+      "source": "/professional-services",
+      "destination": "/professional-services-ai-receptionist.html"
+    },
+    {
+      "source": "/accounting",
+      "destination": "/professional-services-ai-receptionist.html"
+    },
+    {
+      "source": "/consulting",
+      "destination": "/professional-services-ai-receptionist.html"
+    },
+    {
+      "source": "/real-estate",
+      "destination": "/professional-services-ai-receptionist.html"
+    },
+    {
+      "source": "/professional-services",
+      "destination": "/professional-services-ai-receptionist.html"
+    },
+    {
+      "source": "/lawyers",
+      "destination": "/professional-services-ai-receptionist.html"
+    },
+    {
+      "source": "/law-firms",
+      "destination": "/professional-services-ai-receptionist.html"
+    },
+    {
+      "source": "/accountants",
+      "destination": "/professional-services-ai-receptionist.html"
+    },
+    {
+      "source": "/accounting",
+      "destination": "/professional-services-ai-receptionist.html"
+    },
+    {
+      "source": "/consultants",
+      "destination": "/professional-services-ai-receptionist.html"
+    },
+    {
+      "source": "/consulting",
+      "destination": "/professional-services-ai-receptionist.html"
+    },
+    {
+      "source": "/retail",
+      "destination": "/retail-ai-receptionist.html"
+    },
+    {
+      "source": "/ecommerce",
+      "destination": "/retail-ai-receptionist.html"
+    },
+    {
+      "source": "/e-commerce",
+      "destination": "/retail-ai-receptionist.html"
+    },
+    {
+      "source": "/store",
+      "destination": "/retail-ai-receptionist.html"
+    },
+    {
+      "source": "/boutique",
+      "destination": "/retail-ai-receptionist.html"
+    },
+    {
+      "source": "/restaurants",
+      "destination": "/restaurants-ai-receptionist.html"
+    },
+    {
+      "source": "/restaurant",
+      "destination": "/restaurants-ai-receptionist.html"
+    },
+    {
+      "source": "/hospitality",
+      "destination": "/restaurants-ai-receptionist.html"
+    },
+    {
+      "source": "/cafe",
+      "destination": "/restaurants-ai-receptionist.html"
+    },
+    {
+      "source": "/catering",
+      "destination": "/restaurants-ai-receptionist.html"
+    }
   ],
   "headers": [
     {
