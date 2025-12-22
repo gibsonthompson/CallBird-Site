@@ -163,6 +163,22 @@
     {
       "source": "/catering",
       "destination": "/restaurants-ai-receptionist.html"
+    },
+    {
+      "source": "/veterinary",
+      "destination": "/veterinary-ai-receptionist.html"
+    },
+    {
+      "source": "/vet",
+      "destination": "/veterinary-ai-receptionist.html"
+    },
+    {
+      "source": "/vets",
+      "destination": "/veterinary-ai-receptionist.html"
+    },
+    {
+      "source": "/animal-hospital",
+      "destination": "/veterinary-ai-receptionist.html"
     }
   ],
   "headers": [
