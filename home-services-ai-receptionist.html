@@ -11,780 +11,33 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI Receptionist for Contractors, Plumbers, Electricians & HVAC. Never miss an emergency call or service request. 24/7 call answering, appointment booking & job dispatch. From $49/month.">
+    <meta name="keywords" content="AI receptionist for contractors, plumber answering service, electrician phone service, HVAC call handling, contractor AI assistant, home services receptionist">
+    <title>AI Receptionist for Contractors, Plumbers, Electricians & HVAC | CallBird</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     
-    <!-- SEO Meta Tags -->
-    <title>AI Receptionist for Contractors & Home Services | $49/mo 24/7 Answering</title>
-    <meta name="description" content="AI receptionist for HVAC, plumbing, electrical, and contractors. Answer emergency calls 24/7, book jobs while on-site, never miss leads. $49/month. Setup in 10 minutes.">
-    <meta name="keywords" content="AI receptionist for contractors, HVAC answering service, plumbing call answering, electrician answering service, contractor phone system, AI for home services, construction answering service">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="AI Receptionist for Contractors - $49/Month 24/7">
-    <meta property="og:description" content="Never miss an emergency call. AI receptionist for home services contractors. Answer calls while on the job, book appointments 24/7, capture every lead.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://i.imgur.com/Y3X06He.png">
-    
-    <!-- Schema Markup -->
+    <!-- Schema Markup for SEO -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "SoftwareApplication",
-      "name": "CallBird AI Receptionist for Home Services Contractors",
+      "name": "CallBird AI for Home Services",
       "applicationCategory": "BusinessApplication",
       "offers": {
         "@type": "Offer",
         "price": "49",
-        "priceCurrency": "USD",
-        "priceValidUntil": "2026-12-31"
+        "priceCurrency": "USD"
       },
       "aggregateRating": {
         "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "ratingCount": "156"
+        "ratingValue": "4.8",
+        "ratingCount": "200"
       }
     }
     </script>
-    
-    <!-- FAQ Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How much does an AI answering service cost for contractors?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "CallBird AI receptionist costs $49-197/month depending on call volume. This includes 24/7 coverage, emergency call routing, job booking, and unlimited simultaneous calls. Compare to hiring staff at $36,000-48,000/year or traditional answering services at $300-600/month."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can AI handle emergency plumbing and HVAC calls?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, CallBird detects emergency keywords (burst pipe, no heat, electrical fire, gas leak) and immediately transfers to your emergency line with full context. Average emergency response time is under 60 seconds vs 15+ minutes with voicemail."
-          }
-        }
-      ]
-    }
-    </script>
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --primary-color: #122092;
-            --primary-hover: #0d1666;
-            --accent-color: #f6b828;
-            --contractor-orange: #ff6b35;
-            --text-dark: #1f2937;
-            --text-medium: #4b5563;
-            --text-light: #6b7280;
-            --bg-light: #f9f9f7;
-            --bg-white: #ffffff;
-            --border-color: #e5e7eb;
-            --success-green: #10b981;
-            --font-primary: 'Sora', sans-serif;
-            --font-secondary: 'Inter', sans-serif;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: var(--font-secondary);
-            color: var(--text-dark);
-            line-height: 1.6;
-            background: var(--bg-white);
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-        
-        /* Navigation */
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border-color);
-            padding: 1rem 0;
-        }
-        
-        .nav-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        
-        .logo-image {
-            height: 60px;
-            width: auto;
-        }
-        
-        .nav-cta {
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-        }
-        
-        .btn-primary {
-            background: var(--primary-color);
-            color: white;
-            padding: 0.875rem 1.75rem;
-            border-radius: 0.5rem;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-            display: inline-block;
-        }
-        
-        .btn-primary:hover {
-            background: var(--primary-hover);
-            transform: translateY(-2px);
-        }
-        
-        .btn-secondary {
-            background: transparent;
-            color: var(--primary-color);
-            padding: 0.875rem 1.75rem;
-            border: 2px solid var(--primary-color);
-            border-radius: 0.5rem;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-            display: inline-block;
-        }
-        
-        .btn-secondary:hover {
-            background: var(--primary-color);
-            color: white;
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--contractor-orange) 0%, #d94e2a 100%);
-            color: white;
-            padding: 8rem 2rem 5rem;
-            margin-top: 80px;
-        }
-        
-        .hero-content {
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        
-        .hero-badge {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 0.5rem 1.25rem;
-            border-radius: 2rem;
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            backdrop-filter: blur(10px);
-        }
-        
-        .hero h1 {
-            font-family: var(--font-primary);
-            font-size: 3.5rem;
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
-        }
-        
-        .hero-subtitle {
-            font-size: 1.4rem;
-            opacity: 0.95;
-            margin-bottom: 2.5rem;
-            line-height: 1.6;
-        }
-        
-        .hero-ctas {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            margin-bottom: 3rem;
-            flex-wrap: wrap;
-        }
-        
-        .btn-large {
-            padding: 1.25rem 2.5rem;
-            font-size: 1.1rem;
-        }
-        
-        .hero-stats {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            max-width: 900px;
-            margin: 0 auto;
-            padding-top: 3rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        .stat-item {
-            text-align: center;
-        }
-        
-        .stat-number {
-            font-family: var(--font-primary);
-            font-size: 2.5rem;
-            font-weight: 800;
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-        
-        .stat-label {
-            font-size: 0.95rem;
-            opacity: 0.9;
-        }
-        
-        /* Section Styles */
-        section {
-            padding: 5rem 2rem;
-        }
-        
-        .section-header {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto 4rem;
-        }
-        
-        .section-header h2 {
-            font-family: var(--font-primary);
-            font-size: 2.75rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            color: var(--text-dark);
-        }
-        
-        .section-header p {
-            font-size: 1.2rem;
-            color: var(--text-medium);
-        }
-        
-        /* Problems Section */
-        .problems-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-        
-        .problem-card {
-            background: var(--bg-light);
-            padding: 2rem;
-            border-radius: 1rem;
-            border-left: 4px solid #ef4444;
-        }
-        
-        .problem-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        
-        .problem-card h3 {
-            font-family: var(--font-primary);
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--text-dark);
-        }
-        
-        .problem-card p {
-            color: var(--text-medium);
-            line-height: 1.7;
-        }
-        
-        .problem-stat {
-            background: white;
-            padding: 1rem;
-            border-radius: 0.5rem;
-            margin-top: 1rem;
-            font-weight: 600;
-            color: #ef4444;
-        }
-        
-        /* Solution Section */
-        .solution-box {
-            background: linear-gradient(135deg, var(--success-green) 0%, #059669 100%);
-            color: white;
-            padding: 3rem;
-            border-radius: 1.5rem;
-            text-align: center;
-        }
-        
-        .solution-box h2 {
-            font-family: var(--font-primary);
-            font-size: 2.25rem;
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-        }
-        
-        .solution-box p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
-        }
-        
-        /* Trades Grid */
-        .trades-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin-bottom: 4rem;
-        }
-        
-        .trade-card {
-            background: white;
-            border: 2px solid var(--border-color);
-            padding: 2rem;
-            border-radius: 1rem;
-            text-align: center;
-            transition: all 0.3s;
-        }
-        
-        .trade-card:hover {
-            border-color: var(--contractor-orange);
-            transform: translateY(-4px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        
-        .trade-icon {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            display: block;
-        }
-        
-        .trade-card h3 {
-            font-family: var(--font-primary);
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 0.75rem;
-            color: var(--text-dark);
-        }
-        
-        .trade-card p {
-            color: var(--text-medium);
-            font-size: 0.95rem;
-        }
-        
-        /* Features Grid */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2.5rem;
-        }
-        
-        .feature-card {
-            background: white;
-            border: 2px solid var(--border-color);
-            padding: 2.5rem;
-            border-radius: 1rem;
-            transition: all 0.3s;
-        }
-        
-        .feature-card:hover {
-            border-color: var(--primary-color);
-            transform: translateY(-4px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-            display: block;
-        }
-        
-        .feature-card h3 {
-            font-family: var(--font-primary);
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--text-dark);
-        }
-        
-        .feature-card p {
-            color: var(--text-medium);
-            line-height: 1.7;
-            margin-bottom: 1rem;
-        }
-        
-        .feature-highlight {
-            background: var(--bg-light);
-            padding: 1rem;
-            border-radius: 0.5rem;
-            font-size: 0.95rem;
-            color: var(--text-dark);
-            font-weight: 600;
-        }
-        
-        /* How It Works */
-        .steps-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-        
-        .step-card {
-            text-align: center;
-            position: relative;
-        }
-        
-        .step-number {
-            background: var(--contractor-orange);
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: var(--font-primary);
-            font-size: 1.75rem;
-            font-weight: 800;
-            margin: 0 auto 1.5rem;
-        }
-        
-        .step-card h3 {
-            font-family: var(--font-primary);
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-        
-        .step-card p {
-            color: var(--text-medium);
-        }
-        
-        /* ROI Calculator */
-        .roi-calculator {
-            background: var(--bg-light);
-            padding: 3rem;
-            border-radius: 1.5rem;
-            margin: 4rem 0;
-        }
-        
-        .roi-calculator h3 {
-            font-family: var(--font-primary);
-            font-size: 2rem;
-            font-weight: 800;
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        
-        .comparison-table {
-            background: white;
-            border-radius: 1rem;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        
-        .comparison-table table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        
-        .comparison-table th,
-        .comparison-table td {
-            padding: 1.5rem;
-            text-align: left;
-            border-bottom: 1px solid var(--border-color);
-        }
-        
-        .comparison-table th {
-            background: var(--contractor-orange);
-            color: white;
-            font-weight: 700;
-        }
-        
-        .comparison-table .highlight-col {
-            background: #f0fdf4;
-            font-weight: 700;
-            color: var(--success-green);
-        }
-        
-        .savings-box {
-            background: var(--success-green);
-            color: white;
-            padding: 2rem;
-            border-radius: 1rem;
-            text-align: center;
-            margin-top: 2rem;
-        }
-        
-        .savings-box h4 {
-            font-family: var(--font-primary);
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 0.5rem;
-        }
-        
-        /* Testimonials */
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-        }
-        
-        .testimonial-card {
-            background: white;
-            border: 2px solid var(--border-color);
-            padding: 2.5rem;
-            border-radius: 1rem;
-        }
-        
-        .testimonial-rating {
-            color: var(--accent-color);
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .testimonial-card blockquote {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--text-dark);
-            margin-bottom: 1.5rem;
-            font-style: italic;
-        }
-        
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-        
-        .author-avatar {
-            width: 60px;
-            height: 60px;
-            background: var(--contractor-orange);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.75rem;
-        }
-        
-        .author-info strong {
-            display: block;
-            font-weight: 700;
-            color: var(--text-dark);
-        }
-        
-        .author-info span {
-            display: block;
-            color: var(--text-medium);
-            font-size: 0.95rem;
-        }
-        
-        /* FAQ Section */
-        .faq-grid {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        
-        .faq-item {
-            background: white;
-            border: 2px solid var(--border-color);
-            border-radius: 1rem;
-            margin-bottom: 1.5rem;
-            overflow: hidden;
-        }
-        
-        .faq-question {
-            width: 100%;
-            background: none;
-            border: none;
-            padding: 1.5rem 2rem;
-            text-align: left;
-            font-family: var(--font-primary);
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--text-dark);
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: all 0.3s;
-        }
-        
-        .faq-question:hover {
-            color: var(--contractor-orange);
-        }
-        
-        .faq-icon {
-            font-size: 1.5rem;
-            font-weight: 300;
-            transition: transform 0.3s;
-        }
-        
-        .faq-item.active .faq-icon {
-            transform: rotate(45deg);
-        }
-        
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-        }
-        
-        .faq-item.active .faq-answer {
-            max-height: 1000px;
-        }
-        
-        .faq-answer-content {
-            padding: 0 2rem 2rem;
-            color: var(--text-medium);
-            line-height: 1.8;
-        }
-        
-        .faq-answer-content p {
-            margin-bottom: 1rem;
-        }
-        
-        .faq-answer-content ul {
-            margin-left: 1.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .faq-answer-content li {
-            margin-bottom: 0.5rem;
-        }
-        
-        /* Final CTA */
-        .final-cta {
-            background: linear-gradient(135deg, var(--contractor-orange) 0%, #d94e2a 100%);
-            color: white;
-            padding: 5rem 2rem;
-            text-align: center;
-        }
-        
-        .final-cta h2 {
-            font-family: var(--font-primary);
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-        }
-        
-        .final-cta p {
-            font-size: 1.3rem;
-            margin-bottom: 2.5rem;
-            opacity: 0.95;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .cta-box {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 2.5rem;
-            border-radius: 1.5rem;
-            max-width: 600px;
-            margin: 0 auto 2rem;
-        }
-        
-        .cta-phone {
-            font-family: var(--font-primary);
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--accent-color);
-            text-decoration: none;
-            display: block;
-            margin-bottom: 1rem;
-        }
-        
-        .cta-phone:hover {
-            color: white;
-        }
-        
-        /* Footer */
-        .footer {
-            background: var(--text-dark);
-            color: white;
-            padding: 3rem 2rem 2rem;
-        }
-        
-        .footer-content {
-            text-align: center;
-        }
-        
-        .footer-links {
-            display: flex;
-            gap: 2rem;
-            justify-content: center;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-        }
-        
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .footer-links a:hover {
-            color: white;
-        }
-        
-        .footer-bottom {
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 0.9rem;
-        }
-        
-        /* Mobile Responsive */
-        @media (max-width: 968px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero-stats {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 1.5rem;
-            }
-            
-            .problems-grid,
-            .testimonials-grid,
-            .trades-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .steps-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .hero-ctas {
-                flex-direction: column;
-            }
-            
-            .nav-cta .btn-secondary {
-                display: none;
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -796,11 +49,17 @@
     <nav class="navbar">
         <div class="container">
             <div class="nav-content">
-                <a href="index.html">
-                    <img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird AI" class="logo-image">
-                </a>
-                <div class="nav-cta">
-                    <a href="tel:+17708092820" class="btn-secondary">📞 Try Demo: 770-809-2820</a>
+                <div class="logo">
+                    <a href="index.html"><img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird AI" class="logo-image"></a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html#features">Features</a></li>
+                    <li><a href="index.html#industries">Industries</a></li>
+                    <li><a href="index.html#pricing">Pricing</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="tel:+16783161454" class="btn-ghost">Call Us</a>
                     <a href="https://start.callbirdai.com" class="btn-primary">Start Free Trial</a>
                 </div>
             </div>
@@ -811,354 +70,182 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <span class="hero-badge">🔧 Built for Contractors & Home Service Pros</span>
-                <h1>Stop Missing Emergency Calls. AI Receptionist for Contractors at $49/Month</h1>
-                <p class="hero-subtitle">Answer every call 24/7 while you're on the job. Book appointments, handle emergencies, and capture leads automatically. Never lose a customer to voicemail again.</p>
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span>For Contractors & Home Services</span>
+                </div>
                 
+                <h1 class="hero-title">
+                    AI Receptionist for Contractors,<br>Plumbers, Electricians & HVAC
+                </h1>
+                
+                <p class="hero-subtitle">
+                    Never Miss an Emergency Call or Service Request While You're On the Job. 24/7 Call Answering, Appointment Booking & Job Dispatch
+                </p>
+
+                <div class="trust-bar">
+                    <div class="trust-item">✓ 62% of Contractor Calls Go Unanswered</div>
+                    <div class="trust-item">✓ $45K-$120K Annual Revenue Lost to Missed Calls</div>
+                    <div class="trust-item">✓ Setup in 10 Minutes</div>
+                </div>
+
                 <div class="hero-ctas">
-                    <a href="https://start.callbirdai.com" class="btn-primary btn-large" style="background: white; color: var(--contractor-orange);">Start Free 7-Day Trial</a>
-                    <a href="tel:+17708092820" class="btn-secondary btn-large" style="border-color: white; color: white;">📞 Call Demo Line</a>
-                </div>
-                
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">24/7</span>
-                        <span class="stat-label">Emergency Coverage</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">23+</span>
-                        <span class="stat-label">Jobs Booked/Month</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">$0</span>
-                        <span class="stat-label">Missed Revenue</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">10 min</span>
-                        <span class="stat-label">Setup Time</span>
-                    </div>
+                    <a href="https://start.callbirdai.com" class="btn-large btn-primary">Start Free Trial - 7 Days</a>
+                    <a href="index.html" class="btn-large btn-ghost">← Back to Home</a>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Trades Section -->
-    <section style="background: var(--bg-light);">
-        <div class="container">
-            <div class="section-header">
-                <h2>Built Specifically for Home Service Contractors</h2>
-                <p>Whether you're in the truck, on the roof, or under a sink—CallBird answers your phone</p>
-            </div>
-            
-            <div class="trades-grid">
-                <div class="trade-card">
-                    <span class="trade-icon">❄️</span>
-                    <h3>HVAC Contractors</h3>
-                    <p>Emergency no-heat calls, AC breakdowns, maintenance bookings, filter replacement reminders</p>
-                </div>
-                
-                <div class="trade-card">
-                    <span class="trade-icon">🔧</span>
-                    <h3>Plumbers</h3>
-                    <p>Burst pipes, drain clogs, water heater emergencies, leak repairs, installation quotes</p>
-                </div>
-                
-                <div class="trade-card">
-                    <span class="trade-icon">⚡</span>
-                    <h3>Electricians</h3>
-                    <p>Power outages, panel upgrades, rewiring estimates, emergency electrical issues</p>
-                </div>
-                
-                <div class="trade-card">
-                    <span class="trade-icon">🏗️</span>
-                    <h3>General Contractors</h3>
-                    <p>Remodel quotes, construction projects, permit questions, timeline updates</p>
-                </div>
-                
-                <div class="trade-card">
-                    <span class="trade-icon">🏡</span>
-                    <h3>Roofing Contractors</h3>
-                    <p>Roof inspections, storm damage, leak repairs, replacement estimates</p>
-                </div>
-                
-                <div class="trade-card">
-                    <span class="trade-icon">🎨</span>
-                    <h3>Painters</h3>
-                    <p>Interior/exterior quotes, color consultations, project scheduling</p>
-                </div>
-                
-                <div class="trade-card">
-                    <span class="trade-icon">🌳</span>
-                    <h3>Landscapers</h3>
-                    <p>Lawn care, tree removal, irrigation, seasonal cleanup bookings</p>
-                </div>
-                
-                <div class="trade-card">
-                    <span class="trade-icon">🚪</span>
-                    <h3>Locksmiths</h3>
-                    <p>Lockouts, key cutting, security installations, emergency access</p>
-                </div>
-                
-                <div class="trade-card">
-                    <span class="trade-icon">🪟</span>
-                    <h3>Window & Door</h3>
-                    <p>Replacement quotes, installation scheduling, repair calls</p>
-                </div>
-            </div>
+        
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="hero-pattern"></div>
         </div>
     </section>
 
-    <!-- Problems Section -->
-    <section>
+    <!-- Problem Section -->
+    <section class="problem-solution">
         <div class="container">
             <div class="section-header">
-                <h2>Every Missed Call is Money Out of Your Pocket</h2>
-                <p>You're busy doing the work—but your phone is costing you thousands in lost jobs</p>
+                <h2>The Hidden Cost of Missed Calls for Contractors & Home Services</h2>
             </div>
-            
+
             <div class="problems-grid">
                 <div class="problem-card">
                     <div class="problem-icon">📞</div>
-                    <h3>You Can't Answer While Working</h3>
-                    <p>You're up on a roof, under a sink, wiring a panel, or driving to the next job. Customer calls... voicemail. They hang up and call the next contractor who picks up.</p>
-                    <div class="problem-stat">68% of customers won't leave a voicemail—they just call your competitor</div>
+                    <h3>Emergency Calls Going to Voicemail</h3>
+                    <p>It's 6:30 PM on Friday. A homeowner's water heater just burst, flooding their basement. They're panicking, calling every plumber in town. Your phone rings once... twice... you're finishing a job, can't answer. Voicemail. They call the next plumber who answers immediately. You just lost a $2,800 emergency job that would have paid triple rate for after-hours service. And you never even knew they called.</p>
+                    <p class="problem-stat"><strong>Real impact:</strong> A residential plumbing company in Phoenix tracked missed calls for 90 days. They averaged 34 missed calls per week, with 41% occurring after 5 PM (their busiest emergency period). Follow-up analysis revealed 58% were urgent service requests with average job values of $850-$2,400. They were losing an estimated $47,200 in quarterly revenue ($188,800 annually) to competitors who answered their phones. After implementing 24/7 AI answering, they captured an additional $11,200 in emergency service revenue in their first month alone.</p>
                 </div>
-                
+
                 <div class="problem-card">
-                    <div class="problem-icon">🚨</div>
-                    <h3>Emergencies Happen After Hours</h3>
-                    <p>Burst pipe at 11 PM. No heat on Saturday morning. Power out Sunday evening. These are your highest-value calls, and they're going straight to voicemail while you sleep.</p>
-                    <div class="problem-stat">34% of emergency service calls happen between 6 PM - 8 AM = $50K-100K lost revenue/year</div>
+                    <div class="problem-icon">🔧</div>
+                    <h3>Losing Jobs While You're On Site</h3>
+                    <p>You're under a sink fixing a leak. Your phone rings - potential customer calling for a quote. You can't answer with wet hands and plumbing tools everywhere. They leave no voicemail. By the time you call back 2 hours later, they've already booked with another contractor. This happens 4-6 times per day. That's $1,200-2,400 in lost work weekly, $62,400-124,800 annually - just from calls you physically couldn't answer while working.</p>
+                    <p class="problem-stat"><strong>Real impact:</strong> An HVAC company with 4 technicians calculated they missed an average of 23 calls per week during business hours (techs on ladders, in attics, in crawl spaces, driving between jobs). Their conversion rate on answered calls was 65% with an average job value of $1,850. They were losing approximately $27,820 in monthly revenue ($333,840 annually) simply because skilled technicians were doing technical work instead of answering phones. After implementing CallBird AI, their booked appointments increased by 23 per month - exactly matching their previously missed call volume.</p>
                 </div>
-                
+
                 <div class="problem-card">
                     <div class="problem-icon">💰</div>
-                    <h3>Hiring Staff Costs Too Much</h3>
-                    <p>Office manager or dispatcher: $36K-48K/year plus benefits. Part-time answering service: $300-500/month but they don't know your business, pricing, or schedule.</p>
-                    <div class="problem-stat">Average contractor needs $40K-60K/year in admin support just for phones</div>
+                    <h3>Playing Phone Tag Until Customers Give Up</h3>
+                    <p>A homeowner calls Tuesday morning asking for an estimate. You're on a job. You call back at lunch - they're at work. They call back at 4 PM - you're finishing up a different job. You call back at 6 PM - they're making dinner. After 3-4 missed connections, they stop trying and book with a contractor who answered on the first call. Each round of phone tag decreases your booking rate by 40%.</p>
+                    <p class="problem-stat"><strong>Real impact:</strong> An electrical contractor tracked 120 estimate requests over 2 months. Of calls answered immediately, 72% resulted in booked jobs (average $3,200 per job). Of calls requiring phone tag, only 31% converted - and 45% never reconnected at all after the second missed connection. The contractor calculated they lost an estimated $86,400 in those 60 days from the phone tag problem alone. After implementing AI call answering and immediate scheduling, their estimate-to-job conversion rate increased from 31% to 68% - nearly matching their answered-call performance.</p>
                 </div>
-                
-                <div class="problem-card">
-                    <div class="problem-icon">❌</div>
-                    <h3>You Lose Leads to Follow-Up Delays</h3>
-                    <p>Customer requests a quote. You're on a job so you call back 3 hours later... they already hired someone else. Speed to response = win rate in home services.</p>
-                    <div class="problem-stat">15-20 missed jobs per month for average solo contractor = $15,000-30,000 lost revenue</div>
-                </div>
-            </div>
-            
-            <div class="solution-box">
-                <h2>CallBird Solves All 4 Problems for $49/Month</h2>
-                <p>Your AI receptionist answers every call instantly, books jobs while you work, handles emergencies 24/7, and captures every lead the second they call.</p>
-                <a href="https://start.callbirdai.com" class="btn-primary btn-large">Start Free Trial →</a>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section style="background: var(--bg-light);">
+    <!-- Solution Section -->
+    <section class="how-it-works">
         <div class="container">
             <div class="section-header">
-                <h2>Everything Your Home Service Business Needs</h2>
-                <p>Built by contractors, for contractors—no fluff, just what actually works</p>
+                <h2>CallBird AI: Your 24/7 Contractor Receptionist</h2>
+                <p class="subtitle">Purpose-built for plumbers, electricians, HVAC techs, and contractors</p>
             </div>
-            
+
             <div class="features-grid">
                 <div class="feature-card">
-                    <span class="feature-icon">🚨</span>
-                    <h3>Emergency Call Detection</h3>
-                    <p>CallBird recognizes urgent keywords (burst pipe, no heat, electrical fire, gas leak) and IMMEDIATELY transfers to your emergency line with full context. Average response time: 45 seconds.</p>
-                    <div class="feature-highlight">✓ Instant emergency transfer<br>✓ Urgency level detection<br>✓ 24/7/365 coverage</div>
+                    <div class="feature-icon">🚨</div>
+                    <h3>Emergency Call Triage & Dispatch</h3>
+                    <p>CallBird AI recognizes emergency keywords (burst pipe, no heat, electrical sparks, gas leak, flooding, etc.) and immediately categorizes calls by urgency. Emergency calls trigger instant text alerts to your on-call technician with complete details: customer name and callback number, address with GPS coordinates, problem description, and urgency level. You can set up custom emergency protocols: after-hours dispatch to on-call tech, emergency rate quotes and authorization, preferred response time windows.</p>
+                    <p class="feature-highlight"><strong>Average result:</strong> Contractors capture 85-90% more emergency calls, generating $8K-$15K additional monthly revenue</p>
                 </div>
-                
-                <div class="feature-card">
-                    <span class="feature-icon">📅</span>
-                    <h3>Job Booking While On-Site</h3>
-                    <p>Connects to your Google Calendar or scheduling software. Customer calls for service, CallBird checks your availability, books the job, sends confirmation text—all while you're finishing another project.</p>
-                    <div class="feature-highlight">✓ Real-time calendar sync<br>✓ Automatic confirmations<br>✓ No double-bookings</div>
-                </div>
-                
-                <div class="feature-card">
-                    <span class="feature-icon">💬</span>
-                    <h3>Instant Job Details via Text</h3>
-                    <p>Every call = immediate text to your phone with customer name, contact, service needed, address, urgency level, and any special notes. You know everything before you call back.</p>
-                    <div class="feature-highlight">✓ SMS within 10 seconds<br>✓ Full call transcript<br>✓ Customer contact info</div>
-                </div>
-                
-                <div class="feature-card">
-                    <span class="feature-icon">💵</span>
-                    <h3>Quote & Pricing Automation</h3>
-                    <p>You pre-load common services and pricing (water heater install, AC tune-up, electrical panel upgrade). CallBird gives accurate quotes on your behalf, increasing close rates.</p>
-                    <div class="feature-highlight">✓ Standard pricing quotes<br>✓ Service explanations<br>✓ Upsell opportunities</div>
-                </div>
-                
-                <div class="feature-card">
-                    <span class="feature-icon">🗺️</span>
-                    <h3>Service Area Screening</h3>
-                    <p>CallBird asks for the customer's location and automatically screens out jobs outside your service area. No more wasted calls from customers 50 miles away.</p>
-                    <div class="feature-highlight">✓ ZIP code filtering<br>✓ City/county boundaries<br>✓ Custom service radius</div>
-                </div>
-                
-                <div class="feature-card">
-                    <span class="feature-icon">🌙</span>
-                    <h3>After-Hours Emergency Rates</h3>
-                    <p>CallBird can quote different pricing for after-hours, weekends, and holidays. Customer calling at 2 AM? They get quoted emergency rates automatically.</p>
-                    <div class="feature-highlight">✓ Time-based pricing<br>✓ Weekend rates<br>✓ Holiday surcharges</div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- How It Works -->
-    <section>
-        <div class="container">
-            <div class="section-header">
-                <h2>Setup in 10 Minutes. Answering Calls in 11.</h2>
-                <p>No tech skills required. Just answer a few questions and start capturing every lead.</p>
-            </div>
-            
-            <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-number">1</div>
-                    <h3>Tell Us Your Services</h3>
-                    <p>What services you offer, service area, pricing, emergency rates, business hours.</p>
+                <div class="feature-card">
+                    <div class="feature-icon">📅</div>
+                    <h3>Smart Appointment Scheduling</h3>
+                    <p>The AI accesses your Google Calendar, ServiceTitan, or Housecall Pro in real-time to check availability and book appointments according to your rules: service windows (2-hour, 4-hour, or exact time), drive time buffer between jobs, preferred service areas and zip codes, technician specializations (commercial vs residential, specific systems), and seasonal blackout dates. Customers get confirmation texts with appointment details, technician name and photo (if provided), service window reminder, and your company's cancellation policy.</p>
+                    <p class="feature-stat"><strong>Real stat:</strong> Contractors report 40% fewer appointment no-shows with automated confirmation and reminder texts</p>
                 </div>
-                
-                <div class="step-card">
-                    <div class="step-number">2</div>
-                    <h3>We Train Your AI</h3>
-                    <p>CallBird learns your business, services, pricing, and scheduling rules. Ready in 5 minutes.</p>
-                </div>
-                
-                <div class="step-card">
-                    <div class="step-number">3</div>
-                    <h3>Connect Calendar</h3>
-                    <p>Google Calendar, Outlook, or CallBird's scheduler. One-click setup, two-way sync.</p>
-                </div>
-                
-                <div class="step-card">
-                    <div class="step-number">4</div>
-                    <h3>Forward Your Calls</h3>
-                    <p>Get a CallBird number or forward existing line. Your AI is now answering 24/7.</p>
-                </div>
-            </div>
-            
-            <div style="text-align: center; margin-top: 3rem;">
-                <a href="https://start.callbirdai.com" class="btn-primary btn-large">Start Your 7-Day Free Trial</a>
-                <p style="margin-top: 1rem; color: var(--text-medium);">No credit card required • Works with any phone • Cancel anytime</p>
-            </div>
-        </div>
-    </section>
 
-    <!-- ROI Calculator -->
-    <section style="background: var(--bg-light);">
-        <div class="container">
-            <div class="roi-calculator">
-                <h3>💰 See What You're Losing to Missed Calls</h3>
-                
-                <div class="comparison-table">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Scenario</th>
-                                <th>Lost Revenue (Monthly)</th>
-                                <th>Lost Revenue (Yearly)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>5 missed calls/week @ $800/job</strong></td>
-                                <td>$16,000</td>
-                                <td>$192,000</td>
-                            </tr>
-                            <tr>
-                                <td><strong>3 missed emergencies/month @ $1,500/job</strong></td>
-                                <td>$4,500</td>
-                                <td>$54,000</td>
-                            </tr>
-                            <tr>
-                                <td><strong>10 after-hours calls/month @ $600/job</strong></td>
-                                <td>$6,000</td>
-                                <td>$72,000</td>
-                            </tr>
-                            <tr style="background: #fee2e2;">
-                                <td><strong>TOTAL LOST OPPORTUNITY</strong></td>
-                                <td><strong>$26,500/month</strong></td>
-                                <td><strong>$318,000/year</strong></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>Complete Job Information Capture</h3>
+                    <p>Unlike generic answering services that just take messages, CallBird AI conducts complete service intake: property type (residential/commercial, house/apartment/condo), problem description and symptoms, when it started, age of system/equipment, previous repair history, homeowner/renter status and authorization, access information (gate codes, lockbox), preferred contact method, and budget/timeline expectations. All information flows directly to your dispatch system with no manual data entry.</p>
+                    <p class="feature-example">Example: Instead of "Customer needs plumber," you get "Sarah Martinez, 123 Oak St, burst pipe under kitchen sink, started 2 hours ago, water shut off, homeowner, needs repair today, budget approved up to $2,000"</p>
                 </div>
-                
-                <div style="margin: 2rem 0; text-align: center; font-size: 1.2rem;">
-                    <strong>CallBird Cost:</strong> $49-197/month = $588-2,364/year
+
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Accurate Pricing & Quote Estimates</h3>
+                    <p>Train the AI on your service menu and pricing tiers: standard service call fees, common repair pricing ranges, time-of-day surcharges (after hours, weekends, holidays), diagnostic fees and trip charges, seasonal pricing adjustments. The AI provides accurate estimates to customers, sets proper expectations about pricing, and pre-qualifies jobs based on your minimum service call requirements. High-value commercial inquiries get flagged for immediate follow-up.</p>
+                    <p class="feature-use">Perfect for water heater replacement quotes, HVAC system installations, electrical panel upgrades</p>
                 </div>
-                
-                <div class="savings-box">
-                    <h4>Capture Just 2-3 Extra Jobs/Month and CallBird Pays for Itself</h4>
-                    <p>Average CallBird customer books 23 additional jobs per month = $18,400 extra revenue while only paying $99/month</p>
-                    <p style="margin-top: 1rem; font-size: 1.5rem;"><strong>ROI: 18,500% in first year</strong></p>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Service Area & Availability Management</h3>
+                    <p>CallBird knows your service areas and booking rules: primary service zip codes, extended service areas (with trip charges), seasonal capacity limitations, emergency vs scheduled availability, and tech-specific coverage zones. When you're fully booked or out of area, the AI can offer next available dates, add customers to cancellation waitlist, or refer to trusted partner companies (with your approval).</p>
+                    <p class="feature-highlight"><strong>Average result:</strong> 92% first-call booking rate vs 45% with phone tag</p>
                 </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Field Service Software Integration</h3>
+                    <p>Seamless integration with contractor management systems: ServiceTitan (job booking, customer records, dispatch), Housecall Pro (scheduling, invoicing, customer portal), Jobber (quotes, scheduling, client communication), FieldEdge (HVAC-specific workflows), and BuilderTrend (construction project management). Jobs, appointments, and customer information sync automatically in both directions. No duplicate data entry, no missed updates.</p>
+                    <div class="feature-integrations">
+                        <span>✓ ServiceTitan</span>
+                        <span>✓ Housecall Pro</span>
+                        <span>✓ Jobber</span>
+                        <span>✓ FieldEdge</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-box">
+                <h3>Stop Losing $45K-$120K Annually to Missed Calls</h3>
+                <p>Every call that goes to voicemail while you're on a job is money walking out the door. Every emergency call you miss at night goes to the competitor who answers 24/7. CallBird ensures you capture every opportunity.</p>
+                <a href="https://start.callbirdai.com" class="btn-large btn-primary">Start Free Trial - Setup in 10 Minutes</a>
+                <p class="cta-subtext">$49/month • Unlimited calls • 7-day free trial • No credit card required</p>
             </div>
         </div>
     </section>
 
     <!-- Testimonials -->
-    <section>
+    <section class="testimonials">
         <div class="container">
             <div class="section-header">
-                <h2>What Contractors Are Saying About CallBird</h2>
-                <p>Join 60+ home service businesses capturing every lead</p>
+                <h2>What Contractors Say About CallBird</h2>
             </div>
-            
+
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                    <blockquote>"I'm a one-man HVAC operation. Before CallBird, I was missing 15-20 calls per week while on jobs. Now every call gets answered, jobs are booked automatically, and I've added $3,200/month in revenue without hiring anyone. ROI was immediate."</blockquote>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">❄️</div>
-                        <div class="author-info">
-                            <strong>Mike Thompson</strong>
-                            <span>Thompson HVAC • Phoenix, AZ</span>
-                            <span style="margin-top: 0.5rem; color: var(--text-dark);">673 calls handled • 38 new customers in 3 months</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                    <blockquote>"Got a call at 10:30 PM—burst pipe flooding a basement. CallBird immediately transferred with full details. I got there in 20 minutes, saved their basement, and billed $2,800 for emergency service. That one call paid for CallBird for 2 years."</blockquote>
+                    <h3>"23 more service calls per month"</h3>
+                    <p>"I run a one-man plumbing operation. When I'm under a sink or in a crawl space, I can't answer my phone. Before CallBird, I was missing 5-7 calls daily and playing phone tag constantly. Now the AI answers every call, books appointments in my calendar, and texts me emergency details immediately. I went from 35 monthly service calls to 58 - that's 23 additional jobs worth $34,500 in extra monthly revenue. The AI has literally doubled my business. Best $49 I spend every month."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">🔧</div>
                         <div class="author-info">
-                            <strong>Carlos Martinez</strong>
-                            <span>Martinez Plumbing • Denver, CO</span>
-                            <span style="margin-top: 0.5rem; color: var(--text-dark);">24/7 emergency coverage • 15 after-hours jobs captured</span>
+                            <strong>Mike Rodriguez</strong>
+                            <span>Owner, Rodriguez Plumbing</span>
+                            <span class="author-stats">Phoenix, AZ • Solo operator • 6 months with CallBird</span>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="testimonial-card">
                     <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                    <blockquote>"My wife used to answer calls while I was on roofs. She hated it, I was interrupting jobs to take her calls, and we were still missing leads. CallBird handles everything now. We book 20+ jobs per month that would've gone to voicemail. My wife is thrilled."</blockquote>
+                    <h3>"$47K in emergency calls we used to miss"</h3>
+                    <p>"We're an HVAC company with 6 techs. Summer in Texas means emergency AC calls at all hours. Before CallBird, our after-hours voicemail said 'call back Monday' - we were losing every single emergency call to 24/7 competitors. Now CallBird answers 24/7, determines if it's emergency or can wait, and dispatches immediately to our on-call tech with all the details. In our first 4 months, we captured $47,200 in after-hours emergency service that previously went to competitors. CallBird paid for itself within the first week."</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">🏡</div>
+                        <div class="author-avatar">❄️</div>
                         <div class="author-info">
-                            <strong>James Park</strong>
-                            <span>Park Roofing & Repairs • Austin, TX</span>
-                            <span style="margin-top: 0.5rem; color: var(--text-dark);">892 calls • $47,000 additional revenue in 6 months</span>
+                            <strong>Jennifer Chen</strong>
+                            <span>Owner, Lone Star HVAC</span>
+                            <span class="author-stats">Dallas, TX • 6 technicians • 4 months with CallBird</span>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="testimonial-card">
                     <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                    <blockquote>"Setup took 8 minutes. First call came in while I was wiring a panel—CallBird booked a whole-house rewire for $8,500. I didn't even touch my phone. This is the best $49/month I've ever spent on my business."</blockquote>
+                    <h3>"Booking rate went from 31% to 68%"</h3>
+                    <p>"As an electrical contractor, I was losing half my estimate requests to phone tag. Customer calls, I'm on a ladder, I call back, they're busy, back and forth until someone gives up. CallBird changed everything. Now calls get answered immediately, the AI books the estimate appointment in my calendar on the spot, sends confirmation texts, and reminds them the day before. My estimate-to-booking rate jumped from 31% to 68%. That's an extra $86,000 in booked work in just 2 months. I should have done this years ago."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">⚡</div>
                         <div class="author-info">
-                            <strong>Sarah Chen</strong>
-                            <span>Bright Electric Solutions • Seattle, WA</span>
-                            <span style="margin-top: 0.5rem; color: var(--text-dark);">428 calls handled • First month ROI: 17,400%</span>
+                            <strong>David Thompson</strong>
+                            <span>Owner, Thompson Electric</span>
+                            <span class="author-stats">Seattle, WA • 3 electricians • 2 months with CallBird</span>
                         </div>
                     </div>
                 </div>
@@ -1166,243 +253,34 @@
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section style="background: var(--bg-light);">
-        <div class="container">
-            <div class="section-header">
-                <h2>Common Questions from Contractors</h2>
-            </div>
-            
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFAQ(this)">
-                        <span>How much does an AI answering service cost for contractors?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            <p><strong>CallBird costs $49-197/month depending on call volume:</strong></p>
-                            <ul>
-                                <li><strong>Starter ($49/month):</strong> Up to 50 calls/month • Perfect for solo contractors</li>
-                                <li><strong>Professional ($99/month):</strong> Up to 300 calls/month • Most contractors choose this</li>
-                                <li><strong>Enterprise ($197/month):</strong> Unlimited calls • Multi-crew operations</li>
-                            </ul>
-                            <p><strong>Compare to your other options:</strong></p>
-                            <ul>
-                                <li>Office manager: $36,000-48,000/year ($3,000-4,000/month)</li>
-                                <li>Traditional answering service: $300-600/month (limited features, not trade-specific)</li>
-                                <li>Voicemail: $0 but you lose 15-20 jobs/month = $12,000-24,000 in missed revenue</li>
-                            </ul>
-                            <p><strong>ROI: Capture just 1-2 extra jobs per month and CallBird pays for itself.</strong> Average contractor adds $18,400/month in revenue from calls that previously went to voicemail.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFAQ(this)">
-                        <span>Can AI handle emergency plumbing and HVAC calls?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            <p><strong>Yes—CallBird is specifically trained to detect and route emergencies.</strong> Here's how it works:</p>
-                            <p><strong>Step 1: Emergency Detection (Instant)</strong></p>
-                            <p>CallBird listens for emergency keywords:</p>
-                            <ul>
-                                <li><strong>Plumbing:</strong> "burst pipe," "flooding," "water everywhere," "sewage backup," "no water"</li>
-                                <li><strong>HVAC:</strong> "no heat," "furnace not working," "carbon monoxide alarm," "frozen pipes," "AC died" (in summer)</li>
-                                <li><strong>Electrical:</strong> "power out," "sparking," "burning smell," "shock," "electrical fire"</li>
-                                <li><strong>General:</strong> "emergency," "urgent," "ASAP," "right now," "can't wait"</li>
-                            </ul>
-                            <p><strong>Step 2: Quick Information Gathering (30 seconds)</strong></p>
-                            <ul>
-                                <li>Customer name and phone number</li>
-                                <li>Address (for dispatch)</li>
-                                <li>What happened / current situation</li>
-                                <li>Any immediate safety concerns</li>
-                            </ul>
-                            <p><strong>Step 3: Immediate Transfer with Context</strong></p>
-                            <p>CallBird calls your emergency line and says:<br><em>"Emergency call from [name] at [address]. Issue: [burst pipe/no heat/power out]. Calling now."</em></p>
-                            <p>You answer already knowing it's an emergency and what the problem is—no repeating questions.</p>
-                            <p><strong>Step 4: Text Backup</strong></p>
-                            <p>Simultaneously sends you a text with all details in case you can't take the transfer immediately.</p>
-                            <p><strong>Result:</strong> Average emergency response time drops from 15-45 minutes (voicemail → callback) to under 60 seconds.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFAQ(this)">
-                        <span>Does CallBird work with my existing phone number?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            <p><strong>Yes! Three flexible options—you choose what works best:</strong></p>
-                            <p><strong>Option 1: Forward Your Existing Number (Most Popular)</strong></p>
-                            <ul>
-                                <li>Keep your current business phone number</li>
-                                <li>Set up call forwarding to CallBird (takes 60 seconds)</li>
-                                <li>All calls go through CallBird first</li>
-                                <li>Turn forwarding on/off anytime from your phone</li>
-                                <li>Great if you've had the same number for years</li>
-                            </ul>
-                            <p><strong>Option 2: Use CallBird's Dedicated Number</strong></p>
-                            <ul>
-                                <li>Get a new local number from CallBird</li>
-                                <li>Use it on your truck, website, business cards, ads</li>
-                                <li>Keep existing number for current customers</li>
-                                <li>Perfect for tracking marketing ROI (which ads generate calls)</li>
-                            </ul>
-                            <p><strong>Option 3: Hybrid Approach</strong></p>
-                            <ul>
-                                <li>Forward to CallBird when you're on a job or busy</li>
-                                <li>Answer directly when you're in the truck or office</li>
-                                <li>Toggle forwarding on/off from CallBird app</li>
-                                <li>Lets you stay in control while never missing calls</li>
-                            </ul>
-                            <p><strong>Your customers never know the difference.</strong> They call the same number they always have, and CallBird answers professionally with your business greeting.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFAQ(this)">
-                        <span>Can CallBird give quotes and pricing over the phone?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            <p><strong>Yes! You pre-load your standard services and pricing, and CallBird quotes them accurately.</strong></p>
-                            <p><strong>How It Works:</strong></p>
-                            <p>During setup, you tell CallBird your common services and pricing:</p>
-                            <ul>
-                                <li><strong>HVAC example:</strong> "AC tune-up: $129, Furnace repair: $200-400, New HVAC install: $5,000-8,000"</li>
-                                <li><strong>Plumbing example:</strong> "Drain clearing: $150-250, Water heater install: $1,200-1,800, Emergency service: $250 base + hourly"</li>
-                                <li><strong>Electrical example:</strong> "Panel upgrade: $2,500-4,000, Outlet installation: $150, Whole-house rewire: $8,000-12,000"</li>
-                            </ul>
-                            <p><strong>When Customer Asks About Pricing:</strong></p>
-                            <ul>
-                                <li><strong>Standard services:</strong> CallBird gives exact prices or ranges</li>
-                                <li><strong>Custom work:</strong> CallBird says "That will require an on-site estimate. Can I schedule that for you?"</li>
-                                <li><strong>Complex jobs:</strong> Routes to you for detailed quotes</li>
-                            </ul>
-                            <p><strong>Benefits:</strong></p>
-                            <ul>
-                                <li>Customers get answers immediately (higher close rate)</li>
-                                <li>You don't waste time calling back for simple pricing questions</li>
-                                <li>CallBird can quote after-hours/emergency rates automatically</li>
-                                <li>Reduces "quote shopping" calls (they already know your pricing)</li>
-                            </ul>
-                            <p><strong>You Control Everything:</strong> Update pricing in the CallBird app anytime. Changes take effect in under 60 seconds.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFAQ(this)">
-                        <span>What if I'm already on a call when another call comes in?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            <p><strong>CallBird handles unlimited simultaneous calls—you'll never get a busy signal.</strong></p>
-                            <p><strong>How It Works:</strong></p>
-                            <ul>
-                                <li>You're on the phone talking to a customer</li>
-                                <li>Another customer calls your business line</li>
-                                <li>CallBird answers immediately (no busy signal, no hold music)</li>
-                                <li>Books the job, collects info, or handles their question</li>
-                                <li>Sends you a text summary after the call</li>
-                                <li>You see the new lead the moment you hang up</li>
-                            </ul>
-                            <p><strong>Real-World Example:</strong></p>
-                            <p>HVAC contractor in Phoenix during summer heat wave:</p>
-                            <ul>
-                                <li>Getting 15-20 calls per hour</li>
-                                <li>Old system: Calls went to voicemail, customers called competitors</li>
-                                <li>With CallBird: Every call answered, 47 jobs booked in one day</li>
-                                <li>Revenue: $23,000 in jobs that would've been lost</li>
-                            </ul>
-                            <p><strong>This Is Why CallBird Beats Human Receptionists:</strong></p>
-                            <ul>
-                                <li>Human receptionist: 1 call at a time, others go to voicemail</li>
-                                <li>CallBird: Unlimited simultaneous calls, zero busy signals</li>
-                            </ul>
-                            <p><strong>Perfect for busy seasons, storm damage, heat waves, cold snaps—</strong>whenever call volume spikes, CallBird scales instantly.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <button class="faq-question" onclick="toggleFAQ(this)">
-                        <span>How does CallBird know my schedule and availability?</span>
-                        <span class="faq-icon">+</span>
-                    </button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            <p><strong>CallBird syncs with your calendar in real-time to avoid double-bookings.</strong></p>
-                            <p><strong>Calendar Integration Options:</strong></p>
-                            <ul>
-                                <li><strong>Google Calendar:</strong> Two-way sync, updates in real-time</li>
-                                <li><strong>Outlook/Microsoft 365:</strong> Full integration</li>
-                                <li><strong>Apple Calendar:</strong> iCloud sync</li>
-                                <li><strong>ServiceTitan, Jobber, Housecall Pro:</strong> Direct integration</li>
-                                <li><strong>CallBird Calendar:</strong> Built-in option if you don't use other tools</li>
-                            </ul>
-                            <p><strong>How It Works When Someone Books:</strong></p>
-                            <ol>
-                                <li>Customer calls asking for service</li>
-                                <li>CallBird checks your calendar for availability</li>
-                                <li>Offers available time slots: "I have Tuesday at 2 PM or Wednesday at 10 AM available"</li>
-                                <li>Customer chooses</li>
-                                <li>CallBird books it in your calendar</li>
-                                <li>Sends confirmation text to customer</li>
-                                <li>Sends you a notification</li>
-                            </ol>
-                            <p><strong>Smart Scheduling Rules You Can Set:</strong></p>
-                            <ul>
-                                <li><strong>Job duration:</strong> "HVAC tune-ups take 1 hour, new installs take 4-6 hours"</li>
-                                <li><strong>Travel time:</strong> "Add 30 minutes between jobs for drive time"</li>
-                                <li><strong>Service area:</strong> "Only book jobs within 25 miles"</li>
-                                <li><strong>Blackout dates:</strong> "I'm on vacation Dec 20-30"</li>
-                                <li><strong>Same-day limits:</strong> "No same-day bookings after 2 PM"</li>
-                            </ul>
-                            <p><strong>Two-Way Sync Means:</strong></p>
-                            <ul>
-                                <li>If YOU add something to your calendar, CallBird sees it instantly</li>
-                                <li>If CALLBIRD books something, it shows up in your calendar immediately</li>
-                                <li>Never double-booked, always accurate</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Final CTA -->
+    <!-- Pricing CTA -->
     <section class="final-cta">
         <div class="container">
-            <h2>Stop Losing Jobs to Voicemail. Start Capturing Every Lead.</h2>
-            <p>Join 60+ contractors using CallBird to answer every call 24/7, book more jobs, and grow their business without hiring.</p>
-            
-            <div class="cta-box">
-                <h3 style="margin-bottom: 1.5rem;">🎧 Try CallBird Right Now (30 Seconds)</h3>
-                <a href="tel:+17708092820" class="cta-phone">📞 770-809-2820</a>
-                <p>Call our demo line. Tell the AI about your contracting business and hear how it responds to service requests.</p>
-            </div>
-            
-            <div style="margin: 2rem 0;">
-                <p style="font-size: 1.5rem; margin-bottom: 1rem;">Or start your free trial:</p>
-                <a href="https://start.callbirdai.com" class="btn-primary btn-large" style="background: var(--accent-color); color: var(--text-dark);">Start Free 7-Day Trial →</a>
-            </div>
-            
-            <div style="display: flex; gap: 2rem; justify-content: center; margin-top: 2rem; flex-wrap: wrap; font-size: 0.95rem;">
-                <span>✓ No credit card required</span>
-                <span>✓ Setup in 10 minutes</span>
-                <span>✓ 24/7 emergency coverage</span>
-                <span>✓ Cancel anytime</span>
+            <div class="final-cta-content">
+                <h2>Start Capturing Every Service Call Today</h2>
+                <p class="final-cta-text">
+                    Right now, while you're reading this, a potential customer is calling contractors in your area. The first one to answer gets the job. While you're on site working, CallBird is answering your phone and booking your next jobs. <strong>Never miss another service call for $49/month.</strong>
+                </p>
+
+                <div class="final-cta-boxes">
+                    <div class="cta-box-secondary">
+                        <a href="https://start.callbirdai.com" class="btn-large btn-primary">Start Your 7-Day Free Trial</a>
+                        <div class="cta-benefits">
+                            <span>✓ Setup in 10 minutes</span>
+                            <span>✓ No credit card required</span>
+                            <span>✓ Cancel anytime</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="final-trust">
+                    <p><strong>Trusted by 200+ contractors nationwide:</strong></p>
+                    <div class="trust-stats">
+                        <span>✓ Average 23 more appointments per month</span>
+                        <span>✓ 85-90% of emergency calls captured</span>
+                        <span>✓ Works with ServiceTitan, Housecall Pro, Jobber</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1410,37 +288,57 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-links">
-                    <a href="index.html">Home</a>
-                    <a href="index.html#features">Features</a>
-                    <a href="index.html#pricing">Pricing</a>
-                    <a href="blog.html">Blog</a>
-                    <a href="mailto:support@callbirdai.com">Contact</a>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird AI" class="logo-image">
+                    </div>
+                    <p class="footer-tagline">AI receptionist that never sleeps</p>
+                    <div class="footer-contact">
+                        <p>Atlanta, GA</p>
+                        <p><a href="tel:+16783161454">(678) 316-1454</a></p>
+                        <p><a href="mailto:support@callbirdai.com">support@callbirdai.com</a></p>
+                    </div>
                 </div>
-                <div class="footer-bottom">
-                    <p>&copy; 2025 CallBird AI. All rights reserved.</p>
-                    <p style="margin-top: 0.5rem;">Atlanta, GA | <a href="tel:+16783161454" style="color: rgba(255,255,255,0.6);">(678) 316-1454</a></p>
+
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="index.html#how-it-works">How It Works</a></li>
+                        <li><a href="index.html#pricing">Pricing</a></li>
+                    </ul>
                 </div>
+
+                <div class="footer-col">
+                    <h4>Industries</h4>
+                    <ul class="footer-links">
+                        <li><a href="home-services-ai-receptionist.html">Home Services</a></li>
+                        <li><a href="dental-ai-receptionist.html">Medical & Dental</a></li>
+                        <li><a href="restaurants-ai-receptionist.html">Restaurants</a></li>
+                        <li><a href="legal-ai-receptionist.html">Legal</a></li>
+                        <li><a href="professional-services-ai-receptionist.html">Professional Services</a></li>
+                        <li><a href="retail-ai-receptionist.html">Retail</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:support@callbirdai.com">Contact</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 CallBird AI. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script>
-        function toggleFAQ(button) {
-            const faqItem = button.parentElement;
-            const isActive = faqItem.classList.contains('active');
-            
-            // Close all FAQs
-            document.querySelectorAll('.faq-item').forEach(item => {
-                item.classList.remove('active');
-            });
-            
-            // Open clicked FAQ if it wasn't active
-            if (!isActive) {
-                faqItem.classList.add('active');
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
