@@ -1,5 +1,11 @@
 {
+  "cleanUrls": true,
+  "trailingSlash": false,
   "rewrites": [
+    {
+      "source": "/",
+      "destination": "/index.html"
+    },
     {
       "source": "/blog",
       "destination": "/blog.html"
@@ -7,6 +13,26 @@
     {
       "source": "/blog/ai-receptionist-guide",
       "destination": "/blog-ai-receptionist-guide.html"
+    },
+    {
+      "source": "/privacy",
+      "destination": "/privacy-policy.html"
+    },
+    {
+      "source": "/privacy-policy",
+      "destination": "/privacy-policy.html"
+    },
+    {
+      "source": "/terms",
+      "destination": "/terms-and-conditions.html"
+    },
+    {
+      "source": "/terms-and-conditions",
+      "destination": "/terms-and-conditions.html"
+    },
+    {
+      "source": "/tos",
+      "destination": "/terms-and-conditions.html"
     },
     {
       "source": "/dental",
@@ -53,6 +79,18 @@
       "destination": "/restaurants-ai-receptionist.html"
     },
     {
+      "source": "/hospitality",
+      "destination": "/restaurants-ai-receptionist.html"
+    },
+    {
+      "source": "/cafe",
+      "destination": "/restaurants-ai-receptionist.html"
+    },
+    {
+      "source": "/catering",
+      "destination": "/restaurants-ai-receptionist.html"
+    },
+    {
       "source": "/legal",
       "destination": "/legal-ai-receptionist.html"
     },
@@ -61,11 +99,19 @@
       "destination": "/legal-ai-receptionist.html"
     },
     {
+      "source": "/law-firms",
+      "destination": "/legal-ai-receptionist.html"
+    },
+    {
       "source": "/attorney",
       "destination": "/legal-ai-receptionist.html"
     },
     {
       "source": "/lawyer",
+      "destination": "/legal-ai-receptionist.html"
+    },
+    {
+      "source": "/lawyers",
       "destination": "/legal-ai-receptionist.html"
     },
     {
@@ -81,51 +127,7 @@
       "destination": "/retail-ai-receptionist.html"
     },
     {
-      "source": "/professional-services",
-      "destination": "/professional-services-ai-receptionist.html"
-    },
-    {
-      "source": "/accounting",
-      "destination": "/professional-services-ai-receptionist.html"
-    },
-    {
-      "source": "/consulting",
-      "destination": "/professional-services-ai-receptionist.html"
-    },
-    {
-      "source": "/real-estate",
-      "destination": "/professional-services-ai-receptionist.html"
-    },
-    {
-      "source": "/professional-services",
-      "destination": "/professional-services-ai-receptionist.html"
-    },
-    {
-      "source": "/lawyers",
-      "destination": "/professional-services-ai-receptionist.html"
-    },
-    {
-      "source": "/law-firms",
-      "destination": "/professional-services-ai-receptionist.html"
-    },
-    {
-      "source": "/accountants",
-      "destination": "/professional-services-ai-receptionist.html"
-    },
-    {
-      "source": "/accounting",
-      "destination": "/professional-services-ai-receptionist.html"
-    },
-    {
-      "source": "/consultants",
-      "destination": "/professional-services-ai-receptionist.html"
-    },
-    {
-      "source": "/consulting",
-      "destination": "/professional-services-ai-receptionist.html"
-    },
-    {
-      "source": "/retail",
+      "source": "/boutique",
       "destination": "/retail-ai-receptionist.html"
     },
     {
@@ -137,32 +139,28 @@
       "destination": "/retail-ai-receptionist.html"
     },
     {
-      "source": "/store",
-      "destination": "/retail-ai-receptionist.html"
+      "source": "/professional-services",
+      "destination": "/professional-services-ai-receptionist.html"
     },
     {
-      "source": "/boutique",
-      "destination": "/retail-ai-receptionist.html"
+      "source": "/accounting",
+      "destination": "/professional-services-ai-receptionist.html"
     },
     {
-      "source": "/restaurants",
-      "destination": "/restaurants-ai-receptionist.html"
+      "source": "/accountants",
+      "destination": "/professional-services-ai-receptionist.html"
     },
     {
-      "source": "/restaurant",
-      "destination": "/restaurants-ai-receptionist.html"
+      "source": "/consulting",
+      "destination": "/professional-services-ai-receptionist.html"
     },
     {
-      "source": "/hospitality",
-      "destination": "/restaurants-ai-receptionist.html"
+      "source": "/consultants",
+      "destination": "/professional-services-ai-receptionist.html"
     },
     {
-      "source": "/cafe",
-      "destination": "/restaurants-ai-receptionist.html"
-    },
-    {
-      "source": "/catering",
-      "destination": "/restaurants-ai-receptionist.html"
+      "source": "/real-estate",
+      "destination": "/professional-services-ai-receptionist.html"
     },
     {
       "source": "/veterinary",
@@ -196,6 +194,10 @@
         {
           "key": "X-XSS-Protection",
           "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
         }
       ]
     }
