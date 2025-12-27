@@ -211,18 +211,6 @@
       "destination": "/veterinary-ai-receptionist.html"
     }
   ],
-  "redirects": [
-    {
-      "source": "/start",
-      "destination": "https://callbirdai.com/start",
-      "permanent": false
-    },
-    {
-      "source": "/start/:path*",
-      "destination": "https://callbirdai.com/start",
-      "permanent": false
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
