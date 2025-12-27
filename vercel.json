@@ -35,6 +35,38 @@
       "destination": "/terms-and-conditions.html"
     },
     {
+      "source": "/start",
+      "destination": "/start.html"
+    },
+    {
+      "source": "/trial",
+      "destination": "/start.html"
+    },
+    {
+      "source": "/signup",
+      "destination": "/start.html"
+    },
+    {
+      "source": "/free-trial",
+      "destination": "/start.html"
+    },
+    {
+      "source": "/get-started",
+      "destination": "/start.html"
+    },
+    {
+      "source": "/confirmation",
+      "destination": "/signup-confirmation.html"
+    },
+    {
+      "source": "/thank-you",
+      "destination": "/signup-confirmation.html"
+    },
+    {
+      "source": "/welcome",
+      "destination": "/signup-confirmation.html"
+    },
+    {
       "source": "/dental",
       "destination": "/dental-ai-receptionist.html"
     },
@@ -177,6 +209,18 @@
     {
       "source": "/animal-hospital",
       "destination": "/veterinary-ai-receptionist.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "https://start.callbirdai.com",
+      "destination": "https://callbirdai.com/start",
+      "permanent": false
+    },
+    {
+      "source": "https://start.callbirdai.com/:path*",
+      "destination": "https://callbirdai.com/start",
+      "permanent": false
     }
   ],
   "headers": [
