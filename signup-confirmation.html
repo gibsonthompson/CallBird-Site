@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-M9WVK3WD');</script>
+    <!-- End Google Tag Manager -->
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to CallBird AI! Check your email for next steps to set up your AI receptionist.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://i.imgur.com/qwyQQW5.png">
+    <link rel="apple-touch-icon" href="https://i.imgur.com/qwyQQW5.png">
+    <link rel="shortcut icon" href="https://i.imgur.com/qwyQQW5.png">
+    <meta name="theme-color" content="#122092">
+    
+    <title>Welcome to CallBird AI - Check Your Email</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Confirmation-specific styles */
+        .confirmation-hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6rem 0;
+            background: linear-gradient(135deg, #f9f9f7 0%, #ffffff 100%);
+        }
+        
+        .confirmation-content {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .success-icon {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0d1666 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            animation: scaleIn 0.6s ease-out;
+            box-shadow: 0 20px 40px rgba(18, 32, 146, 0.3);
+        }
+        
+        .success-icon svg {
+            width: 60px;
+            height: 60px;
+            stroke: white;
+            stroke-width: 3;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            animation: checkmark 0.8s ease-out 0.3s both;
+        }
+        
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes checkmark {
+            0% {
+                stroke-dasharray: 0, 100;
+            }
+            100% {
+                stroke-dasharray: 100, 0;
+            }
+        }
+        
+        .confirmation-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.6s ease-out 0.4s both;
+        }
+        
+        .confirmation-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-medium);
+            margin-bottom: 3rem;
+            animation: fadeInUp 0.6s ease-out 0.5s both;
+        }
+        
+        .email-notice {
+            background: rgba(18, 32, 146, 0.1);
+            border: 2px solid var(--primary-color);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin-bottom: 3rem;
+            animation: fadeInUp 0.6s ease-out 0.6s both;
+        }
+        
+        .email-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .email-notice h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .email-notice p {
+            color: var(--text-medium);
+            font-size: 1rem;
+        }
+        
+        .next-steps {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            box-shadow: var(--shadow-lg);
+            margin-bottom: 3rem;
+            animation: fadeInUp 0.6s ease-out 0.7s both;
+        }
+        
+        .next-steps h3 {
+            color: var(--text-dark);
+            margin-bottom: 2rem;
+            font-size: 1.75rem;
+        }
+        
+        .steps-timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            text-align: left;
+        }
+        
+        .timeline-step {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+        
+        .step-badge {
+            width: 48px;
+            height: 48px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+            font-family: var(--font-primary);
+        }
+        
+        .step-content h4 {
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+            font-size: 1.125rem;
+        }
+        
+        .step-content p {
+            color: var(--text-medium);
+            margin-bottom: 0;
+        }
+        
+        .step-time {
+            display: inline-block;
+            background: rgba(18, 32, 146, 0.1);
+            color: var(--primary-color);
+            padding: 0.25rem 0.75rem;
+            border-radius: var(--radius-full);
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+        
+        .cta-section {
+            animation: fadeInUp 0.6s ease-out 0.8s both;
+        }
+        
+        .cta-divider {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 2rem 0;
+            color: var(--text-light);
+            font-size: 0.875rem;
+        }
+        
+        .cta-divider::before,
+        .cta-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border-color);
+        }
+        
+        .help-box {
+            background: var(--bg-light);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .help-box h4 {
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+        
+        .help-box p {
+            color: var(--text-medium);
+            margin-bottom: 1rem;
+        }
+        
+        .contact-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .contact-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: white;
+            border: 2px solid var(--border-color);
+            border-radius: var(--radius-full);
+            color: var(--text-dark);
+            font-weight: 600;
+            transition: all var(--transition-base);
+        }
+        
+        .contact-link:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        @media (max-width: 768px) {
+            .confirmation-hero {
+                min-height: auto;
+                padding: 4rem 0;
+            }
+            
+            .success-icon {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .success-icon svg {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .confirmation-title {
+                font-size: 1.75rem;
+            }
+            
+            .confirmation-subtitle {
+                font-size: 1.125rem;
+            }
+            
+            .email-notice,
+            .next-steps {
+                padding: 1.5rem;
+            }
+            
+            .steps-timeline {
+                gap: 1.5rem;
+            }
+            
+            .timeline-step {
+                gap: 1rem;
+            }
+            
+            .contact-links {
+                flex-direction: column;
+            }
+            
+            .contact-link {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9WVK3WD"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird" class="logo-image">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html#features">Features</a></li>
+                    <li><a href="index.html#how-it-works">How It Works</a></li>
+                    <li><a href="index.html#pricing">Pricing</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="index.html#faq">FAQ</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="tel:+16783161454" class="btn-ghost">Call Us</a>
+                    <a href="https://start.callbirdai.com" class="btn-primary">Dashboard Login</a>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Confirmation Hero Section -->
+    <section class="confirmation-hero">
+        <div class="container">
+            <div class="confirmation-content">
+                <!-- Success Icon with Checkmark -->
+                <div class="success-icon">
+                    <svg viewBox="0 0 52 52">
+                        <polyline points="14 27 22 35 38 19" />
+                    </svg>
+                </div>
+
+                <h1 class="confirmation-title">You're All Set! 🎉</h1>
+                <p class="confirmation-subtitle">Welcome to CallBird AI. Your AI receptionist is being prepared right now.</p>
+
+                <!-- Email Notice -->
+                <div class="email-notice">
+                    <div class="email-icon">📧</div>
+                    <h3>Check Your Email Inbox</h3>
+                    <p>We just sent you a welcome email with:</p>
+                    <p style="margin-top: 0.5rem;">
+                        ✓ Your account login details<br>
+                        ✓ Setup instructions (takes 10 minutes)<br>
+                        ✓ Your dedicated CallBird phone number
+                    </p>
+                    <p style="font-size: 0.875rem; color: var(--text-light); margin-top: 1rem; margin-bottom: 0;">
+                        <strong>Didn't receive it?</strong> Check your spam folder or contact us below.
+                    </p>
+                </div>
+
+                <!-- Next Steps -->
+                <div class="next-steps">
+                    <h3>What Happens Next</h3>
+                    <div class="steps-timeline">
+                        <div class="timeline-step">
+                            <div class="step-badge">1</div>
+                            <div class="step-content">
+                                <h4>Check Your Email (Right Now)</h4>
+                                <p>Click the link in your welcome email to activate your account and access your CallBird dashboard.</p>
+                                <span class="step-time">⏱️ 30 seconds</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-step">
+                            <div class="step-badge">2</div>
+                            <div class="step-content">
+                                <h4>Complete Your Business Profile</h4>
+                                <p>Tell us about your business, services, and hours. We'll use this to train your AI receptionist.</p>
+                                <span class="step-time">⏱️ 5 minutes</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-step">
+                            <div class="step-badge">3</div>
+                            <div class="step-content">
+                                <h4>Get Your Phone Number & Forward Calls</h4>
+                                <p>We'll assign you a dedicated CallBird number, or you can forward your existing business line to us.</p>
+                                <span class="step-time">⏱️ 2 minutes</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-step">
+                            <div class="step-badge">4</div>
+                            <div class="step-content">
+                                <h4>Start Answering Calls with AI</h4>
+                                <p>That's it! Your AI receptionist is live and ready to handle every customer call, 24/7.</p>
+                                <span class="step-time">⏱️ You're done!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CTA Section -->
+                <div class="cta-section">
+                    <a href="https://start.callbirdai.com" class="btn-large btn-primary">Go to Your Dashboard →</a>
+                    
+                    <div class="cta-divider">or</div>
+                    
+                    <p style="color: var(--text-medium); margin-bottom: 1rem;">Want to hear CallBird in action first?</p>
+                    <a href="tel:+17708092820" class="btn-large btn-secondary">📞 Call Our Demo: 770-809-2820</a>
+                    <p style="font-size: 0.875rem; color: var(--text-light); margin-top: 0.5rem;">Tell our AI your business name and it'll answer like it's been your receptionist for years.</p>
+                </div>
+
+                <!-- Help Box -->
+                <div class="help-box">
+                    <h4>Need Help Getting Started?</h4>
+                    <p>Our team is here to help you set up CallBird in under 10 minutes.</p>
+                    <div class="contact-links">
+                        <a href="tel:+16783161454" class="contact-link">
+                            📞 Call: (678) 316-1454
+                        </a>
+                        <a href="mailto:support@callbirdai.com" class="contact-link">
+                            ✉️ Email Support
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird" class="logo-image">
+                    </div>
+                    <p class="footer-tagline">AI receptionist that never sleeps</p>
+                    <div class="footer-contact">
+                        <p>Atlanta, GA</p>
+                        <p><a href="tel:+16783161454">(678) 316-1454</a></p>
+                        <p><a href="mailto:support@callbirdai.com">support@callbirdai.com</a></p>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="index.html#how-it-works">How It Works</a></li>
+                        <li><a href="index.html#pricing">Pricing</a></li>
+                        <li><a href="index.html#faq">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Industries</h4>
+                    <ul class="footer-links">
+                        <li><a href="home-services-ai-receptionist.html">Home Services</a></li>
+                        <li><a href="dental-ai-receptionist.html">Medical & Dental</a></li>
+                        <li><a href="restaurants-ai-receptionist.html">Restaurants</a></li>
+                        <li><a href="legal-ai-receptionist.html">Legal</a></li>
+                        <li><a href="professional-services-ai-receptionist.html">Professional Services</a></li>
+                        <li><a href="retail-ai-receptionist.html">Retail</a></li>
+                        <li><a href="veterinary-ai-receptionist.html">Veterinary</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:support@callbirdai.com">Contact</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 CallBird AI. All Rights Reserved.</p>
+                <p>A2P 10DLC Compliant • SOC 2 Type II Certified</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GTM Conversion Event -->
+    <script>
+        // Fire signup conversion event
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            'event': 'signup_completed',
+            'conversion_type': 'signup'
+        });
+    </script>
+</body>
+</html>
