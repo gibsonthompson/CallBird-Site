@@ -213,12 +213,12 @@
   ],
   "redirects": [
     {
-      "source": "https://start.callbirdai.com",
+      "source": "/start",
       "destination": "https://callbirdai.com/start",
       "permanent": false
     },
     {
-      "source": "https://start.callbirdai.com/:path*",
+      "source": "/start/:path*",
       "destination": "https://callbirdai.com/start",
       "permanent": false
     }
