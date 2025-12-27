@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-M9WVK3WD');</script>
+    <!-- End Google Tag Manager -->
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Start your 7-day free trial with CallBird AI. Setup your AI receptionist in under 10 minutes.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://i.imgur.com/qwyQQW5.png">
+    <link rel="apple-touch-icon" href="https://i.imgur.com/qwyQQW5.png">
+    <link rel="shortcut icon" href="https://i.imgur.com/qwyQQW5.png">
+    <meta name="theme-color" content="#122092">
+    
+    <title>Start Your Free Trial - CallBird AI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Start page specific styles */
+        .start-hero {
+            padding: 8rem 0 4rem;
+            margin-top: 4rem;
+            background: linear-gradient(135deg, #f9f9f7 0%, #ffffff 100%);
+            overflow-x: hidden;
+        }
+        
+        .start-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .start-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        .start-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(18, 32, 146, 0.1);
+            border-radius: var(--radius-full);
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+        
+        .start-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            word-wrap: break-word;
+        }
+        
+        .start-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-medium);
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .start-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+        
+        .form-container {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            box-shadow: var(--shadow-xl);
+            animation: fadeInUp 0.6s ease-out 0.2s both;
+        }
+        
+        .form-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .form-header h2 {
+            font-size: 1.75rem;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+        
+        .form-header p {
+            color: var(--text-medium);
+            font-size: 0.9375rem;
+        }
+        
+        .ghl-form-wrapper {
+            width: 100%;
+            min-height: 500px;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+        }
+        
+        .ghl-form-wrapper iframe {
+            width: 100%;
+            min-height: 500px;
+            border: none;
+            display: block;
+        }
+        
+        .benefits-section {
+            animation: fadeInUp 0.6s ease-out 0.3s both;
+        }
+        
+        .benefits-header {
+            margin-bottom: 2rem;
+        }
+        
+        .benefits-header h3 {
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+        
+        .benefits-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .benefit-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+            padding: 1.5rem;
+            background: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-base);
+        }
+        
+        .benefit-item:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .benefit-icon {
+            font-size: 2.5rem;
+            flex-shrink: 0;
+        }
+        
+        .benefit-content h4 {
+            color: var(--text-dark);
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .benefit-content p {
+            color: var(--text-medium);
+            font-size: 0.9375rem;
+            margin-bottom: 0;
+        }
+        
+        .trust-badges {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            margin-top: 2rem;
+        }
+        
+        .trust-badges h4 {
+            text-align: center;
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+            font-size: 1.125rem;
+        }
+        
+        .badges-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            text-align: center;
+        }
+        
+        .badge-item {
+            padding: 1rem 0.5rem;
+            border-radius: var(--radius-md);
+            background: var(--bg-light);
+        }
+        
+        .badge-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .badge-label {
+            font-size: 0.8125rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        
+        .help-link {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .help-link p {
+            color: var(--text-medium);
+            margin-bottom: 0.75rem;
+        }
+        
+        .help-link a {
+            color: var(--primary-color);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all var(--transition-base);
+        }
+        
+        .help-link a:hover {
+            gap: 0.75rem;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Mobile Optimization */
+        @media (max-width: 968px) {
+            .start-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .benefits-section {
+                order: -1;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .start-hero {
+                padding: 5rem 0 3rem;
+                margin-top: 3.5rem;
+            }
+            
+            .start-header {
+                margin-bottom: 2rem;
+            }
+            
+            .start-title {
+                font-size: 1.75rem;
+            }
+            
+            .start-subtitle {
+                font-size: 1rem;
+                margin-bottom: 1.5rem;
+            }
+            
+            .start-grid {
+                gap: 2rem;
+            }
+            
+            .form-container {
+                padding: 1.5rem;
+            }
+            
+            .form-header h2 {
+                font-size: 1.5rem;
+            }
+            
+            .ghl-form-wrapper,
+            .ghl-form-wrapper iframe {
+                min-height: 600px;
+            }
+            
+            .benefits-list {
+                gap: 1rem;
+            }
+            
+            .benefit-item {
+                padding: 1.25rem;
+            }
+            
+            .benefit-icon {
+                font-size: 2rem;
+            }
+            
+            .benefit-content h4 {
+                font-size: 1rem;
+            }
+            
+            .benefit-content p {
+                font-size: 0.875rem;
+            }
+            
+            .badges-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 0.75rem;
+            }
+            
+            .badge-item {
+                padding: 0.75rem 0.5rem;
+            }
+            
+            .badge-icon {
+                font-size: 1.5rem;
+            }
+            
+            .badge-label {
+                font-size: 0.75rem;
+            }
+            
+            .trust-badges {
+                padding: 1.5rem;
+                margin-top: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .start-hero {
+                padding: 4rem 0 2rem;
+            }
+            
+            .start-title {
+                font-size: 1.5rem;
+            }
+            
+            .start-subtitle {
+                font-size: 0.9375rem;
+            }
+            
+            .form-container {
+                padding: 1.25rem;
+            }
+            
+            .form-header h2 {
+                font-size: 1.25rem;
+            }
+            
+            .badges-grid {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
+            
+            .badge-item {
+                display: flex;
+                align-items: center;
+                gap: 0.75rem;
+                padding: 0.75rem 1rem;
+                text-align: left;
+            }
+            
+            .badge-icon {
+                margin-bottom: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9WVK3WD"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird" class="logo-image">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html#features">Features</a></li>
+                    <li><a href="index.html#how-it-works">How It Works</a></li>
+                    <li><a href="index.html#pricing">Pricing</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="index.html#faq">FAQ</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <a href="tel:+16783161454" class="btn-ghost">Call Us</a>
+                    <a href="index.html" class="btn-secondary">← Back to Home</a>
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Start Hero Section -->
+    <section class="start-hero">
+        <div class="container">
+            <div class="start-content">
+                <!-- Header -->
+                <div class="start-header">
+                    <div class="start-badge">
+                        <span class="badge-dot"></span>
+                        <span>7-Day Free Trial • No Credit Card Required</span>
+                    </div>
+                    <h1 class="start-title">Start Your Free Trial</h1>
+                    <p class="start-subtitle">Your AI receptionist will be ready to answer calls in under 10 minutes. Fill out the form below to get started.</p>
+                </div>
+
+                <!-- Grid Layout -->
+                <div class="start-grid">
+                    <!-- Form Column -->
+                    <div class="form-container">
+                        <div class="form-header">
+                            <h2>Create Your Account</h2>
+                            <p>Setup takes less than 2 minutes</p>
+                        </div>
+
+                        <!-- GoHighLevel Form Embed -->
+                        <div class="ghl-form-wrapper">
+                            <iframe 
+                                src="https://api.leadconnectorhq.com/widget/form/peg0BnnZPXhlOOcCH4jN?notrack=true" 
+                                scrolling="yes"
+                                id="inline-peg0BnnZPXhlOOcCH4jN" 
+                                data-layout="{'id':'INLINE'}"
+                                data-trigger-type="alwaysShow"
+                                data-trigger-value=""
+                                data-activation-type="alwaysActivated"
+                                data-activation-value=""
+                                data-deactivation-type="neverDeactivate"
+                                data-deactivation-value=""
+                                data-form-name="CallBird AI Signup"
+                                data-height="539"
+                                data-layout-iframe-id="inline-peg0BnnZPXhlOOcCH4jN"
+                                data-form-id="peg0BnnZPXhlOOcCH4jN"
+                                title="CallBird AI Signup Form"
+                            >
+                            </iframe>
+                        </div>
+
+                        <!-- Help Link -->
+                        <div class="help-link">
+                            <p>Need help getting started?</p>
+                            <a href="tel:+16783161454">📞 Call us at (678) 316-1454 →</a>
+                        </div>
+                    </div>
+
+                    <!-- Benefits Column -->
+                    <div class="benefits-section">
+                        <div class="benefits-header">
+                            <h3>What You'll Get:</h3>
+                        </div>
+
+                        <div class="benefits-list">
+                            <div class="benefit-item">
+                                <div class="benefit-icon">⚡</div>
+                                <div class="benefit-content">
+                                    <h4>10-Minute Setup</h4>
+                                    <p>Your AI receptionist is ready to answer calls in under 10 minutes. No technical skills required.</p>
+                                </div>
+                            </div>
+
+                            <div class="benefit-item">
+                                <div class="benefit-icon">📞</div>
+                                <div class="benefit-content">
+                                    <h4>Dedicated Phone Number</h4>
+                                    <p>Get your own CallBird number, or forward your existing business line. Your choice.</p>
+                                </div>
+                            </div>
+
+                            <div class="benefit-item">
+                                <div class="benefit-icon">🤖</div>
+                                <div class="benefit-content">
+                                    <h4>Custom AI Training</h4>
+                                    <p>We train your AI on your business, services, and FAQs. It knows your business inside and out.</p>
+                                </div>
+                            </div>
+
+                            <div class="benefit-item">
+                                <div class="benefit-icon">📱</div>
+                                <div class="benefit-content">
+                                    <h4>Mobile App Access</h4>
+                                    <p>Manage calls, view transcripts, and listen to recordings from your phone—anywhere, anytime.</p>
+                                </div>
+                            </div>
+
+                            <div class="benefit-item">
+                                <div class="benefit-icon">💬</div>
+                                <div class="benefit-content">
+                                    <h4>Instant Text Summaries</h4>
+                                    <p>Get a text summary of every call the moment it ends. Know who called and what they need.</p>
+                                </div>
+                            </div>
+
+                            <div class="benefit-item">
+                                <div class="benefit-icon">📅</div>
+                                <div class="benefit-content">
+                                    <h4>Calendar Integration</h4>
+                                    <p>Automatically books appointments in your Google Calendar, Outlook, or our built-in system.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Trust Badges -->
+                        <div class="trust-badges">
+                            <h4>Trusted by 200+ Businesses</h4>
+                            <div class="badges-grid">
+                                <div class="badge-item">
+                                    <div class="badge-icon">✓</div>
+                                    <div class="badge-label">No Credit Card</div>
+                                </div>
+                                <div class="badge-item">
+                                    <div class="badge-icon">✓</div>
+                                    <div class="badge-label">7-Day Trial</div>
+                                </div>
+                                <div class="badge-item">
+                                    <div class="badge-icon">✓</div>
+                                    <div class="badge-label">Cancel Anytime</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird" class="logo-image">
+                    </div>
+                    <p class="footer-tagline">AI receptionist that never sleeps</p>
+                    <div class="footer-contact">
+                        <p>Atlanta, GA</p>
+                        <p><a href="tel:+16783161454">(678) 316-1454</a></p>
+                        <p><a href="mailto:support@callbirdai.com">support@callbirdai.com</a></p>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#features">Features</a></li>
+                        <li><a href="index.html#how-it-works">How It Works</a></li>
+                        <li><a href="index.html#pricing">Pricing</a></li>
+                        <li><a href="index.html#faq">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Industries</h4>
+                    <ul class="footer-links">
+                        <li><a href="home-services-ai-receptionist.html">Home Services</a></li>
+                        <li><a href="dental-ai-receptionist.html">Medical & Dental</a></li>
+                        <li><a href="restaurants-ai-receptionist.html">Restaurants</a></li>
+                        <li><a href="legal-ai-receptionist.html">Legal</a></li>
+                        <li><a href="professional-services-ai-receptionist.html">Professional Services</a></li>
+                        <li><a href="retail-ai-receptionist.html">Retail</a></li>
+                        <li><a href="veterinary-ai-receptionist.html">Veterinary</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:support@callbirdai.com">Contact</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 CallBird AI. All Rights Reserved.</p>
+                <p>A2P 10DLC Compliant • SOC 2 Type II Certified</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GTM Event Tracking -->
+    <script>
+        // Track page view
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            'event': 'signup_page_view',
+            'page_type': 'signup'
+        });
+
+        // Auto-resize iframe based on content
+        window.addEventListener('message', function(e) {
+            if (e.data.hasOwnProperty("frameHeight")) {
+                document.getElementById("inline-peg0BnnZPXhlOOcCH4jN").style.height = e.data.frameHeight + "px";
+            }
+        });
+    </script>
+
+    <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+</body>
+</html>
