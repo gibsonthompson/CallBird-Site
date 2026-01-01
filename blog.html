@@ -59,20 +59,20 @@
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--border-color);
-            padding: 1.25rem 0;
+            padding: 1rem 0;
         }
         
         .nav-content {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 1.5rem;
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
         
         .logo-image {
-            height: 60px;
+            height: 50px;
             width: auto;
         }
         
@@ -87,10 +87,17 @@
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s;
+            font-size: 0.95rem;
         }
         
         .nav-links a:hover {
             color: var(--primary-color);
+        }
+        
+        .nav-actions {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
         }
         
         .btn-primary {
@@ -101,39 +108,60 @@
             text-decoration: none;
             font-weight: 600;
             transition: background 0.3s;
+            white-space: nowrap;
+            font-size: 0.95rem;
         }
         
         .btn-primary:hover {
             background: var(--primary-hover);
         }
         
+        /* Mobile Menu Toggle */
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 0.25rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        
+        .mobile-menu-toggle span {
+            width: 24px;
+            height: 2px;
+            background: var(--text-dark);
+            transition: all 0.3s;
+        }
+        
         /* Hero Section */
         .blog-hero {
             background: linear-gradient(135deg, var(--primary-color) 0%, #1a2fb8 100%);
             color: white;
-            padding: 8rem 2rem 4rem;
+            padding: 7rem 1.5rem 3rem;
             text-align: center;
         }
         
         .blog-hero h1 {
             font-family: var(--font-primary);
-            font-size: 3rem;
+            font-size: clamp(2rem, 5vw, 3rem);
             font-weight: 800;
             margin-bottom: 1rem;
         }
         
         .blog-hero p {
-            font-size: 1.25rem;
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
             opacity: 0.95;
             max-width: 600px;
             margin: 0 auto;
+            line-height: 1.6;
         }
         
         /* Blog Container */
         .blog-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 4rem 2rem;
+            padding: 3rem 1.5rem;
         }
         
         /* Featured Post */
@@ -142,7 +170,7 @@
             border-radius: 1rem;
             overflow: hidden;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 0;
@@ -156,10 +184,14 @@
             padding: 3rem;
             color: white;
             font-size: 4rem;
+            min-height: 300px;
         }
         
         .featured-content {
-            padding: 2.5rem;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
         
         .featured-badge {
@@ -171,25 +203,29 @@
             font-size: 0.85rem;
             font-weight: 700;
             margin-bottom: 1rem;
+            align-self: flex-start;
         }
         
         .featured-content h2 {
             font-family: var(--font-primary);
-            font-size: 2rem;
+            font-size: clamp(1.5rem, 3vw, 2rem);
             font-weight: 700;
             margin-bottom: 1rem;
             color: var(--text-dark);
+            line-height: 1.3;
         }
         
         .featured-content p {
             color: var(--text-medium);
             margin-bottom: 1.5rem;
-            font-size: 1.05rem;
+            font-size: clamp(0.95rem, 2vw, 1.05rem);
+            line-height: 1.6;
         }
         
         .featured-meta {
             display: flex;
-            gap: 1.5rem;
+            gap: 1rem;
+            flex-wrap: wrap;
             color: var(--text-light);
             font-size: 0.9rem;
             margin-bottom: 1.5rem;
@@ -211,7 +247,7 @@
         /* Posts Grid */
         .section-title {
             font-family: var(--font-primary);
-            font-size: 2rem;
+            font-size: clamp(1.5rem, 3vw, 2rem);
             font-weight: 700;
             margin-bottom: 2rem;
             color: var(--text-dark);
@@ -219,9 +255,9 @@
         
         .posts-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 2rem;
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
         }
         
         .post-card {
@@ -232,7 +268,9 @@
             transition: all 0.3s;
             cursor: pointer;
             text-decoration: none;
-            display: block;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
         
         .post-card:hover {
@@ -242,16 +280,20 @@
         
         .post-image {
             background: linear-gradient(135deg, var(--bg-light) 0%, #e8e8e6 100%);
-            height: 200px;
+            height: 180px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 3rem;
             color: var(--text-medium);
+            flex-shrink: 0;
         }
         
         .post-content {
             padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
         
         .post-category {
@@ -263,50 +305,57 @@
             font-size: 0.8rem;
             font-weight: 600;
             margin-bottom: 0.75rem;
+            align-self: flex-start;
         }
         
         .post-title {
             font-family: var(--font-primary);
-            font-size: 1.25rem;
+            font-size: 1.15rem;
             font-weight: 700;
             margin-bottom: 0.75rem;
             color: var(--text-dark);
+            line-height: 1.4;
         }
         
         .post-excerpt {
             color: var(--text-medium);
             font-size: 0.95rem;
-            margin-bottom: 1rem;
+            margin-bottom: auto;
             line-height: 1.6;
+            padding-bottom: 1rem;
         }
         
         .post-meta {
             display: flex;
-            gap: 1rem;
+            gap: 0.75rem;
+            flex-wrap: wrap;
             color: var(--text-light);
             font-size: 0.85rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid var(--border-color);
         }
         
         /* Newsletter CTA */
         .newsletter-cta {
             background: linear-gradient(135deg, var(--primary-color) 0%, #1a2fb8 100%);
             color: white;
-            padding: 3rem;
+            padding: 2.5rem 2rem;
             border-radius: 1rem;
             text-align: center;
-            margin-top: 4rem;
+            margin-top: 3rem;
         }
         
         .newsletter-cta h3 {
             font-family: var(--font-primary);
-            font-size: 2rem;
+            font-size: clamp(1.5rem, 3vw, 2rem);
             margin-bottom: 1rem;
         }
         
         .newsletter-cta p {
-            font-size: 1.1rem;
+            font-size: clamp(1rem, 2vw, 1.1rem);
             margin-bottom: 2rem;
             opacity: 0.95;
+            line-height: 1.6;
         }
         
         .newsletter-form {
@@ -314,6 +363,7 @@
             gap: 1rem;
             max-width: 500px;
             margin: 0 auto;
+            flex-direction: column;
         }
         
         .newsletter-form input {
@@ -343,8 +393,8 @@
         .footer {
             background: var(--text-dark);
             color: white;
-            padding: 3rem 2rem 2rem;
-            margin-top: 4rem;
+            padding: 2.5rem 1.5rem 2rem;
+            margin-top: 3rem;
         }
         
         .footer-content {
@@ -355,7 +405,7 @@
         
         .footer-links {
             display: flex;
-            gap: 2rem;
+            gap: 1.5rem;
             justify-content: center;
             margin-bottom: 2rem;
             flex-wrap: wrap;
@@ -365,6 +415,7 @@
             color: rgba(255, 255, 255, 0.8);
             text-decoration: none;
             transition: color 0.3s;
+            font-size: 0.95rem;
         }
         
         .footer-links a:hover {
@@ -372,40 +423,122 @@
         }
         
         .footer-bottom {
-            padding-top: 2rem;
+            padding-top: 1.5rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: rgba(255, 255, 255, 0.6);
             font-size: 0.9rem;
         }
         
         /* Mobile Responsive */
-        @media (max-width: 768px) {
+        @media (max-width: 968px) {
             .nav-links {
                 display: none;
             }
             
+            .mobile-menu-toggle {
+                display: flex;
+            }
+            
             .logo-image {
-                height: 50px;
+                height: 45px;
+            }
+            
+            .btn-primary {
+                padding: 0.65rem 1.25rem;
+                font-size: 0.9rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 0.75rem 0;
+            }
+            
+            .nav-content {
+                padding: 0 1rem;
+            }
+            
+            .logo-image {
+                height: 40px;
             }
             
             .blog-hero {
-                padding: 6rem 1.5rem 3rem;
+                padding: 6rem 1rem 2.5rem;
             }
             
-            .blog-hero h1 {
-                font-size: 2rem;
+            .blog-container {
+                padding: 2rem 1rem;
             }
             
             .featured-post {
                 grid-template-columns: 1fr;
             }
             
+            .featured-image {
+                min-height: 200px;
+                font-size: 3rem;
+                padding: 2rem;
+            }
+            
+            .featured-content {
+                padding: 1.5rem;
+            }
+            
             .posts-grid {
                 grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .post-image {
+                height: 160px;
+                font-size: 2.5rem;
+            }
+            
+            .newsletter-cta {
+                padding: 2rem 1.5rem;
             }
             
             .newsletter-form {
-                flex-direction: column;
+                gap: 0.75rem;
+            }
+            
+            .footer-links {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+        }
+        
+        @media (min-width: 769px) {
+            .newsletter-form {
+                flex-direction: row;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .logo-image {
+                height: 35px;
+            }
+            
+            .btn-primary {
+                padding: 0.6rem 1rem;
+                font-size: 0.85rem;
+            }
+            
+            .featured-badge {
+                font-size: 0.75rem;
+                padding: 0.4rem 0.8rem;
+            }
+            
+            .post-title {
+                font-size: 1.05rem;
+            }
+            
+            .post-excerpt {
+                font-size: 0.9rem;
+            }
+            
+            .post-meta {
+                font-size: 0.8rem;
             }
         }
     </style>
@@ -428,7 +561,14 @@
                 <li><a href="index.html#industries">Industries</a></li>
                 <li><a href="blog.html">Blog</a></li>
             </ul>
-            <a href="/start" class="btn-primary">Start Free Trial</a>
+            <div class="nav-actions">
+                <a href="/start" class="btn-primary">Start Free Trial</a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -442,24 +582,84 @@
     <div class="blog-container">
         <!-- Featured Post -->
         <div class="featured-post">
-            <div class="featured-image">🏆</div>
+            <div class="featured-image">💰</div>
             <div class="featured-content">
                 <span class="featured-badge">⭐ FEATURED</span>
-                <h2>Best AI Receptionist 2026: Compare Top 6 Solutions</h2>
-                <p>Complete comparison guide: CallBird, Smith.ai, Ruby, Dialzara, Abby Connect & more. Pricing analysis, feature breakdown, ROI calculations. Find your perfect AI receptionist match based on real testing and data.</p>
+                <h2>How Much Money Do Contractors Lose From Missed Calls?</h2>
+                <p>Real data on the $45K-$120K contractors lose annually from unanswered calls. See revenue loss by trade, calculate your own missed call cost, and learn the solution.</p>
                 <div class="featured-meta">
-                    <span>📅 December 26, 2025</span>
+                    <span>📅 January 1, 2026</span>
                     <span>•</span>
-                    <span>16 min read</span>
+                    <span>12 min read</span>
                 </div>
-                <a href="blog-ai-receptionist-comparison-2025.html" class="read-more">Read Complete Guide →</a>
+                <a href="blog-contractor-missed-calls-cost.html" class="read-more">Read Complete Analysis →</a>
             </div>
         </div>
 
         <!-- Latest Posts -->
         <h2 class="section-title">Latest Articles</h2>
         <div class="posts-grid">
-            <!-- Post 1 - NEW Multi-Competitor Comparison -->
+            <!-- Post 1 - NEW: Contractor Missed Calls Cost -->
+            <a href="blog-contractor-missed-calls-cost.html" class="post-card">
+                <div class="post-image">💰</div>
+                <div class="post-content">
+                    <span class="post-category">Industry Research</span>
+                    <h3 class="post-title">How Much Money Do Contractors Lose From Missed Calls? [2026 Data]</h3>
+                    <p class="post-excerpt">Contractors lose $45K-$120K annually from missed calls. See real data on revenue loss by trade, what each missed call costs, and calculate your own loss.</p>
+                    <div class="post-meta">
+                        <span>📅 Jan 1, 2026</span>
+                        <span>•</span>
+                        <span>12 min read</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Post 2 - NEW: After-Hours Answering Guide -->
+            <a href="blog-after-hours-answering-contractors.html" class="post-card">
+                <div class="post-image">🌙</div>
+                <div class="post-content">
+                    <span class="post-category">How-To Guide</span>
+                    <h3 class="post-title">After-Hours Call Answering for Contractors: Complete 2026 Guide</h3>
+                    <p class="post-excerpt">Complete guide to 24/7 call answering for contractors. Compare solutions, set up emergency triage, and capture high-value after-hours calls. Implementation included.</p>
+                    <div class="post-meta">
+                        <span>📅 Jan 1, 2026</span>
+                        <span>•</span>
+                        <span>15 min read</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Post 3 - NEW: Emergency Call Handling -->
+            <a href="blog-emergency-calls-contractors.html" class="post-card">
+                <div class="post-image">🚨</div>
+                <div class="post-content">
+                    <span class="post-category">Emergency Response</span>
+                    <h3 class="post-title">Never Miss Emergency Calls: How Contractors Capture After-Hours Jobs</h3>
+                    <p class="post-excerpt">Emergency calls are worth 2-3x normal rates, yet contractors miss 88%. Learn the 3-tier triage system, emergency keywords, and technology to capture every call.</p>
+                    <div class="post-meta">
+                        <span>📅 Jan 1, 2026</span>
+                        <span>•</span>
+                        <span>13 min read</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Post 4 - Contractors Best AI Receptionist -->
+            <a href="blog-contractors-ai-receptionist.html" class="post-card">
+                <div class="post-image">🔧</div>
+                <div class="post-content">
+                    <span class="post-category">Comparison Guide</span>
+                    <h3 class="post-title">Best AI Receptionist for Contractors & Home Services [2025 Guide]</h3>
+                    <p class="post-excerpt">Compare the top 5 AI receptionists for contractors. Emergency call handling, appointment booking, and ServiceTitan integration. See real contractor results.</p>
+                    <div class="post-meta">
+                        <span>📅 Dec 25, 2025</span>
+                        <span>•</span>
+                        <span>14 min read</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Post 5 - Multi-Competitor Comparison -->
             <a href="blog-ai-receptionist-comparison-2025.html" class="post-card">
                 <div class="post-image">🏆</div>
                 <div class="post-content">
@@ -474,7 +674,7 @@
                 </div>
             </a>
 
-            <!-- Post 2 - CallBird vs Ruby -->
+            <!-- Post 6 - CallBird vs Ruby -->
             <a href="blog-callbird-vs-ruby-receptionists.html" class="post-card">
                 <div class="post-image">⚖️</div>
                 <div class="post-content">
@@ -489,7 +689,7 @@
                 </div>
             </a>
 
-            <!-- Post 3 - Complete Guide -->
+            <!-- Post 7 - Complete Guide -->
             <a href="blog-ai-receptionist-guide.html" class="post-card">
                 <div class="post-image">📘</div>
                 <div class="post-content">
@@ -504,22 +704,7 @@
                 </div>
             </a>
 
-            <!-- Post 4 - Contractors Guide -->
-            <a href="blog-best-ai-receptionist-contractors.html" class="post-card">
-                <div class="post-image">🔧</div>
-                <div class="post-content">
-                    <span class="post-category">Industry Guide</span>
-                    <h3 class="post-title">Best AI Receptionist for Contractors & Home Services [2025]</h3>
-                    <p class="post-excerpt">Complete guide for contractors, plumbers, HVAC, and electricians. Emergency call handling, appointment booking, and ServiceTitan integration. Never miss another call.</p>
-                    <div class="post-meta">
-                        <span>📅 Dec 25, 2025</span>
-                        <span>•</span>
-                        <span>14 min read</span>
-                    </div>
-                </div>
-            </a>
-
-            <!-- Post 5 - Dental Guide -->
+            <!-- Post 8 - Dental Guide -->
             <a href="blog-best-ai-receptionist-dentists.html" class="post-card">
                 <div class="post-image">🦷</div>
                 <div class="post-content">
@@ -534,9 +719,9 @@
                 </div>
             </a>
 
-            <!-- Post 6 - Pricing Guide -->
+            <!-- Post 9 - Pricing Guide -->
             <a href="blog-ai-receptionist-cost-pricing-guide.html" class="post-card">
-                <div class="post-image">💰</div>
+                <div class="post-image">💵</div>
                 <div class="post-content">
                     <span class="post-category">Pricing Guide</span>
                     <h3 class="post-title">AI Receptionist Cost: Complete 2025 Pricing Guide</h3>
@@ -549,7 +734,7 @@
                 </div>
             </a>
 
-            <!-- Post 7 - Smith.ai Comparison -->
+            <!-- Post 10 - Smith.ai Comparison -->
             <a href="blog-callbird-vs-smith-ai.html" class="post-card">
                 <div class="post-image">📊</div>
                 <div class="post-content">
@@ -564,7 +749,7 @@
                 </div>
             </a>
 
-            <!-- Post 8 - Lawyers Guide -->
+            <!-- Post 11 - Lawyers Guide -->
             <a href="blog-best-ai-receptionist-lawyers.html" class="post-card">
                 <div class="post-image">⚖️</div>
                 <div class="post-content">
@@ -575,21 +760,6 @@
                         <span>📅 Dec 25, 2025</span>
                         <span>•</span>
                         <span>14 min read</span>
-                    </div>
-                </div>
-            </a>
-
-            <!-- Post 9 - Contractors Missed Calls Problem -->
-            <a href="blog-contractors-lose-money-missed-calls.html" class="post-card">
-                <div class="post-image">📞</div>
-                <div class="post-content">
-                    <span class="post-category">Problem/Solution</span>
-                    <h3 class="post-title">How Contractors Lose $45K-$120K Per Year to Missed Calls</h3>
-                    <p class="post-excerpt">The hidden cost of missed calls for contractors. Real numbers, real examples, and the simple solution to capture every opportunity.</p>
-                    <div class="post-meta">
-                        <span>📅 Dec 25, 2025</span>
-                        <span>•</span>
-                        <span>10 min read</span>
                     </div>
                 </div>
             </a>
@@ -615,9 +785,13 @@
                 <a href="index.html#pricing">Pricing</a>
                 <a href="index.html#industries">Industries</a>
                 <a href="blog.html">Blog</a>
-                <a href="/cdn-cgi/l/email-protection#3b484e4b4b54494f7b585a57575952495f5a5215585456">Contact</a>
+                <a href="mailto:support@callbirdai.com">Contact</a>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 CallBird AI. All rights reserved.</p>
+                <p>&copy; 2026 CallBird AI. All rights reserved.</p>
                 <p style="margin-top: 0.5rem;">Atlanta, GA | <a href="tel:+16783161454" style="color: rgba(255,255,255,0.6);">(678) 316-1454</a></p>
             </div>
+        </div>
+    </footer>
+</body>
+</html>
