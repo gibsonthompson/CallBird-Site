@@ -161,7 +161,7 @@
     <section class="legal-hero">
         <div class="container">
             <h1>Privacy Policy</h1>
-            <p class="legal-meta"><strong>Last Updated:</strong> December 25, 2024</p>
+            <p class="legal-meta"><strong>Last Updated:</strong> January 9, 2026</p>
             <p class="legal-intro">Your privacy is important to us. This policy explains how we collect, use, and protect your information.</p>
         </div>
     </section>
@@ -201,7 +201,7 @@
                         <li>Greeting messages and prompts</li>
                         <li>Appointment scheduling preferences</li>
                         <li>Custom instructions for the AI receptionist</li>
-                        <li>Integration settings</li>
+                        <li>Integration settings (including Google Calendar connection)</li>
                     </ul>
                 </div>
 
@@ -243,6 +243,23 @@
 
                 <h3>2.4 Information from Third Parties</h3>
                 <p>We may receive information from payment processors (transaction confirmation), SMS delivery services (delivery status), analytics providers (usage patterns), and API services that power our voice AI technology.</p>
+
+                <h3>2.5 Google Calendar Data</h3>
+                <div class="legal-highlight">
+                    <p>If you choose to connect your Google Calendar to CallBird AI, we collect and process:</p>
+                    <ul>
+                        <li>Calendar event data (event times, durations) to check your availability</li>
+                        <li>Calendar ID to identify which calendar to use for bookings</li>
+                        <li>OAuth tokens to maintain your authorized connection</li>
+                    </ul>
+                    <p style="margin-top: 1rem;"><strong>We do NOT access:</strong></p>
+                    <ul>
+                        <li>Event titles, descriptions, or attendee details of your existing events</li>
+                        <li>Your Google account password</li>
+                        <li>Any other Google services or data beyond Calendar</li>
+                        <li>Calendars you have not explicitly authorized</li>
+                    </ul>
+                </div>
             </div>
 
             <!-- Section 3 -->
@@ -256,6 +273,7 @@
                     <li>Transcribe and analyze call content</li>
                     <li>Send SMS notifications about calls and messages</li>
                     <li>Schedule appointments for your business</li>
+                    <li>Check calendar availability and create appointments (when Google Calendar is connected)</li>
                     <li>Provide call analytics and insights</li>
                     <li>Manage your account and subscription</li>
                     <li>Process payments and billing</li>
@@ -339,6 +357,10 @@
                     <p><strong>Database and Hosting Providers:</strong> Account information, call data and transcripts, usage analytics</p>
                 </div>
 
+                <div class="legal-info">
+                    <p><strong>Google (Calendar Integration):</strong> When you connect your Google Calendar, we interact with Google's API to read calendar availability (busy/free times only) and create new appointment events on your behalf. We do not share your Google Calendar data with any other third parties.</p>
+                </div>
+
                 <h3>5.2 Business Transfers</h3>
                 <p>If CallBird AI or Rocket Solutions LLC is involved in a merger, acquisition, or sale of assets, your information may be transferred. We will provide notice before your information becomes subject to a different privacy policy.</p>
 
@@ -365,6 +387,7 @@
                     <li>Regular security assessments</li>
                     <li>Employee training on data protection</li>
                     <li>Restricted access to personal information</li>
+                    <li>Secure storage of OAuth tokens for third-party integrations</li>
                 </ul>
 
                 <h3>6.2 No Guarantee</h3>
@@ -393,6 +416,13 @@
                     <li>Transaction records: 7 years (for tax and accounting purposes)</li>
                     <li>Payment methods: Stored by Stripe, subject to their retention policies</li>
                 </ul>
+
+                <h3>7.4 Google Calendar Data</h3>
+                <ul>
+                    <li>OAuth tokens: Retained while your Google Calendar integration is active</li>
+                    <li>Appointment data created through our Service: Retained in our database according to section 7.1</li>
+                    <li>Upon disconnecting Google Calendar, we immediately stop accessing your calendar and delete stored OAuth tokens</li>
+                </ul>
             </div>
 
             <!-- Section 8 -->
@@ -411,7 +441,23 @@
                 <h3>8.4 Objection and Restriction</h3>
                 <p>You can object to certain uses of your information, request restriction of processing in certain circumstances, and opt out of marketing communications.</p>
 
-                <h3>8.5 Exercising Your Rights</h3>
+                <h3>8.5 Revoking Google Calendar Access</h3>
+                <div class="legal-highlight">
+                    <p>You can disconnect your Google Calendar integration at any time:</p>
+                    <ul>
+                        <li>Through your CallBird AI dashboard Settings page</li>
+                        <li>Through your Google Account permissions at <a href="https://myaccount.google.com/permissions" target="_blank">myaccount.google.com/permissions</a></li>
+                    </ul>
+                    <p style="margin-top: 1rem;">Upon disconnection:</p>
+                    <ul>
+                        <li>We immediately stop accessing your Google Calendar</li>
+                        <li>Your OAuth tokens are deleted from our systems</li>
+                        <li>Appointments previously created remain on your calendar (you can delete them manually)</li>
+                        <li>Appointment records in our database are retained per our standard retention policy</li>
+                    </ul>
+                </div>
+
+                <h3>8.6 Exercising Your Rights</h3>
                 <p>To exercise these rights, use account settings for direct access, contact us through our website, or email us at <a href="mailto:support@callbirdai.com">support@callbirdai.com</a>. We will respond to requests within 30 days.</p>
             </div>
 
@@ -442,7 +488,7 @@
                 <p>We process personal information based on:</p>
                 <ul>
                     <li><strong>Contract:</strong> To provide the Service you requested</li>
-                    <li><strong>Consent:</strong> For marketing communications and certain data processing</li>
+                    <li><strong>Consent:</strong> For marketing communications, Google Calendar integration, and certain data processing</li>
                     <li><strong>Legitimate Interests:</strong> For service improvement and security</li>
                     <li><strong>Legal Obligation:</strong> To comply with applicable laws</li>
                 </ul>
@@ -567,7 +613,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2025 CallBird AI by Rocket Solutions LLC. All Rights Reserved.</p>
+                <p>&copy; 2026 CallBird AI by Rocket Solutions LLC. All Rights Reserved.</p>
                 <p>A2P 10DLC Compliant • SOC 2 Type II Certified</p>
             </div>
         </div>
