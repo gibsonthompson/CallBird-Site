@@ -1,237 +1,55 @@
 {
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "rewrites": [
-    {
-      "source": "/",
-      "destination": "/index.html"
-    },
-    {
-      "source": "/blog",
-      "destination": "/blog.html"
-    },
-    {
-      "source": "/blog/ai-receptionist-guide",
-      "destination": "/blog-ai-receptionist-guide.html"
-    },
-    {
-      "source": "/privacy",
-      "destination": "/privacy-policy.html"
-    },
-    {
-      "source": "/privacy-policy",
-      "destination": "/privacy-policy.html"
-    },
-    {
-      "source": "/terms",
-      "destination": "/terms-and-conditions.html"
-    },
-    {
-      "source": "/terms-and-conditions",
-      "destination": "/terms-and-conditions.html"
-    },
-    {
-      "source": "/tos",
-      "destination": "/terms-and-conditions.html"
-    },
-    {
-      "source": "/start",
-      "destination": "/start.html"
-    },
-    {
-      "source": "/trial",
-      "destination": "/start.html"
-    },
-    {
-      "source": "/signup",
-      "destination": "/start.html"
-    },
-    {
-      "source": "/free-trial",
-      "destination": "/start.html"
-    },
-    {
-      "source": "/get-started",
-      "destination": "/start.html"
-    },
-    {
-      "source": "/confirmation",
-      "destination": "/signup-confirmation.html"
-    },
-    {
-      "source": "/thank-you",
-      "destination": "/signup-confirmation.html"
-    },
-    {
-      "source": "/welcome",
-      "destination": "/signup-confirmation.html"
-    },
-    {
-      "source": "/dental",
-      "destination": "/dental-ai-receptionist.html"
-    },
-    {
-      "source": "/dentist",
-      "destination": "/dental-ai-receptionist.html"
-    },
-    {
-      "source": "/dentists",
-      "destination": "/dental-ai-receptionist.html"
-    },
-    {
-      "source": "/contractors",
-      "destination": "/home-services-ai-receptionist.html"
-    },
-    {
-      "source": "/home-services",
-      "destination": "/home-services-ai-receptionist.html"
-    },
-    {
-      "source": "/hvac",
-      "destination": "/home-services-ai-receptionist.html"
-    },
-    {
-      "source": "/plumbing",
-      "destination": "/home-services-ai-receptionist.html"
-    },
-    {
-      "source": "/electrician",
-      "destination": "/home-services-ai-receptionist.html"
-    },
-    {
-      "source": "/restaurants",
-      "destination": "/restaurants-ai-receptionist.html"
-    },
-    {
-      "source": "/restaurant",
-      "destination": "/restaurants-ai-receptionist.html"
-    },
-    {
-      "source": "/food-service",
-      "destination": "/restaurants-ai-receptionist.html"
-    },
-    {
-      "source": "/hospitality",
-      "destination": "/restaurants-ai-receptionist.html"
-    },
-    {
-      "source": "/cafe",
-      "destination": "/restaurants-ai-receptionist.html"
-    },
-    {
-      "source": "/catering",
-      "destination": "/restaurants-ai-receptionist.html"
-    },
-    {
-      "source": "/legal",
-      "destination": "/legal-ai-receptionist.html"
-    },
-    {
-      "source": "/law-firm",
-      "destination": "/legal-ai-receptionist.html"
-    },
-    {
-      "source": "/law-firms",
-      "destination": "/legal-ai-receptionist.html"
-    },
-    {
-      "source": "/attorney",
-      "destination": "/legal-ai-receptionist.html"
-    },
-    {
-      "source": "/lawyer",
-      "destination": "/legal-ai-receptionist.html"
-    },
-    {
-      "source": "/lawyers",
-      "destination": "/legal-ai-receptionist.html"
-    },
-    {
-      "source": "/retail",
-      "destination": "/retail-ai-receptionist.html"
-    },
-    {
-      "source": "/store",
-      "destination": "/retail-ai-receptionist.html"
-    },
-    {
-      "source": "/shop",
-      "destination": "/retail-ai-receptionist.html"
-    },
-    {
-      "source": "/boutique",
-      "destination": "/retail-ai-receptionist.html"
-    },
-    {
-      "source": "/ecommerce",
-      "destination": "/retail-ai-receptionist.html"
-    },
-    {
-      "source": "/e-commerce",
-      "destination": "/retail-ai-receptionist.html"
-    },
-    {
-      "source": "/professional-services",
-      "destination": "/professional-services-ai-receptionist.html"
-    },
-    {
-      "source": "/accounting",
-      "destination": "/professional-services-ai-receptionist.html"
-    },
-    {
-      "source": "/accountants",
-      "destination": "/professional-services-ai-receptionist.html"
-    },
-    {
-      "source": "/consulting",
-      "destination": "/professional-services-ai-receptionist.html"
-    },
-    {
-      "source": "/consultants",
-      "destination": "/professional-services-ai-receptionist.html"
-    },
-    {
-      "source": "/real-estate",
-      "destination": "/professional-services-ai-receptionist.html"
-    },
-    {
-      "source": "/veterinary",
-      "destination": "/veterinary-ai-receptionist.html"
-    },
-    {
-      "source": "/vet",
-      "destination": "/veterinary-ai-receptionist.html"
-    },
-    {
-      "source": "/vets",
-      "destination": "/veterinary-ai-receptionist.html"
-    },
-    {
-      "source": "/animal-hospital",
-      "destination": "/veterinary-ai-receptionist.html"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "X-Frame-Options",
-          "value": "DENY"
-        },
-        {
-          "key": "X-XSS-Protection",
-          "value": "1; mode=block"
-        },
-        {
-          "key": "Referrer-Policy",
-          "value": "strict-origin-when-cross-origin"
-        }
-      ]
-    }
+  "redirects": [
+    
+    { "source": "/aiansweringforvets", "destination": "/blog-best-ai-receptionist-veterinarians.html", "permanent": true },
+    { "source": "/veterinary", "destination": "/blog-best-ai-receptionist-veterinarians.html", "permanent": true },
+    { "source": "/aiansweringfordentists", "destination": "/blog-best-ai-receptionist-dentists.html", "permanent": true },
+    { "source": "/dental", "destination": "/blog-best-ai-receptionist-dentists.html", "permanent": true },
+    { "source": "/aiansweringforlawfirms", "destination": "/blog-best-ai-receptionist-lawyers.html", "permanent": true },
+    { "source": "/aiansweringformedical", "destination": "/blog-best-ai-receptionist-dentists.html", "permanent": true },
+    { "source": "/aiansweringindustries", "destination": "/index.html#industries", "permanent": true },
+    { "source": "/home-services", "destination": "/blog-contractors-ai-receptionist.html", "permanent": true },
+
+    
+    { "source": "/post/ai-answering-service-complete-guide-2025", "destination": "/blog-ai-receptionist-guide.html", "permanent": true },
+    { "source": "/post/ai-answering-service-veterinary-clinics-2025-guide", "destination": "/blog-best-ai-receptionist-veterinarians.html", "permanent": true },
+    { "source": "/post/blogai-answering-service-cost-roi-analysis-2025", "destination": "/blog-ai-receptionist-cost-pricing-guide.html", "permanent": true },
+    { "source": "/blog/ai-receptionist-guide", "destination": "/blog-ai-receptionist-guide.html", "permanent": true },
+    { "source": "/blog/category/cost-analysis-roi/", "destination": "/blog.html", "permanent": true },
+    { "source": "/post", "destination": "/blog.html", "permanent": true },
+
+    
+    { "source": "/pricing", "destination": "/index.html#pricing", "permanent": true },
+    { "source": "/ai-phone-answering-price", "destination": "/index.html#pricing", "permanent": true },
+    
+    
+    { "source": "/home", "destination": "/", "permanent": true },
+    { "source": "/home-135746", "destination": "/", "permanent": true },
+
+    
+    { "source": "/contact", "destination": "/", "permanent": true },
+    { "source": "/contact-us", "destination": "/", "permanent": true },
+    { "source": "/contact-635696", "destination": "/", "permanent": true },
+
+    
+    { "source": "/booking-page", "destination": "/start", "permanent": true },
+    { "source": "/thank-you-365311", "destination": "/", "permanent": true },
+
+    
+    { "source": "/privacy", "destination": "/", "permanent": true },
+    { "source": "/bio", "destination": "/", "permanent": true },
+    { "source": "/link-in-bio", "destination": "/", "permanent": true },
+    { "source": "/sitemap", "destination": "/", "permanent": true },
+    { "source": "/automation", "destination": "/", "permanent": true },
+
+    
+    { "source": "/virtualaisolutions", "destination": "/blog.html", "permanent": true },
+    { "source": "/virtualaisolutions/:path*", "destination": "/blog.html", "permanent": true },
+    { "source": "/categories/:path*", "destination": "/blog.html", "permanent": true },
+
+    
+    { "source": "/www.callbirdai.com", "destination": "/", "permanent": true },
+    { "source": "/cdn-cgi/:path*", "destination": "/", "permanent": true },
+    { "source": "/undefined", "destination": "/", "permanent": true }
   ]
 }
