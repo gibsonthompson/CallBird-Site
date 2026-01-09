@@ -354,8 +354,15 @@ a:hover {
 }
 
 .demo-icon {
-    font-size: 4rem;
     flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.demo-icon svg {
+    width: 4rem;
+    height: 4rem;
 }
 
 .demo-content {
@@ -522,7 +529,14 @@ a:hover {
 }
 
 .audio-icon {
-    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.audio-icon svg {
+    width: 2.5rem;
+    height: 2.5rem;
 }
 
 .audio-info h3 {
@@ -629,10 +643,15 @@ a:hover {
 }
 
 .stat-icon {
-    font-size: 3rem;
     margin-bottom: 0.5rem;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.stat-icon svg {
+    width: 2.5rem;
+    height: 2.5rem;
 }
 
 .stat-number {
@@ -677,10 +696,15 @@ a:hover {
 }
 
 .problem-icon {
-    font-size: 3rem;
     margin-bottom: 1rem;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.problem-icon svg {
+    width: 3rem;
+    height: 3rem;
 }
 
 .problem-card h3 {
@@ -778,10 +802,18 @@ a:hover {
 }
 
 .step-icon {
-    font-size: 4rem;
+    width: 100%;
     margin: 1rem 0;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.step-icon svg {
+    width: 3rem;
+    height: 3rem;
+    display: block;
+    margin: 0 auto;
 }
 
 .step-card h3 {
@@ -956,10 +988,15 @@ a:hover {
 }
 
 .benefit-icon {
-    font-size: 3rem;
     margin-bottom: 1rem;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.benefit-icon svg {
+    width: 3rem;
+    height: 3rem;
 }
 
 .benefit-item h3 {
@@ -1064,10 +1101,15 @@ a:hover {
 }
 
 .feature-icon {
-    font-size: 3rem;
     margin-bottom: 1rem;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.feature-icon svg {
+    width: 3rem;
+    height: 3rem;
 }
 
 .feature-card h3 {
@@ -1154,10 +1196,15 @@ a:hover {
 }
 
 .industry-icon {
-    font-size: 3.5rem;
     margin-bottom: 1rem;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.industry-icon svg {
+    width: 3.5rem;
+    height: 3.5rem;
 }
 
 .industry-card h3 {
@@ -1789,10 +1836,15 @@ a:hover {
 }
 
 .popup-icon {
-    font-size: 4rem;
     margin-bottom: 1rem;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.popup-icon svg {
+    width: 4rem;
+    height: 4rem;
 }
 
 .popup-content h3 {
