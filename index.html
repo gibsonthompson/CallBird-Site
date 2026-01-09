@@ -24,6 +24,65 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* SVG Icon Styles */
+        .icon-svg {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 1.2em;
+            height: 1.2em;
+            vertical-align: middle;
+        }
+        .icon-svg svg {
+            width: 100%;
+            height: 100%;
+        }
+        .icon-lg {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+        .icon-xl {
+            width: 3rem;
+            height: 3rem;
+        }
+        .icon-xxl {
+            width: 4rem;
+            height: 4rem;
+        }
+        
+        /* Icon containers for cards */
+        .demo-icon, .audio-icon, .stat-icon, .problem-icon, .step-icon, 
+        .benefit-icon, .feature-icon, .industry-icon, .popup-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .demo-icon svg, .audio-icon svg, .stat-icon svg, .problem-icon svg, 
+        .step-icon svg, .benefit-icon svg, .feature-icon svg, .industry-icon svg,
+        .popup-icon svg {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+        .feature-icon svg, .industry-icon svg {
+            width: 3rem;
+            height: 3rem;
+        }
+        .author-avatar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 3rem;
+            height: 3rem;
+            background: var(--bg-light, #f5f7fa);
+            border-radius: 50%;
+        }
+        .author-avatar svg {
+            width: 1.75rem;
+            height: 1.75rem;
+        }
+    </style>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -68,7 +127,8 @@
                 </div>
                 
                 <h1 class="hero-title">
-                    Run Your Business. We'll Answer Your Calls.
+                    <span style="display: block;">Run Your Business.</span>
+                    <span style="display: block;">We'll Answer Your Calls.</span>
                     <span class="subtitle">AI Receptionist • $49/Month</span>
                 </h1>
                 
@@ -79,15 +139,32 @@
                 <!-- Interactive Demo CTA -->
                 <div class="demo-cta">
                     <div class="demo-box">
-                        <div class="demo-icon">🎧</div>
+                        <div class="demo-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+                                <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+                            </svg>
+                        </div>
                         <div class="demo-content">
                             <h3>EXPERIENCE IT LIVE:</h3>
-                            <a href="tel:+17708092820" class="demo-phone">📞 Call: 770-809-2820</a>
+                            <a href="tel:+17708092820" class="demo-phone">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 1.25rem; height: 1.25rem; margin-right: 0.5rem; vertical-align: middle;">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                                Call: 770-809-2820
+                            </a>
                             <p class="demo-instructions">
                                 Tell our AI your business, and it'll answer your test call like it's been your receptionist for years.
                                 Try it in 30 seconds.
                             </p>
-                            <button class="btn-secondary" onclick="showAudioSamples()">🔊 Or Listen to Sample Calls Below</button>
+                            <button class="btn-secondary" onclick="showAudioSamples()">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 1.25rem; height: 1.25rem; margin-right: 0.5rem; vertical-align: middle;">
+                                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                                    <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+                                </svg>
+                                Or Listen to Sample Calls Below
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -126,7 +203,11 @@
                 <!-- Audio Player 1 -->
                 <div class="audio-card">
                     <div class="audio-header">
-                        <div class="audio-icon">🔧</div>
+                        <div class="audio-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                            </svg>
+                        </div>
                         <div class="audio-info">
                             <h3>Emergency Plumbing Call</h3>
                             <span class="audio-time">0:52 • 6:42 PM</span>
@@ -156,7 +237,13 @@
                 <!-- Audio Player 2 -->
                 <div class="audio-card">
                     <div class="audio-header">
-                        <div class="audio-icon">🦷</div>
+                        <div class="audio-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2a7 7 0 0 0-7 7c0 1.5.5 3.5 2 5l5 5 5-5c1.5-1.5 2-3.5 2-5a7 7 0 0 0-7-7z"></path>
+                                <path d="M12 9v0"></path>
+                                <circle cx="12" cy="9" r="1" fill="#122092"></circle>
+                            </svg>
+                        </div>
                         <div class="audio-info">
                             <h3>Dental Appointment Booking</h3>
                             <span class="audio-time">1:08 • 2:34 PM</span>
@@ -186,7 +273,15 @@
                 <!-- Audio Player 3 -->
                 <div class="audio-card">
                     <div class="audio-header">
-                        <div class="audio-icon">🍕</div>
+                        <div class="audio-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                                <line x1="6" y1="1" x2="6" y2="4"></line>
+                                <line x1="10" y1="1" x2="10" y2="4"></line>
+                                <line x1="14" y1="1" x2="14" y2="4"></line>
+                            </svg>
+                        </div>
                         <div class="audio-info">
                             <h3>Restaurant Menu Inquiry</h3>
                             <span class="audio-time">0:41 • 7:14 PM</span>
@@ -217,22 +312,42 @@
             <!-- Live Stats -->
             <div class="live-stats">
                 <div class="stat-item">
-                    <div class="stat-icon">⚡</div>
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                        </svg>
+                    </div>
                     <div class="stat-number">10 min</div>
                     <div class="stat-label">Setup Time</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-icon">⏱️</div>
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
                     <div class="stat-number">1.2 sec</div>
                     <div class="stat-label">Avg Response Time</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-icon">📅</div>
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                    </div>
                     <div class="stat-number" data-count="200">200+</div>
                     <div class="stat-label">Businesses Served</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-icon">😊</div>
+                    <div class="stat-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path>
+                        </svg>
+                    </div>
                     <div class="stat-number">96%</div>
                     <div class="stat-label">Customer Satisfaction</div>
                 </div>
@@ -249,17 +364,35 @@
 
             <div class="problems-grid">
                 <div class="problem-card">
-                    <div class="problem-icon">❌</div>
+                    <div class="problem-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="15" y1="9" x2="9" y2="15"></line>
+                            <line x1="9" y1="9" x2="15" y2="15"></line>
+                        </svg>
+                    </div>
                     <h3>62% of Business Calls Go Unanswered</h3>
                     <p>"You're on a job, with a customer, or driving. The call goes to voicemail."</p>
                 </div>
                 <div class="problem-card">
-                    <div class="problem-icon">❌</div>
+                    <div class="problem-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="15" y1="9" x2="9" y2="15"></line>
+                            <line x1="9" y1="9" x2="15" y2="15"></line>
+                        </svg>
+                    </div>
                     <h3>Hiring a Receptionist Costs $3,000+/Month</h3>
                     <p>"You can't afford full-time staff, but you need someone to answer professionally."</p>
                 </div>
                 <div class="problem-card">
-                    <div class="problem-icon">❌</div>
+                    <div class="problem-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="15" y1="9" x2="9" y2="15"></line>
+                            <line x1="9" y1="9" x2="15" y2="15"></line>
+                        </svg>
+                    </div>
                     <h3>Traditional Answering Services Cost $300-500/Mo</h3>
                     <p>"They're scripted, robotic, and can't book appointments or access your calendar."</p>
                 </div>
@@ -294,34 +427,88 @@
             <div class="steps-grid">
                 <div class="step-card">
                     <div class="step-number">1</div>
-                    <div class="step-icon">📋</div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
                     <h3>Tell Us About Your Business</h3>
                     <p>2-minute signup form. Just your business name, industry, and phone number. That's it.</p>
-                    <div class="step-time">⏱️ 2 minutes</div>
+                    <div class="step-time">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 1rem; height: 1rem; margin-right: 0.25rem; vertical-align: middle;">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        2 minutes
+                    </div>
                 </div>
 
                 <div class="step-card">
                     <div class="step-number">2</div>
-                    <div class="step-icon">🤖</div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                            <rect x="9" y="9" width="6" height="6"></rect>
+                            <line x1="9" y1="1" x2="9" y2="4"></line>
+                            <line x1="15" y1="1" x2="15" y2="4"></line>
+                            <line x1="9" y1="20" x2="9" y2="23"></line>
+                            <line x1="15" y1="20" x2="15" y2="23"></line>
+                            <line x1="20" y1="9" x2="23" y2="9"></line>
+                            <line x1="20" y1="14" x2="23" y2="14"></line>
+                            <line x1="1" y1="9" x2="4" y2="9"></line>
+                            <line x1="1" y1="14" x2="4" y2="14"></line>
+                        </svg>
+                    </div>
                     <h3>We Build Your AI Receptionist</h3>
                     <p>Our system reads your website, learns your services, and creates your custom AI voice. You can customize the greeting, tone, and what it says.</p>
-                    <div class="step-time">⏱️ 5 minutes</div>
+                    <div class="step-time">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 1rem; height: 1rem; margin-right: 0.25rem; vertical-align: middle;">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        5 minutes
+                    </div>
                 </div>
 
                 <div class="step-card">
                     <div class="step-number">3</div>
-                    <div class="step-icon">📞</div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                    </div>
                     <h3>Forward Your Calls</h3>
                     <p>We give you a dedicated CallBird number, or forward your existing business line to us. Works with any phone system.</p>
-                    <div class="step-time">⏱️ 30 seconds</div>
+                    <div class="step-time">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 1rem; height: 1rem; margin-right: 0.25rem; vertical-align: middle;">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        30 seconds
+                    </div>
                 </div>
 
                 <div class="step-card">
                     <div class="step-number">4</div>
-                    <div class="step-icon">📱</div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                        </svg>
+                    </div>
                     <h3>Download the CallBird App</h3>
                     <p>Available on iOS and Android. See every conversation, listen to call recordings, read transcripts, and manage appointments—all in one place.</p>
-                    <div class="step-time">⏱️ 2 minutes</div>
+                    <div class="step-time">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 1rem; height: 1rem; margin-right: 0.25rem; vertical-align: middle;">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        2 minutes
+                    </div>
                 </div>
             </div>
 
@@ -349,22 +536,42 @@
 
                 <div class="app-benefits">
                     <div class="benefit-item">
-                        <div class="benefit-icon">📱</div>
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                            </svg>
+                        </div>
                         <h3>Mobile App</h3>
                         <p>iOS & Android. Access anywhere, anytime. Manage calls on the go.</p>
                     </div>
                     <div class="benefit-item">
-                        <div class="benefit-icon">📞</div>
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                        </div>
                         <h3>Call Recordings</h3>
                         <p>Listen to any call anytime. Review quality, train staff, or settle disputes.</p>
                     </div>
                     <div class="benefit-item">
-                        <div class="benefit-icon">📊</div>
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="18" y1="20" x2="18" y2="10"></line>
+                                <line x1="12" y1="20" x2="12" y2="4"></line>
+                                <line x1="6" y1="20" x2="6" y2="14"></line>
+                            </svg>
+                        </div>
                         <h3>Analytics Dashboard</h3>
                         <p>Track call volume, peak times, conversion rates, and customer satisfaction.</p>
                     </div>
                     <div class="benefit-item">
-                        <div class="benefit-icon">🔔</div>
+                        <div class="benefit-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                            </svg>
+                        </div>
                         <h3>Instant Alerts</h3>
                         <p>Get text notifications for every call with customer details and actions taken.</p>
                     </div>
@@ -402,7 +609,14 @@
 
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">📅</div>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                    </div>
                     <h3>Smart Appointment Booking</h3>
                     <p>Your AI accesses your Google Calendar, Outlook, or our built-in scheduler in real-time. Customers book appointments during the call. You get a calendar invite. They get a confirmation text.</p>
                     <div class="feature-integrations">
@@ -413,14 +627,25 @@
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">💬</div>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                    </div>
                     <h3>Instant Text Summaries</h3>
                     <p>The second a call ends, you get a text with customer name and contact info, what they wanted, what action was taken, and a link to full transcript.</p>
                     <p class="feature-highlight">No more digging through voicemails or missed call lists.</p>
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">🔄</div>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="17 1 21 5 17 9"></polyline>
+                            <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+                            <polyline points="7 23 3 19 7 15"></polyline>
+                            <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+                        </svg>
+                    </div>
                     <h3>Emergency Call Transfer</h3>
                     <p>CallBird knows when to loop you in. Urgent calls, complex questions, or VIP customers get transferred immediately to your cell phone—with full context so you know what the call is about.</p>
                     <div class="feature-example">
@@ -429,14 +654,23 @@
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">🧠</div>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2a8 8 0 0 0-8 8c0 5.4 7 11.5 7.3 11.8a1 1 0 0 0 1.4 0C13 21.5 20 15.4 20 10a8 8 0 0 0-8-8z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                    </div>
                     <h3>Industry-Specific Training</h3>
                     <p>We don't give you a generic AI. Your CallBird is trained on your website content, service list and pricing, FAQ answers, and booking policies.</p>
                     <p class="feature-highlight">It answers questions accurately because it knows YOUR business.</p>
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">🌙</div>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </div>
                     <h3>After-Hours Coverage</h3>
                     <p>Most new customers call outside 9-5. CallBird answers at 11pm on Saturday just as professionally as 2pm on Tuesday.</p>
                     <div class="feature-stat">
@@ -445,7 +679,14 @@
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">🎤</div>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                            <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                            <line x1="12" y1="19" x2="12" y2="23"></line>
+                            <line x1="8" y1="23" x2="16" y2="23"></line>
+                        </svg>
+                    </div>
                     <h3>Call Recording & Transcripts</h3>
                     <p>Every single call is recorded (downloadable MP3), transcribed word-for-word, searchable in your app, and stored securely for 90 days.</p>
                     <p class="feature-use">Perfect for training, quality control, or settling disputes.</p>
@@ -464,7 +705,11 @@
             <div class="industries-grid">
                 <a href="home-services-ai-receptionist.html" style="text-decoration: none;">
                     <div class="industry-card">
-                        <div class="industry-icon">🔧</div>
+                        <div class="industry-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                            </svg>
+                        </div>
                         <h3>Home Services</h3>
                         <p class="industry-subtitle">Plumbers • Electricians • HVAC • Contractors</p>
                         <p>"CallBird books service calls, handles emergency requests, and collects job details while you're on site."</p>
@@ -479,7 +724,12 @@
 
                 <a href="dental-ai-receptionist.html" style="text-decoration: none;">
                     <div class="industry-card">
-                        <div class="industry-icon">🦷</div>
+                        <div class="industry-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2a7 7 0 0 0-7 7c0 1.5.5 3.5 2 5l5 5 5-5c1.5-1.5 2-3.5 2-5a7 7 0 0 0-7-7z"></path>
+                                <circle cx="12" cy="9" r="1" fill="#122092"></circle>
+                            </svg>
+                        </div>
                         <h3>Medical & Dental</h3>
                         <p class="industry-subtitle">Dentists • Doctors • Chiropractors • Therapists</p>
                         <p>"HIPAA-compliant appointment booking. Patients get confirmed without tying up your front desk."</p>
@@ -494,7 +744,15 @@
 
                 <a href="restaurants-ai-receptionist.html" style="text-decoration: none;">
                     <div class="industry-card">
-                        <div class="industry-icon">🍕</div>
+                        <div class="industry-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                                <line x1="6" y1="1" x2="6" y2="4"></line>
+                                <line x1="10" y1="1" x2="10" y2="4"></line>
+                                <line x1="14" y1="1" x2="14" y2="4"></line>
+                            </svg>
+                        </div>
                         <h3>Restaurants & Food</h3>
                         <p class="industry-subtitle">Restaurants • Cafes • Catering • Food Trucks</p>
                         <p>"Answer questions about hours, menu items, dietary options, and take-out availability 24/7."</p>
@@ -509,7 +767,13 @@
 
                 <a href="professional-services-ai-receptionist.html" style="text-decoration: none;">
                     <div class="industry-card">
-                        <div class="industry-icon">🏢</div>
+                        <div class="industry-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="3" y1="9" x2="21" y2="9"></line>
+                                <line x1="9" y1="21" x2="9" y2="9"></line>
+                            </svg>
+                        </div>
                         <h3>Professional Services</h3>
                         <p class="industry-subtitle">Lawyers • Accountants • Consultants • Coaches</p>
                         <p>"Qualify leads, book consultations, and screen calls so you only talk to serious prospects."</p>
@@ -524,7 +788,12 @@
 
                 <a href="retail-ai-receptionist.html" style="text-decoration: none;">
                     <div class="industry-card">
-                        <div class="industry-icon">🏪</div>
+                        <div class="industry-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                            </svg>
+                        </div>
                         <h3>Retail & E-Commerce</h3>
                         <p class="industry-subtitle">Local shops • Boutiques • Service businesses</p>
                         <p>"Answer product questions, store hours, and availability while you help in-store customers."</p>
@@ -539,7 +808,16 @@
 
                 <a href="veterinary-ai-receptionist.html" style="text-decoration: none;">
                     <div class="industry-card">
-                        <div class="industry-icon">🐕</div>
+                        <div class="industry-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M10 5.172C10 3.782 8.423 2.679 6.5 3c-2.823.47-4.113 6.006-4 7 .08.703 1.725 1.722 3.656 1 1.261-.472 1.96-1.45 2.344-2.5"></path>
+                                <path d="M14.267 5.172c0-1.39 1.577-2.493 3.5-2.172 2.823.47 4.113 6.006 4 7-.08.703-1.725 1.722-3.656 1-1.261-.472-1.855-1.45-2.239-2.5"></path>
+                                <path d="M8 14v.5"></path>
+                                <path d="M16 14v.5"></path>
+                                <path d="M11.25 16.25h1.5L12 17l-.75-.75z"></path>
+                                <path d="M4.42 11.247A13.152 13.152 0 0 0 4 14.556C4 18.728 7.582 21 12 21s8-2.272 8-6.444c0-1.061-.162-2.2-.493-3.309m-9.243-6.082A8.801 8.801 0 0 1 12 5c.78 0 1.5.108 2.161.306"></path>
+                            </svg>
+                        </div>
                         <h3>Veterinary Clinics</h3>
                         <p class="industry-subtitle">Vets • Animal Hospitals • Grooming</p>
                         <p>"Book appointments, triage emergency cases, and refill prescription requests automatically."</p>
@@ -665,11 +943,22 @@
 
             <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-rating">
+                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    </div>
                     <h3>"We were missing 30% of our calls before CallBird"</h3>
                     <p>"Now every patient gets through, our appointment book stays full, and I'm not chained to the front desk. The text summaries are game-changing—I know exactly who called and what they need before I even call back."</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">👨‍⚕️</div>
+                        <div class="author-avatar">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
                         <div class="author-info">
                             <strong>Dr. Sarah Chen</strong>
                             <span>Riverside Dental Practice</span>
@@ -679,11 +968,22 @@
                 </div>
 
                 <div class="testimonial-card">
-                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-rating">
+                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    </div>
                     <h3>"Setup literally took 8 minutes"</h3>
                     <p>"I signed up, forwarded my phone, and CallBird was answering calls before I finished lunch. The first call was a $3,200 kitchen remodel job. Paid for itself in an hour."</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">👷</div>
+                        <div class="author-avatar">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
                         <div class="author-info">
                             <strong>Carlos Martinez</strong>
                             <span>Elite Home Renovations</span>
@@ -693,11 +993,22 @@
                 </div>
 
                 <div class="testimonial-card">
-                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-rating">
+                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    </div>
                     <h3>"Emergency calls get through, routine stuff is handled"</h3>
                     <p>"As a vet, I need to know when there's a real emergency. CallBird transfers those immediately, but handles appointment bookings and prescription refills automatically. My staff loves it because their phone isn't ringing off the hook."</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">👨‍⚕️</div>
+                        <div class="author-avatar">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
                         <div class="author-info">
                             <strong>Dr. James Park</strong>
                             <span>Oakwood Animal Hospital</span>
@@ -745,7 +1056,10 @@
 
                 <!-- Professional Plan (Most Popular) -->
                 <div class="pricing-card pricing-popular">
-                    <div class="pricing-badge">⭐ Most Popular</div>
+                    <div class="pricing-badge">
+                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1rem; height: 1rem; margin-right: 0.25rem; vertical-align: middle;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        Most Popular
+                    </div>
                     <div class="pricing-header">
                         <h3>Professional</h3>
                         <div class="pricing-price">
@@ -935,8 +1249,19 @@
 
                 <div class="final-cta-boxes">
                     <div class="cta-box-primary">
-                        <h3>🎧 Try CallBird Right Now (30 Seconds)</h3>
-                        <a href="tel:+17708092820" class="cta-phone-large">📞 Call: 770-809-2820</a>
+                        <h3>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 1.5rem; height: 1.5rem; margin-right: 0.5rem; vertical-align: middle;">
+                                <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+                                <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+                            </svg>
+                            Try CallBird Right Now (30 Seconds)
+                        </h3>
+                        <a href="tel:+17708092820" class="cta-phone-large">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 1.5rem; height: 1.5rem; margin-right: 0.5rem; vertical-align: middle;">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                            Call: 770-809-2820
+                        </a>
                         <p>"Hear it work before you sign up"</p>
                     </div>
 
@@ -1025,11 +1350,22 @@
     <div id="exit-popup" class="popup-overlay">
         <div class="popup-content">
             <button class="popup-close" onclick="closePopup()">&times;</button>
-            <div class="popup-icon">⏸️</div>
+            <div class="popup-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 3rem; height: 3rem;">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="10" y1="15" x2="10" y2="9"></line>
+                    <line x1="14" y1="15" x2="14" y2="9"></line>
+                </svg>
+            </div>
             <h3>Wait! See CallBird Answer a Real Call</h3>
             <p>Most people are convinced in 30 seconds.</p>
             <div class="popup-actions">
-                <a href="tel:+17708092820" class="btn-primary">📞 Call 770-809-2820 Now</a>
+                <a href="tel:+17708092820" class="btn-primary">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 1.25rem; height: 1.25rem; margin-right: 0.5rem; vertical-align: middle;">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    Call 770-809-2820 Now
+                </a>
                 <button class="btn-ghost" onclick="closePopup()">Maybe Later</button>
             </div>
         </div>
@@ -1039,10 +1375,15 @@
     <div id="sticky-cta" class="sticky-cta">
         <div class="container">
             <div class="sticky-cta-content">
-                <span>👋 Ready to try CallBird?</span>
+                <span>Ready to try CallBird?</span>
                 <div class="sticky-cta-actions">
                     <a href="/start" class="btn-primary btn-small">Start Free Trial</a>
-                    <a href="tel:+17708092820" class="btn-ghost btn-small">📞 Call Demo</a>
+                    <a href="tel:+17708092820" class="btn-ghost btn-small">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 1rem; height: 1rem; margin-right: 0.25rem; vertical-align: middle;">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                        Call Demo
+                    </a>
                 </div>
             </div>
         </div>
