@@ -733,6 +733,7 @@ a:hover {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     margin-bottom: 3rem;
+    align-items: stretch;
 }
 
 .hero-bg {
@@ -750,6 +751,7 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100%;
 }
 
 .step-card:hover {
@@ -784,15 +786,11 @@ a:hover {
 
 .step-card h3 {
     margin-bottom: 1rem;
-    min-height: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-.step-card p {
+.step-card > p {
     flex: 1;
-    min-height: 4.5rem;
+    margin-bottom: 1rem;
 }
 
 .step-time {
