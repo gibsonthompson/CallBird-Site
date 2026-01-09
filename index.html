@@ -89,17 +89,26 @@
         }
         .demo-box .demo-icon {
             justify-content: center;
-            margin-bottom: 1rem;
+            margin: 0 auto 1rem;
         }
         .demo-content {
             display: flex;
             flex-direction: column;
             align-items: center;
+            width: 100%;
         }
-        .demo-content h3,
-        .demo-content p,
-        .demo-phone {
+        .demo-content h3 {
             text-align: center;
+            width: 100%;
+        }
+        .demo-content p,
+        .demo-phone,
+        .demo-instructions {
+            text-align: center;
+            width: 100%;
+        }
+        .demo-content .btn-secondary {
+            margin: 0 auto;
         }
         
         /* Center alignment for feature cards */
@@ -126,10 +135,26 @@
         /* Center alignment for step cards */
         .step-card {
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .step-card .step-icon {
             justify-content: center;
-            margin: 0 auto;
+            margin: 0 auto 1rem;
+        }
+        .step-card h3 {
+            min-height: 3.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .step-card p {
+            flex: 1;
+            min-height: 5rem;
+        }
+        .step-card .step-time {
+            margin-top: auto;
         }
         
         /* Center alignment for problem cards */
