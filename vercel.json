@@ -1,6 +1,10 @@
 {
+  "rewrites": [
+    { "source": "/start", "destination": "/start.html" },
+    { "source": "/signup", "destination": "/start.html" },
+    { "source": "/trial", "destination": "/start.html" }
+  ],
   "redirects": [
-    
     { "source": "/aiansweringforvets", "destination": "/blog-best-ai-receptionist-veterinarians.html", "permanent": true },
     { "source": "/veterinary", "destination": "/blog-best-ai-receptionist-veterinarians.html", "permanent": true },
     { "source": "/aiansweringfordentists", "destination": "/blog-best-ai-receptionist-dentists.html", "permanent": true },
@@ -9,7 +13,6 @@
     { "source": "/aiansweringformedical", "destination": "/blog-best-ai-receptionist-dentists.html", "permanent": true },
     { "source": "/aiansweringindustries", "destination": "/index.html#industries", "permanent": true },
     { "source": "/home-services", "destination": "/blog-contractors-ai-receptionist.html", "permanent": true },
-
     
     { "source": "/post/ai-answering-service-complete-guide-2025", "destination": "/blog-ai-receptionist-guide.html", "permanent": true },
     { "source": "/post/ai-answering-service-veterinary-clinics-2025-guide", "destination": "/blog-best-ai-receptionist-veterinarians.html", "permanent": true },
@@ -17,36 +20,29 @@
     { "source": "/blog/ai-receptionist-guide", "destination": "/blog-ai-receptionist-guide.html", "permanent": true },
     { "source": "/blog/category/cost-analysis-roi/", "destination": "/blog.html", "permanent": true },
     { "source": "/post", "destination": "/blog.html", "permanent": true },
-
     
     { "source": "/pricing", "destination": "/index.html#pricing", "permanent": true },
     { "source": "/ai-phone-answering-price", "destination": "/index.html#pricing", "permanent": true },
     
-    
     { "source": "/home", "destination": "/", "permanent": true },
     { "source": "/home-135746", "destination": "/", "permanent": true },
-
     
     { "source": "/contact", "destination": "/", "permanent": true },
     { "source": "/contact-us", "destination": "/", "permanent": true },
     { "source": "/contact-635696", "destination": "/", "permanent": true },
-
     
     { "source": "/booking-page", "destination": "/start", "permanent": true },
     { "source": "/thank-you-365311", "destination": "/", "permanent": true },
-
     
     { "source": "/privacy", "destination": "/", "permanent": true },
     { "source": "/bio", "destination": "/", "permanent": true },
     { "source": "/link-in-bio", "destination": "/", "permanent": true },
     { "source": "/sitemap", "destination": "/", "permanent": true },
     { "source": "/automation", "destination": "/", "permanent": true },
-
     
     { "source": "/virtualaisolutions", "destination": "/blog.html", "permanent": true },
     { "source": "/virtualaisolutions/:path*", "destination": "/blog.html", "permanent": true },
     { "source": "/categories/:path*", "destination": "/blog.html", "permanent": true },
-
     
     { "source": "/www.callbirdai.com", "destination": "/", "permanent": true },
     { "source": "/cdn-cgi/:path*", "destination": "/", "permanent": true },
