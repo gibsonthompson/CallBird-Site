@@ -105,17 +105,186 @@
             font-size: 0.9375rem;
         }
         
-        .ghl-form-wrapper {
-            width: 100%;
-            min-height: 500px;
-            border-radius: var(--radius-md);
-            overflow: hidden;
+        /* Native Form Styles */
+        .signup-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
         }
         
-        .ghl-form-wrapper iframe {
-            width: 100%;
-            min-height: 500px;
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .form-group label {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        
+        .form-group label .required {
+            color: #dc2626;
+        }
+        
+        .form-group input,
+        .form-group select {
+            padding: 0.875rem 1rem;
+            border: 2px solid #e5e7eb;
+            border-radius: var(--radius-md);
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.2s ease;
+            background: white;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(18, 32, 146, 0.1);
+        }
+        
+        .form-group input::placeholder {
+            color: #9ca3af;
+        }
+        
+        .form-group .help-text {
+            font-size: 0.8125rem;
+            color: var(--text-medium);
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        
+        .form-group.error input,
+        .form-group.error select {
+            border-color: #dc2626;
+        }
+        
+        .form-group .error-text {
+            color: #dc2626;
+            font-size: 0.8125rem;
+        }
+        
+        .submit-btn {
+            background: var(--primary-color);
+            color: white;
             border: none;
+            padding: 1rem 2rem;
+            font-size: 1.125rem;
+            font-weight: 600;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+        
+        .submit-btn:hover {
+            background: #0f1a7a;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(18, 32, 146, 0.3);
+        }
+        
+        .submit-btn:disabled {
+            background: #9ca3af;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        .submit-btn .spinner {
+            width: 20px;
+            height: 20px;
+            border: 2px solid transparent;
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Success State */
+        .success-state {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .success-state.active {
+            display: block;
+        }
+        
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: #10b981;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .success-icon svg {
+            width: 40px;
+            height: 40px;
+            color: white;
+        }
+        
+        .success-state h3 {
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            margin-bottom: 0.75rem;
+        }
+        
+        .success-state p {
+            color: var(--text-medium);
+            margin-bottom: 1rem;
+        }
+        
+        .success-phone {
+            background: #f0f4ff;
+            border: 2px solid var(--primary-color);
+            border-radius: var(--radius-md);
+            padding: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .success-phone .label {
+            font-size: 0.875rem;
+            color: var(--text-medium);
+            margin-bottom: 0.25rem;
+        }
+        
+        .success-phone .number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        /* Error State */
+        .error-banner {
+            display: none;
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            border-radius: var(--radius-md);
+            padding: 1rem;
+            margin-bottom: 1rem;
+            color: #991b1b;
+        }
+        
+        .error-banner.active {
             display: block;
         }
         
@@ -278,10 +447,6 @@
                 margin-bottom: 1.5rem;
             }
             
-            .start-grid {
-                gap: 2rem;
-            }
-            
             .form-container {
                 padding: 1.5rem;
             }
@@ -290,9 +455,8 @@
                 font-size: 1.5rem;
             }
             
-            .ghl-form-wrapper,
-            .ghl-form-wrapper iframe {
-                min-height: 600px;
+            .form-row {
+                grid-template-columns: 1fr;
             }
             
             .benefits-list {
@@ -434,26 +598,107 @@
                             <p>Setup takes less than 2 minutes</p>
                         </div>
 
-                        <!-- GoHighLevel Form Embed -->
-                        <div class="ghl-form-wrapper">
-                            <iframe 
-                                src="https://api.leadconnectorhq.com/widget/form/peg0BnnZPXhlOOcCH4jN?notrack=true" 
-                                scrolling="yes"
-                                id="inline-peg0BnnZPXhlOOcCH4jN" 
-                                data-layout="{'id':'INLINE'}"
-                                data-trigger-type="alwaysShow"
-                                data-trigger-value=""
-                                data-activation-type="alwaysActivated"
-                                data-activation-value=""
-                                data-deactivation-type="neverDeactivate"
-                                data-deactivation-value=""
-                                data-form-name="CallBird AI Signup"
-                                data-height="539"
-                                data-layout-iframe-id="inline-peg0BnnZPXhlOOcCH4jN"
-                                data-form-id="peg0BnnZPXhlOOcCH4jN"
-                                title="CallBird AI Signup Form"
-                            >
-                            </iframe>
+                        <!-- Error Banner -->
+                        <div id="errorBanner" class="error-banner">
+                            <strong>Oops!</strong> <span id="errorMessage"></span>
+                        </div>
+
+                        <!-- Native Signup Form -->
+                        <form id="signupForm" class="signup-form">
+                            <div class="form-group">
+                                <label for="firstName">First Name <span class="required">*</span></label>
+                                <input type="text" id="firstName" name="firstName" placeholder="John" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone <span class="required">*</span></label>
+                                <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
+                                <span class="help-text">We'll send SMS summaries here</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="businessName">Business Name <span class="required">*</span></label>
+                                <input type="text" id="businessName" name="businessName" placeholder="Acme Plumbing" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="websiteUrl">Website URL <span style="color: var(--text-medium); font-weight: normal;">(optional)</span></label>
+                                <input type="url" id="websiteUrl" name="websiteUrl" placeholder="www.yourbusiness.com">
+                                <span class="help-text">We'll train your AI on your website content</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="industry">Industry <span class="required">*</span></label>
+                                <select id="industry" name="industry" required>
+                                    <option value="">Please select...</option>
+                                    <option value="Home Services (plumbing, HVAC, contractors)">Home Services (plumbing, HVAC, contractors)</option>
+                                    <option value="Medical/Dental">Medical/Dental</option>
+                                    <option value="Retail/E-commerce">Retail/E-commerce</option>
+                                    <option value="Professional Services (legal, accounting)">Professional Services (legal, accounting)</option>
+                                    <option value="Restaurants/Food Service">Restaurants/Food Service</option>
+                                    <option value="Salon/Spa (hair, nails, skincare)">Salon/Spa (hair, nails, skincare)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="businessCity">City <span class="required">*</span></label>
+                                    <input type="text" id="businessCity" name="businessCity" placeholder="Atlanta" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="businessState">State <span class="required">*</span></label>
+                                    <input type="text" id="businessState" name="businessState" placeholder="GA" maxlength="2" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="referralSource">How did you hear about us? <span class="required">*</span></label>
+                                <select id="referralSource" name="referralSource" required>
+                                    <option value="">Please select...</option>
+                                    <option value="Google Search">Google Search</option>
+                                    <option value="Social Media">Social Media</option>
+                                    <option value="Friend/Colleague">Friend/Colleague</option>
+                                    <option value="Advertisement">Advertisement</option>
+                                    <option value="Blog/Article">Blog/Article</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="submit-btn" id="submitBtn">
+                                <span id="btnText">Start Free Trial →</span>
+                                <span id="btnSpinner" class="spinner" style="display: none;"></span>
+                            </button>
+
+                            <p style="font-size: 0.8125rem; color: var(--text-medium); text-align: center; margin-top: 0.5rem;">
+                                By signing up, you agree to our <a href="terms-and-conditions.html" style="color: var(--primary-color);">Terms</a> and <a href="privacy-policy.html" style="color: var(--primary-color);">Privacy Policy</a>
+                            </p>
+                        </form>
+
+                        <!-- Success State -->
+                        <div id="successState" class="success-state">
+                            <div class="success-icon">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            <h3>You're All Set! 🎉</h3>
+                            <p>Your AI receptionist is ready to start answering calls.</p>
+                            
+                            <div class="success-phone">
+                                <div class="label">Your AI Phone Number</div>
+                                <div class="number" id="successPhoneNumber">Loading...</div>
+                            </div>
+                            
+                            <p><strong>Check your email</strong> to set your password and access your dashboard.</p>
+                            
+                            <a href="https://app.callbirdai.com" class="submit-btn" style="text-decoration: none; display: inline-flex;">
+                                Go to Dashboard →
+                            </a>
                         </div>
 
                         <!-- Help Link -->
@@ -600,23 +845,168 @@
         </div>
     </footer>
 
-    <!-- GTM Event Tracking -->
+    <!-- Form Submission Script -->
     <script>
-        // Track page view
+        // API endpoint - UPDATE THIS TO YOUR BACKEND URL
+        const API_URL = 'https://dolphin-app-fohdg.ondigitalocean.app/api/signup';
+        
+        const form = document.getElementById('signupForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const btnText = document.getElementById('btnText');
+        const btnSpinner = document.getElementById('btnSpinner');
+        const errorBanner = document.getElementById('errorBanner');
+        const errorMessage = document.getElementById('errorMessage');
+        const successState = document.getElementById('successState');
+        const successPhoneNumber = document.getElementById('successPhoneNumber');
+        
+        // Phone number formatting
+        const phoneInput = document.getElementById('phone');
+        phoneInput.addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 0) {
+                if (value.length <= 3) {
+                    value = `(${value}`;
+                } else if (value.length <= 6) {
+                    value = `(${value.slice(0,3)}) ${value.slice(3)}`;
+                } else {
+                    value = `(${value.slice(0,3)}) ${value.slice(3,6)}-${value.slice(6,10)}`;
+                }
+            }
+            e.target.value = value;
+        });
+        
+        // State input uppercase
+        const stateInput = document.getElementById('businessState');
+        stateInput.addEventListener('input', function(e) {
+            e.target.value = e.target.value.toUpperCase();
+        });
+        
+        // Form submission
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Reset error state
+            errorBanner.classList.remove('active');
+            
+            // Get form data
+            const formData = {
+                firstName: document.getElementById('firstName').value.trim(),
+                email: document.getElementById('email').value.trim().toLowerCase(),
+                phone: document.getElementById('phone').value.trim(),
+                businessName: document.getElementById('businessName').value.trim(),
+                websiteUrl: document.getElementById('websiteUrl').value.trim(),
+                industry: document.getElementById('industry').value,
+                businessCity: document.getElementById('businessCity').value.trim(),
+                businessState: document.getElementById('businessState').value.trim().toUpperCase(),
+                referralSource: document.getElementById('referralSource').value
+            };
+            
+            // Client-side validation
+            if (!formData.firstName || !formData.email || !formData.phone || 
+                !formData.businessName || !formData.industry || 
+                !formData.businessCity || !formData.businessState || !formData.referralSource) {
+                showError('Please fill in all required fields.');
+                return;
+            }
+            
+            // Email validation
+            if (!formData.email.includes('@') || !formData.email.includes('.')) {
+                showError('Please enter a valid email address.');
+                return;
+            }
+            
+            // Phone validation (at least 10 digits)
+            if (formData.phone.replace(/\D/g, '').length < 10) {
+                showError('Please enter a valid phone number.');
+                return;
+            }
+            
+            // Show loading state
+            setLoading(true);
+            
+            // Track form submission
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'signup_form_submit',
+                'industry': formData.industry,
+                'referral_source': formData.referralSource
+            });
+            
+            try {
+                const response = await fetch(API_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+                
+                const data = await response.json();
+                
+                if (!response.ok) {
+                    throw new Error(data.message || data.error || 'Something went wrong');
+                }
+                
+                // Success!
+                console.log('✅ Signup successful:', data);
+                
+                // Track conversion
+                window.dataLayer.push({
+                    'event': 'signup_success',
+                    'client_id': data.client?.id,
+                    'phone_number': data.client?.phone_number
+                });
+                
+                // Show success state
+                form.style.display = 'none';
+                successState.classList.add('active');
+                successPhoneNumber.textContent = formatPhoneDisplay(data.client?.phone_number);
+                
+            } catch (error) {
+                console.error('❌ Signup error:', error);
+                showError(error.message || 'Something went wrong. Please try again.');
+                
+                // Track error
+                window.dataLayer.push({
+                    'event': 'signup_error',
+                    'error_message': error.message
+                });
+            } finally {
+                setLoading(false);
+            }
+        });
+        
+        function setLoading(loading) {
+            submitBtn.disabled = loading;
+            btnText.style.display = loading ? 'none' : 'inline';
+            btnSpinner.style.display = loading ? 'inline-block' : 'none';
+        }
+        
+        function showError(message) {
+            errorMessage.textContent = message;
+            errorBanner.classList.add('active');
+            errorBanner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+        
+        function formatPhoneDisplay(phone) {
+            if (!phone) return 'Check your email';
+            const cleaned = phone.replace(/\D/g, '');
+            if (cleaned.length === 11 && cleaned.startsWith('1')) {
+                const without1 = cleaned.substring(1);
+                return `(${without1.substring(0,3)}) ${without1.substring(3,6)}-${without1.substring(6)}`;
+            }
+            if (cleaned.length === 10) {
+                return `(${cleaned.substring(0,3)}) ${cleaned.substring(3,6)}-${cleaned.substring(6)}`;
+            }
+            return phone;
+        }
+        
+        // GTM Event Tracking
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({
             'event': 'signup_page_view',
             'page_type': 'signup'
         });
-
-        // Auto-resize iframe based on content
-        window.addEventListener('message', function(e) {
-            if (e.data.hasOwnProperty("frameHeight")) {
-                document.getElementById("inline-peg0BnnZPXhlOOcCH4jN").style.height = e.data.frameHeight + "px";
-            }
-        });
     </script>
-
-    <script src="https://link.msgsndr.com/js/form_embed.js"></script>
 </body>
 </html>
