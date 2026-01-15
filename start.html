@@ -214,65 +214,6 @@
             to { transform: rotate(360deg); }
         }
         
-        /* Success State */
-        .success-state {
-            display: none;
-            text-align: center;
-            padding: 2rem;
-        }
-        
-        .success-state.active {
-            display: block;
-        }
-        
-        .success-icon {
-            width: 80px;
-            height: 80px;
-            background: #10b981;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-        }
-        
-        .success-icon svg {
-            width: 40px;
-            height: 40px;
-            color: white;
-        }
-        
-        .success-state h3 {
-            font-size: 1.5rem;
-            color: var(--text-dark);
-            margin-bottom: 0.75rem;
-        }
-        
-        .success-state p {
-            color: var(--text-medium);
-            margin-bottom: 1rem;
-        }
-        
-        .success-phone {
-            background: #f0f4ff;
-            border: 2px solid var(--primary-color);
-            border-radius: var(--radius-md);
-            padding: 1rem;
-            margin: 1.5rem 0;
-        }
-        
-        .success-phone .label {
-            font-size: 0.875rem;
-            color: var(--text-medium);
-            margin-bottom: 0.25rem;
-        }
-        
-        .success-phone .number {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
-        }
-        
         /* Error State */
         .error-banner {
             display: none;
@@ -679,28 +620,6 @@
                             </p>
                         </form>
 
-                        <!-- Success State -->
-                        <div id="successState" class="success-state">
-                            <div class="success-icon">
-                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                                </svg>
-                            </div>
-                            <h3>You're All Set! 🎉</h3>
-                            <p>Your AI receptionist is ready to start answering calls.</p>
-                            
-                            <div class="success-phone">
-                                <div class="label">Your AI Phone Number</div>
-                                <div class="number" id="successPhoneNumber">Loading...</div>
-                            </div>
-                            
-                            <p><strong>Check your email</strong> to set your password and access your dashboard.</p>
-                            
-                            <a href="https://app.callbirdai.com" class="submit-btn" style="text-decoration: none; display: inline-flex;">
-                                Go to Dashboard →
-                            </a>
-                        </div>
-
                         <!-- Help Link -->
                         <div class="help-link">
                             <p>Need help getting started?</p>
@@ -847,7 +766,7 @@
 
     <!-- Form Submission Script -->
     <script>
-        // API endpoint - UPDATE THIS TO YOUR BACKEND URL
+        // API endpoint
         const API_URL = 'https://dolphin-app-fohdg.ondigitalocean.app/api/signup';
         
         const form = document.getElementById('signupForm');
@@ -856,8 +775,6 @@
         const btnSpinner = document.getElementById('btnSpinner');
         const errorBanner = document.getElementById('errorBanner');
         const errorMessage = document.getElementById('errorMessage');
-        const successState = document.getElementById('successState');
-        const successPhoneNumber = document.getElementById('successPhoneNumber');
         
         // Phone number formatting
         const phoneInput = document.getElementById('phone');
@@ -957,10 +874,8 @@
                     'phone_number': data.client?.phone_number
                 });
                 
-                // Show success state
-                form.style.display = 'none';
-                successState.classList.add('active');
-                successPhoneNumber.textContent = formatPhoneDisplay(data.client?.phone_number);
+                // Redirect to confirmation page
+                window.location.href = 'signup-confirmation.html';
                 
             } catch (error) {
                 console.error('❌ Signup error:', error);
@@ -986,19 +901,6 @@
             errorMessage.textContent = message;
             errorBanner.classList.add('active');
             errorBanner.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-        
-        function formatPhoneDisplay(phone) {
-            if (!phone) return 'Check your email';
-            const cleaned = phone.replace(/\D/g, '');
-            if (cleaned.length === 11 && cleaned.startsWith('1')) {
-                const without1 = cleaned.substring(1);
-                return `(${without1.substring(0,3)}) ${without1.substring(3,6)}-${without1.substring(6)}`;
-            }
-            if (cleaned.length === 10) {
-                return `(${cleaned.substring(0,3)}) ${cleaned.substring(3,6)}-${cleaned.substring(6)}`;
-            }
-            return phone;
         }
         
         // GTM Event Tracking
