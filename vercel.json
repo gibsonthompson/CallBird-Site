@@ -1,8 +1,11 @@
 {
+  "cleanUrls": true,
+  "trailingSlash": false,
   "rewrites": [
     { "source": "/start", "destination": "/start.html" },
     { "source": "/signup", "destination": "/start.html" },
-    { "source": "/trial", "destination": "/start.html" }
+    { "source": "/trial", "destination": "/start.html" },
+    { "source": "/signup-confirmation", "destination": "/signup-confirmation.html" }
   ],
   "redirects": [
     { "source": "/aiansweringforvets", "destination": "/blog-best-ai-receptionist-veterinarians.html", "permanent": true },
