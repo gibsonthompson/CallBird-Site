@@ -171,6 +171,16 @@
             font-size: 0.8125rem;
         }
         
+        /* Other referral input styling */
+        #otherReferralGroup {
+            display: none;
+            margin-top: 0.5rem;
+        }
+        
+        #otherReferralGroup.active {
+            display: block;
+        }
+        
         .submit-btn {
             background: var(--primary-color);
             color: white;
@@ -564,12 +574,12 @@
 
                             <div class="form-group">
                                 <label for="businessName">Business Name <span class="required">*</span></label>
-                                <input type="text" id="businessName" name="businessName" placeholder="Acme Plumbing" required>
+                                <input type="text" id="businessName" name="businessName" placeholder="Your Business" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="websiteUrl">Website URL <span style="color: var(--text-medium); font-weight: normal;">(optional)</span></label>
-                                <input type="url" id="websiteUrl" name="websiteUrl" placeholder="www.yourbusiness.com">
+                                <input type="text" id="websiteUrl" name="websiteUrl" placeholder="yourbusiness.com">
                                 <span class="help-text">We'll train your AI on your website content</span>
                             </div>
 
@@ -602,12 +612,16 @@
                                 <select id="referralSource" name="referralSource" required>
                                     <option value="">Please select...</option>
                                     <option value="Google Search">Google Search</option>
+                                    <option value="AI Recommendation">AI Recommendation (ChatGPT, Claude, etc.)</option>
                                     <option value="Social Media">Social Media</option>
                                     <option value="Friend/Colleague">Friend/Colleague</option>
                                     <option value="Advertisement">Advertisement</option>
                                     <option value="Blog/Article">Blog/Article</option>
                                     <option value="Other">Other</option>
                                 </select>
+                                <div id="otherReferralGroup">
+                                    <input type="text" id="otherReferral" name="otherReferral" placeholder="Please specify...">
+                                </div>
                             </div>
 
                             <button type="submit" class="submit-btn" id="submitBtn">
@@ -798,6 +812,36 @@
             e.target.value = e.target.value.toUpperCase();
         });
         
+        // Show/hide "Other" text input based on referral source selection
+        const referralSelect = document.getElementById('referralSource');
+        const otherReferralGroup = document.getElementById('otherReferralGroup');
+        const otherReferralInput = document.getElementById('otherReferral');
+        
+        referralSelect.addEventListener('change', function(e) {
+            if (e.target.value === 'Other') {
+                otherReferralGroup.classList.add('active');
+                otherReferralInput.setAttribute('required', 'required');
+            } else {
+                otherReferralGroup.classList.remove('active');
+                otherReferralInput.removeAttribute('required');
+                otherReferralInput.value = '';
+            }
+        });
+        
+        // Website URL normalization helper
+        function normalizeWebsiteUrl(url) {
+            if (!url || url.trim() === '') return '';
+            
+            url = url.trim().toLowerCase();
+            
+            // Remove any leading/trailing whitespace and common typos
+            url = url.replace(/^(https?:\/\/)?/, ''); // Remove existing protocol if any
+            url = url.replace(/^www\./, ''); // Remove www. prefix temporarily
+            
+            // Add https:// prefix
+            return 'https://' + url;
+        }
+        
         // Form submission
         form.addEventListener('submit', async function(e) {
             e.preventDefault();
@@ -805,17 +849,29 @@
             // Reset error state
             errorBanner.classList.remove('active');
             
+            // Get and normalize website URL
+            let websiteUrl = document.getElementById('websiteUrl').value.trim();
+            if (websiteUrl) {
+                websiteUrl = normalizeWebsiteUrl(websiteUrl);
+            }
+            
+            // Handle "Other" referral source
+            let referralSource = document.getElementById('referralSource').value;
+            if (referralSource === 'Other' && otherReferralInput.value.trim()) {
+                referralSource = 'Other: ' + otherReferralInput.value.trim();
+            }
+            
             // Get form data
             const formData = {
                 firstName: document.getElementById('firstName').value.trim(),
                 email: document.getElementById('email').value.trim().toLowerCase(),
                 phone: document.getElementById('phone').value.trim(),
                 businessName: document.getElementById('businessName').value.trim(),
-                websiteUrl: document.getElementById('websiteUrl').value.trim(),
+                websiteUrl: websiteUrl,
                 industry: document.getElementById('industry').value,
                 businessCity: document.getElementById('businessCity').value.trim(),
                 businessState: document.getElementById('businessState').value.trim().toUpperCase(),
-                referralSource: document.getElementById('referralSource').value
+                referralSource: referralSource
             };
             
             // Client-side validation
@@ -823,6 +879,12 @@
                 !formData.businessName || !formData.industry || 
                 !formData.businessCity || !formData.businessState || !formData.referralSource) {
                 showError('Please fill in all required fields.');
+                return;
+            }
+            
+            // Validate "Other" field if selected
+            if (document.getElementById('referralSource').value === 'Other' && !otherReferralInput.value.trim()) {
+                showError('Please specify how you heard about us.');
                 return;
             }
             
