@@ -105,7 +105,6 @@
             font-size: 0.9375rem;
         }
         
-        /* Native Form Styles */
         .signup-form {
             display: flex;
             flex-direction: column;
@@ -171,7 +170,6 @@
             font-size: 0.8125rem;
         }
         
-        /* Other referral input styling */
         #otherReferralGroup {
             display: none;
             margin-top: 0.5rem;
@@ -224,7 +222,6 @@
             to { transform: rotate(360deg); }
         }
         
-        /* Error State */
         .error-banner {
             display: none;
             background: #fef2f2;
@@ -357,139 +354,109 @@
         }
         
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ===============================================================
+           PHASE 2C: Success screen styles
+           =============================================================== */
+        .success-screen {
+            display: none;
+            text-align: center;
+            animation: fadeInUp 0.5s ease-out;
+        }
+        .success-screen.active {
+            display: block;
+        }
+        .success-icon {
+            width: 64px; height: 64px; border-radius: 16px;
+            background: rgba(18, 32, 146, 0.1);
+            display: inline-flex; align-items: center; justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        .success-icon svg {
+            width: 32px; height: 32px; color: var(--primary-color);
+        }
+        .credential-box {
+            background: #f9fafb; border: 1px solid #e5e7eb; border-radius: var(--radius-md);
+            padding: 1.25rem; margin: 1rem 0; text-align: left;
+        }
+        .credential-box .cred-label {
+            font-size: 0.75rem; color: var(--text-medium); margin-bottom: 0.25rem;
+        }
+        .credential-box .cred-row {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 0.5rem 0; border-bottom: 1px solid #e5e7eb;
+        }
+        .credential-box .cred-row:last-child {
+            border-bottom: none;
+        }
+        .credential-box .cred-value {
+            font-family: 'Sora', monospace; font-weight: 600; font-size: 0.9375rem;
+            color: var(--text-dark);
+        }
+        .credential-box .cred-value.phone-value {
+            color: var(--primary-color); font-size: 1.25rem;
+        }
+        .copy-btn {
+            background: none; border: 1px solid #e5e7eb; border-radius: 6px;
+            padding: 4px 10px; font-size: 0.75rem; cursor: pointer;
+            color: var(--text-medium); transition: all 0.2s;
+        }
+        .copy-btn:hover { background: #f3f4f6; }
+        .copy-btn.copied { background: #ecfdf5; color: #059669; border-color: #a7f3d0; }
+        .warning-box {
+            background: #fffbeb; border: 1px solid #fde68a; border-radius: var(--radius-md);
+            padding: 0.75rem 1rem; margin: 1rem 0; font-size: 0.8125rem; color: #92400e;
+        }
+        .dashboard-btn {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            background: var(--primary-color); color: white; border: none;
+            padding: 1rem 2rem; font-size: 1.125rem; font-weight: 600;
+            border-radius: var(--radius-md); cursor: pointer;
+            transition: all 0.2s ease; text-decoration: none; margin-top: 0.5rem;
+        }
+        .dashboard-btn:hover {
+            background: #0f1a7a; transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(18, 32, 146, 0.3);
         }
         
         /* Mobile Optimization */
         @media (max-width: 968px) {
-            .start-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            
-            .benefits-section {
-                order: -1;
-            }
+            .start-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .benefits-section { order: -1; }
         }
         
         @media (max-width: 768px) {
-            .start-hero {
-                padding: 5rem 0 3rem;
-                margin-top: 3.5rem;
-            }
-            
-            .start-header {
-                margin-bottom: 2rem;
-            }
-            
-            .start-title {
-                font-size: 1.75rem;
-            }
-            
-            .start-subtitle {
-                font-size: 1rem;
-                margin-bottom: 1.5rem;
-            }
-            
-            .form-container {
-                padding: 1.5rem;
-            }
-            
-            .form-header h2 {
-                font-size: 1.5rem;
-            }
-            
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-            
-            .benefits-list {
-                gap: 1rem;
-            }
-            
-            .benefit-item {
-                padding: 1.25rem;
-            }
-            
-            .benefit-icon {
-                font-size: 2rem;
-            }
-            
-            .benefit-content h4 {
-                font-size: 1rem;
-            }
-            
-            .benefit-content p {
-                font-size: 0.875rem;
-            }
-            
-            .badges-grid {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 0.75rem;
-            }
-            
-            .badge-item {
-                padding: 0.75rem 0.5rem;
-            }
-            
-            .badge-icon {
-                font-size: 1.5rem;
-            }
-            
-            .badge-label {
-                font-size: 0.75rem;
-            }
-            
-            .trust-badges {
-                padding: 1.5rem;
-                margin-top: 1.5rem;
-            }
+            .start-hero { padding: 5rem 0 3rem; margin-top: 3.5rem; }
+            .start-header { margin-bottom: 2rem; }
+            .start-title { font-size: 1.75rem; }
+            .start-subtitle { font-size: 1rem; margin-bottom: 1.5rem; }
+            .form-container { padding: 1.5rem; }
+            .form-header h2 { font-size: 1.5rem; }
+            .form-row { grid-template-columns: 1fr; }
+            .benefits-list { gap: 1rem; }
+            .benefit-item { padding: 1.25rem; }
+            .benefit-icon { font-size: 2rem; }
+            .benefit-content h4 { font-size: 1rem; }
+            .benefit-content p { font-size: 0.875rem; }
+            .badges-grid { grid-template-columns: repeat(3, 1fr); gap: 0.75rem; }
+            .badge-item { padding: 0.75rem 0.5rem; }
+            .badge-icon { font-size: 1.5rem; }
+            .badge-label { font-size: 0.75rem; }
+            .trust-badges { padding: 1.5rem; margin-top: 1.5rem; }
         }
         
         @media (max-width: 480px) {
-            .start-hero {
-                padding: 4rem 0 2rem;
-            }
-            
-            .start-title {
-                font-size: 1.5rem;
-            }
-            
-            .start-subtitle {
-                font-size: 0.9375rem;
-            }
-            
-            .form-container {
-                padding: 1.25rem;
-            }
-            
-            .form-header h2 {
-                font-size: 1.25rem;
-            }
-            
-            .badges-grid {
-                grid-template-columns: 1fr;
-                gap: 0.5rem;
-            }
-            
-            .badge-item {
-                display: flex;
-                align-items: center;
-                gap: 0.75rem;
-                padding: 0.75rem 1rem;
-                text-align: left;
-            }
-            
-            .badge-icon {
-                margin-bottom: 0;
-            }
+            .start-hero { padding: 4rem 0 2rem; }
+            .start-title { font-size: 1.5rem; }
+            .start-subtitle { font-size: 0.9375rem; }
+            .form-container { padding: 1.25rem; }
+            .form-header h2 { font-size: 1.25rem; }
+            .badges-grid { grid-template-columns: 1fr; gap: 0.5rem; }
+            .badge-item { display: flex; align-items: center; gap: 0.75rem; padding: 0.75rem 1rem; text-align: left; }
+            .badge-icon { margin-bottom: 0; }
         }
     </style>
 </head>
@@ -515,7 +482,7 @@
                 </ul>
                 <div class="nav-actions">
                     <a href="tel:+16783161454" class="btn-ghost">Call Us</a>
-                    <a href="index.html" class="btn-secondary">← Back to Home</a>
+                    <a href="index.html" class="btn-secondary">&larr; Back to Home</a>
                 </div>
                 <button class="mobile-menu-toggle" aria-label="Toggle menu">
                     <span></span>
@@ -530,114 +497,165 @@
     <section class="start-hero">
         <div class="container">
             <div class="start-content">
-                <!-- Header -->
                 <div class="start-header">
                     <div class="start-badge">
                         <span class="badge-dot"></span>
-                        <span>7-Day Free Trial • No Credit Card Required</span>
+                        <span>7-Day Free Trial &bull; No Credit Card Required</span>
                     </div>
                     <h1 class="start-title">Start Your Free Trial</h1>
                     <p class="start-subtitle">Your AI receptionist will be ready to answer calls in under 10 minutes. Fill out the form below to get started.</p>
                 </div>
 
-                <!-- Grid Layout -->
                 <div class="start-grid">
                     <!-- Form Column -->
                     <div class="form-container">
-                        <div class="form-header">
-                            <h2>Create Your Account</h2>
-                            <p>Setup takes less than 2 minutes</p>
+                        <!-- ============================================ -->
+                        <!-- SIGNUP FORM (hidden on success)              -->
+                        <!-- ============================================ -->
+                        <div id="formSection">
+                            <div class="form-header">
+                                <h2>Create Your Account</h2>
+                                <p>Setup takes less than 2 minutes</p>
+                            </div>
+
+                            <div id="errorBanner" class="error-banner">
+                                <strong>Oops!</strong> <span id="errorMessage"></span>
+                            </div>
+
+                            <form id="signupForm" class="signup-form">
+                                <div class="form-group">
+                                    <label for="firstName">First Name <span class="required">*</span></label>
+                                    <input type="text" id="firstName" name="firstName" placeholder="John" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">Email <span class="required">*</span></label>
+                                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phone">Phone <span class="required">*</span></label>
+                                    <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
+                                    <span class="help-text">We'll send SMS summaries here</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="businessName">Business Name <span class="required">*</span></label>
+                                    <input type="text" id="businessName" name="businessName" placeholder="Your Business" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="websiteUrl">Website URL <span style="color: var(--text-medium); font-weight: normal;">(optional)</span></label>
+                                    <input type="text" id="websiteUrl" name="websiteUrl" placeholder="yourbusiness.com">
+                                    <span class="help-text">We'll train your AI on your website content</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="industry">Industry <span class="required">*</span></label>
+                                    <select id="industry" name="industry" required>
+                                        <option value="">Please select...</option>
+                                        <option value="Home Services (plumbing, HVAC, contractors)">Home Services (plumbing, HVAC, contractors)</option>
+                                        <option value="Medical/Dental">Medical/Dental</option>
+                                        <option value="Retail/E-commerce">Retail/E-commerce</option>
+                                        <option value="Professional Services (legal, accounting)">Professional Services (legal, accounting)</option>
+                                        <option value="Restaurants/Food Service">Restaurants/Food Service</option>
+                                        <option value="Salon/Spa (hair, nails, skincare)">Salon/Spa (hair, nails, skincare)</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="businessCity">City <span class="required">*</span></label>
+                                        <input type="text" id="businessCity" name="businessCity" placeholder="Atlanta" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="businessState">State <span class="required">*</span></label>
+                                        <input type="text" id="businessState" name="businessState" placeholder="GA" maxlength="2" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="referralSource">How did you hear about us? <span class="required">*</span></label>
+                                    <select id="referralSource" name="referralSource" required>
+                                        <option value="">Please select...</option>
+                                        <option value="Google Search">Google Search</option>
+                                        <option value="AI Recommendation">AI Recommendation (ChatGPT, Claude, etc.)</option>
+                                        <option value="Social Media">Social Media</option>
+                                        <option value="Friend/Colleague">Friend/Colleague</option>
+                                        <option value="Advertisement">Advertisement</option>
+                                        <option value="Blog/Article">Blog/Article</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                    <div id="otherReferralGroup">
+                                        <input type="text" id="otherReferral" name="otherReferral" placeholder="Please specify...">
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="submit-btn" id="submitBtn">
+                                    <span id="btnText">Start Free Trial &rarr;</span>
+                                    <span id="btnSpinner" class="spinner" style="display: none;"></span>
+                                </button>
+
+                                <p style="font-size: 0.8125rem; color: var(--text-medium); text-align: center; margin-top: 0.5rem;">
+                                    By signing up, you agree to our <a href="terms-and-conditions.html" style="color: var(--primary-color);">Terms</a> and <a href="privacy-policy.html" style="color: var(--primary-color);">Privacy Policy</a>
+                                </p>
+                            </form>
+
+                            <div class="help-link">
+                                <p>Need help getting started?</p>
+                                <a href="tel:+16783161454">&#128222; Call us at (678) 316-1454 &rarr;</a>
+                            </div>
                         </div>
 
-                        <!-- Error Banner -->
-                        <div id="errorBanner" class="error-banner">
-                            <strong>Oops!</strong> <span id="errorMessage"></span>
-                        </div>
-
-                        <!-- Native Signup Form -->
-                        <form id="signupForm" class="signup-form">
-                            <div class="form-group">
-                                <label for="firstName">First Name <span class="required">*</span></label>
-                                <input type="text" id="firstName" name="firstName" placeholder="John" required>
+                        <!-- ============================================ -->
+                        <!-- PHASE 2C: SUCCESS SCREEN (shown after signup)-->
+                        <!-- ============================================ -->
+                        <div id="successSection" class="success-screen">
+                            <div class="success-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                             </div>
+                            <h2 style="font-size: 1.75rem; color: var(--text-dark); margin-bottom: 0.5rem;">You're All Set!</h2>
+                            <p style="color: var(--text-medium); margin-bottom: 1.5rem;">Your AI receptionist is ready to take calls.</p>
 
-                            <div class="form-group">
-                                <label for="email">Email <span class="required">*</span></label>
-                                <input type="email" id="email" name="email" placeholder="john@example.com" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="phone">Phone <span class="required">*</span></label>
-                                <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
-                                <span class="help-text">We'll send SMS summaries here</span>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="businessName">Business Name <span class="required">*</span></label>
-                                <input type="text" id="businessName" name="businessName" placeholder="Your Business" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="websiteUrl">Website URL <span style="color: var(--text-medium); font-weight: normal;">(optional)</span></label>
-                                <input type="text" id="websiteUrl" name="websiteUrl" placeholder="yourbusiness.com">
-                                <span class="help-text">We'll train your AI on your website content</span>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="industry">Industry <span class="required">*</span></label>
-                                <select id="industry" name="industry" required>
-                                    <option value="">Please select...</option>
-                                    <option value="Home Services (plumbing, HVAC, contractors)">Home Services (plumbing, HVAC, contractors)</option>
-                                    <option value="Medical/Dental">Medical/Dental</option>
-                                    <option value="Retail/E-commerce">Retail/E-commerce</option>
-                                    <option value="Professional Services (legal, accounting)">Professional Services (legal, accounting)</option>
-                                    <option value="Restaurants/Food Service">Restaurants/Food Service</option>
-                                    <option value="Salon/Spa (hair, nails, skincare)">Salon/Spa (hair, nails, skincare)</option>
-                                </select>
-                            </div>
-
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="businessCity">City <span class="required">*</span></label>
-                                    <input type="text" id="businessCity" name="businessCity" placeholder="Atlanta" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="businessState">State <span class="required">*</span></label>
-                                    <input type="text" id="businessState" name="businessState" placeholder="GA" maxlength="2" required>
+                            <!-- AI Phone Number -->
+                            <div id="successPhone" class="credential-box" style="background: rgba(18,32,146,0.04); border-color: rgba(18,32,146,0.15);">
+                                <div class="cred-label">Your AI Phone Number</div>
+                                <div class="cred-row" style="border-bottom: none;">
+                                    <span class="cred-value phone-value" id="successPhoneNumber"></span>
+                                    <button class="copy-btn" onclick="copyToClipboard(this, 'phone')">Copy</button>
                                 </div>
                             </div>
 
-                            <div class="form-group">
-                                <label for="referralSource">How did you hear about us? <span class="required">*</span></label>
-                                <select id="referralSource" name="referralSource" required>
-                                    <option value="">Please select...</option>
-                                    <option value="Google Search">Google Search</option>
-                                    <option value="AI Recommendation">AI Recommendation (ChatGPT, Claude, etc.)</option>
-                                    <option value="Social Media">Social Media</option>
-                                    <option value="Friend/Colleague">Friend/Colleague</option>
-                                    <option value="Advertisement">Advertisement</option>
-                                    <option value="Blog/Article">Blog/Article</option>
-                                    <option value="Other">Other</option>
-                                </select>
-                                <div id="otherReferralGroup">
-                                    <input type="text" id="otherReferral" name="otherReferral" placeholder="Please specify...">
+                            <!-- Login Credentials -->
+                            <div class="credential-box">
+                                <div class="cred-label" style="margin-bottom: 0.75rem; font-weight: 600;">Your Login Credentials</div>
+                                <div class="cred-row">
+                                    <div>
+                                        <div class="cred-label">Email</div>
+                                        <span class="cred-value" id="successEmail"></span>
+                                    </div>
+                                    <button class="copy-btn" onclick="copyToClipboard(this, 'email')">Copy</button>
+                                </div>
+                                <div class="cred-row">
+                                    <div>
+                                        <div class="cred-label">Temporary Password</div>
+                                        <span class="cred-value" id="successPassword"></span>
+                                    </div>
+                                    <button class="copy-btn" onclick="copyToClipboard(this, 'password')">Copy</button>
                                 </div>
                             </div>
 
-                            <button type="submit" class="submit-btn" id="submitBtn">
-                                <span id="btnText">Start Free Trial →</span>
-                                <span id="btnSpinner" class="spinner" style="display: none;"></span>
-                            </button>
+                            <div class="warning-box">
+                                Save your password now &mdash; you won't see it again. Check your email for a backup link.
+                            </div>
 
-                            <p style="font-size: 0.8125rem; color: var(--text-medium); text-align: center; margin-top: 0.5rem;">
-                                By signing up, you agree to our <a href="terms-and-conditions.html" style="color: var(--primary-color);">Terms</a> and <a href="privacy-policy.html" style="color: var(--primary-color);">Privacy Policy</a>
+                            <a href="https://myvoiceaiconnect.com/client/login?signup=success" class="dashboard-btn">
+                                Log In to Dashboard &rarr;
+                            </a>
+
+                            <p style="font-size: 0.8125rem; color: var(--text-medium); margin-top: 1rem;">
+                                Your 7-day free trial has started. No credit card required.
                             </p>
-                        </form>
-
-                        <!-- Help Link -->
-                        <div class="help-link">
-                            <p>Need help getting started?</p>
-                            <a href="tel:+16783161454">📞 Call us at (678) 316-1454 →</a>
                         </div>
                     </div>
 
@@ -646,71 +664,63 @@
                         <div class="benefits-header">
                             <h3>What You'll Get:</h3>
                         </div>
-
                         <div class="benefits-list">
                             <div class="benefit-item">
-                                <div class="benefit-icon">⚡</div>
+                                <div class="benefit-icon">&#9889;</div>
                                 <div class="benefit-content">
                                     <h4>10-Minute Setup</h4>
                                     <p>Your AI receptionist is ready to answer calls in under 10 minutes. No technical skills required.</p>
                                 </div>
                             </div>
-
                             <div class="benefit-item">
-                                <div class="benefit-icon">📞</div>
+                                <div class="benefit-icon">&#128222;</div>
                                 <div class="benefit-content">
                                     <h4>Dedicated Phone Number</h4>
                                     <p>Get your own CallBird number, or forward your existing business line. Your choice.</p>
                                 </div>
                             </div>
-
                             <div class="benefit-item">
-                                <div class="benefit-icon">🤖</div>
+                                <div class="benefit-icon">&#129302;</div>
                                 <div class="benefit-content">
                                     <h4>Custom AI Training</h4>
                                     <p>We train your AI on your business, services, and FAQs. It knows your business inside and out.</p>
                                 </div>
                             </div>
-
                             <div class="benefit-item">
-                                <div class="benefit-icon">📱</div>
+                                <div class="benefit-icon">&#128241;</div>
                                 <div class="benefit-content">
                                     <h4>Mobile App Access</h4>
                                     <p>Manage calls, view transcripts, and listen to recordings from your phone—anywhere, anytime.</p>
                                 </div>
                             </div>
-
                             <div class="benefit-item">
-                                <div class="benefit-icon">💬</div>
+                                <div class="benefit-icon">&#128172;</div>
                                 <div class="benefit-content">
                                     <h4>Instant Text Summaries</h4>
                                     <p>Get a text summary of every call the moment it ends. Know who called and what they need.</p>
                                 </div>
                             </div>
-
                             <div class="benefit-item">
-                                <div class="benefit-icon">📅</div>
+                                <div class="benefit-icon">&#128197;</div>
                                 <div class="benefit-content">
                                     <h4>Calendar Integration</h4>
                                     <p>Automatically books appointments in your Google Calendar, Outlook, or our built-in system.</p>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Trust Badges -->
                         <div class="trust-badges">
                             <h4>Trusted by 200+ Businesses</h4>
                             <div class="badges-grid">
                                 <div class="badge-item">
-                                    <div class="badge-icon">✓</div>
+                                    <div class="badge-icon">&#10003;</div>
                                     <div class="badge-label">No Credit Card</div>
                                 </div>
                                 <div class="badge-item">
-                                    <div class="badge-icon">✓</div>
+                                    <div class="badge-icon">&#10003;</div>
                                     <div class="badge-label">7-Day Trial</div>
                                 </div>
                                 <div class="badge-item">
-                                    <div class="badge-icon">✓</div>
+                                    <div class="badge-icon">&#10003;</div>
                                     <div class="badge-label">Cancel Anytime</div>
                                 </div>
                             </div>
@@ -736,7 +746,6 @@
                         <p><a href="mailto:support@callbirdai.com">support@callbirdai.com</a></p>
                     </div>
                 </div>
-
                 <div class="footer-col">
                     <h4>Product</h4>
                     <ul class="footer-links">
@@ -746,7 +755,6 @@
                         <li><a href="index.html#faq">FAQ</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-col">
                     <h4>Industries</h4>
                     <ul class="footer-links">
@@ -759,7 +767,6 @@
                         <li><a href="veterinary-ai-receptionist.html">Veterinary</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-col">
                     <h4>Company</h4>
                     <ul class="footer-links">
@@ -770,21 +777,58 @@
                     </ul>
                 </div>
             </div>
-
             <div class="footer-bottom">
                 <p>&copy; 2025 CallBird AI. All Rights Reserved.</p>
-                <p>A2P 10DLC Compliant • SOC 2 Type II Certified</p>
+                <p>A2P 10DLC Compliant &bull; SOC 2 Type II Certified</p>
             </div>
         </div>
     </footer>
 
-    <!-- Form Submission Script -->
     <script>
-        // =====================================================================
-        // CHANGED: Points to VoiceAI Connect backend instead of CallBird
-        // =====================================================================
+        // =================================================================
+        // PHASE 2C: Points to VoiceAI Connect backend
+        // =================================================================
         const API_URL = 'https://urchin-app-bqb4i.ondigitalocean.app/api/client/signup';
-        
+
+        // =================================================================
+        // PHASE 2C: Generate temp password (same pattern as add-client page)
+        // 8 chars, excludes ambiguous characters (0/O/l/I/1)
+        // =================================================================
+        function generateTempPassword() {
+            const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnpqrstuvwxyz23456789';
+            let password = '';
+            for (let i = 0; i < 8; i++) {
+                password += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            return password;
+        }
+
+        // Format phone for display
+        function formatPhoneDisplay(phone) {
+            if (!phone) return '';
+            var digits = phone.replace(/\D/g, '');
+            var ten = digits.length === 11 && digits.charAt(0) === '1' ? digits.slice(1) : digits;
+            if (ten.length === 10) {
+                return '(' + ten.slice(0,3) + ') ' + ten.slice(3,6) + '-' + ten.slice(6);
+            }
+            return phone;
+        }
+
+        // Store credentials for copy buttons
+        var _credentials = { email: '', password: '', phone: '' };
+
+        function copyToClipboard(btn, field) {
+            var text = _credentials[field] || '';
+            navigator.clipboard.writeText(text).then(function() {
+                btn.textContent = 'Copied!';
+                btn.classList.add('copied');
+                setTimeout(function() {
+                    btn.textContent = 'Copy';
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+
         const form = document.getElementById('signupForm');
         const submitBtn = document.getElementById('submitBtn');
         const btnText = document.getElementById('btnText');
@@ -798,11 +842,11 @@
             let value = e.target.value.replace(/\D/g, '');
             if (value.length > 0) {
                 if (value.length <= 3) {
-                    value = `(${value}`;
+                    value = '(' + value;
                 } else if (value.length <= 6) {
-                    value = `(${value.slice(0,3)}) ${value.slice(3)}`;
+                    value = '(' + value.slice(0,3) + ') ' + value.slice(3);
                 } else {
-                    value = `(${value.slice(0,3)}) ${value.slice(3,6)}-${value.slice(6,10)}`;
+                    value = '(' + value.slice(0,3) + ') ' + value.slice(3,6) + '-' + value.slice(6,10);
                 }
             }
             e.target.value = value;
@@ -814,7 +858,7 @@
             e.target.value = e.target.value.toUpperCase();
         });
         
-        // Show/hide "Other" text input based on referral source selection
+        // Show/hide "Other" text input
         const referralSelect = document.getElementById('referralSource');
         const otherReferralGroup = document.getElementById('otherReferralGroup');
         const otherReferralInput = document.getElementById('otherReferral');
@@ -830,17 +874,11 @@
             }
         });
         
-        // Website URL normalization helper
         function normalizeWebsiteUrl(url) {
             if (!url || url.trim() === '') return '';
-            
             url = url.trim().toLowerCase();
-            
-            // Remove any leading/trailing whitespace and common typos
-            url = url.replace(/^(https?:\/\/)?/, ''); // Remove existing protocol if any
-            url = url.replace(/^www\./, ''); // Remove www. prefix temporarily
-            
-            // Add https:// prefix
+            url = url.replace(/^(https?:\/\/)?/, '');
+            url = url.replace(/^www\./, '');
             return 'https://' + url;
         }
         
@@ -848,25 +886,23 @@
         form.addEventListener('submit', async function(e) {
             e.preventDefault();
             
-            // Reset error state
             errorBanner.classList.remove('active');
             
-            // Get and normalize website URL
             let websiteUrl = document.getElementById('websiteUrl').value.trim();
             if (websiteUrl) {
                 websiteUrl = normalizeWebsiteUrl(websiteUrl);
             }
             
-            // Handle "Other" referral source
             let referralSource = document.getElementById('referralSource').value;
             if (referralSource === 'Other' && otherReferralInput.value.trim()) {
                 referralSource = 'Other: ' + otherReferralInput.value.trim();
             }
             
-            // Get form data
-            // =================================================================
-            // CHANGED: Added agencyId for VoiceAI Connect CallBird agency
-            // =================================================================
+            // =============================================================
+            // PHASE 2C: Generate temp password and include in request
+            // =============================================================
+            const tempPassword = generateTempPassword();
+
             const formData = {
                 agencyId: '00000000-0000-0000-0000-000000000001',
                 firstName: document.getElementById('firstName').value.trim(),
@@ -877,7 +913,8 @@
                 industry: document.getElementById('industry').value,
                 businessCity: document.getElementById('businessCity').value.trim(),
                 businessState: document.getElementById('businessState').value.trim().toUpperCase(),
-                referralSource: referralSource
+                referralSource: referralSource,
+                password: tempPassword  // PHASE 2C: Send temp password to backend
             };
             
             // Client-side validation
@@ -888,28 +925,23 @@
                 return;
             }
             
-            // Validate "Other" field if selected
             if (document.getElementById('referralSource').value === 'Other' && !otherReferralInput.value.trim()) {
                 showError('Please specify how you heard about us.');
                 return;
             }
             
-            // Email validation
             if (!formData.email.includes('@') || !formData.email.includes('.')) {
                 showError('Please enter a valid email address.');
                 return;
             }
             
-            // Phone validation (at least 10 digits)
             if (formData.phone.replace(/\D/g, '').length < 10) {
                 showError('Please enter a valid phone number.');
                 return;
             }
             
-            // Show loading state
             setLoading(true);
             
-            // Track form submission
             window.dataLayer = window.dataLayer || [];
             window.dataLayer.push({
                 'event': 'signup_form_submit',
@@ -920,9 +952,7 @@
             try {
                 const response = await fetch(API_URL, {
                     method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
+                    headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(formData)
                 });
                 
@@ -932,24 +962,37 @@
                     throw new Error(data.message || data.error || 'Something went wrong');
                 }
                 
-                // Success!
-                console.log('✅ Signup successful:', data);
+                console.log('Signup successful:', data);
                 
-                // Track conversion
                 window.dataLayer.push({
                     'event': 'signup_success',
-                    'client_id': data.client?.id,
-                    'phone_number': data.client?.phone_number
+                    'client_id': data.client && data.client.id,
+                    'phone_number': data.client && data.client.phone_number
                 });
                 
-                // Redirect to confirmation page
-                window.location.href = 'signup-confirmation.html';
+                // ==========================================================
+                // PHASE 2C: Show inline success screen with credentials
+                // instead of redirecting to signup-confirmation.html
+                // ==========================================================
+                _credentials.email = formData.email;
+                _credentials.password = tempPassword;
+                _credentials.phone = (data.client && data.client.phone_number) || '';
+
+                document.getElementById('successEmail').textContent = formData.email;
+                document.getElementById('successPassword').textContent = tempPassword;
+                document.getElementById('successPhoneNumber').textContent = formatPhoneDisplay(_credentials.phone);
+
+                // Hide form, show success
+                document.getElementById('formSection').style.display = 'none';
+                document.getElementById('successSection').classList.add('active');
+
+                // Scroll to top of form container
+                document.querySelector('.form-container').scrollIntoView({ behavior: 'smooth', block: 'start' });
                 
             } catch (error) {
-                console.error('❌ Signup error:', error);
+                console.error('Signup error:', error);
                 showError(error.message || 'Something went wrong. Please try again.');
                 
-                // Track error
                 window.dataLayer.push({
                     'event': 'signup_error',
                     'error_message': error.message
@@ -971,12 +1014,8 @@
             errorBanner.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
         
-        // GTM Event Tracking
         window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({
-            'event': 'signup_page_view',
-            'page_type': 'signup'
-        });
+        window.dataLayer.push({ 'event': 'signup_page_view', 'page_type': 'signup' });
     </script>
 </body>
 </html>
