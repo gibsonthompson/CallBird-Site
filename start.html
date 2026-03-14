@@ -780,8 +780,10 @@
 
     <!-- Form Submission Script -->
     <script>
-        // API endpoint
-        const API_URL = 'https://dolphin-app-fohdg.ondigitalocean.app/api/signup';
+        // =====================================================================
+        // CHANGED: Points to VoiceAI Connect backend instead of CallBird
+        // =====================================================================
+        const API_URL = 'https://urchin-app-bqb4i.ondigitalocean.app/api/client/signup';
         
         const form = document.getElementById('signupForm');
         const submitBtn = document.getElementById('submitBtn');
@@ -862,7 +864,11 @@
             }
             
             // Get form data
+            // =================================================================
+            // CHANGED: Added agencyId for VoiceAI Connect CallBird agency
+            // =================================================================
             const formData = {
+                agencyId: '00000000-0000-0000-0000-000000000001',
                 firstName: document.getElementById('firstName').value.trim(),
                 email: document.getElementById('email').value.trim().toLowerCase(),
                 phone: document.getElementById('phone').value.trim(),
