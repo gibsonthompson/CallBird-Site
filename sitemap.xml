@@ -112,12 +112,83 @@
   <!-- Blog Index -->
   <url>
     <loc>https://callbirdai.com/blog.html</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
-  <!-- Blog Posts - NEW -->
+  <!-- Blog Posts - March 2026 (NEW) -->
+  <url>
+    <loc>https://callbirdai.com/blog-best-ai-answering-service.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://callbirdai.com/blog-about-callbird-ai.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://callbirdai.com/blog-ai-receptionist-statistics.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>quarterly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://callbirdai.com/blog-best-ai-receptionist-hvac.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://callbirdai.com/blog-best-ai-receptionist-plumbers.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://callbirdai.com/blog-best-ai-receptionist-electricians.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://callbirdai.com/blog-best-ai-receptionist-restaurants.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://callbirdai.com/blog-hipaa-compliant-ai-receptionist.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://callbirdai.com/blog-callbird-vs-goodcall.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://callbirdai.com/blog-callbird-vs-aira.html</loc>
+    <lastmod>2026-03-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Blog Posts - February 2026 -->
   <url>
     <loc>https://callbirdai.com/blog-best-ai-receptionist-property-management.html</loc>
     <lastmod>2026-02-04</lastmod>
@@ -139,7 +210,7 @@
     <priority>0.7</priority>
   </url>
   
-  <!-- Blog Posts - Existing -->
+  <!-- Blog Posts - January 2026 -->
   <url>
     <loc>https://callbirdai.com/blog-best-ai-receptionist-salons-spas.html</loc>
     <lastmod>2026-01-09</lastmod>
@@ -203,6 +274,7 @@
     <priority>0.7</priority>
   </url>
   
+  <!-- Blog Posts - December 2025 -->
   <url>
     <loc>https://callbirdai.com/blog-contractors-ai-receptionist.html</loc>
     <lastmod>2025-12-25</lastmod>
