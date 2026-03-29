@@ -45,244 +45,50 @@
             background: var(--bg-white);
         }
         
-        .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border-color);
-            padding: 1rem 0;
-        }
-        
-        .nav-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        
+        .navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border-color); padding: 1rem 0; }
+        .nav-content { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; }
         .logo-image { height: 50px; width: auto; }
-        
         .nav-links { display: flex; gap: 2rem; list-style: none; }
         .nav-links a { color: var(--text-dark); text-decoration: none; font-weight: 500; transition: color 0.3s; font-size: 0.95rem; }
         .nav-links a:hover { color: var(--primary-color); }
-        
         .nav-actions { display: flex; gap: 1rem; align-items: center; }
-        
-        .btn-primary {
-            background: var(--primary-color);
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background 0.3s;
-            white-space: nowrap;
-            font-size: 0.95rem;
-        }
-        
+        .btn-primary { background: var(--primary-color); color: white; padding: 0.75rem 1.5rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600; transition: background 0.3s; white-space: nowrap; font-size: 0.95rem; }
         .btn-primary:hover { background: var(--primary-hover); }
-        
-        .mobile-menu-toggle {
-            display: none;
-            flex-direction: column;
-            gap: 0.25rem;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 0.5rem;
-        }
-        
+        .mobile-menu-toggle { display: none; flex-direction: column; gap: 0.25rem; background: none; border: none; cursor: pointer; padding: 0.5rem; }
         .mobile-menu-toggle span { width: 24px; height: 2px; background: var(--text-dark); transition: all 0.3s; }
         
-        .blog-hero {
-            background: linear-gradient(135deg, var(--primary-color) 0%, #1a2fb8 100%);
-            color: white;
-            padding: 7rem 1.5rem 3rem;
-            text-align: center;
-        }
-        
-        .blog-hero h1 {
-            font-family: var(--font-primary);
-            font-size: clamp(2rem, 5vw, 3rem);
-            font-weight: 800;
-            margin-bottom: 1rem;
-        }
-        
-        .blog-hero p {
-            font-size: clamp(1rem, 2.5vw, 1.25rem);
-            opacity: 0.95;
-            max-width: 600px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
+        .blog-hero { background: linear-gradient(135deg, var(--primary-color) 0%, #1a2fb8 100%); color: white; padding: 7rem 1.5rem 3rem; text-align: center; }
+        .blog-hero h1 { font-family: var(--font-primary); font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; margin-bottom: 1rem; }
+        .blog-hero p { font-size: clamp(1rem, 2.5vw, 1.25rem); opacity: 0.95; max-width: 600px; margin: 0 auto; line-height: 1.6; }
         
         .blog-container { max-width: 1200px; margin: 0 auto; padding: 3rem 1.5rem; }
         
-        .featured-post {
-            background: white;
-            border-radius: 1rem;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            margin-bottom: 3rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0;
-        }
-        
-        .featured-image {
-            background: linear-gradient(135deg, var(--primary-color) 0%, #1a2fb8 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 3rem;
-            color: white;
-            font-size: 4rem;
-            min-height: 300px;
-        }
-        
+        .featured-post { background: white; border-radius: 1rem; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+        .featured-image { background: linear-gradient(135deg, var(--primary-color) 0%, #1a2fb8 100%); display: flex; align-items: center; justify-content: center; padding: 3rem; color: white; font-size: 4rem; min-height: 300px; }
         .featured-content { padding: 2rem; display: flex; flex-direction: column; justify-content: center; }
-        
-        .featured-badge {
-            display: inline-block;
-            background: var(--accent-color);
-            color: var(--text-dark);
-            padding: 0.5rem 1rem;
-            border-radius: 2rem;
-            font-size: 0.85rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            align-self: flex-start;
-        }
-        
-        .featured-content h2 {
-            font-family: var(--font-primary);
-            font-size: clamp(1.5rem, 3vw, 2rem);
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--text-dark);
-            line-height: 1.3;
-        }
-        
-        .featured-content p {
-            color: var(--text-medium);
-            margin-bottom: 1.5rem;
-            font-size: clamp(0.95rem, 2vw, 1.05rem);
-            line-height: 1.6;
-        }
-        
+        .featured-badge { display: inline-block; background: var(--accent-color); color: var(--text-dark); padding: 0.5rem 1rem; border-radius: 2rem; font-size: 0.85rem; font-weight: 700; margin-bottom: 1rem; align-self: flex-start; }
+        .featured-content h2 { font-family: var(--font-primary); font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; margin-bottom: 1rem; color: var(--text-dark); line-height: 1.3; }
+        .featured-content p { color: var(--text-medium); margin-bottom: 1.5rem; font-size: clamp(0.95rem, 2vw, 1.05rem); line-height: 1.6; }
         .featured-meta { display: flex; gap: 1rem; flex-wrap: wrap; color: var(--text-light); font-size: 0.9rem; margin-bottom: 1.5rem; }
-        
-        .read-more {
-            display: inline-block;
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.05rem;
-            transition: color 0.3s;
-        }
-        
+        .read-more { display: inline-block; color: var(--primary-color); text-decoration: none; font-weight: 600; font-size: 1.05rem; transition: color 0.3s; }
         .read-more:hover { color: var(--primary-hover); }
         
-        .section-title {
-            font-family: var(--font-primary);
-            font-size: clamp(1.5rem, 3vw, 2rem);
-            font-weight: 700;
-            margin-bottom: 2rem;
-            color: var(--text-dark);
-        }
+        .section-title { font-family: var(--font-primary); font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; margin-bottom: 2rem; color: var(--text-dark); }
         
-        .posts-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
+        .posts-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem; }
         
-        .post-card {
-            background: white;
-            border: 1px solid var(--border-color);
-            border-radius: 1rem;
-            overflow: hidden;
-            transition: all 0.3s;
-            cursor: pointer;
-            text-decoration: none;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-        
+        .post-card { background: white; border: 1px solid var(--border-color); border-radius: 1rem; overflow: hidden; transition: all 0.3s; cursor: pointer; text-decoration: none; display: flex; flex-direction: column; height: 100%; }
         .post-card:hover { transform: translateY(-4px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
-        
-        .post-image {
-            background: linear-gradient(135deg, var(--bg-light) 0%, #e8e8e6 100%);
-            height: 180px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: var(--text-medium);
-            flex-shrink: 0;
-        }
-        
+        .post-image { background: linear-gradient(135deg, var(--bg-light) 0%, #e8e8e6 100%); height: 180px; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: var(--text-medium); flex-shrink: 0; }
         .post-content { padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; }
+        .post-category { display: inline-block; background: var(--bg-light); color: var(--primary-color); padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.8rem; font-weight: 600; margin-bottom: 0.75rem; align-self: flex-start; }
+        .post-title { font-family: var(--font-primary); font-size: 1.15rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-dark); line-height: 1.4; }
+        .post-excerpt { color: var(--text-medium); font-size: 0.95rem; margin-bottom: auto; line-height: 1.6; padding-bottom: 1rem; }
+        .post-meta { display: flex; gap: 0.75rem; flex-wrap: wrap; color: var(--text-light); font-size: 0.85rem; padding-top: 0.75rem; border-top: 1px solid var(--border-color); }
         
-        .post-category {
-            display: inline-block;
-            background: var(--bg-light);
-            color: var(--primary-color);
-            padding: 0.25rem 0.75rem;
-            border-radius: 1rem;
-            font-size: 0.8rem;
-            font-weight: 600;
-            margin-bottom: 0.75rem;
-            align-self: flex-start;
-        }
-        
-        .post-title {
-            font-family: var(--font-primary);
-            font-size: 1.15rem;
-            font-weight: 700;
-            margin-bottom: 0.75rem;
-            color: var(--text-dark);
-            line-height: 1.4;
-        }
-        
-        .post-excerpt {
-            color: var(--text-medium);
-            font-size: 0.95rem;
-            margin-bottom: auto;
-            line-height: 1.6;
-            padding-bottom: 1rem;
-        }
-        
-        .post-meta {
-            display: flex;
-            gap: 0.75rem;
-            flex-wrap: wrap;
-            color: var(--text-light);
-            font-size: 0.85rem;
-            padding-top: 0.75rem;
-            border-top: 1px solid var(--border-color);
-        }
-        
-        .newsletter-cta {
-            background: linear-gradient(135deg, var(--primary-color) 0%, #1a2fb8 100%);
-            color: white;
-            padding: 2.5rem 2rem;
-            border-radius: 1rem;
-            text-align: center;
-            margin-top: 3rem;
-        }
-        
+        .newsletter-cta { background: linear-gradient(135deg, var(--primary-color) 0%, #1a2fb8 100%); color: white; padding: 2.5rem 2rem; border-radius: 1rem; text-align: center; margin-top: 3rem; }
         .newsletter-cta h3 { font-family: var(--font-primary); font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 1rem; }
         .newsletter-cta p { font-size: clamp(1rem, 2vw, 1.1rem); margin-bottom: 2rem; opacity: 0.95; line-height: 1.6; }
-        
         .newsletter-form { display: flex; gap: 1rem; max-width: 500px; margin: 0 auto; flex-direction: column; }
         .newsletter-form input { flex: 1; padding: 1rem; border: none; border-radius: 0.5rem; font-size: 1rem; }
         .newsletter-form button { background: var(--accent-color); color: var(--text-dark); padding: 1rem 2rem; border: none; border-radius: 0.5rem; font-weight: 700; cursor: pointer; transition: background 0.3s; }
@@ -295,13 +101,7 @@
         .footer-links a:hover { color: white; }
         .footer-bottom { padding-top: 1.5rem; border-top: 1px solid rgba(255, 255, 255, 0.1); color: rgba(255, 255, 255, 0.6); font-size: 0.9rem; }
         
-        @media (max-width: 968px) {
-            .nav-links { display: none; }
-            .mobile-menu-toggle { display: flex; }
-            .logo-image { height: 45px; }
-            .btn-primary { padding: 0.65rem 1.25rem; font-size: 0.9rem; }
-        }
-        
+        @media (max-width: 968px) { .nav-links { display: none; } .mobile-menu-toggle { display: flex; } .logo-image { height: 45px; } .btn-primary { padding: 0.65rem 1.25rem; font-size: 0.9rem; } }
         @media (max-width: 768px) {
             .navbar { padding: 0.75rem 0; }
             .nav-content { padding: 0 1rem; }
@@ -317,17 +117,8 @@
             .newsletter-form { gap: 0.75rem; }
             .footer-links { gap: 1rem; font-size: 0.9rem; }
         }
-        
         @media (min-width: 769px) { .newsletter-form { flex-direction: row; } }
-        
-        @media (max-width: 480px) {
-            .logo-image { height: 35px; }
-            .btn-primary { padding: 0.6rem 1rem; font-size: 0.85rem; }
-            .featured-badge { font-size: 0.75rem; padding: 0.4rem 0.8rem; }
-            .post-title { font-size: 1.05rem; }
-            .post-excerpt { font-size: 0.9rem; }
-            .post-meta { font-size: 0.8rem; }
-        }
+        @media (max-width: 480px) { .logo-image { height: 35px; } .btn-primary { padding: 0.6rem 1rem; font-size: 0.85rem; } .featured-badge { font-size: 0.75rem; padding: 0.4rem 0.8rem; } .post-title { font-size: 1.05rem; } .post-excerpt { font-size: 0.9rem; } .post-meta { font-size: 0.8rem; } }
     </style>
 </head>
 <body>
@@ -383,7 +174,67 @@
         <h2 class="section-title">Latest Articles</h2>
         <div class="posts-grid">
 
-            <!-- NEW: AI Receptionist Statistics -->
+            <!-- NEW: CallBird vs My AI Front Desk -->
+            <a href="blog-callbird-vs-my-ai-front-desk.html" class="post-card">
+                <div class="post-image">⚖️</div>
+                <div class="post-content">
+                    <span class="post-category">Comparison</span>
+                    <h3 class="post-title">CallBird vs My AI Front Desk: Honest Comparison [2026]</h3>
+                    <p class="post-excerpt">Flat-rate unlimited vs minute-based pricing, industry AI vs generic. Side-by-side feature breakdown.</p>
+                    <div class="post-meta">
+                        <span>📅 Mar 28, 2026</span>
+                        <span>•</span>
+                        <span>11 min read</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- NEW: CallBird vs Upfirst -->
+            <a href="blog-callbird-vs-upfirst.html" class="post-card">
+                <div class="post-image">⚖️</div>
+                <div class="post-content">
+                    <span class="post-category">Comparison</span>
+                    <h3 class="post-title">CallBird vs Upfirst: AI Receptionist Comparison [2026]</h3>
+                    <p class="post-excerpt">Flat-rate unlimited ($49/mo) vs per-call pricing ($24.95/mo for 30 calls). Which saves you more?</p>
+                    <div class="post-meta">
+                        <span>📅 Mar 28, 2026</span>
+                        <span>•</span>
+                        <span>10 min read</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- NEW: Stop Missing Business Calls -->
+            <a href="blog-stop-missing-business-calls.html" class="post-card">
+                <div class="post-image">📞</div>
+                <div class="post-content">
+                    <span class="post-category">Business Growth</span>
+                    <h3 class="post-title">How to Stop Missing Business Calls: 7 Methods That Work [2026]</h3>
+                    <p class="post-excerpt">From free call forwarding to AI answering services. 7 solutions ranked by cost and effectiveness.</p>
+                    <div class="post-meta">
+                        <span>📅 Mar 28, 2026</span>
+                        <span>•</span>
+                        <span>12 min read</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- NEW: Receptionist Cost vs AI -->
+            <a href="blog-receptionist-cost-vs-ai.html" class="post-card">
+                <div class="post-image">💰</div>
+                <div class="post-content">
+                    <span class="post-category">Cost Analysis</span>
+                    <h3 class="post-title">Cost of Hiring a Receptionist vs AI Receptionist [2026 Data]</h3>
+                    <p class="post-excerpt">Human receptionist: $50K/year. AI receptionist: $588/year. Full salary data and 5-year savings breakdown.</p>
+                    <div class="post-meta">
+                        <span>📅 Mar 28, 2026</span>
+                        <span>•</span>
+                        <span>11 min read</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- AI Receptionist Statistics -->
             <a href="blog-ai-receptionist-statistics.html" class="post-card">
                 <div class="post-image">📊</div>
                 <div class="post-content">
@@ -398,7 +249,7 @@
                 </div>
             </a>
 
-            <!-- NEW: What is CallBird AI -->
+            <!-- What is CallBird AI -->
             <a href="blog-about-callbird-ai.html" class="post-card">
                 <div class="post-image">🐦</div>
                 <div class="post-content">
@@ -413,7 +264,7 @@
                 </div>
             </a>
 
-            <!-- NEW: HIPAA Compliant AI Receptionist -->
+            <!-- HIPAA Compliant AI Receptionist -->
             <a href="blog-hipaa-compliant-ai-receptionist.html" class="post-card">
                 <div class="post-image">🏥</div>
                 <div class="post-content">
@@ -428,7 +279,7 @@
                 </div>
             </a>
 
-            <!-- NEW: Best AI Receptionist for HVAC -->
+            <!-- Best AI Receptionist for HVAC -->
             <a href="blog-best-ai-receptionist-hvac.html" class="post-card">
                 <div class="post-image">❄️</div>
                 <div class="post-content">
@@ -443,7 +294,7 @@
                 </div>
             </a>
 
-            <!-- NEW: Best AI Receptionist for Plumbers -->
+            <!-- Best AI Receptionist for Plumbers -->
             <a href="blog-best-ai-receptionist-plumbers.html" class="post-card">
                 <div class="post-image">🔧</div>
                 <div class="post-content">
@@ -458,7 +309,7 @@
                 </div>
             </a>
 
-            <!-- NEW: Best AI Receptionist for Electricians -->
+            <!-- Best AI Receptionist for Electricians -->
             <a href="blog-best-ai-receptionist-electricians.html" class="post-card">
                 <div class="post-image">⚡</div>
                 <div class="post-content">
@@ -473,7 +324,7 @@
                 </div>
             </a>
 
-            <!-- NEW: Best AI Receptionist for Restaurants -->
+            <!-- Best AI Receptionist for Restaurants -->
             <a href="blog-best-ai-receptionist-restaurants.html" class="post-card">
                 <div class="post-image">🍽️</div>
                 <div class="post-content">
@@ -488,7 +339,7 @@
                 </div>
             </a>
 
-            <!-- NEW: CallBird vs Goodcall -->
+            <!-- CallBird vs Goodcall -->
             <a href="blog-callbird-vs-goodcall.html" class="post-card">
                 <div class="post-image">⚖️</div>
                 <div class="post-content">
@@ -503,7 +354,7 @@
                 </div>
             </a>
 
-            <!-- NEW: CallBird vs AIRA -->
+            <!-- CallBird vs AIRA -->
             <a href="blog-callbird-vs-aira.html" class="post-card">
                 <div class="post-image">⚖️</div>
                 <div class="post-content">
@@ -518,7 +369,7 @@
                 </div>
             </a>
 
-            <!-- NEW: Best AI Answering Service (card for non-featured placement) -->
+            <!-- Best AI Answering Service (card) -->
             <a href="blog-best-ai-answering-service.html" class="post-card">
                 <div class="post-image">📞</div>
                 <div class="post-content">
@@ -533,7 +384,7 @@
                 </div>
             </a>
 
-            <!-- EXISTING: Property Management -->
+            <!-- Property Management -->
             <a href="blog-best-ai-receptionist-property-management.html" class="post-card">
                 <div class="post-image">🏢</div>
                 <div class="post-content">
@@ -548,7 +399,7 @@
                 </div>
             </a>
 
-            <!-- EXISTING: Chiropractors -->
+            <!-- Chiropractors -->
             <a href="blog-best-ai-receptionist-chiropractors.html" class="post-card">
                 <div class="post-image">🦴</div>
                 <div class="post-content">
@@ -563,7 +414,7 @@
                 </div>
             </a>
 
-            <!-- EXISTING: CallBird vs Dialzara -->
+            <!-- CallBird vs Dialzara -->
             <a href="blog-callbird-vs-dialzara.html" class="post-card">
                 <div class="post-image">⚖️</div>
                 <div class="post-content">
@@ -578,7 +429,7 @@
                 </div>
             </a>
 
-            <!-- EXISTING: Salons & Spas -->
+            <!-- Salons & Spas -->
             <a href="blog-best-ai-receptionist-salons-spas.html" class="post-card">
                 <div class="post-image">💇</div>
                 <div class="post-content">
@@ -593,7 +444,7 @@
                 </div>
             </a>
 
-            <!-- EXISTING: CallBird vs Rosie -->
+            <!-- CallBird vs Rosie -->
             <a href="blog-callbird-vs-rosie.html" class="post-card">
                 <div class="post-image">⚖️</div>
                 <div class="post-content">
@@ -608,7 +459,7 @@
                 </div>
             </a>
 
-            <!-- EXISTING: Veterinarians -->
+            <!-- Veterinarians -->
             <a href="blog-best-ai-receptionist-veterinarians.html" class="post-card">
                 <div class="post-image">🐾</div>
                 <div class="post-content">
@@ -623,7 +474,7 @@
                 </div>
             </a>
 
-            <!-- EXISTING: Real Estate -->
+            <!-- Real Estate -->
             <a href="blog-best-ai-receptionist-real-estate.html" class="post-card">
                 <div class="post-image">🏠</div>
                 <div class="post-content">
@@ -638,7 +489,7 @@
                 </div>
             </a>
 
-            <!-- EXISTING: What is an AI Receptionist -->
+            <!-- What is an AI Receptionist -->
             <a href="blog-what-is-ai-receptionist.html" class="post-card">
                 <div class="post-image">📚</div>
                 <div class="post-content">
@@ -653,7 +504,7 @@
                 </div>
             </a>
 
-            <!-- EXISTING: AI vs Virtual vs Answering Service -->
+            <!-- AI vs Virtual vs Answering Service -->
             <a href="blog-ai-vs-virtual-receptionist-vs-answering-service.html" class="post-card">
                 <div class="post-image">🔄</div>
                 <div class="post-content">
@@ -668,7 +519,7 @@
                 </div>
             </a>
 
-            <!-- EXISTING: Contractor Missed Calls Cost -->
+            <!-- Contractor Missed Calls Cost -->
             <a href="blog-contractor-missed-calls-cost.html" class="post-card">
                 <div class="post-image">💰</div>
                 <div class="post-content">
@@ -683,7 +534,7 @@
                 </div>
             </a>
 
-            <!-- EXISTING: After-Hours Answering Guide -->
+            <!-- After-Hours Answering Guide -->
             <a href="blog-after-hours-answering-contractors.html" class="post-card">
                 <div class="post-image">🌙</div>
                 <div class="post-content">
@@ -698,7 +549,7 @@
                 </div>
             </a>
 
-            <!-- EXISTING: Emergency Call Handling -->
+            <!-- Emergency Call Handling -->
             <a href="blog-emergency-calls-contractors.html" class="post-card">
                 <div class="post-image">🚨</div>
                 <div class="post-content">
@@ -713,7 +564,7 @@
                 </div>
             </a>
 
-            <!-- EXISTING: Contractors Best AI Receptionist -->
+            <!-- Contractors Best AI Receptionist -->
             <a href="blog-contractors-ai-receptionist.html" class="post-card">
                 <div class="post-image">🔧</div>
                 <div class="post-content">
@@ -728,7 +579,7 @@
                 </div>
             </a>
 
-            <!-- EXISTING: Multi-Competitor Comparison -->
+            <!-- Multi-Competitor Comparison -->
             <a href="blog-ai-receptionist-comparison-2025.html" class="post-card">
                 <div class="post-image">🏆</div>
                 <div class="post-content">
@@ -743,7 +594,7 @@
                 </div>
             </a>
 
-            <!-- EXISTING: CallBird vs Ruby -->
+            <!-- CallBird vs Ruby -->
             <a href="blog-callbird-vs-ruby-receptionists.html" class="post-card">
                 <div class="post-image">⚖️</div>
                 <div class="post-content">
@@ -758,7 +609,7 @@
                 </div>
             </a>
 
-            <!-- EXISTING: Complete Guide -->
+            <!-- Complete Guide -->
             <a href="blog-ai-receptionist-guide.html" class="post-card">
                 <div class="post-image">📘</div>
                 <div class="post-content">
@@ -773,7 +624,7 @@
                 </div>
             </a>
 
-            <!-- EXISTING: Dental Guide -->
+            <!-- Dental Guide -->
             <a href="blog-best-ai-receptionist-dentists.html" class="post-card">
                 <div class="post-image">🦷</div>
                 <div class="post-content">
@@ -788,7 +639,7 @@
                 </div>
             </a>
 
-            <!-- EXISTING: Pricing Guide -->
+            <!-- Pricing Guide -->
             <a href="blog-ai-receptionist-cost-pricing-guide.html" class="post-card">
                 <div class="post-image">💵</div>
                 <div class="post-content">
@@ -803,7 +654,7 @@
                 </div>
             </a>
 
-            <!-- EXISTING: Smith.ai Comparison -->
+            <!-- Smith.ai Comparison -->
             <a href="blog-callbird-vs-smith-ai.html" class="post-card">
                 <div class="post-image">📊</div>
                 <div class="post-content">
@@ -818,7 +669,7 @@
                 </div>
             </a>
 
-            <!-- EXISTING: Lawyers Guide -->
+            <!-- Lawyers Guide -->
             <a href="blog-best-ai-receptionist-lawyers.html" class="post-card">
                 <div class="post-image">⚖️</div>
                 <div class="post-content">
