@@ -11,162 +11,186 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AI Receptionist for Law Firms & Attorneys. Never miss a high-value client call. 24/7 client intake, appointment scheduling, emergency triage. From $49/month.">
+    <meta name="description" content="AI Receptionist for Law Firms & Attorneys. Never miss a high-value client call. 24/7 client intake, appointment scheduling, emergency triage. Starting at $99/month.">
+    
+    <link rel="icon" type="image/png" href="https://i.imgur.com/qwyQQW5.png">
+    <link rel="apple-touch-icon" href="https://i.imgur.com/qwyQQW5.png">
+    <link rel="shortcut icon" href="https://i.imgur.com/qwyQQW5.png">
+    <meta name="theme-color" content="#122092">
+
     <title>AI Receptionist for Law Firms, Attorneys & Legal Practices</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        html { zoom: 0.8; -moz-transform: scale(0.8); -moz-transform-origin: 0 0; }
+        .problem-icon, .feature-icon { display: flex; align-items: center; justify-content: center; width: 100%; }
+        .problem-icon svg, .feature-icon svg { width: 3rem; height: 3rem; display: block; margin: 0 auto; }
+        .problem-card, .feature-card { text-align: center !important; }
+        .problem-card .problem-icon, .feature-card .feature-icon { justify-content: center !important; margin: 0 auto 1rem !important; }
+        .feature-integrations { justify-content: center !important; }
+        .author-avatar { display: flex; align-items: center; justify-content: center; width: 3rem; height: 3rem; background: var(--bg-light, #f5f7fa); border-radius: 50%; }
+        .author-avatar svg { width: 1.75rem; height: 1.75rem; }
+        .faq-answer { display: none; padding: 0 1.25rem 1.25rem; }
+        .faq-item.active .faq-answer { display: block; }
+        .faq-question { width: 100%; text-align: left; background: none; border: none; cursor: pointer; padding: 1.25rem; font-size: 1.05rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color: var(--text-dark, #1a1a2e); font-family: inherit; }
+        .faq-question:hover { color: var(--primary-color, #122092); }
+        .faq-icon { font-size: 1.5rem; font-weight: 300; line-height: 1; flex-shrink: 0; transition: transform 0.2s ease; }
+        .faq-item.active .faq-icon { transform: rotate(45deg); }
+        .footer { background: #122092 !important; color: #fff !important; }
+        .footer a { color: rgba(255,255,255,0.85) !important; }
+        .footer a:hover { color: #fff !important; }
+        .footer h4 { color: #f6b828 !important; }
+        .footer-tagline { color: rgba(255,255,255,0.7) !important; }
+        .footer-bottom { border-top-color: rgba(255,255,255,0.15) !important; color: rgba(255,255,255,0.6) !important; }
+    </style>
+    <style>
+        .mobile-nav-overlay { display: none; position: fixed; inset: 0; z-index: 999; background: rgba(0,0,0,0.5); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }
+        .mobile-nav-overlay.active { display: block; }
+        .mobile-nav-panel { position: fixed; top: 0; right: 0; bottom: 0; width: 280px; max-width: 85vw; background: white; z-index: 1000; transform: translateX(100%); transition: transform 0.3s ease; display: flex; flex-direction: column; box-shadow: -4px 0 20px rgba(0,0,0,0.15); }
+        .mobile-nav-panel.active { transform: translateX(0); }
+        .mobile-nav-header { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.25rem; border-bottom: 1px solid #e5e7eb; }
+        .mobile-nav-close { width: 36px; height: 36px; border: none; background: #f3f4f6; border-radius: 8px; font-size: 1.25rem; cursor: pointer; display: flex; align-items: center; justify-content: center; color: #374151; }
+        .mobile-nav-links { flex: 1; padding: 1rem 0; overflow-y: auto; }
+        .mobile-nav-links a { display: block; padding: 0.875rem 1.25rem; color: var(--text-dark); font-size: 1rem; font-weight: 500; text-decoration: none; }
+        .mobile-nav-links a:hover { background: #f9fafb; }
+        .mobile-nav-cta { padding: 1rem 1.25rem; border-top: 1px solid #e5e7eb; }
+        .mobile-nav-cta a { display: block; text-align: center; padding: 0.875rem; background: var(--primary-color); color: white; border-radius: 8px; font-weight: 600; text-decoration: none; }
+        @media (max-width: 768px) { .features-grid, .testimonials-grid, .problems-grid { grid-template-columns: 1fr !important; } }
+        @media (max-width: 1100px) { .features-grid { grid-template-columns: repeat(2, 1fr) !important; } }
+        @media (max-width: 480px) { .hero-title { font-size: 1.75rem !important; } .section-header h2 { font-size: 1.5rem !important; } .trust-bar { flex-direction: column !important; gap: 0.5rem !important; } .hero-ctas { flex-direction: column !important; gap: 0.75rem !important; } .hero-ctas .btn-large { width: 100% !important; text-align: center !important; } .btn-ghost.btn-small, .nav-actions .btn-ghost { display: none !important; } }
+    </style>
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9WVK3WD"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9WVK3WD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-content">
-                <div class="logo">
-                    <a href="index.html"><img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird" class="logo-image"></a>
-                </div>
+                <div class="logo"><a href="index.html"><img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird" class="logo-image"></a></div>
                 <ul class="nav-links">
                     <li><a href="index.html#features">Features</a></li>
-                    <li><a href="index.html#industries">Industries</a></li>
                     <li><a href="index.html#pricing">Pricing</a></li>
                     <li><a href="blog.html">Blog</a></li>
+                    <li><a href="#faq">FAQ</a></li>
                 </ul>
                 <div class="nav-actions">
                     <a href="tel:+16783161454" class="btn-ghost">Call Us</a>
                     <a href="/start" class="btn-primary">Start Free Trial</a>
                 </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu" onclick="openMobileNav()"><span></span><span></span><span></span></button>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay" onclick="closeMobileNav()"></div>
+    <div class="mobile-nav-panel" id="mobileNavPanel">
+        <div class="mobile-nav-header">
+            <img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird" style="height: 32px;">
+            <button class="mobile-nav-close" onclick="closeMobileNav()">&times;</button>
+        </div>
+        <div class="mobile-nav-links">
+            <a href="index.html#features" onclick="closeMobileNav()">Features</a>
+            <a href="index.html#pricing" onclick="closeMobileNav()">Pricing</a>
+            <a href="blog.html" onclick="closeMobileNav()">Blog</a>
+            <a href="#faq" onclick="closeMobileNav()">FAQ</a>
+            <a href="tel:+16783161454" onclick="closeMobileNav()">Call Us: (678) 316-1454</a>
+        </div>
+        <div class="mobile-nav-cta"><a href="/start">Start Free Trial</a></div>
+    </div>
+
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <div class="hero-badge">
-                    <span class="badge-dot"></span>
-                    <span>For Law Firms & Attorneys</span>
-                </div>
-                
-                <h1 class="hero-title">
-                    AI Receptionist for<br>Law Firms & Legal Practices
-                </h1>
-                
-                <p class="hero-subtitle">
-                    Never Miss a High-Value Client Call Again. 24/7 Client Intake, Appointment Scheduling, Emergency Triage & Lead Qualification
-                </p>
-
+                <div class="hero-badge"><span class="badge-dot"></span><span>For Law Firms & Attorneys</span></div>
+                <h1 class="hero-title">AI Receptionist for<br>Law Firms & Legal Practices</h1>
+                <p class="hero-subtitle">Never Miss a High-Value Client Call Again. 24/7 Client Intake, Appointment Scheduling, Emergency Triage & Lead Qualification</p>
                 <div class="trust-bar">
                     <div class="trust-item">✓ $240K-$800K Lost Annually to Missed PI Calls</div>
                     <div class="trust-item">✓ 42% of Legal Calls Come After Hours</div>
                     <div class="trust-item">✓ Attorney-Client Privilege Protected</div>
                 </div>
-
                 <div class="hero-ctas">
                     <a href="/start" class="btn-large btn-primary">Start Free Trial - 7 Days</a>
                     <a href="index.html" class="btn-large btn-ghost">← Back to Home</a>
                 </div>
             </div>
         </div>
-        
-        <div class="hero-bg">
-            <div class="hero-gradient"></div>
-            <div class="hero-pattern"></div>
-        </div>
+        <div class="hero-bg"><div class="hero-gradient"></div><div class="hero-pattern"></div></div>
     </section>
 
-    <!-- Problem Section -->
     <section class="problem-solution">
         <div class="container">
             <div class="section-header">
                 <h2>The Real Cost of Missed Calls for Law Firms</h2>
             </div>
-
             <div class="problems-grid">
                 <div class="problem-card">
-                    <div class="problem-icon">⚖️</div>
+                    <div class="problem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg></div>
                     <h3>Lost High-Value Cases</h3>
-                    <p>A single personal injury case averages $15,000-50,000 in attorney fees. If your firm misses just 2 PI consultation calls per week because you're in depositions or court, that's $240,000-$800,000 in annual lost revenue. Family law cases average $8,000-15,000. Estate planning $2,500-5,000. One missed call can equal months of salary.</p>
+                    <p>A single personal injury case averages $15,000-50,000 in attorney fees. Miss just 2 PI consultation calls per week because you're in depositions or court, and the math gets ugly fast. Family law cases average $8,000-15,000, estate planning $2,500-5,000. One missed call can equal months of salary.</p>
                     <p class="problem-stat"><strong>Reality check:</strong> Prospective clients call 3-4 firms before choosing one. If you don't answer, they hire your competitor. It's that simple.</p>
                 </div>
-
                 <div class="problem-card">
-                    <div class="problem-icon">⏰</div>
+                    <div class="problem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg></div>
                     <h3>After-Hours Opportunity Loss</h3>
-                    <p>42% of legal calls come outside 9-5 business hours. People call lawyers when they're stressed - late at night after an arrest, on weekends after receiving divorce papers, early morning before work. If your voicemail says "call back Monday," they're calling the 24/7 law firm down the street.</p>
-                    <p class="problem-stat"><strong>Real impact:</strong> Law firms using 24/7 AI receptionists report 3-5 additional case signings monthly from after-hours calls alone. Average case value: $12,000-$45,000 depending on practice area.</p>
+                    <p>42% of legal calls come outside 9-5. People call lawyers when they're stressed — late at night after an arrest, on weekends after receiving divorce papers, early morning before work. If your voicemail says "call back Monday," they're calling the 24/7 firm down the street.</p>
+                    <p class="problem-stat"><strong>Real impact:</strong> Law firms using 24/7 AI receptionists report 3-5 additional case signings monthly from after-hours calls alone.</p>
                 </div>
-
                 <div class="problem-card">
-                    <div class="problem-icon">🚫</div>
+                    <div class="problem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg></div>
                     <h3>Time Wasted on Unqualified Leads</h3>
-                    <p>60% of law firm calls are unqualified: wrong practice area, jurisdiction conflicts, statute of limitations expired, no damages, sales calls. If your firm gets 40 calls/day and spends 5 minutes on each unqualified caller, that's 200 minutes daily (67 hours monthly) wasted on calls that can't convert to cases. At $300/hour attorney rates, that's $20,000 in wasted time.</p>
-                    <p class="problem-stat"><strong>Solution:</strong> AI screens calls systematically with qualifying questions. Only forwards cases in your practice areas, within statute of limitations, in proper jurisdiction, and meeting your minimum case value.</p>
+                    <p>60% of law firm calls are unqualified: wrong practice area, jurisdiction conflicts, statute of limitations expired, no damages, or sales calls. If your firm gets 40 calls a day and spends 5 minutes on each unqualified one, that's over 60 hours a month of wasted attorney and staff time.</p>
+                    <p class="problem-stat"><strong>Solution:</strong> AI screens calls with qualifying questions and only forwards cases in your practice areas, within statute of limitations, in proper jurisdiction, and meeting your minimum case value.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Solution Section -->
     <section class="how-it-works">
         <div class="container">
             <div class="section-header">
                 <h2>CallBird AI: Your 24/7 Legal Intake Specialist</h2>
                 <p class="subtitle">Purpose-built for law firms - not a generic answering service</p>
             </div>
-
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">📋</div>
+                    <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg></div>
                     <h3>Comprehensive Client Intake</h3>
-                    <p>The AI conducts thorough intake for new client calls: contact information, case type and description, urgency level, geographic location for jurisdiction check, prior legal representation, conflicts check, and practice-specific questions (accident date for PI, charges for criminal defense, marriage date for family law, estate size for estate planning).</p>
-                    <p class="feature-highlight"><strong>Result:</strong> Complete intake data flows directly to your case management system (Clio, MyCase, PracticePanther)</p>
+                    <p>The AI conducts thorough intake for new client calls: contact information, case type and description, urgency level, jurisdiction check, prior legal representation, conflicts check, and practice-specific questions (accident date for PI, charges for criminal defense, marriage date for family law, estate size for planning).</p>
+                    <p class="feature-highlight"><strong>Result:</strong> Complete intake data flows directly to your case management system</p>
                 </div>
-
                 <div class="feature-card">
-                    <div class="feature-icon">✅</div>
+                    <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div>
                     <h3>Lead Qualification & Screening</h3>
-                    <p>The AI applies your firm's qualification criteria: practice area match, jurisdiction check, statute of limitations verification, case value threshold assessment, and conflict checks. Qualified leads are immediately scheduled for consultation or transferred to available attorney. Unqualified leads are politely declined with referrals when appropriate.</p>
-                    <p class="feature-highlight"><strong>Result:</strong> You only talk to qualified prospects, saving hours weekly on unqualified calls</p>
+                    <p>The AI applies your firm's criteria: practice area match, jurisdiction check, statute of limitations verification, case value threshold, and conflict checks. Qualified leads get immediately scheduled for consultation or transferred to an available attorney. Unqualified leads are politely declined with referrals when appropriate.</p>
+                    <p class="feature-highlight"><strong>Result:</strong> You only talk to qualified prospects, saving hours weekly on dead-end calls</p>
                 </div>
-
                 <div class="feature-card">
-                    <div class="feature-icon">🚨</div>
+                    <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></div>
                     <h3>24/7 Emergency Call Triage</h3>
-                    <p>The AI recognizes emergency situations and escalates appropriately: arrests or booking, court appearances within 48 hours, protective orders served, imminent statute of limitations deadlines, and child custody emergencies trigger immediate attorney notification. Urgent but non-emergency matters get priority consultation scheduling.</p>
+                    <p>The AI recognizes legal emergencies and escalates appropriately: arrests, court appearances within 48 hours, protective orders served, imminent statute of limitations deadlines, and child custody emergencies all trigger immediate attorney notification. Urgent but non-emergency matters get priority consultation scheduling.</p>
                     <p class="feature-example">Example: "I was just arrested for DUI" → Immediate text alert to on-call criminal defense attorney with full details</p>
                 </div>
-
                 <div class="feature-card">
-                    <div class="feature-icon">📅</div>
+                    <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div>
                     <h3>Intelligent Consultation Scheduling</h3>
-                    <p>For qualified leads, the AI schedules consultations seamlessly: checks attorney calendar in real-time via Clio/MyCase, offers available time slots, confirms consultation type (phone, video, in-person), sends confirmation text/email with meeting details and documents to bring, and sends reminder texts 24 hours and 1 hour before consultation.</p>
+                    <p>For qualified leads, the AI schedules consultations seamlessly: checks attorney calendars in real-time, offers available time slots, confirms consultation type (phone, video, in-person), sends confirmation with meeting details and documents to bring, and sends reminder texts 24 hours and 1 hour before.</p>
                     <p class="feature-stat"><strong>Real stat:</strong> Law firms report 85-92% consultation show-rate with automated reminders</p>
                 </div>
-
                 <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
+                    <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></div>
                     <h3>Attorney-Client Privilege Protected</h3>
-                    <p>Legal compliance is built into every conversation: AI never provides legal opinions or case evaluations, clearly states it's not an attorney in every call, escalates privileged communications to attorneys immediately, encrypts all call data end-to-end, and stores data in SOC 2 compliant systems. No recording without consent.</p>
+                    <p>Legal compliance is built into every conversation: the AI never provides legal opinions or case evaluations, clearly states it's not an attorney, escalates privileged communications to attorneys immediately, encrypts all call data end-to-end, and stores data in SOC 2 compliant systems.</p>
                     <p class="feature-use">Designed for legal industry compliance standards</p>
                 </div>
-
                 <div class="feature-card">
-                    <div class="feature-icon">📊</div>
+                    <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><polyline points="7 23 3 19 7 15"></polyline><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg></div>
                     <h3>Practice Management Integration</h3>
-                    <p>Seamless integration with major legal software: Clio (matter creation, calendar, time tracking), MyCase (lead capture, appointments), PracticePanther (contact management, workflow), Smokeball (matter opening, deadlines), and LawPay (payment collection). All client communications documented automatically.</p>
-                    <div class="feature-integrations">
-                        <span>✓ Clio</span>
-                        <span>✓ MyCase</span>
-                        <span>✓ PracticePanther</span>
-                        <span>✓ Smokeball</span>
-                    </div>
+                    <p>Seamless integration with major legal software: Clio, MyCase, PracticePanther, Smokeball, and LawPay. Client communications, matter creation, calendar entries, and intake data all sync automatically. No duplicate entry.</p>
+                    <div class="feature-integrations"><span>✓ Clio</span><span>✓ MyCase</span><span>✓ PracticePanther</span><span>✓ Smokeball</span></div>
                 </div>
             </div>
 
@@ -174,57 +198,59 @@
                 <h3>Stop Losing High-Value Cases to Voicemail</h3>
                 <p>Every missed call while you're in court is a potential client hiring your competitor. Every after-hours emergency call you miss is a case going to the 24/7 firm. CallBird ensures you capture every opportunity.</p>
                 <a href="/start" class="btn-large btn-primary">Start Free Trial - Setup in 10 Minutes</a>
-                <p class="cta-subtext">$49/month • Unlimited calls • 7-day free trial • No credit card required</p>
+                <p class="cta-subtext">Starting at $99/month • 7-day free trial • No credit card required</p>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials -->
     <section class="testimonials">
         <div class="container">
             <div class="section-header">
                 <h2>What Attorneys Say About CallBird</h2>
             </div>
-
             <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-rating">
+                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    </div>
                     <h3>"Signed 11 additional cases in 4 months"</h3>
-                    <p>"Before CallBird, I was losing 4-6 potential PI cases monthly to missed calls - I'm in court, depositions, or with clients most of the day. That was $200K+ in annual lost revenue. CallBird's AI now handles all intake calls 24/7. It asks the right questions, filters out unqualified leads, and schedules qualified prospects directly in my Clio calendar. In 4 months, I've signed 11 additional cases I would have never connected with. ROI is literally 100x."</p>
+                    <p>"Before CallBird, I was losing potential PI cases every month to missed calls. I'm in court, depositions, or with clients most of the day. The AI now handles all intake calls around the clock. It asks the right questions, filters out the unqualified leads, and schedules qualified prospects directly in my Clio calendar. In 4 months I've signed 11 additional cases I never would have connected with. Should have done this a long time ago."</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">⚖️</div>
+                        <div class="author-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
                         <div class="author-info">
                             <strong>Marcus Williams, Esq.</strong>
-                            <span>Personal Injury Attorney</span>
-                            <span class="author-stats">Atlanta, GA • Solo practice</span>
+                            <span>Personal Injury Attorney, Atlanta, GA</span>
+                            <span class="author-stats">CallBird customer since December 2025</span>
                         </div>
                     </div>
                 </div>
-
                 <div class="testimonial-card">
-                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                    <h3>"Paralegal's productivity doubled"</h3>
-                    <p>"Running a solo family law practice, I was constantly interrupted by calls - divorcing couples in crisis don't call 9-5. My paralegal and I were spending 15+ hours weekly on phone intake, most of which were unqualified. CallBird's AI screens every call with intake questions, only schedules qualified consultations, and handles after-hours emergencies appropriately. Last month I signed 7 new divorce cases vs my normal 3-4, and my paralegal's productivity doubled."</p>
+                    <div class="testimonial-rating">
+                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    </div>
+                    <h3>"My paralegal's productivity doubled"</h3>
+                    <p>"Running a solo family law practice, I was constantly interrupted by calls. Divorcing couples in crisis don't call 9 to 5. My paralegal and I were spending 15 plus hours a week on phone intake, most of which were unqualified. CallBird screens every call, only schedules qualified consultations, and handles after-hours emergencies. Last month I signed 7 new divorce cases versus my usual 3 or 4, and my paralegal can finally focus on case work."</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">⚖️</div>
+                        <div class="author-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
                         <div class="author-info">
                             <strong>Jennifer Nakamura, Esq.</strong>
-                            <span>Family Law Attorney</span>
-                            <span class="author-stats">San Diego, CA • Solo practice</span>
+                            <span>Family Law Attorney, San Diego, CA</span>
+                            <span class="author-stats">CallBird customer since January 2026</span>
                         </div>
                     </div>
                 </div>
-
                 <div class="testimonial-card">
-                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-rating">
+                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    </div>
                     <h3>"14 emergency cases captured in 90 days"</h3>
-                    <p>"Our criminal defense firm gets 40-60 calls daily - half are bail emergencies, arrests, or court appearance panics. Before CallBird, we were missing 20-30% of calls and losing cases to other firms. The AI triages perfectly now: true emergencies alert me immediately even at 3 AM; urgent calls schedule priority consultations; routine consultations schedule normally. In the past 90 days, CallBird captured 14 emergency criminal cases we would have 100% missed. That's $168,000 in additional case revenue."</p>
+                    <p>"Our criminal defense firm gets 40 to 60 calls daily. Half are bail emergencies, arrests, or court appearance panics. Before CallBird, we were missing 20 to 30 percent of calls and losing cases to other firms. Now the AI triages perfectly. True emergencies alert me immediately even at 3 AM. Urgent calls get priority consultations. Routine stuff schedules normally. In the past 90 days, CallBird captured 14 emergency criminal cases we absolutely would have missed."</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">⚖️</div>
+                        <div class="author-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
                         <div class="author-info">
                             <strong>David Kowalski, Esq.</strong>
-                            <span>Criminal Defense Attorney</span>
-                            <span class="author-stats">Chicago, IL • 4-attorney firm</span>
+                            <span>Criminal Defense Attorney, Chicago, IL</span>
+                            <span class="author-stats">CallBird customer since November 2025</span>
                         </div>
                     </div>
                 </div>
@@ -232,92 +258,76 @@
         </div>
     </section>
 
-    <!-- Pricing CTA -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Questions About CallBird for Law Firms</h2>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)"><span>Does CallBird protect attorney-client privilege?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Yes. CallBird never provides legal opinions or case evaluations. It clearly states it is not an attorney in every call. All call data is encrypted end-to-end and stored in SOC 2 compliant systems. Privileged communications are escalated to attorneys immediately. No recordings are made without consent.</p></div></div>
+                <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)"><span>How does CallBird qualify leads for my firm?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>You set your qualification criteria and the AI applies them on every call: practice area match, jurisdiction check, statute of limitations verification, case value threshold, and conflict checks. Qualified leads are scheduled for consultation or transferred to an available attorney. Unqualified leads are politely declined with referrals when appropriate.</p></div></div>
+                <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)"><span>Does it integrate with Clio, MyCase, or PracticePanther?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Yes. CallBird integrates with Clio, MyCase, PracticePanther, Smokeball, and LawPay. Client intake data, calendar entries, matter creation, and communications all sync automatically.</p></div></div>
+                <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)"><span>How does CallBird handle emergency legal calls after hours?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>The AI recognizes legal emergencies including arrests, court appearances within 48 hours, protective orders, statute of limitations deadlines, and child custody emergencies. These trigger immediate text and call alerts to your on-call attorney with full client details. Urgent non-emergency matters get priority scheduling for the next available slot.</p></div></div>
+                <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)"><span>How much does CallBird cost for a law firm?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Plans start at $99/month for the Starter plan. The Professional plan at $249/month is the most popular for growing firms and includes team member access and up to 500 calls per month. The Enterprise plan at $499/month includes unlimited calls. All plans include a 7-day free trial with no credit card required.</p></div></div>
+                <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)"><span>Can the AI conduct full client intake?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Yes. CallBird conducts comprehensive intake including contact information, case type and description, urgency level, jurisdiction, prior legal representation, and practice-specific questions like accident dates for PI, charges for criminal defense, and marriage dates for family law. All data flows directly into your case management system.</p></div></div>
+            </div>
+        </div>
+    </section>
+
     <section class="final-cta">
         <div class="container">
             <div class="final-cta-content">
                 <h2>Start Capturing High-Value Cases Today</h2>
-                <p class="final-cta-text">
-                    Every call that goes to voicemail while you're in court is a potential client hiring your competitor. Every after-hours emergency call you miss is a case going to the 24/7 firm. <strong>CallBird captures those cases for you at $49/month.</strong>
-                </p>
-
+                <p class="final-cta-text">Every call that goes to voicemail while you're in court is a potential client hiring your competitor. Every after-hours emergency call you miss is a case going to the 24/7 firm. <strong>CallBird captures those cases for you, starting at $99/month.</strong></p>
                 <div class="final-cta-boxes">
                     <div class="cta-box-secondary">
                         <a href="/start" class="btn-large btn-primary">Start Your 7-Day Free Trial</a>
-                        <div class="cta-benefits">
-                            <span>✓ Setup in 10 minutes</span>
-                            <span>✓ No credit card required</span>
-                            <span>✓ Cancel anytime</span>
-                        </div>
+                        <div class="cta-benefits"><span>✓ Setup in 10 minutes</span><span>✓ No credit card required</span><span>✓ Cancel anytime</span></div>
                     </div>
                 </div>
-
                 <div class="final-trust">
                     <p><strong>Trusted by 90+ law firms nationwide:</strong></p>
-                    <div class="trust-stats">
-                        <span>✓ Attorney-client privilege protected</span>
-                        <span>✓ Average 3-7 additional cases monthly</span>
-                        <span>✓ Integrates with Clio, MyCase & all major legal software</span>
-                    </div>
+                    <div class="trust-stats"><span>✓ Attorney-client privilege protected</span><span>✓ Integrates with Clio, MyCase & all major legal software</span></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <div class="footer-logo">
-                        <img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird" class="logo-image">
-                    </div>
-                    <p class="footer-tagline">AI receptionist that never sleeps</p>
-                    <div class="footer-contact">
-                        <p>Atlanta, GA</p>
-                        <p><a href="tel:+16783161454">(678) 316-1454</a></p>
-                        <p><a href="mailto:support@callbirdai.com">support@callbirdai.com</a></p>
-                    </div>
+                    <div class="footer-logo"><img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird AI" class="logo-image"></div>
+                    <p class="footer-tagline">AI-powered call answering, appointment booking & instant summaries for small businesses.</p>
+                    <div class="footer-contact"><p>Atlanta, GA</p><p><a href="tel:+16783161454">(678) 316-1454</a></p><p><a href="mailto:support@callbirdai.com">support@callbirdai.com</a></p></div>
                 </div>
-
-                <div class="footer-col">
-                    <h4>Product</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html#features">Features</a></li>
-                        <li><a href="index.html#how-it-works">How It Works</a></li>
-                        <li><a href="index.html#pricing">Pricing</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h4>Industries</h4>
-                    <ul class="footer-links">
-                        <li><a href="home-services-ai-receptionist.html">Home Services</a></li>
-                        <li><a href="dental-ai-receptionist.html">Medical & Dental</a></li>
-                        <li><a href="restaurants-ai-receptionist.html">Restaurants</a></li>
-                        <li><a href="legal-ai-receptionist.html">Legal</a></li>
-                        <li><a href="professional-services-ai-receptionist.html">Professional Services</a></li>
-                        <li><a href="retail-ai-receptionist.html">Retail</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h4>Company</h4>
-                    <ul class="footer-links">
-                        <li><a href="mailto:support@callbirdai.com">Contact</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="/privacy">Privacy Policy</a></li>
-                        <li><a href="/terms">Terms & Conditions</a></li>
-                    </ul>
-                </div>
+                <div class="footer-col"><h4>Product</h4><ul class="footer-links"><li><a href="index.html#features">Features</a></li><li><a href="index.html#how-it-works">How It Works</a></li><li><a href="index.html#pricing">Pricing</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+                <div class="footer-col"><h4>Industries</h4><ul class="footer-links"><li><a href="home-services-ai-receptionist.html">Home Services</a></li><li><a href="dental-ai-receptionist.html">Medical & Dental</a></li><li><a href="restaurants-ai-receptionist.html">Restaurants</a></li><li><a href="legal-ai-receptionist.html">Legal</a></li><li><a href="professional-services-ai-receptionist.html">Professional Services</a></li><li><a href="retail-ai-receptionist.html">Retail</a></li><li><a href="veterinary-ai-receptionist.html">Veterinary</a></li></ul></div>
+                <div class="footer-col"><h4>Company</h4><ul class="footer-links"><li><a href="mailto:support@callbirdai.com">Contact</a></li><li><a href="blog.html">Blog</a></li><li><a href="https://myvoiceaiconnect.com" target="_blank" rel="noopener">White Label</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-and-conditions.html">Terms & Conditions</a></li></ul></div>
             </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2025 CallBird AI. All Rights Reserved.</p>
-            </div>
+            <div class="footer-bottom"><p>&copy; 2026 CallBird AI. All Rights Reserved.</p><p>A2P 10DLC Compliant • SOC 2 Type II Certified</p></div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": "Does CallBird protect attorney-client privilege?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. CallBird never provides legal opinions or case evaluations. It clearly states it is not an attorney. All call data is encrypted end-to-end and stored in SOC 2 compliant systems. Privileged communications are escalated to attorneys immediately."}},
+            {"@type": "Question", "name": "How does CallBird qualify leads for my firm?", "acceptedAnswer": {"@type": "Answer", "text": "You set your qualification criteria and the AI applies them on every call: practice area match, jurisdiction check, statute of limitations verification, case value threshold, and conflict checks. Qualified leads are scheduled or transferred. Unqualified leads are politely declined with referrals."}},
+            {"@type": "Question", "name": "Does it integrate with Clio, MyCase, or PracticePanther?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. CallBird integrates with Clio, MyCase, PracticePanther, Smokeball, and LawPay. Client intake data, calendar entries, matter creation, and communications all sync automatically."}},
+            {"@type": "Question", "name": "How does CallBird handle emergency legal calls after hours?", "acceptedAnswer": {"@type": "Answer", "text": "The AI recognizes legal emergencies including arrests, court appearances within 48 hours, protective orders, and statute of limitations deadlines. These trigger immediate alerts to your on-call attorney with full client details."}},
+            {"@type": "Question", "name": "How much does CallBird cost for a law firm?", "acceptedAnswer": {"@type": "Answer", "text": "Plans start at $99/month for the Starter plan. The Professional plan at $249/month includes team member access and up to 500 calls. The Enterprise plan at $499/month includes unlimited calls. All plans include a 7-day free trial with no credit card required."}},
+            {"@type": "Question", "name": "Can the AI conduct full client intake?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. CallBird conducts comprehensive intake including contact information, case type, urgency level, jurisdiction, prior legal representation, and practice-specific questions. All data flows directly into your case management system."}}
+        ]
+    }
+    </script>
+
+    <script>
+        function openMobileNav() { document.getElementById('mobileNavOverlay').classList.add('active'); document.getElementById('mobileNavPanel').classList.add('active'); document.body.style.overflow = 'hidden'; }
+        function closeMobileNav() { document.getElementById('mobileNavOverlay').classList.remove('active'); document.getElementById('mobileNavPanel').classList.remove('active'); document.body.style.overflow = ''; }
+        function toggleFAQ(button) { const faqItem = button.parentElement; const isActive = faqItem.classList.contains('active'); document.querySelectorAll('.faq-item').forEach(item => { item.classList.remove('active'); }); if (!isActive) { faqItem.classList.add('active'); } }
+    </script>
 </body>
 </html>
