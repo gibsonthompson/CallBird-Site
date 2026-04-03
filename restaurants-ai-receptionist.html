@@ -1,323 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-M9WVK3WD');</script>
-    <!-- End Google Tag Manager -->
-    
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-M9WVK3WD');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AI Receptionist for Restaurants, Cafes & Hospitality. Never miss a reservation or takeout order. 24/7 call handling, automated reservations & order processing.">
+    <meta name="description" content="AI Receptionist for Restaurants, Cafes & Hospitality. Never miss a reservation or takeout order. 24/7 call handling, automated reservations & order processing. Starting at $99/month.">
+    <link rel="icon" type="image/png" href="https://i.imgur.com/qwyQQW5.png">
+    <link rel="apple-touch-icon" href="https://i.imgur.com/qwyQQW5.png">
+    <link rel="shortcut icon" href="https://i.imgur.com/qwyQQW5.png">
+    <meta name="theme-color" content="#122092">
     <title>AI Receptionist for Restaurants, Cafes & Hospitality Businesses</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        html { zoom: 0.8; -moz-transform: scale(0.8); -moz-transform-origin: 0 0; }
+        .problem-icon, .feature-icon { display: flex; align-items: center; justify-content: center; width: 100%; }
+        .problem-icon svg, .feature-icon svg { width: 3rem; height: 3rem; display: block; margin: 0 auto; }
+        .problem-card, .feature-card { text-align: center !important; }
+        .problem-card .problem-icon, .feature-card .feature-icon { justify-content: center !important; margin: 0 auto 1rem !important; }
+        .feature-integrations { justify-content: center !important; }
+        .author-avatar { display: flex; align-items: center; justify-content: center; width: 3rem; height: 3rem; background: var(--bg-light, #f5f7fa); border-radius: 50%; }
+        .author-avatar svg { width: 1.75rem; height: 1.75rem; }
+        .faq-answer { display: none; padding: 0 1.25rem 1.25rem; }
+        .faq-item.active .faq-answer { display: block; }
+        .faq-question { width: 100%; text-align: left; background: none; border: none; cursor: pointer; padding: 1.25rem; font-size: 1.05rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color: var(--text-dark, #1a1a2e); font-family: inherit; }
+        .faq-question:hover { color: var(--primary-color, #122092); }
+        .faq-icon { font-size: 1.5rem; font-weight: 300; line-height: 1; flex-shrink: 0; transition: transform 0.2s ease; }
+        .faq-item.active .faq-icon { transform: rotate(45deg); }
+        .footer { background: #122092 !important; color: #fff !important; }
+        .footer a { color: rgba(255,255,255,0.85) !important; } .footer a:hover { color: #fff !important; }
+        .footer h4 { color: #f6b828 !important; }
+        .footer-tagline { color: rgba(255,255,255,0.7) !important; }
+        .footer-bottom { border-top-color: rgba(255,255,255,0.15) !important; color: rgba(255,255,255,0.6) !important; }
+    </style>
+    <style>
+        .mobile-nav-overlay { display: none; position: fixed; inset: 0; z-index: 999; background: rgba(0,0,0,0.5); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }
+        .mobile-nav-overlay.active { display: block; }
+        .mobile-nav-panel { position: fixed; top: 0; right: 0; bottom: 0; width: 280px; max-width: 85vw; background: white; z-index: 1000; transform: translateX(100%); transition: transform 0.3s ease; display: flex; flex-direction: column; box-shadow: -4px 0 20px rgba(0,0,0,0.15); }
+        .mobile-nav-panel.active { transform: translateX(0); }
+        .mobile-nav-header { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.25rem; border-bottom: 1px solid #e5e7eb; }
+        .mobile-nav-close { width: 36px; height: 36px; border: none; background: #f3f4f6; border-radius: 8px; font-size: 1.25rem; cursor: pointer; display: flex; align-items: center; justify-content: center; color: #374151; }
+        .mobile-nav-links { flex: 1; padding: 1rem 0; overflow-y: auto; }
+        .mobile-nav-links a { display: block; padding: 0.875rem 1.25rem; color: var(--text-dark); font-size: 1rem; font-weight: 500; text-decoration: none; }
+        .mobile-nav-cta { padding: 1rem 1.25rem; border-top: 1px solid #e5e7eb; }
+        .mobile-nav-cta a { display: block; text-align: center; padding: 0.875rem; background: var(--primary-color); color: white; border-radius: 8px; font-weight: 600; text-decoration: none; }
+        @media (max-width: 768px) { .features-grid, .testimonials-grid, .problems-grid { grid-template-columns: 1fr !important; } }
+        @media (max-width: 1100px) { .features-grid { grid-template-columns: repeat(2, 1fr) !important; } }
+        @media (max-width: 480px) { .hero-title { font-size: 1.75rem !important; } .section-header h2 { font-size: 1.5rem !important; } .trust-bar { flex-direction: column !important; gap: 0.5rem !important; } .hero-ctas { flex-direction: column !important; gap: 0.75rem !important; } .hero-ctas .btn-large { width: 100% !important; text-align: center !important; } .btn-ghost.btn-small, .nav-actions .btn-ghost { display: none !important; } }
+    </style>
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9WVK3WD"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9WVK3WD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <nav class="navbar"><div class="container"><div class="nav-content">
+        <div class="logo"><a href="index.html"><img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird" class="logo-image"></a></div>
+        <ul class="nav-links"><li><a href="index.html#features">Features</a></li><li><a href="index.html#pricing">Pricing</a></li><li><a href="blog.html">Blog</a></li><li><a href="#faq">FAQ</a></li></ul>
+        <div class="nav-actions"><a href="tel:+16783161454" class="btn-ghost">Call Us</a><a href="/start" class="btn-primary">Start Free Trial</a></div>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu" onclick="openMobileNav()"><span></span><span></span><span></span></button>
+    </div></div></nav>
+    <div class="mobile-nav-overlay" id="mobileNavOverlay" onclick="closeMobileNav()"></div>
+    <div class="mobile-nav-panel" id="mobileNavPanel">
+        <div class="mobile-nav-header"><img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird" style="height:32px;"><button class="mobile-nav-close" onclick="closeMobileNav()">&times;</button></div>
+        <div class="mobile-nav-links"><a href="index.html#features" onclick="closeMobileNav()">Features</a><a href="index.html#pricing" onclick="closeMobileNav()">Pricing</a><a href="blog.html" onclick="closeMobileNav()">Blog</a><a href="#faq" onclick="closeMobileNav()">FAQ</a><a href="tel:+16783161454" onclick="closeMobileNav()">Call Us: (678) 316-1454</a></div>
+        <div class="mobile-nav-cta"><a href="/start">Start Free Trial</a></div>
+    </div>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <div class="logo">
-                    <a href="index.html"><img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird" class="logo-image"></a>
+    <section class="hero"><div class="container"><div class="hero-content">
+        <div class="hero-badge"><span class="badge-dot"></span><span>For Restaurants & Hospitality</span></div>
+        <h1 class="hero-title">AI Receptionist for<br>Restaurants, Cafes & Hospitality Businesses</h1>
+        <p class="hero-subtitle">Never Miss a Reservation or Takeout Order Again. 24/7 Call Handling, Automated Reservations & Order Processing</p>
+        <div class="trust-bar"><div class="trust-item">✓ $187K Avg. Annual Revenue Lost to Missed Calls</div><div class="trust-item">✓ 35% of Calls Go Unanswered During Peak Hours</div><div class="trust-item">✓ Setup in 10 Minutes</div></div>
+        <div class="hero-ctas"><a href="/start" class="btn-large btn-primary">Start Free Trial - 7 Days</a><a href="index.html" class="btn-large btn-ghost">← Back to Home</a></div>
+    </div></div><div class="hero-bg"><div class="hero-gradient"></div><div class="hero-pattern"></div></div></section>
+
+    <section class="problem-solution"><div class="container">
+        <div class="section-header"><h2>The Hidden Cost of Missed Calls in Restaurants & Hospitality</h2></div>
+        <div class="problems-grid">
+            <div class="problem-card">
+                <div class="problem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg></div>
+                <h3>Lost Reservations During Peak Hours</h3>
+                <p>Friday at 6:45 PM. Your host is seating the late arrivals. The phone rings — a couple wanting a table at 8. It rings 6 times before going to voicemail. They hang up and call the restaurant across the street that answers immediately. You just lost a $220 check without ever knowing they called.</p>
+                <p class="problem-stat"><strong>Real impact:</strong> A fine dining restaurant tracked missed calls for 30 days. During peak hours (5:30-8:30 PM Thursday through Saturday), 47% of calls went unanswered. The majority were reservation requests that went straight to competitors.</p>
+            </div>
+            <div class="problem-card">
+                <div class="problem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg></div>
+                <h3>The Takeout Order Problem</h3>
+                <p>Your busy restaurant gets 40 to 50 takeout calls during dinner hours. Staff is taking orders, plating food, and managing the line. Unanswered calls mean customers either order through delivery apps (where you pay 20-30% commissions) or call your competitor down the block.</p>
+                <p class="problem-stat"><strong>Real impact:</strong> A casual Italian restaurant discovered they were missing 278 calls in a single month, with 89% during dinner hours. After implementing AI call handling, they captured over $9,000 monthly in takeout orders that previously went unanswered.</p>
+            </div>
+            <div class="problem-card">
+                <div class="problem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg></div>
+                <h3>Catering Revenue Left on the Table</h3>
+                <p>Catering orders average $800-$3,500 and require minimal additional labor compared to regular service. But when you miss those inquiry calls during the day when your staff is thin, those high-margin opportunities go to someone else. One missed catering call can cost more than a week of missed reservations.</p>
+                <p class="problem-stat"><strong>Real impact:</strong> A restaurant tracked calls and discovered they missed 23 catering inquiries in 3 months. After implementing AI with automatic high-value lead notification, they converted 18 catering orders in the following quarter.</p>
+            </div>
+        </div>
+    </div></section>
+
+    <section class="how-it-works"><div class="container">
+        <div class="section-header"><h2>CallBird AI: Your 24/7 Hospitality Receptionist</h2><p class="subtitle">Specifically built for restaurants, cafes, bars, and hospitality businesses</p></div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div>
+                <h3>Intelligent Reservation Management</h3>
+                <p>CallBird integrates with your reservation system to check real-time availability and book tables according to your rules. It handles party size, special occasions (birthdays, anniversaries), seating preferences (booth, patio, quiet area), and dietary restrictions. Confirmation texts go out automatically.</p>
+                <p class="feature-highlight"><strong>Average result:</strong> 60-75% reduction in no-shows through automated confirmations and reminders</p>
+                <div class="feature-integrations"><span>✓ OpenTable</span><span>✓ Resy</span><span>✓ Yelp Reservations</span><span>✓ Toast Tables</span></div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg></div>
+                <h3>Complete Takeout & Delivery Orders</h3>
+                <p>The AI takes full takeout orders including menu selection, modifications, delivery address or pickup time, and payment processing. Orders flow directly to your POS system with no manual entry. The AI provides estimated ready times based on current kitchen load.</p>
+                <p class="feature-highlight"><strong>Average result:</strong> Thousands in additional monthly takeout revenue captured</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></div>
+                <h3>Menu Questions & Dietary Info</h3>
+                <p>The AI is trained on your complete menu including ingredients, allergens, and dietary accommodations. It answers questions about gluten-free, vegan, nut-free, and other options. It suggests modifications and provides detailed information about preparation methods.</p>
+                <p class="feature-example">Example: "What's in the Cobb salad?" "Do you have vegan options?" "Can I get that gluten-free?"</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></div>
+                <h3>After-Hours Call Coverage</h3>
+                <p>30% of restaurant calls come outside business hours. People plan weekend reservations or order lunch for tomorrow's office meeting. CallBird answers at 11 PM just as professionally as 2 PM, capturing reservations and orders while you're closed.</p>
+                <p class="feature-stat"><strong>Real stat:</strong> Restaurants using CallBird capture 40% more reservations through after-hours availability alone</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle><path d="M16 3.13a4 4 0 0 1 0 7.75"></path><path d="M21 21v-2a4 4 0 0 0-3-3.87"></path></svg></div>
+                <h3>Catering & Private Events</h3>
+                <p>High-value catering inquiries get immediate notification to your catering manager with full details: event date, guest count, menu preferences, dietary restrictions, and budget. The AI also books private dining room reservations according to your availability.</p>
+                <p class="feature-use">Average catering order: $800-$3,500 with high profit margins</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><polyline points="7 23 3 19 7 15"></polyline><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg></div>
+                <h3>POS & Reservation System Integration</h3>
+                <p>Seamless integration with Toast, Square, Clover, Lightspeed, TouchBistro, OpenTable, Resy, and more. Orders and reservations flow directly into your existing systems. No manual entry, no double-booking.</p>
+                <div class="feature-integrations"><span>✓ Toast POS</span><span>✓ Square</span><span>✓ OpenTable</span><span>✓ Resy</span></div>
+            </div>
+        </div>
+        <div class="cta-box">
+            <h3>Stop Losing Revenue to Missed Calls</h3>
+            <p>Every unanswered call during dinner rush is money walking out the door. CallBird ensures you capture every reservation, takeout order, and catering inquiry — 24/7.</p>
+            <a href="/start" class="btn-large btn-primary">Start Free Trial - Setup in 10 Minutes</a>
+            <p class="cta-subtext">Starting at $99/month • 7-day free trial • No credit card required</p>
+        </div>
+    </div></section>
+
+    <section class="testimonials"><div class="container">
+        <div class="section-header"><h2>What Restaurant Owners Say</h2></div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-rating"><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+                <h3>"No-show rate dropped from 28% to 7%"</h3>
+                <p>"Our staff couldn't keep up during dinner rush. Since implementing CallBird, we're capturing way more takeout orders and our no-show rate dropped from 28% to 7%. The AI books reservations into our OpenTable instantly and sends confirmations automatically. It's been a huge difference for us."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
+                    <div class="author-info"><strong>Maria Rodriguez</strong><span>Casa Maria Italian Bistro, Charleston, SC</span><span class="author-stats">CallBird customer since November 2025</span></div>
                 </div>
-                <ul class="nav-links">
-                    <li><a href="index.html#features">Features</a></li>
-                    <li><a href="index.html#industries">Industries</a></li>
-                    <li><a href="index.html#pricing">Pricing</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                </ul>
-                <div class="nav-actions">
-                    <a href="tel:+16783161454" class="btn-ghost">Call Us</a>
-                    <a href="/start" class="btn-primary">Start Free Trial</a>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-rating"><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+                <h3>"Orders are perfect now, zero errors"</h3>
+                <p>"My kitchen staff was trying to cook and answer phones at the same time. Orders got messed up, wait times were terrible. CallBird takes orders with all modifications, repeats everything for confirmation, and sends them directly to our kitchen printer. Zero order errors since we started. Our Google rating went from 3.8 to 4.7 stars."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
+                    <div class="author-info"><strong>Mike Thompson</strong><span>Thompson's Burgers & Brews, Portland, OR</span><span class="author-stats">CallBird customer since January 2026</span></div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-rating"><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+                <h3>"40% more reservations from after-hours calls"</h3>
+                <p>"Someone calls at 11 PM wanting a reservation for an anniversary dinner? Booked. That alone is worth 10 times what we pay. CallBird integrated with our Resy account and handles everything now. Checks availability, asks about dietary restrictions and special occasions, books instantly, sends confirmation texts. We don't think about it anymore."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
+                    <div class="author-info"><strong>James Chen</strong><span>The Watershed, San Francisco, CA</span><span class="author-stats">CallBird customer since October 2025</span></div>
                 </div>
             </div>
         </div>
-    </nav>
+    </div></section>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <span class="badge-dot"></span>
-                    <span>For Restaurants & Hospitality</span>
-                </div>
-                
-                <h1 class="hero-title">
-                    AI Receptionist for<br>Restaurants, Cafes & Hospitality Businesses
-                </h1>
-                
-                <p class="hero-subtitle">
-                    Never Miss a Reservation or Takeout Order Again. 24/7 Call Handling, Automated Reservations & Order Processing
-                </p>
-
-                <div class="trust-bar">
-                    <div class="trust-item">✓ $187K Avg. Annual Revenue Lost to Missed Calls</div>
-                    <div class="trust-item">✓ 35% of Calls Go Unanswered During Peak Hours</div>
-                    <div class="trust-item">✓ Setup in 10 Minutes</div>
-                </div>
-
-                <div class="hero-ctas">
-                    <a href="/start" class="btn-large btn-primary">Start Free Trial - 7 Days</a>
-                    <a href="index.html" class="btn-large btn-ghost">← Back to Home</a>
-                </div>
-            </div>
+    <section id="faq" class="faq"><div class="container">
+        <div class="section-header"><h2>Questions About CallBird for Restaurants</h2></div>
+        <div class="faq-grid">
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)"><span>Does CallBird integrate with my reservation system?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Yes. CallBird integrates with OpenTable, Resy, Yelp Reservations, and Toast Tables. It checks real-time availability and books reservations according to your table management rules. Confirmation texts go out automatically.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)"><span>Can the AI take takeout orders accurately?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Yes. The AI takes full orders including menu selection, modifications and substitutions, delivery address or pickup time, and payment processing. It repeats the order back for confirmation. Orders flow directly to your POS system (Toast, Square, Clover) with no manual entry.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)"><span>Does it know my full menu including allergens and dietary options?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Yes. During setup, CallBird is trained on your complete menu including ingredients, allergens, and dietary accommodations. It answers questions about gluten-free, vegan, nut-free, and other options accurately and can suggest modifications.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)"><span>What happens with catering inquiries?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>High-value catering inquiries trigger an immediate notification to your catering manager with complete details: event date, guest count, menu preferences, dietary restrictions, and budget. The AI can also book private dining room reservations according to your availability.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)"><span>How much does CallBird cost for a restaurant?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Plans start at $99/month for the Starter plan. The Professional plan at $249/month is the most popular for busy restaurants and includes up to 500 calls per month and team member access. The Enterprise plan at $499/month includes unlimited calls. All plans include a 7-day free trial with no credit card required.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)"><span>Does CallBird work after hours when we're closed?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Yes. 30% of restaurant calls come outside business hours. CallBird answers around the clock and can take reservations, answer menu questions, and collect catering inquiries while your restaurant is closed. Customers get the same professional experience at 11 PM as they do at 6 PM.</p></div></div>
         </div>
-        
-        <div class="hero-bg">
-            <div class="hero-gradient"></div>
-            <div class="hero-pattern"></div>
+    </div></section>
+
+    <section class="final-cta"><div class="container"><div class="final-cta-content">
+        <h2>Start Capturing Every Reservation & Order Today</h2>
+        <p class="final-cta-text">While your competitors answer their phones 24/7, you're losing reservations to voicemail. While their staff handles calls smoothly, yours is overwhelmed during dinner rush. <strong>CallBird levels the playing field, starting at $99/month.</strong></p>
+        <div class="final-cta-boxes"><div class="cta-box-secondary"><a href="/start" class="btn-large btn-primary">Start Your 7-Day Free Trial</a><div class="cta-benefits"><span>✓ Setup in 10 minutes</span><span>✓ No credit card required</span><span>✓ Cancel anytime</span></div></div></div>
+        <div class="final-trust"><p><strong>Trusted by 180+ restaurants nationwide:</strong></p><div class="trust-stats"><span>✓ Average 60% reduction in no-shows</span><span>✓ Works with Toast, Square, OpenTable, Resy</span></div></div>
+    </div></div></section>
+
+    <footer class="footer"><div class="container">
+        <div class="footer-grid">
+            <div class="footer-col"><div class="footer-logo"><img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird AI" class="logo-image"></div><p class="footer-tagline">AI-powered call answering, appointment booking & instant summaries for small businesses.</p><div class="footer-contact"><p>Atlanta, GA</p><p><a href="tel:+16783161454">(678) 316-1454</a></p><p><a href="mailto:support@callbirdai.com">support@callbirdai.com</a></p></div></div>
+            <div class="footer-col"><h4>Product</h4><ul class="footer-links"><li><a href="index.html#features">Features</a></li><li><a href="index.html#how-it-works">How It Works</a></li><li><a href="index.html#pricing">Pricing</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+            <div class="footer-col"><h4>Industries</h4><ul class="footer-links"><li><a href="home-services-ai-receptionist.html">Home Services</a></li><li><a href="dental-ai-receptionist.html">Medical & Dental</a></li><li><a href="restaurants-ai-receptionist.html">Restaurants</a></li><li><a href="legal-ai-receptionist.html">Legal</a></li><li><a href="professional-services-ai-receptionist.html">Professional Services</a></li><li><a href="retail-ai-receptionist.html">Retail</a></li><li><a href="veterinary-ai-receptionist.html">Veterinary</a></li></ul></div>
+            <div class="footer-col"><h4>Company</h4><ul class="footer-links"><li><a href="mailto:support@callbirdai.com">Contact</a></li><li><a href="blog.html">Blog</a></li><li><a href="https://myvoiceaiconnect.com" target="_blank" rel="noopener">White Label</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-and-conditions.html">Terms & Conditions</a></li></ul></div>
         </div>
-    </section>
+        <div class="footer-bottom"><p>&copy; 2026 CallBird AI. All Rights Reserved.</p><p>A2P 10DLC Compliant • SOC 2 Type II Certified</p></div>
+    </div></footer>
 
-    <!-- Problem Section -->
-    <section class="problem-solution">
-        <div class="container">
-            <div class="section-header">
-                <h2>The Hidden Cost of Missed Calls in Restaurants & Hospitality</h2>
-            </div>
-
-            <div class="problems-grid">
-                <div class="problem-card">
-                    <div class="problem-icon">📞</div>
-                    <h3>Lost Reservations During Peak Hours</h3>
-                    <p>Friday at 6:45pm: your host is seating the 6:30 reservations who arrived late. The phone rings - a couple wanting a table tonight at 8pm. It rings 6 times before going to voicemail. They hang up and call the restaurant across the street that answers immediately. You just lost a $220 check (2 entrees, apps, drinks, dessert) without ever knowing they called.</p>
-                    <p class="problem-stat"><strong>Real impact:</strong> A fine dining restaurant in Portland tracked missed calls for 30 days. During peak hours (5:30-8:30pm Thursday-Saturday), 47% of calls went unanswered. Of those, an estimated 65% were reservation requests. At an average $185 per table and 2.3 guests per reservation, they lost an estimated $43,872 in monthly revenue ($526,464 annually) from reservations that went to competitors.</p>
-                </div>
-
-                <div class="problem-card">
-                    <div class="problem-icon">🍕</div>
-                    <h3>The Takeout Order Problem</h3>
-                    <p>Your busy pizza restaurant receives 40-50 takeout calls during dinner hours. Your staff is taking orders, making pizzas, and managing the oven. When calls go unanswered, customers order from delivery apps (where you pay 20-30% commissions) or call competitors. Each missed takeout call costs $45-$85 in immediate revenue.</p>
-                    <p class="problem-stat"><strong>Real impact:</strong> A casual Italian restaurant implemented call tracking and discovered they missed 278 calls in a single month, with 89% occurring during their busiest dinner hours. Follow-up surveys revealed 67% were trying to place takeout orders averaging $72. This represented $13,414 in lost monthly revenue ($160,968 annually). After implementing AI call handling, they captured an additional $9,350 monthly in takeout orders that previously went unanswered.</p>
-                </div>
-
-                <div class="problem-card">
-                    <div class="problem-icon">🎉</div>
-                    <h3>Catering Revenue Left on the Table</h3>
-                    <p>Catering orders average $800-$3,500 and require minimal additional labor compared to regular service. But when busy restaurants miss catering inquiry calls (typically during daytime hours when restaurants have smaller staff), they lose high-margin opportunities that could fill slow days and supplement revenue.</p>
-                    <p class="problem-stat"><strong>Real impact:</strong> A restaurant with strong catering capabilities tracked calls and discovered they missed 23 catering inquiries in 3 months - averaging 7.6 missed calls per month. Conservative estimate: if 40% would have converted at an average $1,450 per order, the restaurant lost $40,020 annually in catering revenue. After implementing AI with automatic high-value lead notification, they converted 18 catering orders in the following 3 months worth $27,300.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Solution Section -->
-    <section class="how-it-works">
-        <div class="container">
-            <div class="section-header">
-                <h2>CallBird AI: Your 24/7 Hospitality Receptionist</h2>
-                <p class="subtitle">Specifically built for restaurants, cafes, bars, and hospitality businesses</p>
-            </div>
-
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">📅</div>
-                    <h3>Intelligent Reservation Management</h3>
-                    <p>CallBird AI integrates with your reservation system (OpenTable, Resy, Yelp Reservations, Toast Tables) to check real-time availability and book reservations according to your table management rules. It handles party size, special occasions (birthdays, anniversaries), seating preferences (booth, patio, quiet area), and dietary restrictions.</p>
-                    <p class="feature-highlight"><strong>Average result:</strong> 60-75% reduction in no-shows through automated confirmation texts and reminder calls</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🍽️</div>
-                    <h3>Complete Takeout & Delivery Orders</h3>
-                    <p>The AI takes full takeout orders including menu selection, modifications/substitutions, delivery address or pickup time, and payment processing. Orders flow directly to your POS system (Toast, Square, Clover) with no manual entry. The AI can also provide estimated ready times based on current kitchen load.</p>
-                    <p class="feature-highlight"><strong>Average result:</strong> $8,000-$15,000 additional monthly takeout revenue captured</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">💬</div>
-                    <h3>Menu Questions & Dietary Info</h3>
-                    <p>The AI is trained on your complete menu including ingredients, allergens, and dietary accommodations. It answers questions about gluten-free, vegan, nut-free, and other dietary options. It can suggest modifications and provide detailed information about preparation methods.</p>
-                    <p class="feature-example">Example questions handled: "What's in the Cobb salad?" "Do you have vegan options?" "Can I get that gluten-free?"</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">⏰</div>
-                    <h3>After-Hours Call Coverage</h3>
-                    <p>30% of restaurant calls come outside business hours. People plan ahead for weekend reservations or order lunch for tomorrow's office meeting. CallBird answers at 11pm just as professionally as 2pm, capturing reservations and orders while you're closed.</p>
-                    <p class="feature-stat"><strong>Real stat:</strong> Restaurants using CallBird capture 40% more reservations through after-hours availability alone</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🎉</div>
-                    <h3>Catering & Private Events</h3>
-                    <p>High-value catering inquiries get immediate notification to your catering manager with complete details: event date, guest count, menu preferences, dietary restrictions, and budget. The AI also books private dining room reservations according to your availability calendar.</p>
-                    <p class="feature-use">Average catering order: $800-$3,500 with 60-70% profit margins</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <h3>POS & Reservation System Integration</h3>
-                    <p>Seamless integration with Toast, Square, Clover, Lightspeed, TouchBistro, OpenTable, Resy, and more. Orders and reservations flow directly into your existing systems. No manual entry, no double-booking, no errors.</p>
-                    <div class="feature-integrations">
-                        <span>✓ Toast POS</span>
-                        <span>✓ Square</span>
-                        <span>✓ OpenTable</span>
-                        <span>✓ Resy</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cta-box">
-                <h3>Stop Losing Revenue to Missed Calls</h3>
-                <p>Every unanswered call during dinner rush is money walking out the door. CallBird ensures you capture every reservation, takeout order, and catering inquiry - 24/7.</p>
-                <a href="/start" class="btn-large btn-primary">Start Free Trial - Setup in 10 Minutes</a>
-                <p class="cta-subtext">$49/month • Unlimited calls • 7-day free trial • No credit card required</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <h2>What Restaurant Owners Say</h2>
-            </div>
-
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                    <h3>"We were losing $3,000-4,000 monthly to missed calls"</h3>
-                    <p>"Our staff couldn't keep up during dinner rush. Since implementing CallBird three months ago, we've captured an extra $11,200 in takeout orders and our no-show rate dropped from 28% to 7%. The AI books reservations into our OpenTable instantly and sends confirmations automatically. Best $49/month we spend."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">👨‍🍳</div>
-                        <div class="author-info">
-                            <strong>Maria Rodriguez</strong>
-                            <span>Owner, Casa Maria Italian Bistro</span>
-                            <span class="author-stats">Charleston, SC • 85 seats</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                    <h3>"Orders are perfect now, zero errors"</h3>
-                    <p>"My kitchen staff was trying to cook AND answer phones - orders got messed up, wait times were terrible. CallBird takes orders with all modifications, repeats everything for confirmation, and sends directly to our kitchen printer. Zero order errors in 6 weeks. Our Google rating went from 3.8 to 4.7 stars."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">🍔</div>
-                        <div class="author-info">
-                            <strong>Mike Thompson</strong>
-                            <span>Owner, Thompson's Burgers & Brews</span>
-                            <span class="author-stats">Portland, OR • Quick-service</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                    <h3>"40% more reservations from after-hours"</h3>
-                    <p>"Someone calls at 11 PM wanting a reservation for anniversary dinner? Booked. That alone is worth 10x what we pay. CallBird integrated with our Resy account and now handles it all - checks availability, asks about dietary restrictions and special occasions, books instantly, sends confirmation texts."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">🍷</div>
-                        <div class="author-info">
-                            <strong>James Chen</strong>
-                            <span>General Manager, The Watershed</span>
-                            <span class="author-stats">San Francisco, CA • Fine dining</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing CTA -->
-    <section class="final-cta">
-        <div class="container">
-            <div class="final-cta-content">
-                <h2>Start Capturing Every Reservation & Order Today</h2>
-                <p class="final-cta-text">
-                    While your competitors answer their phones 24/7, you're losing reservations to voicemail. While their staff handles calls smoothly, yours is overwhelmed during dinner rush. <strong>CallBird levels the playing field at $49/month.</strong>
-                </p>
-
-                <div class="final-cta-boxes">
-                    <div class="cta-box-secondary">
-                        <a href="/start" class="btn-large btn-primary">Start Your 7-Day Free Trial</a>
-                        <div class="cta-benefits">
-                            <span>✓ Setup in 10 minutes</span>
-                            <span>✓ No credit card required</span>
-                            <span>✓ Cancel anytime</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="final-trust">
-                    <p><strong>Trusted by 180+ restaurants nationwide:</strong></p>
-                    <div class="trust-stats">
-                        <span>✓ Average 60% reduction in no-shows</span>
-                        <span>✓ $8K-$15K additional monthly revenue</span>
-                        <span>✓ Zero order errors</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <div class="footer-logo">
-                        <img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird" class="logo-image">
-                    </div>
-                    <p class="footer-tagline">AI receptionist that never sleeps</p>
-                    <div class="footer-contact">
-                        <p>Atlanta, GA</p>
-                        <p><a href="tel:+16783161454">(678) 316-1454</a></p>
-                        <p><a href="mailto:support@callbirdai.com">support@callbirdai.com</a></p>
-                    </div>
-                </div>
-
-                <div class="footer-col">
-                    <h4>Product</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html#features">Features</a></li>
-                        <li><a href="index.html#how-it-works">How It Works</a></li>
-                        <li><a href="index.html#pricing">Pricing</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h4>Industries</h4>
-                    <ul class="footer-links">
-                        <li><a href="home-services-ai-receptionist.html">Home Services</a></li>
-                        <li><a href="dental-ai-receptionist.html">Medical & Dental</a></li>
-                        <li><a href="restaurants-ai-receptionist.html">Restaurants</a></li>
-                        <li><a href="legal-ai-receptionist.html">Legal</a></li>
-                        <li><a href="professional-services-ai-receptionist.html">Professional Services</a></li>
-                        <li><a href="retail-ai-receptionist.html">Retail</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h4>Company</h4>
-                    <ul class="footer-links">
-                        <li><a href="mailto:support@callbirdai.com">Contact</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="/privacy">Privacy Policy</a></li>
-                        <li><a href="/terms">Terms & Conditions</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2025 CallBird AI. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+        {"@type":"Question","name":"Does CallBird integrate with my reservation system?","acceptedAnswer":{"@type":"Answer","text":"Yes. CallBird integrates with OpenTable, Resy, Yelp Reservations, and Toast Tables. It checks real-time availability and books reservations according to your table management rules."}},
+        {"@type":"Question","name":"Can the AI take takeout orders accurately?","acceptedAnswer":{"@type":"Answer","text":"Yes. The AI takes full orders including menu selection, modifications, delivery address or pickup time, and payment processing. Orders flow directly to your POS system with no manual entry."}},
+        {"@type":"Question","name":"Does it know my full menu including allergens and dietary options?","acceptedAnswer":{"@type":"Answer","text":"Yes. CallBird is trained on your complete menu including ingredients, allergens, and dietary accommodations. It answers questions about gluten-free, vegan, nut-free, and other options accurately."}},
+        {"@type":"Question","name":"What happens with catering inquiries?","acceptedAnswer":{"@type":"Answer","text":"High-value catering inquiries trigger an immediate notification to your catering manager with complete details including event date, guest count, menu preferences, dietary restrictions, and budget."}},
+        {"@type":"Question","name":"How much does CallBird cost for a restaurant?","acceptedAnswer":{"@type":"Answer","text":"Plans start at $99/month for the Starter plan. The Professional plan at $249/month includes up to 500 calls and team member access. The Enterprise plan at $499/month includes unlimited calls. All plans include a 7-day free trial."}},
+        {"@type":"Question","name":"Does CallBird work after hours when we're closed?","acceptedAnswer":{"@type":"Answer","text":"Yes. 30% of restaurant calls come outside business hours. CallBird answers around the clock and can take reservations, answer menu questions, and collect catering inquiries while your restaurant is closed."}}
+    ]}
+    </script>
+    <script>
+        function openMobileNav(){document.getElementById('mobileNavOverlay').classList.add('active');document.getElementById('mobileNavPanel').classList.add('active');document.body.style.overflow='hidden';}
+        function closeMobileNav(){document.getElementById('mobileNavOverlay').classList.remove('active');document.getElementById('mobileNavPanel').classList.remove('active');document.body.style.overflow='';}
+        function toggleFAQ(button){const faqItem=button.parentElement;const isActive=faqItem.classList.contains('active');document.querySelectorAll('.faq-item').forEach(item=>{item.classList.remove('active');});if(!isActive){faqItem.classList.add('active');}}
+    </script>
 </body>
 </html>
