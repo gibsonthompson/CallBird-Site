@@ -1,323 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-M9WVK3WD');</script>
-    <!-- End Google Tag Manager -->
-    
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-M9WVK3WD');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AI Receptionist for Retail Stores & Shops. Never miss a customer call. 24/7 product inquiries, store hours, inventory checks, and order status.">
+    <meta name="description" content="AI Receptionist for Retail Stores & Shops. Never miss a customer call. 24/7 product inquiries, store hours, inventory checks, and order status. Starting at $99/month.">
+    <link rel="icon" type="image/png" href="https://i.imgur.com/qwyQQW5.png">
+    <link rel="apple-touch-icon" href="https://i.imgur.com/qwyQQW5.png">
+    <link rel="shortcut icon" href="https://i.imgur.com/qwyQQW5.png">
+    <meta name="theme-color" content="#122092">
     <title>AI Receptionist for Retail Stores, Boutiques & Local Shops</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        html { zoom: 0.8; -moz-transform: scale(0.8); -moz-transform-origin: 0 0; }
+        .problem-icon, .feature-icon { display: flex; align-items: center; justify-content: center; width: 100%; }
+        .problem-icon svg, .feature-icon svg { width: 3rem; height: 3rem; display: block; margin: 0 auto; }
+        .problem-card, .feature-card { text-align: center !important; }
+        .problem-card .problem-icon, .feature-card .feature-icon { justify-content: center !important; margin: 0 auto 1rem !important; }
+        .feature-integrations { justify-content: center !important; }
+        .author-avatar { display: flex; align-items: center; justify-content: center; width: 3rem; height: 3rem; background: var(--bg-light, #f5f7fa); border-radius: 50%; }
+        .author-avatar svg { width: 1.75rem; height: 1.75rem; }
+        .faq-answer { display: none; padding: 0 1.25rem 1.25rem; }
+        .faq-item.active .faq-answer { display: block; }
+        .faq-question { width: 100%; text-align: left; background: none; border: none; cursor: pointer; padding: 1.25rem; font-size: 1.05rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color: var(--text-dark, #1a1a2e); font-family: inherit; }
+        .faq-question:hover { color: var(--primary-color, #122092); }
+        .faq-icon { font-size: 1.5rem; font-weight: 300; line-height: 1; flex-shrink: 0; transition: transform 0.2s ease; }
+        .faq-item.active .faq-icon { transform: rotate(45deg); }
+        .footer { background: #122092 !important; color: #fff !important; }
+        .footer a { color: rgba(255,255,255,0.85) !important; } .footer a:hover { color: #fff !important; }
+        .footer h4 { color: #f6b828 !important; }
+        .footer-tagline { color: rgba(255,255,255,0.7) !important; }
+        .footer-bottom { border-top-color: rgba(255,255,255,0.15) !important; color: rgba(255,255,255,0.6) !important; }
+    </style>
+    <style>
+        .mobile-nav-overlay { display: none; position: fixed; inset: 0; z-index: 999; background: rgba(0,0,0,0.5); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }
+        .mobile-nav-overlay.active { display: block; }
+        .mobile-nav-panel { position: fixed; top: 0; right: 0; bottom: 0; width: 280px; max-width: 85vw; background: white; z-index: 1000; transform: translateX(100%); transition: transform 0.3s ease; display: flex; flex-direction: column; box-shadow: -4px 0 20px rgba(0,0,0,0.15); }
+        .mobile-nav-panel.active { transform: translateX(0); }
+        .mobile-nav-header { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.25rem; border-bottom: 1px solid #e5e7eb; }
+        .mobile-nav-close { width: 36px; height: 36px; border: none; background: #f3f4f6; border-radius: 8px; font-size: 1.25rem; cursor: pointer; display: flex; align-items: center; justify-content: center; color: #374151; }
+        .mobile-nav-links { flex: 1; padding: 1rem 0; overflow-y: auto; }
+        .mobile-nav-links a { display: block; padding: 0.875rem 1.25rem; color: var(--text-dark); font-size: 1rem; font-weight: 500; text-decoration: none; }
+        .mobile-nav-cta { padding: 1rem 1.25rem; border-top: 1px solid #e5e7eb; }
+        .mobile-nav-cta a { display: block; text-align: center; padding: 0.875rem; background: var(--primary-color); color: white; border-radius: 8px; font-weight: 600; text-decoration: none; }
+        @media (max-width: 768px) { .features-grid, .testimonials-grid, .problems-grid { grid-template-columns: 1fr !important; } }
+        @media (max-width: 1100px) { .features-grid { grid-template-columns: repeat(2, 1fr) !important; } }
+        @media (max-width: 480px) { .hero-title { font-size: 1.75rem !important; } .section-header h2 { font-size: 1.5rem !important; } .trust-bar { flex-direction: column !important; gap: 0.5rem !important; } .hero-ctas { flex-direction: column !important; gap: 0.75rem !important; } .hero-ctas .btn-large { width: 100% !important; text-align: center !important; } .btn-ghost.btn-small, .nav-actions .btn-ghost { display: none !important; } }
+    </style>
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9WVK3WD"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9WVK3WD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <nav class="navbar"><div class="container"><div class="nav-content">
+        <div class="logo"><a href="index.html"><img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird" class="logo-image"></a></div>
+        <ul class="nav-links"><li><a href="index.html#features">Features</a></li><li><a href="index.html#pricing">Pricing</a></li><li><a href="blog.html">Blog</a></li><li><a href="#faq">FAQ</a></li></ul>
+        <div class="nav-actions"><a href="tel:+15055945806" class="btn-ghost">Call Us</a><a href="/start" class="btn-primary">Start Free Trial</a></div>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu" onclick="openMobileNav()"><span></span><span></span><span></span></button>
+    </div></div></nav>
+    <div class="mobile-nav-overlay" id="mobileNavOverlay" onclick="closeMobileNav()"></div>
+    <div class="mobile-nav-panel" id="mobileNavPanel">
+        <div class="mobile-nav-header"><img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird" style="height:32px;"><button class="mobile-nav-close" onclick="closeMobileNav()">&times;</button></div>
+        <div class="mobile-nav-links"><a href="index.html#features" onclick="closeMobileNav()">Features</a><a href="index.html#pricing" onclick="closeMobileNav()">Pricing</a><a href="blog.html" onclick="closeMobileNav()">Blog</a><a href="#faq" onclick="closeMobileNav()">FAQ</a><a href="tel:+15055945806" onclick="closeMobileNav()">Call Us: (505) 594-5806</a></div>
+        <div class="mobile-nav-cta"><a href="/start">Start Free Trial</a></div>
+    </div>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <div class="logo">
-                    <a href="index.html"><img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird" class="logo-image"></a>
+    <section class="hero"><div class="container"><div class="hero-content">
+        <div class="hero-badge"><span class="badge-dot"></span><span>For Retail & Local Shops</span></div>
+        <h1 class="hero-title">AI Receptionist for<br>Retail Stores & Local Shops</h1>
+        <p class="hero-subtitle">Never Miss a Customer Call While Helping In-Store Shoppers. 24/7 Product Inquiries, Store Hours, Inventory Checks & Order Status</p>
+        <div class="trust-bar"><div class="trust-item">✓ 28% of Customers Hang Up After 1 Minute on Hold</div><div class="trust-item">✓ 40% Call Competitors After Unanswered Call</div><div class="trust-item">✓ Setup in 10 Minutes</div></div>
+        <div class="hero-ctas"><a href="/start" class="btn-large btn-primary">Start Free Trial - 7 Days</a><a href="index.html" class="btn-large btn-ghost">← Back to Home</a></div>
+    </div></div><div class="hero-bg"><div class="hero-gradient"></div><div class="hero-pattern"></div></div></section>
+
+    <section class="problem-solution"><div class="container">
+        <div class="section-header"><h2>The Hidden Cost of Missed Calls in Retail</h2></div>
+        <div class="problems-grid">
+            <div class="problem-card">
+                <div class="problem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg></div>
+                <h3>Lost Sales While Helping In-Store Customers</h3>
+                <p>A customer calls asking "Do you have the blue running shoes in size 9?" Your staff is helping someone try on clothes, ringing up purchases, and restocking shelves. The call goes to voicemail. They call the store down the street that answers immediately.</p>
+                <p class="problem-stat"><strong>Real impact:</strong> A sporting goods store tracked missed calls for 60 days. They averaged 23 missed calls per week, and 71% were product availability questions with purchase intent. After implementing AI, they captured thousands in additional monthly sales from previously missed calls.</p>
+            </div>
+            <div class="problem-card">
+                <div class="problem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg></div>
+                <h3>After-Hours Shoppers Can't Reach You</h3>
+                <p>It's 7 PM. Your store closed at 6. A customer calls wanting to know if you have a specific item before driving 20 minutes tomorrow. Voicemail. They check online retailers instead and order for next-day delivery. You lose the sale before your store even opens.</p>
+                <p class="problem-stat"><strong>Real impact:</strong> A boutique clothing store implemented after-hours AI call handling. In 3 months, they received 340 after-hours calls. 47% of those callers came in-store the next day after getting instant inventory answers from the AI.</p>
+            </div>
+            <div class="problem-card">
+                <div class="problem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg></div>
+                <h3>Holiday Rush Overwhelm</h3>
+                <p>Black Friday, Small Business Saturday, Christmas shopping season — your store is packed, phones ringing constantly, and you're short-staffed. Every unanswered call during the holiday rush is lost revenue in your most profitable season.</p>
+                <p class="problem-stat"><strong>Real impact:</strong> A gift shop missed 180 calls during their busiest 6 weeks. The following year with AI handling calls, they had their best holiday season ever with 22% more revenue and the same staff.</p>
+            </div>
+        </div>
+    </div></section>
+
+    <section class="how-it-works"><div class="container">
+        <div class="section-header"><h2>CallBird AI: Your 24/7 Retail Assistant</h2><p class="subtitle">Built for local shops, boutiques, and retail businesses</p></div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg></div>
+                <h3>Real-Time Inventory Checking</h3>
+                <p>CallBird integrates with your POS system to check inventory in real-time. When customers call asking "Do you have X in stock?" the AI checks your system instantly and answers accurately. No more "let me check and call you back."</p>
+                <p class="feature-highlight"><strong>Average result:</strong> 45% more phone-to-store conversions with instant inventory answers</p>
+                <div class="feature-integrations"><span>✓ Square</span><span>✓ Shopify POS</span><span>✓ Lightspeed</span><span>✓ Clover</span></div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>
+                <h3>Store Hours, Location & Directions</h3>
+                <p>The AI answers the most common retail questions automatically: store hours including holidays, address and directions, parking info, current sales and promotions, return and exchange policies, and accepted payment methods.</p>
+                <p class="feature-highlight"><strong>Average result:</strong> 30-40 routine calls per week handled automatically</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg></div>
+                <h3>Order Status & Pickup Coordination</h3>
+                <p>For buy-online-pick-up-in-store orders, the AI provides status updates, estimated pickup times, and preparation notifications. Customers calling about special orders or custom items get accurate status information pulled from your system.</p>
+                <p class="feature-example">Example: "Your order #1234 is ready for pickup. Bring your ID and order confirmation."</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg></div>
+                <h3>Product Information & Availability</h3>
+                <p>The AI is trained on your product catalog including sizes, colors, pricing, and availability. It answers detailed questions, suggests alternatives when items are out of stock, and informs about upcoming restocks.</p>
+                <p class="feature-stat"><strong>Real stat:</strong> 60% fewer "I'll call back later" responses when customers get complete product info immediately</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle><path d="M16 3.13a4 4 0 0 1 0 7.75"></path><path d="M21 21v-2a4 4 0 0 0-3-3.87"></path></svg></div>
+                <h3>Special Orders & Bulk Requests</h3>
+                <p>For special order inquiries, custom requests, or bulk purchases, the AI collects complete information: customer details, product specs, quantity, budget, and timeline. High-value requests trigger immediate manager notification.</p>
+                <p class="feature-use">Perfect for gift registries, corporate orders, and wholesale inquiries</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><polyline points="7 23 3 19 7 15"></polyline><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg></div>
+                <h3>POS System Integration</h3>
+                <p>Seamless integration with Square, Shopify POS, Lightspeed Retail, Vend, and Clover. Real-time inventory sync, product catalog access, and order management all flow automatically.</p>
+                <div class="feature-integrations"><span>✓ Square</span><span>✓ Shopify POS</span><span>✓ Lightspeed</span><span>✓ Clover</span></div>
+            </div>
+        </div>
+        <div class="cta-box">
+            <h3>Stop Losing Sales to Missed Calls</h3>
+            <p>Every unanswered call is a potential customer walking into a competitor's store or ordering online. CallBird ensures you capture every phone inquiry — 24/7.</p>
+            <a href="/start" class="btn-large btn-primary">Start Free Trial - Setup in 10 Minutes</a>
+            <p class="cta-subtext">Starting at $99/month • 7-day free trial • No credit card required</p>
+        </div>
+    </div></section>
+
+    <section class="testimonials"><div class="container">
+        <div class="section-header"><h2>What Retail Owners Say</h2></div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-rating"><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+                <h3>"Staff can finally focus on in-store customers"</h3>
+                <p>"We're a sporting goods store with 2 locations. Staff was constantly interrupted by calls while helping customers on the floor. Since implementing CallBird, the AI answers product availability questions by checking our Square inventory in real-time. Our staff can focus on the people in the store and phone customers still get instant answers. It's been a huge win for us."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
+                    <div class="author-info"><strong>David Kim</strong><span>Summit Sports, Denver, CO</span><span class="author-stats">CallBird customer since January 2026</span></div>
                 </div>
-                <ul class="nav-links">
-                    <li><a href="index.html#features">Features</a></li>
-                    <li><a href="index.html#industries">Industries</a></li>
-                    <li><a href="index.html#pricing">Pricing</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                </ul>
-                <div class="nav-actions">
-                    <a href="tel:+16783161454" class="btn-ghost">Call Us</a>
-                    <a href="/start" class="btn-primary">Start Free Trial</a>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-rating"><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+                <h3>"After-hours callers actually show up the next day"</h3>
+                <p>"I own a boutique clothing store. People would call after 6 PM asking if I had specific items in stock. I'd miss those calls and they'd just shop online instead. CallBird now answers after-hours, checks my Shopify inventory, and tells them to come in tomorrow. Almost half of those callers actually show up the next day. Those are sales I was completely losing before."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
+                    <div class="author-info"><strong>Emma Rodriguez</strong><span>Bella Boutique, Austin, TX</span><span class="author-stats">CallBird customer since November 2025</span></div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-rating"><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+                <h3>"Holiday season was actually manageable"</h3>
+                <p>"Last Christmas was chaos. Packed store, phones ringing constantly, staff overwhelmed. This year with CallBird handling all the calls, we had our smoothest holiday season ever. The AI answered hours questions, gift availability, and even took special order requests with full customer info. We did 22% more revenue than last year with the same staff."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
+                    <div class="author-info"><strong>Michael Chen</strong><span>Treasures Gift Shop, Portland, OR</span><span class="author-stats">CallBird customer since October 2025</span></div>
                 </div>
             </div>
         </div>
-    </nav>
+    </div></section>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <span class="badge-dot"></span>
-                    <span>For Retail & Local Shops</span>
-                </div>
-                
-                <h1 class="hero-title">
-                    AI Receptionist for<br>Retail Stores & Local Shops
-                </h1>
-                
-                <p class="hero-subtitle">
-                    Never Miss a Customer Call While Helping In-Store Shoppers. 24/7 Product Inquiries, Store Hours, Inventory Checks & Order Status
-                </p>
-
-                <div class="trust-bar">
-                    <div class="trust-item">✓ 28% of Customers Hang Up After 1 Minute on Hold</div>
-                    <div class="trust-item">✓ 40% Call Competitors After Unanswered Call</div>
-                    <div class="trust-item">✓ Setup in 10 Minutes</div>
-                </div>
-
-                <div class="hero-ctas">
-                    <a href="/start" class="btn-large btn-primary">Start Free Trial - 7 Days</a>
-                    <a href="index.html" class="btn-large btn-ghost">← Back to Home</a>
-                </div>
-            </div>
+    <section id="faq" class="faq"><div class="container">
+        <div class="section-header"><h2>Questions About CallBird for Retail</h2></div>
+        <div class="faq-grid">
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)"><span>Does CallBird check my real-time inventory?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Yes. CallBird integrates with Square, Shopify POS, Lightspeed, Vend, and Clover to check inventory in real-time. When a customer calls asking about a product, the AI checks your system instantly and gives an accurate answer.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)"><span>Can the AI answer questions about my products?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Yes. During setup, CallBird is trained on your product catalog including sizes, colors, pricing, and availability. It answers detailed product questions, suggests alternatives when items are out of stock, and informs about upcoming restocks.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)"><span>Does it work after my store closes?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Yes. CallBird answers around the clock. After-hours callers can check product availability, get store hours and directions, and learn about current promotions. Many retail owners find that after-hours callers who get instant answers come in-store the next day.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)"><span>How does it handle special orders or bulk requests?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>For special orders, custom requests, or bulk purchases, the AI collects complete details including customer contact info, product specifications, quantity, budget, and timeline. High-value requests trigger an immediate notification to you so you can follow up personally.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)"><span>How much does CallBird cost for a retail store?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Plans start at $99/month for the Starter plan. The Professional plan at $249/month is the most popular for busy retail stores and includes up to 500 calls and team member access. The Enterprise plan at $499/month includes unlimited calls. All plans include a 7-day free trial with no credit card required.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)"><span>Does it help during the holiday rush?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>CallBird is ideal for peak seasons. During holiday rushes when your store is packed and staff is stretched thin, the AI handles all incoming calls so your team can focus on in-store customers. It answers questions about hours, gift availability, and special orders without interrupting your floor staff.</p></div></div>
         </div>
-        
-        <div class="hero-bg">
-            <div class="hero-gradient"></div>
-            <div class="hero-pattern"></div>
+    </div></section>
+
+    <section class="final-cta"><div class="container"><div class="final-cta-content">
+        <h2>Start Capturing Every Customer Call Today</h2>
+        <p class="final-cta-text">While your staff helps in-store customers, CallBird handles phone inquiries 24/7. While competitors' stores go to voicemail after hours, you're capturing sales around the clock. <strong>Starting at $99/month to never miss another sale.</strong></p>
+        <div class="final-cta-boxes"><div class="cta-box-secondary"><a href="/start" class="btn-large btn-primary">Start Your 7-Day Free Trial</a><div class="cta-benefits"><span>✓ Setup in 10 minutes</span><span>✓ No credit card required</span><span>✓ Cancel anytime</span></div></div></div>
+        <div class="final-trust"><p><strong>Trusted by 140+ retail businesses:</strong></p><div class="trust-stats"><span>✓ Real-time inventory checking</span><span>✓ Works with Square, Shopify, Lightspeed, Clover</span></div></div>
+    </div></div></section>
+
+    <footer class="footer"><div class="container">
+        <div class="footer-grid">
+            <div class="footer-col"><div class="footer-logo"><img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird AI" class="logo-image"></div><p class="footer-tagline">AI-powered call answering, appointment booking & instant summaries for small businesses.</p><div class="footer-contact"><p>Atlanta, GA</p><p><a href="tel:+15055945806">(505) 594-5806</a></p><p><a href="mailto:support@callbirdai.com">support@callbirdai.com</a></p></div></div>
+            <div class="footer-col"><h4>Product</h4><ul class="footer-links"><li><a href="index.html#features">Features</a></li><li><a href="index.html#how-it-works">How It Works</a></li><li><a href="index.html#pricing">Pricing</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+            <div class="footer-col"><h4>Industries</h4><ul class="footer-links"><li><a href="home-services-ai-receptionist.html">Home Services</a></li><li><a href="dental-ai-receptionist.html">Medical & Dental</a></li><li><a href="restaurants-ai-receptionist.html">Restaurants</a></li><li><a href="legal-ai-receptionist.html">Legal</a></li><li><a href="professional-services-ai-receptionist.html">Professional Services</a></li><li><a href="retail-ai-receptionist.html">Retail</a></li><li><a href="veterinary-ai-receptionist.html">Veterinary</a></li></ul></div>
+            <div class="footer-col"><h4>Company</h4><ul class="footer-links"><li><a href="mailto:support@callbirdai.com">Contact</a></li><li><a href="blog.html">Blog</a></li><li><a href="https://myvoiceaiconnect.com" target="_blank" rel="noopener">White Label</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-and-conditions.html">Terms & Conditions</a></li></ul></div>
         </div>
-    </section>
+        <div class="footer-bottom"><p>&copy; 2026 CallBird AI. All Rights Reserved.</p><p>A2P 10DLC Compliant • SOC 2 Type II Certified</p></div>
+    </div></footer>
 
-    <!-- Problem Section -->
-    <section class="problem-solution">
-        <div class="container">
-            <div class="section-header">
-                <h2>The Hidden Cost of Missed Calls in Retail</h2>
-            </div>
-
-            <div class="problems-grid">
-                <div class="problem-card">
-                    <div class="problem-icon">📞</div>
-                    <h3>Lost Sales While Helping In-Store Customers</h3>
-                    <p>A customer calls asking "Do you have the blue running shoes in size 9?" Your staff is helping someone try on clothes, ringing up purchases, and restocking shelves. The call rings 6 times, goes to voicemail. The customer calls the store down the street who answers immediately. You just lost a $120 sale without knowing they called.</p>
-                    <p class="problem-stat"><strong>Real impact:</strong> A sporting goods store tracked missed calls for 60 days. They averaged 23 missed calls per week during business hours. Follow-up revealed 71% were product availability questions with purchase intent. At an average $85 transaction value, they were losing $1,660 weekly ($86,320 annually) to missed calls. After implementing AI, they captured $6,200 in additional monthly sales from previously missed calls.</p>
-                </div>
-
-                <div class="problem-card">
-                    <div class="problem-icon">🕐</div>
-                    <h3>After-Hours Shoppers Can't Reach You</h3>
-                    <p>It's 7 PM. Your store closed at 6 PM. A customer calls wanting to know if you have a specific item in stock before driving 20 minutes tomorrow. Voicemail. They check online retailers instead and order for next-day delivery. You lose the sale before your store even opens.</p>
-                    <p class="problem-stat"><strong>Real impact:</strong> A boutique clothing store implemented after-hours AI call handling. In the first 3 months, they received 340 after-hours calls (averaging 3.8 per day). The AI answered product questions, confirmed inventory, and told customers when to visit. Result: 47% of those callers came in-store the next day, generating $18,400 in sales that previously went to online competitors.</p>
-                </div>
-
-                <div class="problem-card">
-                    <div class="problem-icon">🎁</div>
-                    <h3>Holiday Rush Overwhelm</h3>
-                    <p>Black Friday weekend, Small Business Saturday, Christmas shopping season - your store is packed with customers, phones ringing constantly, and you're short-staffed. Every call that goes unanswered during holiday rush is lost revenue you'll never recover.</p>
-                    <p class="problem-stat"><strong>Real impact:</strong> A gift shop tracked calls during November-December holiday season. They missed 180 calls during their busiest 6 weeks (average 4.3 per day). Post-season surveys revealed 65% were trying to check gift item availability or holiday hours. With average holiday purchase of $75, they lost an estimated $8,775 in holiday sales - their most profitable season - to unanswered calls. The next year with AI, they captured those calls and had their best season ever.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Solution Section -->
-    <section class="how-it-works">
-        <div class="container">
-            <div class="section-header">
-                <h2>CallBird AI: Your 24/7 Retail Assistant</h2>
-                <p class="subtitle">Built for local shops, boutiques, and retail businesses</p>
-            </div>
-
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">📦</div>
-                    <h3>Real-Time Inventory Checking</h3>
-                    <p>CallBird AI integrates with your POS system (Square, Shopify, Lightspeed, Vend, Clover) to check inventory in real-time. When customers call asking "Do you have X in stock?" the AI checks your system instantly and answers accurately. No more "let me check and call you back" - the answer is immediate.</p>
-                    <p class="feature-highlight"><strong>Average result:</strong> 45% more phone-to-store conversions when customers get instant inventory answers</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🕐</div>
-                    <h3>Store Hours, Location & Directions</h3>
-                    <p>The AI answers the most common retail questions automatically: store hours (including holiday hours), address and directions, parking information, current sales and promotions, return/exchange policies, and accepted payment methods. Simple questions get instant answers without tying up your staff.</p>
-                    <p class="feature-highlight"><strong>Average result:</strong> 30-40 routine calls per week handled automatically</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">📱</div>
-                    <h3>Order Status & Pickup Coordination</h3>
-                    <p>For buy-online-pick-up-in-store (BOPIS) orders, the AI provides order status updates, estimated pickup times, and preparation notifications. When orders are ready, it can send automated text notifications. Customers calling about special orders or custom items get accurate status information pulled from your system.</p>
-                    <p class="feature-example">Example: "Your order #1234 is ready for pickup. Bring your ID and order confirmation."</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🛍️</div>
-                    <h3>Product Information & Availability</h3>
-                    <p>The AI is trained on your product catalog including SKUs, sizes, colors, pricing, and current availability. It can answer detailed product questions, suggest alternatives when items are out of stock, inform about upcoming restocks, and provide price comparisons between similar items.</p>
-                    <p class="feature-stat"><strong>Real stat:</strong> Stores report 60% fewer "I'll call back later" responses when customers get complete product info immediately</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🎉</div>
-                    <h3>Special Orders & Requests</h3>
-                    <p>For special order inquiries, custom requests, or bulk purchases, the AI collects complete information: customer contact details, product specifications, quantity needed, budget and timeline, and specific requirements. High-value requests (orders over $500) trigger immediate manager notification.</p>
-                    <p class="feature-use">Perfect for gift registries, corporate orders, and wholesale inquiries</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <h3>POS System Integration</h3>
-                    <p>Seamless integration with major retail systems: Square (real-time inventory sync), Shopify POS (product catalog access), Lightspeed Retail (stock levels and pricing), Vend (multi-location inventory), and Clover (order management). All data flows automatically with no manual updates needed.</p>
-                    <div class="feature-integrations">
-                        <span>✓ Square</span>
-                        <span>✓ Shopify POS</span>
-                        <span>✓ Lightspeed</span>
-                        <span>✓ Clover</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cta-box">
-                <h3>Stop Losing Sales to Missed Calls</h3>
-                <p>Every unanswered call is a potential customer walking into a competitor's store or ordering online. CallBird ensures you capture every phone inquiry - 24/7.</p>
-                <a href="/start" class="btn-large btn-primary">Start Free Trial - Setup in 10 Minutes</a>
-                <p class="cta-subtext">$49/month • Unlimited calls • 7-day free trial • No credit card required</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <h2>What Retail Owners Say</h2>
-            </div>
-
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                    <h3>"$6,200 in additional monthly sales"</h3>
-                    <p>"We're a sporting goods store with 2 locations. Staff was constantly interrupted by calls while helping customers on the floor. Since implementing CallBird, the AI answers product availability questions by checking our Square inventory in real-time. We captured $6,200 in additional monthly sales from calls we used to miss. Our staff can focus on in-store customers, and phone customers get instant answers. Win-win."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">🏃</div>
-                        <div class="author-info">
-                            <strong>David Kim</strong>
-                            <span>Owner, Summit Sports</span>
-                            <span class="author-stats">Denver, CO • 2 locations</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                    <h3>"After-hours calls converted to sales"</h3>
-                    <p>"I own a boutique clothing store. People would call after 6 PM asking if I had specific items in stock. I'd miss those calls and they'd shop elsewhere. CallBird's AI now answers after-hours, checks my Shopify inventory, and tells them to come in tomorrow. 47% of after-hours callers actually show up the next day. That's $18,000 in sales over 3 months that I was completely losing before. Insane ROI."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">👗</div>
-                        <div class="author-info">
-                            <strong>Emma Rodriguez</strong>
-                            <span>Owner, Bella Boutique</span>
-                            <span class="author-stats">Austin, TX</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                    <h3>"Holiday season was actually manageable"</h3>
-                    <p>"Last Christmas was chaos - packed store, phones ringing constantly, staff overwhelmed. This year with CallBird handling all calls, we had our smoothest holiday season ever. The AI answered hours questions, gift availability, and even took special order requests with customer info. We did 22% more revenue than last year with the same staff size. Already paid for itself 50x over."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">🎁</div>
-                        <div class="author-info">
-                            <strong>Michael Chen</strong>
-                            <span>Owner, Treasures Gift Shop</span>
-                            <span class="author-stats">Portland, OR</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing CTA -->
-    <section class="final-cta">
-        <div class="container">
-            <div class="final-cta-content">
-                <h2>Start Capturing Every Customer Call Today</h2>
-                <p class="final-cta-text">
-                    While your staff helps in-store customers, CallBird handles phone inquiries 24/7. While competitors' stores go to voicemail after hours, you're capturing sales around the clock. <strong>$49/month to never miss another sale.</strong>
-                </p>
-
-                <div class="final-cta-boxes">
-                    <div class="cta-box-secondary">
-                        <a href="/start" class="btn-large btn-primary">Start Your 7-Day Free Trial</a>
-                        <div class="cta-benefits">
-                            <span>✓ Setup in 10 minutes</span>
-                            <span>✓ No credit card required</span>
-                            <span>✓ Cancel anytime</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="final-trust">
-                    <p><strong>Trusted by 140+ retail businesses:</strong></p>
-                    <div class="trust-stats">
-                        <span>✓ Real-time inventory checking</span>
-                        <span>✓ Average $6K-$18K additional monthly sales</span>
-                        <span>✓ Works with Square, Shopify, Lightspeed, Clover</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <div class="footer-logo">
-                        <img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird" class="logo-image">
-                    </div>
-                    <p class="footer-tagline">AI receptionist that never sleeps</p>
-                    <div class="footer-contact">
-                        <p>Atlanta, GA</p>
-                        <p><a href="tel:+16783161454">(678) 316-1454</a></p>
-                        <p><a href="mailto:support@callbirdai.com">support@callbirdai.com</a></p>
-                    </div>
-                </div>
-
-                <div class="footer-col">
-                    <h4>Product</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html#features">Features</a></li>
-                        <li><a href="index.html#how-it-works">How It Works</a></li>
-                        <li><a href="index.html#pricing">Pricing</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h4>Industries</h4>
-                    <ul class="footer-links">
-                        <li><a href="home-services-ai-receptionist.html">Home Services</a></li>
-                        <li><a href="dental-ai-receptionist.html">Medical & Dental</a></li>
-                        <li><a href="restaurants-ai-receptionist.html">Restaurants</a></li>
-                        <li><a href="legal-ai-receptionist.html">Legal</a></li>
-                        <li><a href="professional-services-ai-receptionist.html">Professional Services</a></li>
-                        <li><a href="retail-ai-receptionist.html">Retail</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h4>Company</h4>
-                    <ul class="footer-links">
-                        <li><a href="mailto:support@callbirdai.com">Contact</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="/privacy">Privacy Policy</a></li>
-                        <li><a href="/terms">Terms & Conditions</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2025 CallBird AI. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+        {"@type":"Question","name":"Does CallBird check my real-time inventory?","acceptedAnswer":{"@type":"Answer","text":"Yes. CallBird integrates with Square, Shopify POS, Lightspeed, Vend, and Clover to check inventory in real-time."}},
+        {"@type":"Question","name":"Can the AI answer questions about my products?","acceptedAnswer":{"@type":"Answer","text":"Yes. CallBird is trained on your product catalog including sizes, colors, pricing, and availability. It answers detailed questions and suggests alternatives when items are out of stock."}},
+        {"@type":"Question","name":"Does it work after my store closes?","acceptedAnswer":{"@type":"Answer","text":"Yes. CallBird answers around the clock. After-hours callers can check product availability, get store hours, and learn about promotions."}},
+        {"@type":"Question","name":"How does it handle special orders or bulk requests?","acceptedAnswer":{"@type":"Answer","text":"The AI collects complete details including customer contact info, product specs, quantity, budget, and timeline. High-value requests trigger an immediate notification to you."}},
+        {"@type":"Question","name":"How much does CallBird cost for a retail store?","acceptedAnswer":{"@type":"Answer","text":"Plans start at $99/month. The Professional plan at $249/month includes up to 500 calls. Enterprise at $499/month includes unlimited calls. All plans include a 7-day free trial."}},
+        {"@type":"Question","name":"Does it help during the holiday rush?","acceptedAnswer":{"@type":"Answer","text":"CallBird is ideal for peak seasons. During holiday rushes the AI handles all incoming calls so your team can focus on in-store customers."}}
+    ]}
+    </script>
+    <script>
+        function openMobileNav(){document.getElementById('mobileNavOverlay').classList.add('active');document.getElementById('mobileNavPanel').classList.add('active');document.body.style.overflow='hidden';}
+        function closeMobileNav(){document.getElementById('mobileNavOverlay').classList.remove('active');document.getElementById('mobileNavPanel').classList.remove('active');document.body.style.overflow='';}
+        function toggleFAQ(button){const faqItem=button.parentElement;const isActive=faqItem.classList.contains('active');document.querySelectorAll('.faq-item').forEach(item=>{item.classList.remove('active');});if(!isActive){faqItem.classList.add('active');}}
+    </script>
 </body>
 </html>
