@@ -11,8 +11,15 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AI Receptionist for Dentists, Doctors & Medical Practices. HIPAA-compliant 24/7 appointment scheduling, patient intake, and call handling. Never miss a patient call. From $49/month.">
+    <meta name="description" content="AI Receptionist for Dentists, Doctors & Medical Practices. HIPAA-compliant 24/7 appointment scheduling, patient intake, and call handling. Never miss a patient call. Starting at $99/month.">
     <meta name="keywords" content="AI receptionist for dentists, dental answering service, medical office receptionist AI, HIPAA compliant appointment scheduling, dental practice phone system, medical receptionist AI">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://i.imgur.com/qwyQQW5.png">
+    <link rel="apple-touch-icon" href="https://i.imgur.com/qwyQQW5.png">
+    <link rel="shortcut icon" href="https://i.imgur.com/qwyQQW5.png">
+    <meta name="theme-color" content="#122092">
+
     <title>AI Receptionist for Dentists, Doctors & Medical Practices | HIPAA Compliant</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,7 +35,7 @@
       "applicationCategory": "BusinessApplication",
       "offers": {
         "@type": "Offer",
-        "price": "49",
+        "price": "99",
         "priceCurrency": "USD"
       },
       "aggregateRating": {
@@ -38,6 +45,190 @@
       }
     }
     </script>
+
+    <style>
+        /* Global 80% scale */
+        html {
+            zoom: 0.8;
+            -moz-transform: scale(0.8);
+            -moz-transform-origin: 0 0;
+        }
+
+        /* Icon containers */
+        .problem-icon, .feature-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+        .problem-icon svg, .feature-icon svg {
+            width: 3rem;
+            height: 3rem;
+            display: block;
+            margin: 0 auto;
+        }
+        .problem-card, .feature-card {
+            text-align: center !important;
+        }
+        .problem-card .problem-icon,
+        .feature-card .feature-icon {
+            justify-content: center !important;
+            margin: 0 auto 1rem !important;
+        }
+        .feature-integrations {
+            justify-content: center !important;
+        }
+        .author-avatar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 3rem;
+            height: 3rem;
+            background: var(--bg-light, #f5f7fa);
+            border-radius: 50%;
+        }
+        .author-avatar svg {
+            width: 1.75rem;
+            height: 1.75rem;
+        }
+
+        /* FAQ toggle */
+        .faq-answer {
+            display: none;
+            padding: 0 1.25rem 1.25rem;
+        }
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 1.25rem;
+            font-size: 1.05rem;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            color: var(--text-dark, #1a1a2e);
+            font-family: inherit;
+        }
+        .faq-question:hover {
+            color: var(--primary-color, #122092);
+        }
+        .faq-icon {
+            font-size: 1.5rem;
+            font-weight: 300;
+            line-height: 1;
+            flex-shrink: 0;
+            transition: transform 0.2s ease;
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        /* Footer override */
+        .footer {
+            background: #122092 !important;
+            color: #fff !important;
+        }
+        .footer a {
+            color: rgba(255,255,255,0.85) !important;
+        }
+        .footer a:hover {
+            color: #fff !important;
+        }
+        .footer h4 {
+            color: #f6b828 !important;
+        }
+        .footer-tagline {
+            color: rgba(255,255,255,0.7) !important;
+        }
+        .footer-bottom {
+            border-top-color: rgba(255,255,255,0.15) !important;
+            color: rgba(255,255,255,0.6) !important;
+        }
+    </style>
+
+    <style>
+        /* Mobile Nav Drawer */
+        .mobile-nav-overlay {
+            display: none; position: fixed; inset: 0; z-index: 999;
+            background: rgba(0,0,0,0.5); backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+        }
+        .mobile-nav-overlay.active { display: block; }
+        .mobile-nav-panel {
+            position: fixed; top: 0; right: 0; bottom: 0;
+            width: 280px; max-width: 85vw; background: white; z-index: 1000;
+            transform: translateX(100%); transition: transform 0.3s ease;
+            display: flex; flex-direction: column;
+            box-shadow: -4px 0 20px rgba(0,0,0,0.15);
+        }
+        .mobile-nav-panel.active { transform: translateX(0); }
+        .mobile-nav-header {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 1rem 1.25rem; border-bottom: 1px solid #e5e7eb;
+        }
+        .mobile-nav-close {
+            width: 36px; height: 36px; border: none; background: #f3f4f6;
+            border-radius: 8px; font-size: 1.25rem; cursor: pointer;
+            display: flex; align-items: center; justify-content: center; color: #374151;
+        }
+        .mobile-nav-links { flex: 1; padding: 1rem 0; overflow-y: auto; }
+        .mobile-nav-links a {
+            display: block; padding: 0.875rem 1.25rem; color: var(--text-dark);
+            font-size: 1rem; font-weight: 500; text-decoration: none;
+        }
+        .mobile-nav-links a:hover { background: #f9fafb; }
+        .mobile-nav-cta { padding: 1rem 1.25rem; border-top: 1px solid #e5e7eb; }
+        .mobile-nav-cta a {
+            display: block; text-align: center; padding: 0.875rem;
+            background: var(--primary-color); color: white; border-radius: 8px;
+            font-weight: 600; text-decoration: none;
+        }
+
+        /* Mobile grid fixes */
+        @media (max-width: 768px) {
+            .features-grid,
+            .testimonials-grid,
+            .problems-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
+        @media (max-width: 1100px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 1.75rem !important;
+            }
+            .section-header h2 {
+                font-size: 1.5rem !important;
+            }
+            .trust-bar {
+                flex-direction: column !important;
+                gap: 0.5rem !important;
+            }
+            .hero-ctas {
+                flex-direction: column !important;
+                gap: 0.75rem !important;
+            }
+            .hero-ctas .btn-large {
+                width: 100% !important;
+                text-align: center !important;
+            }
+            .btn-ghost.btn-small,
+            .nav-actions .btn-ghost {
+                display: none !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -54,17 +245,41 @@
                 </div>
                 <ul class="nav-links">
                     <li><a href="index.html#features">Features</a></li>
-                    <li><a href="index.html#industries">Industries</a></li>
                     <li><a href="index.html#pricing">Pricing</a></li>
                     <li><a href="blog.html">Blog</a></li>
+                    <li><a href="#faq">FAQ</a></li>
                 </ul>
                 <div class="nav-actions">
                     <a href="tel:+16783161454" class="btn-ghost">Call Us</a>
                     <a href="/start" class="btn-primary">Start Free Trial</a>
                 </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu" onclick="openMobileNav()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
     </nav>
+
+    <!-- Mobile Nav Drawer -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay" onclick="closeMobileNav()"></div>
+    <div class="mobile-nav-panel" id="mobileNavPanel">
+        <div class="mobile-nav-header">
+            <img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird" style="height: 32px;">
+            <button class="mobile-nav-close" onclick="closeMobileNav()">&times;</button>
+        </div>
+        <div class="mobile-nav-links">
+            <a href="index.html#features" onclick="closeMobileNav()">Features</a>
+            <a href="index.html#pricing" onclick="closeMobileNav()">Pricing</a>
+            <a href="blog.html" onclick="closeMobileNav()">Blog</a>
+            <a href="#faq" onclick="closeMobileNav()">FAQ</a>
+            <a href="tel:+16783161454" onclick="closeMobileNav()">Call Us: (678) 316-1454</a>
+        </div>
+        <div class="mobile-nav-cta">
+            <a href="/start">Start Free Trial</a>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -111,24 +326,30 @@
 
             <div class="problems-grid">
                 <div class="problem-card">
-                    <div class="problem-icon">🦷</div>
+                    <div class="problem-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+                    </div>
                     <h3>Lost Patients While Front Desk is Overwhelmed</h3>
-                    <p>It's 9:30 AM on Monday. Your waiting room is full. Your front desk receptionist is checking in a patient, answering insurance questions, and handling a billing issue. The phone rings - it's a new patient with a dental emergency (cracked tooth, severe pain). They hear ringing... ringing... voicemail. They call the next dentist. That's a $1,200 crown plus $2,400 in annual cleanings and care - gone in 30 seconds because your front desk was busy.</p>
-                    <p class="problem-stat"><strong>Real impact:</strong> A 3-dentist practice in Chicago tracked calls for 60 days. They missed an average of 42 calls per week during business hours (peak times: Monday mornings, lunch hours, and Friday afternoons when staff was helping in-office patients). Analysis revealed 56% were new patient inquiries with lifetime values of $2,800-$8,500 per patient. The practice calculated they were losing $67,200 in monthly revenue ($806,400 annually) to competitors simply because their front desk couldn't keep up with call volume while serving in-office patients.</p>
+                    <p>It's Monday morning. Your waiting room is full. Your receptionist is checking in a patient, answering insurance questions, and handling a billing issue. The phone rings — a new patient with a dental emergency. They hear ringing... voicemail. They call the next dentist.</p>
+                    <p class="problem-stat"><strong>Real impact:</strong> A 3-dentist practice tracked calls for 60 days. They missed an average of 42 calls per week during business hours — 56% were new patient inquiries. The practice estimated over $800K in annual revenue lost to competitors simply because the front desk couldn't keep up.</p>
                 </div>
 
                 <div class="problem-card">
-                    <div class="problem-icon">💰</div>
+                    <div class="problem-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+                    </div>
                     <h3>No-Show Appointments Destroying Your Schedule</h3>
-                    <p>Industry average no-show rate for medical and dental practices: 18-25%. For a busy dental practice with 120 patient appointments weekly, that's 22-30 no-shows per week. At an average appointment value of $280, that's $6,160-8,400 in lost weekly revenue ($320,320-436,800 annually). Your hygienists sit idle. Your schedule has gaps. Your production plummets. All because patients forgot or didn't get proper reminders.</p>
-                    <p class="problem-stat"><strong>Real impact:</strong> A family medicine practice with 4 doctors had a 24% no-show rate (averaging 34 missed appointments weekly at $185 per visit). That was $6,290 in lost weekly revenue - $327,080 annually in empty appointment slots that could have been filled by other patients. After implementing AI with automated confirmation texts, appointment reminders at 24 hours and 2 hours before, and easy rescheduling options, their no-show rate dropped to 7%. That's a recovery of $182,054 in annual revenue simply by ensuring patients remember their appointments.</p>
+                    <p>The industry average no-show rate for dental and medical practices runs 18-25%. For a busy office with 120 weekly appointments, that's 22-30 empty slots every week. Your hygienists sit idle. Your schedule has gaps. Your production plummets — all because patients forgot or didn't get proper reminders.</p>
+                    <p class="problem-stat"><strong>Real impact:</strong> A family medicine practice with a 24% no-show rate was losing over $6,000 weekly in empty appointment slots. After implementing automated confirmation texts and reminders at 24 hours and 2 hours before, their no-show rate dropped to 7%.</p>
                 </div>
 
                 <div class="problem-card">
-                    <div class="problem-icon">📞</div>
+                    <div class="problem-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+                    </div>
                     <h3>After-Hours Emergency Calls Lost Forever</h3>
-                    <p>38% of patient calls to medical practices come outside of business hours. Someone has a dental emergency at 8 PM (knocked out tooth, abscess pain). Your office is closed. Voicemail says "call back Monday." They need help NOW. They call 5 dental offices until they find one with 24/7 emergency service. You just lost not only the $1,500 emergency visit, but a patient worth $8,000+ in lifetime value who will now go to that other practice for all future care.</p>
-                    <p class="problem-stat"><strong>Real impact:</strong> A dental practice serving young families implemented 24/7 AI answering. In the first 90 days, they received 127 after-hours calls. The AI triaged 34 true emergencies (injuries, severe pain, infections) and dispatched them to the on-call dentist. It scheduled 68 urgent-but-not-emergency appointments for the next morning. It fielded 25 routine scheduling calls. Of the 102 patients who received proper care, 89 became regular patients of the practice. At an average lifetime value of $6,800 per patient, those after-hours calls generated $605,200 in patient lifetime value that the practice was previously losing to competitors every single quarter.</p>
+                    <p>38% of patient calls come outside business hours. Someone has a dental emergency at 8 PM — a knocked out tooth, abscess pain. Your voicemail says "call back Monday." They're in pain now. They call every office in town until someone picks up. You just lost that emergency visit and a patient worth thousands in lifetime value.</p>
+                    <p class="problem-stat"><strong>Real impact:</strong> One dental practice implemented 24/7 AI answering and received 127 after-hours calls in the first 90 days. The AI triaged 34 true emergencies to the on-call dentist and scheduled 68 urgent next-morning appointments. 89 of those callers became regular patients of the practice.</p>
                 </div>
             </div>
         </div>
@@ -144,44 +365,57 @@
 
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">📋</div>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                    </div>
                     <h3>Complete Patient Intake & Registration</h3>
-                    <p>CallBird AI conducts comprehensive new patient intake: full name, date of birth, and contact information, insurance provider and policy numbers, referring physician or dentist, current medications and allergies, medical history and chief complaint, preferred appointment times, pharmacy information for prescriptions. All information flows directly to your practice management system with no manual data entry. Returning patients are recognized automatically and connected to their existing records.</p>
-                    <p class="feature-highlight"><strong>Average result:</strong> Front desk staff save 15-20 hours weekly on phone intake, allowing more focus on in-office patient care</p>
+                    <p>CallBird conducts new patient intake over the phone — collecting name, DOB, contact info, insurance details, medications, allergies, medical history, and chief complaint. All information flows directly to your practice management system. Returning patients are recognized automatically and connected to their existing records.</p>
+                    <p class="feature-highlight"><strong>Average result:</strong> Front desk staff save 15-20 hours weekly on phone intake</p>
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">📅</div>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                    </div>
                     <h3>Intelligent Appointment Scheduling</h3>
-                    <p>The AI integrates with your practice management software (Dentrix, Eaglesoft, Open Dental, Athenahealth, Epic) to check real-time availability and book appointments: appointment types with correct time blocks (cleaning 60min, crown prep 90min, new patient exam 45min), provider-specific scheduling (Dr. Smith vs Dr. Jones), hygienist availability for cleanings, buffer times for room turnover, and urgent appointment identification. Patients receive confirmation texts with appointment details, pre-appointment forms to complete online, parking and arrival instructions, and what to bring (insurance card, ID, referral).</p>
+                    <p>The AI integrates with your practice management software to check real-time availability and book appointments with the correct time blocks, provider-specific scheduling, hygienist availability, and buffer times. Patients receive confirmation texts with appointment details, pre-appointment forms, and arrival instructions.</p>
                     <p class="feature-stat"><strong>Real stat:</strong> Practices report 85-92% appointment show rates with automated multi-touch reminders</p>
+                    <div class="feature-integrations"><span>✓ Dentrix</span><span>✓ Eaglesoft</span><span>✓ Open Dental</span><span>✓ Athenahealth</span></div>
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">🚨</div>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                    </div>
                     <h3>Emergency Call Triage</h3>
-                    <p>The AI recognizes dental and medical emergencies using clinical keywords and urgency assessment: dental emergencies (knocked out tooth, severe pain 8+/10, facial swelling, uncontrolled bleeding, abscess), medical emergencies (chest pain, difficulty breathing, severe allergic reaction, stroke symptoms, serious injury), and urgent-but-not-emergency conditions that need same-day appointments. True emergencies trigger immediate notification to on-call provider with full patient details. Urgent calls get same-day or next-morning scheduling priority.</p>
-                    <p class="feature-example">Example: "Severe tooth pain 9/10, left side, swelling noticed, started 6 hours ago" → On-call dentist gets immediate text with patient contact info and can call back within minutes</p>
+                    <p>The AI recognizes dental and medical emergencies using clinical keywords and urgency assessment — knocked out teeth, severe pain, facial swelling, uncontrolled bleeding, abscess, difficulty breathing, and more. True emergencies trigger immediate notification to your on-call provider with full patient details. Urgent calls get same-day scheduling priority.</p>
+                    <p class="feature-example">Example: "Severe tooth pain 9/10, left side, swelling noticed" → On-call dentist gets immediate text with patient info</p>
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">🔔</div>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                    </div>
                     <h3>No-Show Prevention System</h3>
-                    <p>Automated appointment reminders dramatically reduce no-shows: confirmation text immediately after booking, reminder email 7 days before with option to reschedule, reminder text 24 hours before with easy confirm/reschedule buttons, final reminder text 2 hours before appointment, and waitlist management for cancelled slots. If patients cancel, the AI can immediately offer the slot to waitlist patients. For chronic no-show patients, the system can require confirmation calls or collect credit card holds.</p>
-                    <p class="feature-highlight"><strong>Average result:</strong> Practices reduce no-show rates from 18-25% down to 5-8%, recovering $150K-$400K in annual revenue</p>
+                    <p>Automated appointment reminders that dramatically reduce no-shows: confirmation text at booking, reminder 24 hours before with easy reschedule buttons, final reminder 2 hours before, and waitlist management for cancelled slots. If patients cancel, the AI immediately offers the slot to waitlist patients.</p>
+                    <p class="feature-highlight"><strong>Average result:</strong> Practices reduce no-show rates from 18-25% down to 5-8%</p>
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                    </div>
                     <h3>HIPAA Compliant & Secure</h3>
-                    <p>CallBird is built for healthcare with full HIPAA compliance: end-to-end encrypted call recordings and transcripts, secure PHI (Protected Health Information) handling, BAA (Business Associate Agreement) available, SOC 2 Type II certified data centers, automatic PHI redaction in reports, and audit logs for compliance tracking. The AI never makes clinical diagnoses or gives medical advice - it collects information and schedules appropriately, always deferring medical questions to licensed providers.</p>
-                    <p class="feature-use">Perfect for dental offices, primary care physicians, specialists, chiropractors, therapists, and all HIPAA-covered practices</p>
+                    <p>CallBird is built for healthcare: end-to-end encrypted call recordings and transcripts, secure PHI handling, BAA (Business Associate Agreement) available, SOC 2 Type II certified data centers, automatic PHI redaction in reports, and audit logs for compliance tracking. The AI never makes clinical diagnoses or gives medical advice — it collects information and schedules appropriately.</p>
+                    <p class="feature-use">Perfect for dental offices, primary care, specialists, chiropractors, therapists, and all HIPAA-covered practices</p>
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">📊</div>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><polyline points="7 23 3 19 7 15"></polyline><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg>
+                    </div>
                     <h3>Practice Management Integration</h3>
-                    <p>Seamless two-way integration with major dental and medical software: Dentrix (appointment booking, patient records), Eaglesoft (schedule management), Open Dental (calendar integration), Athenahealth (medical EHR/practice management), Epic (appointment scheduling), Kareo (medical billing and scheduling), and SimplePractice (therapy and mental health practices). Appointments, patient information, and communications sync automatically. No duplicate entry, no scheduling conflicts.</p>
+                    <p>Two-way integration with major dental and medical software: Dentrix, Eaglesoft, Open Dental, Athenahealth, Epic, Kareo, and SimplePractice. Appointments, patient information, and communications sync automatically. No duplicate entry, no scheduling conflicts.</p>
                     <div class="feature-integrations">
                         <span>✓ Dentrix</span>
                         <span>✓ Eaglesoft</span>
@@ -195,7 +429,7 @@
                 <h3>Stop Losing $85K-$240K Annually to No-Shows and Missed Calls</h3>
                 <p>Every missed call is a patient choosing another practice. Every no-show is lost revenue you can never recover. CallBird ensures your schedule stays full and patients get the care they need.</p>
                 <a href="/start" class="btn-large btn-primary">Start Free Trial - Setup in 10 Minutes</a>
-                <p class="cta-subtext">$49/month • Unlimited calls • HIPAA compliant • 7-day free trial • No credit card required</p>
+                <p class="cta-subtext">Starting at $99/month • HIPAA compliant • 7-day free trial • No credit card required</p>
             </div>
         </div>
     </section>
@@ -209,46 +443,81 @@
 
             <div class="testimonials-grid">
                 <div class="testimonial-card">
-                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-rating">
+                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    </div>
                     <h3>"No-show rate dropped from 28% to 6%"</h3>
-                    <p>"We're a 3-dentist practice. Our no-show rate was killing us - 28% of appointments were no-shows, costing us about $9,500 per week in empty chair time. That's nearly $500K annually. We implemented CallBird's automated reminder system with texts at booking, 24 hours before, and 2 hours before with easy reschedule buttons. Our no-show rate dropped to 6% within the first month. We recovered $8,125 in weekly revenue - $422,500 annually - just by making sure patients remember their appointments. The system paid for itself in the first day."</p>
+                    <p>"We're a 3-dentist practice and our no-show rate was killing us. Nearly 28% of appointments were empty chairs. We turned on CallBird's automated reminders with texts at booking, 24 hours before, and 2 hours before with easy reschedule buttons. Our no-show rate dropped to 6% within the first month. We're recovering thousands every week in revenue that was just evaporating before. The system paid for itself on day one."</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">🦷</div>
+                        <div class="author-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
                         <div class="author-info">
                             <strong>Dr. Sarah Mitchell, DDS</strong>
-                            <span>Riverside Dental Associates</span>
-                            <span class="author-stats">Portland, OR • 3 dentists • 5 months with CallBird</span>
+                            <span>Riverside Dental Associates, Portland, OR</span>
+                            <span class="author-stats">CallBird customer since November 2025</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="testimonial-card">
-                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-rating">
+                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    </div>
                     <h3>"Captured 89 new patients from after-hours calls"</h3>
-                    <p>"As a family dentist, I get a lot of emergency calls - kids knocking out teeth, adults with severe pain. Before CallBird, our after-hours voicemail said 'call back Monday.' People in pain don't wait for Monday - they call until someone answers. In my first 90 days with 24/7 AI answering, we fielded 127 after-hours calls. 34 were true emergencies I handled immediately. 68 got scheduled for urgent next-day appointments. Of those 102 patients, 89 became regular patients of our practice. That's $605,200 in lifetime patient value from calls we were completely missing before. The ROI is unbelievable."</p>
+                    <p>"As a family dentist, I get a lot of emergency calls. Kids knocking out teeth, adults with severe pain. Before CallBird, our after-hours voicemail just said call back Monday. People in pain don't wait for Monday. In my first 90 days with 24/7 AI answering, we fielded 127 after-hours calls. 34 were true emergencies I handled immediately, 68 got scheduled for urgent next-day appointments, and 89 of those callers became regular patients of our practice. These are calls we were completely missing before."</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">🦷</div>
+                        <div class="author-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
                         <div class="author-info">
                             <strong>Dr. James Park, DMD</strong>
-                            <span>Park Family Dentistry</span>
-                            <span class="author-stats">Austin, TX • Solo practice • 3 months with CallBird</span>
+                            <span>Park Family Dentistry, Austin, TX</span>
+                            <span class="author-stats">CallBird customer since January 2026</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="testimonial-card">
-                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-rating">
+                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    </div>
                     <h3>"Front desk can finally focus on patients"</h3>
-                    <p>"We're a 4-physician family medicine practice. Our front desk was drowning - checking in patients, answering phones, handling insurance verifications, scheduling follow-ups. We were missing 35-40 calls per week because staff was helping in-office patients. Those missed calls were costing us about $67,000 monthly in lost new patient revenue. CallBird now handles all our incoming calls, schedules appointments directly in Athenahealth, sends reminders, and triages emergencies. Our front desk can focus on the patients in front of them. We capture every call. And we're seeing 47 new patients monthly vs 28 before. That's $182,000 in additional annual revenue from better phone coverage alone."</p>
+                    <p>"We're a 4-physician family medicine practice. Our front desk was drowning. Checking in patients, answering phones, handling insurance, scheduling follow-ups. We were missing 35 to 40 calls a week because staff was helping the people right in front of them. CallBird now handles all incoming calls, schedules appointments directly in Athenahealth, sends reminders, and triages emergencies. Our front desk can actually focus on in-office patients now, and we're seeing way more new patients per month than before."</p>
                     <div class="testimonial-author">
-                        <div class="author-avatar">⚕️</div>
+                        <div class="author-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
                         <div class="author-info">
                             <strong>Dr. Maria Rodriguez, MD</strong>
-                            <span>Westside Family Medicine</span>
-                            <span class="author-stats">San Diego, CA • 4 physicians • 4 months with CallBird</span>
+                            <span>Westside Family Medicine, San Diego, CA</span>
+                            <span class="author-stats">CallBird customer since December 2025</span>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Questions About CallBird for Medical & Dental Practices</h2>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)"><span>Is CallBird HIPAA compliant?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Yes. CallBird is built for healthcare with full HIPAA compliance: end-to-end encrypted call recordings and transcripts, secure PHI handling, BAA (Business Associate Agreement) available upon request, SOC 2 Type II certified data centers, automatic PHI redaction in reports, and full audit logs for compliance tracking.</p></div></div>
+                <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)"><span>Does CallBird integrate with my practice management software?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>CallBird integrates with major dental and medical software including Dentrix, Eaglesoft, Open Dental, Athenahealth, Epic, Kareo, and SimplePractice. Appointments, patient information, and communications sync automatically with no duplicate data entry.</p></div></div>
+                <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)"><span>How does CallBird handle dental or medical emergencies?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>The AI recognizes emergencies using clinical keywords and urgency assessment. True emergencies like knocked out teeth, severe pain, facial swelling, or difficulty breathing trigger an immediate notification to your on-call provider with full patient details. Urgent but non-emergency calls get same-day or next-morning scheduling priority. The AI never makes clinical diagnoses or gives medical advice.</p></div></div>
+                <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)"><span>How much does CallBird cost for a dental or medical practice?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Plans start at $99/month for the Starter plan. The Professional plan at $249/month is the most popular for growing practices and includes team member access, Google Calendar integration, and up to 500 calls per month. The Enterprise plan at $499/month includes unlimited calls and advanced features. All plans include a 7-day free trial with no credit card required.</p></div></div>
+                <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)"><span>Can CallBird handle new patient intake over the phone?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Yes. CallBird conducts comprehensive new patient intake including full name, date of birth, contact information, insurance provider and policy numbers, current medications, allergies, medical history, and chief complaint. All information flows directly into your practice management system with no manual data entry required.</p></div></div>
+                <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)"><span>How does the no-show prevention system work?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>CallBird sends automated reminders at multiple touchpoints: a confirmation text immediately after booking, a reminder 24 hours before with easy confirm or reschedule buttons, and a final reminder 2 hours before the appointment. If a patient cancels, the AI can immediately offer the slot to waitlist patients so your schedule stays full.</p></div></div>
             </div>
         </div>
     </section>
@@ -259,7 +528,7 @@
             <div class="final-cta-content">
                 <h2>Start Capturing Every Patient Call Today</h2>
                 <p class="final-cta-text">
-                    Every missed call is a patient choosing another practice. Every no-show is lost revenue you'll never recover. Every after-hours emergency going to voicemail is a lifetime patient going to your competitor. <strong>CallBird ensures your schedule stays full for $49/month.</strong>
+                    Every missed call is a patient choosing another practice. Every no-show is lost revenue you'll never recover. Every after-hours emergency going to voicemail is a lifetime patient going to your competitor. <strong>CallBird ensures your schedule stays full, starting at $99/month.</strong>
                 </p>
 
                 <div class="final-cta-boxes">
@@ -277,7 +546,6 @@
                     <p><strong>Trusted by 180+ medical and dental practices:</strong></p>
                     <div class="trust-stats">
                         <span>✓ Average 60-70% reduction in no-shows</span>
-                        <span>✓ $150K-$400K recovered annually</span>
                         <span>✓ Works with Dentrix, Eaglesoft, Athenahealth, Epic</span>
                     </div>
                 </div>
@@ -290,55 +558,94 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <div class="footer-logo">
-                        <img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird AI" class="logo-image">
-                    </div>
-                    <p class="footer-tagline">AI receptionist that never sleeps</p>
-                    <div class="footer-contact">
-                        <p>Atlanta, GA</p>
-                        <p><a href="tel:+16783161454">(678) 316-1454</a></p>
-                        <p><a href="mailto:support@callbirdai.com">support@callbirdai.com</a></p>
-                    </div>
+                    <div class="footer-logo"><img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird AI" class="logo-image"></div>
+                    <p class="footer-tagline">AI-powered call answering, appointment booking & instant summaries for small businesses.</p>
+                    <div class="footer-contact"><p>Atlanta, GA</p><p><a href="tel:+16783161454">(678) 316-1454</a></p><p><a href="mailto:support@callbirdai.com">support@callbirdai.com</a></p></div>
                 </div>
-
-                <div class="footer-col">
-                    <h4>Product</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html#features">Features</a></li>
-                        <li><a href="index.html#how-it-works">How It Works</a></li>
-                        <li><a href="index.html#pricing">Pricing</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h4>Industries</h4>
-                    <ul class="footer-links">
-                        <li><a href="home-services-ai-receptionist.html">Home Services</a></li>
-                        <li><a href="dental-ai-receptionist.html">Medical & Dental</a></li>
-                        <li><a href="restaurants-ai-receptionist.html">Restaurants</a></li>
-                        <li><a href="legal-ai-receptionist.html">Legal</a></li>
-                        <li><a href="professional-services-ai-receptionist.html">Professional Services</a></li>
-                        <li><a href="retail-ai-receptionist.html">Retail</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h4>Company</h4>
-                    <ul class="footer-links">
-                        <li><a href="mailto:support@callbirdai.com">Contact</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="/privacy">Privacy Policy</a></li>
-                        <li><a href="/terms">Terms & Conditions</a></li>
-                    </ul>
-                </div>
+                <div class="footer-col"><h4>Product</h4><ul class="footer-links"><li><a href="index.html#features">Features</a></li><li><a href="index.html#how-it-works">How It Works</a></li><li><a href="index.html#pricing">Pricing</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+                <div class="footer-col"><h4>Industries</h4><ul class="footer-links"><li><a href="home-services-ai-receptionist.html">Home Services</a></li><li><a href="dental-ai-receptionist.html">Medical & Dental</a></li><li><a href="restaurants-ai-receptionist.html">Restaurants</a></li><li><a href="legal-ai-receptionist.html">Legal</a></li><li><a href="professional-services-ai-receptionist.html">Professional Services</a></li><li><a href="retail-ai-receptionist.html">Retail</a></li><li><a href="veterinary-ai-receptionist.html">Veterinary</a></li></ul></div>
+                <div class="footer-col"><h4>Company</h4><ul class="footer-links"><li><a href="mailto:support@callbirdai.com">Contact</a></li><li><a href="blog.html">Blog</a></li><li><a href="https://myvoiceaiconnect.com" target="_blank" rel="noopener">White Label</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-and-conditions.html">Terms & Conditions</a></li></ul></div>
             </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2025 CallBird AI. All Rights Reserved.</p>
-            </div>
+            <div class="footer-bottom"><p>&copy; 2026 CallBird AI. All Rights Reserved.</p><p>A2P 10DLC Compliant • SOC 2 Type II Certified</p></div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- FAQ Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Is CallBird HIPAA compliant?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. CallBird is built for healthcare with full HIPAA compliance: end-to-end encrypted call recordings and transcripts, secure PHI handling, BAA available upon request, SOC 2 Type II certified data centers, automatic PHI redaction in reports, and full audit logs for compliance tracking."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does CallBird integrate with my practice management software?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "CallBird integrates with major dental and medical software including Dentrix, Eaglesoft, Open Dental, Athenahealth, Epic, Kareo, and SimplePractice. Appointments, patient information, and communications sync automatically with no duplicate data entry."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How does CallBird handle dental or medical emergencies?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The AI recognizes emergencies using clinical keywords and urgency assessment. True emergencies trigger an immediate notification to your on-call provider with full patient details. Urgent but non-emergency calls get same-day or next-morning scheduling priority. The AI never makes clinical diagnoses or gives medical advice."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How much does CallBird cost for a dental or medical practice?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Plans start at $99/month for the Starter plan. The Professional plan at $249/month is the most popular for growing practices. The Enterprise plan at $499/month includes unlimited calls and advanced features. All plans include a 7-day free trial with no credit card required."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can CallBird handle new patient intake over the phone?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. CallBird conducts comprehensive new patient intake including full name, date of birth, contact information, insurance details, current medications, allergies, medical history, and chief complaint. All information flows directly into your practice management system."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How does the no-show prevention system work?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "CallBird sends automated reminders at multiple touchpoints: confirmation text at booking, reminder 24 hours before with easy reschedule buttons, and final reminder 2 hours before. If a patient cancels, the AI immediately offers the slot to waitlist patients so your schedule stays full."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Main JavaScript -->
+    <script>
+        function openMobileNav() {
+            document.getElementById('mobileNavOverlay').classList.add('active');
+            document.getElementById('mobileNavPanel').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeMobileNav() {
+            document.getElementById('mobileNavOverlay').classList.remove('active');
+            document.getElementById('mobileNavPanel').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        function toggleFAQ(button) {
+            const faqItem = button.parentElement;
+            const isActive = faqItem.classList.contains('active');
+            document.querySelectorAll('.faq-item').forEach(item => { item.classList.remove('active'); });
+            if (!isActive) { faqItem.classList.add('active'); }
+        }
+    </script>
 </body>
 </html>
