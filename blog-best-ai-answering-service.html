@@ -130,6 +130,7 @@
             --border-color: #e5e7eb;
             --success-color: #10b981;
             --error-color: #ef4444;
+            --warning-color: #f59e0b;
             --font-primary: 'Sora', sans-serif;
             --font-secondary: 'Inter', sans-serif;
         }
@@ -240,15 +241,119 @@
         }
         .aeo-answer p { color: var(--text-dark); font-weight: 500; margin-bottom: 0; font-size: 1rem; }
 
+        /* ========== TABLE STATUS ICONS ========== */
+        .icon-yes,
+        .icon-no,
+        .icon-partial,
+        .icon-soon {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            font-size: 0.88rem;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        .icon-yes::before,
+        .icon-no::before,
+        .icon-partial::before,
+        .icon-soon::before {
+            content: '';
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        .icon-yes::before {
+            background: var(--success-color);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M5 9l2.5 2.5L13 6' stroke='white' stroke-width='2.2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        }
+        .icon-yes { color: #065f46; }
+        .icon-no::before {
+            background: var(--error-color);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M6 6l6 6M12 6l-6 6' stroke='white' stroke-width='2.2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+        }
+        .icon-no { color: #991b1b; }
+        .icon-partial::before {
+            background: var(--warning-color);
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M5 9h8' stroke='white' stroke-width='2.2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+        }
+        .icon-partial { color: #92400e; }
+        .icon-soon::before {
+            background: #6366f1;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Ccircle cx='9' cy='9' r='3.5' fill='none' stroke='white' stroke-width='1.8'/%3E%3Cpath d='M9 7v2.5l1.5 1' stroke='white' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        }
+        .icon-soon { color: #4338ca; }
+
         /* ========== COMPARISON TABLE ========== */
-        .table-wrap { overflow-x: auto; margin: 1.5rem 0 2rem; border-radius: 0.75rem; border: 1px solid var(--border-color); }
-        .table-wrap table { width: 100%; border-collapse: collapse; min-width: 700px; font-size: 0.95rem; }
-        .table-wrap thead { background: var(--text-dark); color: white; }
-        .table-wrap th { padding: 1rem 0.75rem; text-align: left; font-weight: 700; font-size: 0.9rem; }
-        .table-wrap td { padding: 0.85rem 0.75rem; border-bottom: 1px solid var(--border-color); color: var(--text-medium); }
-        .table-wrap tbody tr:hover { background: rgba(18,32,146,0.03); }
-        .table-wrap .highlight-col { background: rgba(18,32,146,0.08); font-weight: 600; color: var(--text-dark); }
-        .table-wrap thead .highlight-col { background: var(--primary-color); }
+        .table-wrap {
+            overflow-x: auto;
+            margin: 1.5rem 0 2rem;
+            border-radius: 0.75rem;
+            border: 1px solid var(--border-color);
+            -webkit-overflow-scrolling: touch;
+        }
+        .table-wrap table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 860px;
+            font-size: 0.92rem;
+            table-layout: fixed;
+        }
+        .table-wrap thead {
+            background: var(--text-dark);
+            color: white;
+        }
+        .table-wrap th {
+            padding: 1rem 0.85rem;
+            text-align: left;
+            font-weight: 700;
+            font-size: 0.88rem;
+            letter-spacing: 0.01em;
+        }
+        .table-wrap td {
+            padding: 0.9rem 0.85rem;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-medium);
+            vertical-align: middle;
+        }
+        .table-wrap tbody tr:hover { background: rgba(18,32,146,0.02); }
+
+        /* First column (feature labels) */
+        .table-wrap th:first-child,
+        .table-wrap td:first-child {
+            width: 140px;
+            min-width: 140px;
+            font-weight: 600;
+            color: var(--text-dark);
+            position: sticky;
+            left: 0;
+            z-index: 2;
+        }
+        .table-wrap thead th:first-child {
+            background: var(--text-dark);
+        }
+        .table-wrap tbody td:first-child {
+            background: var(--bg-white);
+        }
+        .table-wrap tbody tr:hover td:first-child {
+            background: rgba(248,248,246,1);
+        }
+
+        /* Highlighted CallBird column */
+        .table-wrap td.hl {
+            background: rgba(18,32,146,0.05);
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        .table-wrap tbody tr:hover td.hl {
+            background: rgba(18,32,146,0.08);
+        }
+        .table-wrap thead th.hl {
+            background: var(--primary-color);
+            color: white;
+            font-weight: 800;
+        }
 
         /* ========== PROVIDER CARD ========== */
         .provider-card {
@@ -352,12 +457,15 @@
         .callout strong { color: var(--text-dark); }
 
         /* ========== FOOTER ========== */
-        .footer { background: var(--text-dark); color: white; padding: 2.5rem 1.5rem 2rem; margin-top: 3rem; }
+        .footer { background: #122092; color: white; padding: 2.5rem 1.5rem 2rem; margin-top: 3rem; }
         .footer-content { max-width: 1200px; margin: 0 auto; text-align: center; }
+        .footer h4 { color: #f6b828; font-family: var(--font-primary); font-size: 1rem; margin-bottom: 0.5rem; }
+        .footer-tagline { color: rgba(255,255,255,0.8); font-size: 0.9rem; margin-bottom: 1.5rem; }
         .footer-links { display: flex; gap: 1.5rem; justify-content: center; margin-bottom: 2rem; flex-wrap: wrap; }
         .footer-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.95rem; }
         .footer-links a:hover { color: white; }
-        .footer-bottom { padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.6); font-size: 0.9rem; }
+        .footer-bottom { padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.6); font-size: 0.85rem; }
+        .footer-bottom p { margin-bottom: 0.25rem; }
 
         /* ========== RESPONSIVE ========== */
         @media (max-width: 968px) {
@@ -407,12 +515,12 @@
     </nav>
 
     <section class="blog-hero">
-        <span class="hero-category">📞 AI Answering Service Guide</span>
+        <span class="hero-category">AI Answering Service Guide</span>
         <h1>7 Best AI Answering Services for Small Business [2026]</h1>
         <div class="hero-meta">
-            <span>📅 March 14, 2026</span>
+            <span>March 14, 2026</span>
             <span>•</span>
-            <span>⏱️ 16 min read</span>
+            <span>16 min read</span>
             <span>•</span>
             <span>By CallBird Team</span>
         </div>
@@ -422,7 +530,7 @@
 
         <!-- AEO: Quick Answer Block -->
         <div class="quick-answer">
-            <div class="quick-answer-label">📌 Quick Answer</div>
+            <div class="quick-answer-label">Quick Answer</div>
             <p><strong>CallBird AI ($49-$149/month)</strong> is the best AI answering service for most small businesses—flat-rate pricing, industry-specific call handling, and instant SMS notifications on every call. For the cheapest entry point, <strong>Dialzara ($29/month + usage)</strong> works for very low call volumes. For AI plus human backup, <strong>Smith.ai ($140+/month)</strong> is the premium choice.</p>
         </div>
 
@@ -461,8 +569,8 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Service</th>
-                        <th class="highlight-col">CallBird AI</th>
+                        <th>Feature</th>
+                        <th class="hl">CallBird AI</th>
                         <th>Smith.ai</th>
                         <th>Rosie AI</th>
                         <th>Goodcall</th>
@@ -474,7 +582,7 @@
                 <tbody>
                     <tr>
                         <td><strong>Starting Price</strong></td>
-                        <td class="highlight-col">$49/mo</td>
+                        <td class="hl">$49/mo</td>
                         <td>$140/mo</td>
                         <td>$49/mo</td>
                         <td>$59/mo</td>
@@ -484,7 +592,7 @@
                     </tr>
                     <tr>
                         <td><strong>Pricing Model</strong></td>
-                        <td class="highlight-col">Flat rate</td>
+                        <td class="hl">Flat rate</td>
                         <td>Per credit</td>
                         <td>Minute bundles</td>
                         <td>Per unique customer</td>
@@ -494,77 +602,77 @@
                     </tr>
                     <tr>
                         <td><strong>24/7 Answering</strong></td>
-                        <td class="highlight-col">✅</td>
-                        <td>✅</td>
-                        <td>✅</td>
-                        <td>✅</td>
-                        <td>✅</td>
-                        <td>✅</td>
-                        <td>✅</td>
+                        <td class="hl"><span class="icon-yes"></span></td>
+                        <td><span class="icon-yes"></span></td>
+                        <td><span class="icon-yes"></span></td>
+                        <td><span class="icon-yes"></span></td>
+                        <td><span class="icon-yes"></span></td>
+                        <td><span class="icon-yes"></span></td>
+                        <td><span class="icon-yes"></span></td>
                     </tr>
                     <tr>
                         <td><strong>Human Backup</strong></td>
-                        <td class="highlight-col">❌</td>
-                        <td>✅</td>
-                        <td>❌</td>
-                        <td>❌</td>
-                        <td>❌</td>
-                        <td>❌</td>
-                        <td>❌</td>
+                        <td class="hl"><span class="icon-no"></span></td>
+                        <td><span class="icon-yes"></span></td>
+                        <td><span class="icon-no"></span></td>
+                        <td><span class="icon-no"></span></td>
+                        <td><span class="icon-no"></span></td>
+                        <td><span class="icon-no"></span></td>
+                        <td><span class="icon-no"></span></td>
                     </tr>
                     <tr>
                         <td><strong>Industry AI</strong></td>
-                        <td class="highlight-col">✅ 6+ industries</td>
-                        <td>✅ Legal focus</td>
-                        <td>⚠️ Generic</td>
-                        <td>⚠️ Generic</td>
-                        <td>⚠️ Generic</td>
-                        <td>⚠️ Healthcare focus</td>
-                        <td>⚠️ Generic</td>
+                        <td class="hl"><span class="icon-yes">6+ industries</span></td>
+                        <td><span class="icon-yes">Legal focus</span></td>
+                        <td><span class="icon-partial">Generic</span></td>
+                        <td><span class="icon-partial">Generic</span></td>
+                        <td><span class="icon-partial">Generic</span></td>
+                        <td><span class="icon-partial">Healthcare</span></td>
+                        <td><span class="icon-partial">Generic</span></td>
                     </tr>
                     <tr>
                         <td><strong>SMS Alerts</strong></td>
-                        <td class="highlight-col">✅ Instant</td>
-                        <td>✅</td>
-                        <td>⚠️ Email</td>
-                        <td>✅</td>
-                        <td>⚠️ Email</td>
-                        <td>✅</td>
-                        <td>✅</td>
+                        <td class="hl"><span class="icon-yes">Instant</span></td>
+                        <td><span class="icon-yes"></span></td>
+                        <td><span class="icon-partial">Email only</span></td>
+                        <td><span class="icon-yes"></span></td>
+                        <td><span class="icon-partial">Email only</span></td>
+                        <td><span class="icon-yes"></span></td>
+                        <td><span class="icon-yes"></span></td>
                     </tr>
                     <tr>
                         <td><strong>Appt Booking</strong></td>
-                        <td class="highlight-col">✅</td>
-                        <td>✅</td>
-                        <td>✅</td>
-                        <td>✅</td>
-                        <td>✅</td>
-                        <td>✅</td>
-                        <td>✅</td>
+                        <td class="hl"><span class="icon-yes"></span></td>
+                        <td><span class="icon-yes"></span></td>
+                        <td><span class="icon-yes"></span></td>
+                        <td><span class="icon-yes"></span></td>
+                        <td><span class="icon-yes"></span></td>
+                        <td><span class="icon-yes"></span></td>
+                        <td><span class="icon-yes"></span></td>
                     </tr>
                     <tr>
                         <td><strong>Emergency Routing</strong></td>
-                        <td class="highlight-col">✅</td>
-                        <td>✅</td>
-                        <td>❌</td>
-                        <td>⚠️</td>
-                        <td>❌</td>
-                        <td>⚠️</td>
-                        <td>⚠️</td>
+                        <td class="hl"><span class="icon-yes"></span></td>
+                        <td><span class="icon-yes"></span></td>
+                        <td><span class="icon-no"></span></td>
+                        <td><span class="icon-partial"></span></td>
+                        <td><span class="icon-no"></span></td>
+                        <td><span class="icon-partial"></span></td>
+                        <td><span class="icon-partial"></span></td>
                     </tr>
                     <tr>
                         <td><strong>Spanish</strong></td>
-                        <td class="highlight-col">🔜 Coming</td>
-                        <td>✅</td>
-                        <td>✅</td>
-                        <td>⚠️</td>
-                        <td>✅</td>
-                        <td>✅</td>
-                        <td>❌</td>
+                        <td class="hl"><span class="icon-soon">Coming</span></td>
+                        <td><span class="icon-yes"></span></td>
+                        <td><span class="icon-yes"></span></td>
+                        <td><span class="icon-partial"></span></td>
+                        <td><span class="icon-yes"></span></td>
+                        <td><span class="icon-yes"></span></td>
+                        <td><span class="icon-no"></span></td>
                     </tr>
                     <tr>
                         <td><strong>Free Trial</strong></td>
-                        <td class="highlight-col">7 days, no card</td>
+                        <td class="hl">7 days, no card</td>
                         <td>Consultation</td>
                         <td>7 days</td>
                         <td>14 days, no card</td>
@@ -574,13 +682,13 @@
                     </tr>
                     <tr>
                         <td><strong>Best For</strong></td>
-                        <td class="highlight-col">Service businesses</td>
-                        <td>Legal/professional</td>
+                        <td class="hl">Service businesses</td>
+                        <td>Legal / professional</td>
                         <td>High-volume callers</td>
                         <td>Repeat customers</td>
-                        <td>Budget/low volume</td>
+                        <td>Budget / low volume</td>
                         <td>Medical offices</td>
-                        <td>Teams needing full phone system</td>
+                        <td>Teams needing phone system</td>
                     </tr>
                 </tbody>
             </table>
@@ -595,15 +703,15 @@
             <div class="provider-header">
                 <span class="provider-rank top">1</span>
                 <span class="provider-name">CallBird AI</span>
-                <span class="provider-badge">⭐ BEST VALUE</span>
+                <span class="provider-badge">BEST VALUE</span>
             </div>
-            <p class="provider-price">$49-$149/month • Flat rate • Unlimited calls</p>
+            <p class="provider-price">$49-$149/month &bull; Flat rate &bull; Unlimited calls</p>
             <p>CallBird is a purpose-built AI answering service for small service businesses. What sets it apart from generic AI phone solutions is industry-specific call handling—the AI understands context for contractors, medical offices, law firms, salons, and more. When a plumber's phone rings at 2am with a burst pipe call, CallBird knows to detect the emergency, capture the address, and immediately alert the business owner via SMS.</p>
             <p>Every call triggers an instant SMS summary to your phone. You know within seconds who called, what they needed, and whether it's urgent—without opening an app or checking email.</p>
 
             <div class="pros-cons">
                 <div class="pros">
-                    <h4>✅ Strengths</h4>
+                    <h4>Strengths</h4>
                     <ul>
                         <li><span>Industry-specific AI (6+ verticals)</span></li>
                         <li><span>Flat-rate pricing—no surprises</span></li>
@@ -614,7 +722,7 @@
                     </ul>
                 </div>
                 <div class="cons">
-                    <h4>❌ Limitations</h4>
+                    <h4>Limitations</h4>
                     <ul>
                         <li><span>Newer company (launched 2025)</span></li>
                         <li><span>Spanish support coming soon</span></li>
@@ -634,13 +742,13 @@
                 <span class="provider-name">Smith.ai</span>
                 <span class="provider-badge">BEST HYBRID</span>
             </div>
-            <p class="provider-price">$140+/month • Credit-based pricing</p>
+            <p class="provider-price">$140+/month &bull; Credit-based pricing</p>
             <p>Smith.ai is the only service on this list that combines AI answering with live human receptionists. Their AI handles routine calls—hours, pricing, appointment booking—while complex or sensitive calls get routed to trained human agents. This hybrid approach makes them particularly popular with law firms and professional services where call quality directly impacts revenue.</p>
             <p>The downside is price. Smith.ai uses a credit-based system where calls, chats, and texts consume credits based on length and complexity. For a busy business, monthly costs can reach $500-$700+ quickly.</p>
 
             <div class="pros-cons">
                 <div class="pros">
-                    <h4>✅ Strengths</h4>
+                    <h4>Strengths</h4>
                     <ul>
                         <li><span>AI + live human backup</span></li>
                         <li><span>Best-in-class CRM integrations</span></li>
@@ -650,7 +758,7 @@
                     </ul>
                 </div>
                 <div class="cons">
-                    <h4>❌ Limitations</h4>
+                    <h4>Limitations</h4>
                     <ul>
                         <li><span>Expensive—costs escalate with volume</span></li>
                         <li><span>Credit system is confusing</span></li>
@@ -670,13 +778,13 @@
                 <span class="provider-name">Rosie AI</span>
                 <span class="provider-badge">BEST MINUTE BUNDLES</span>
             </div>
-            <p class="provider-price">$49-$149/month • Minute bundles</p>
+            <p class="provider-price">$49-$149/month &bull; Minute bundles</p>
             <p>Rosie AI offers generous minute bundles that make per-minute costs among the lowest in the market. Their Scale plan at $149/month includes 1,000 minutes—roughly $0.15/minute, which undercuts most competitors at volume. The AI learns from your website and Google Business Profile, so setup is relatively quick.</p>
             <p>Rosie fills the gap between bare-bones budget services and expensive hybrid solutions. The natural-sounding voice engine handles conversations well, though it lacks the industry-specific intelligence that CallBird offers.</p>
 
             <div class="pros-cons">
                 <div class="pros">
-                    <h4>✅ Strengths</h4>
+                    <h4>Strengths</h4>
                     <ul>
                         <li><span>Generous minute bundles</span></li>
                         <li><span>Learns from your website automatically</span></li>
@@ -686,7 +794,7 @@
                     </ul>
                 </div>
                 <div class="cons">
-                    <h4>❌ Limitations</h4>
+                    <h4>Limitations</h4>
                     <ul>
                         <li><span>Generic AI (no industry specialization)</span></li>
                         <li><span>Email notifications only (no SMS)</span></li>
@@ -706,13 +814,13 @@
                 <span class="provider-name">Goodcall</span>
                 <span class="provider-badge">BEST FOR REPEAT CALLERS</span>
             </div>
-            <p class="provider-price">$59-$199/month • Per unique customer pricing</p>
+            <p class="provider-price">$59-$199/month &bull; Per unique customer pricing</p>
             <p>Goodcall takes a different approach to pricing: instead of charging per minute or per call, they charge per <em>unique customer</em>. Their Starter plan ($59/month) includes 100 unique customers with unlimited minutes and calls. If the same customer calls ten times, it counts as one unique customer. This pricing model rewards businesses with a lot of repeat callers—think property managers, dental offices, or salons with regular clients.</p>
             <p>Born out of Google in 2017, Goodcall has been refining conversational AI longer than most competitors. The AI handles complex interactions well, with customizable logic flows and forms for lead capture.</p>
 
             <div class="pros-cons">
                 <div class="pros">
-                    <h4>✅ Strengths</h4>
+                    <h4>Strengths</h4>
                     <ul>
                         <li><span>Unlimited minutes on all plans</span></li>
                         <li><span>Unique customer pricing rewards loyalty</span></li>
@@ -722,7 +830,7 @@
                     </ul>
                 </div>
                 <div class="cons">
-                    <h4>❌ Limitations</h4>
+                    <h4>Limitations</h4>
                     <ul>
                         <li><span>$0.50 per customer over cap</span></li>
                         <li><span>Generic AI (not industry-specific)</span></li>
@@ -748,7 +856,7 @@
 
             <div class="pros-cons">
                 <div class="pros">
-                    <h4>✅ Strengths</h4>
+                    <h4>Strengths</h4>
                     <ul>
                         <li><span>Lowest base price ($29/month)</span></li>
                         <li><span>Quick, simple setup</span></li>
@@ -757,7 +865,7 @@
                     </ul>
                 </div>
                 <div class="cons">
-                    <h4>❌ Limitations</h4>
+                    <h4>Limitations</h4>
                     <ul>
                         <li><span>Per-minute charges add up fast</span></li>
                         <li><span>Email-only notifications</span></li>
@@ -776,13 +884,13 @@
                 <span class="provider-rank">6</span>
                 <span class="provider-name">My AI Front Desk</span>
             </div>
-            <p class="provider-price">$79-$159/month • Flat rate with minute caps</p>
+            <p class="provider-price">$79-$159/month &bull; Flat rate with minute caps</p>
             <p>My AI Front Desk targets healthcare and professional service businesses with features like intelligent routing, voicemail transcription, and appointment scheduling designed for medical practice workflows. Integration with 9,000+ apps through Zapier gives it broad connectivity, though native integrations are limited.</p>
             <p>At $79/month for 200 minutes (Starter), it's reasonably priced for low-to-moderate call volumes. The platform also offers white-label and reseller options—relevant if you're an agency looking to offer AI answering as a service.</p>
 
             <div class="pros-cons">
                 <div class="pros">
-                    <h4>✅ Strengths</h4>
+                    <h4>Strengths</h4>
                     <ul>
                         <li><span>Healthcare workflow focus</span></li>
                         <li><span>9,000+ app integrations via Zapier</span></li>
@@ -791,7 +899,7 @@
                     </ul>
                 </div>
                 <div class="cons">
-                    <h4>❌ Limitations</h4>
+                    <h4>Limitations</h4>
                     <ul>
                         <li><span>Generic setup (self-service only)</span></li>
                         <li><span>Limited native integrations</span></li>
@@ -810,13 +918,13 @@
                 <span class="provider-rank">7</span>
                 <span class="provider-name">Allo (with Sona AI)</span>
             </div>
-            <p class="provider-price">$45/month per user • Full phone system included</p>
+            <p class="provider-price">$45/month per user &bull; Full phone system included</p>
             <p>Allo isn't a standalone AI answering service—it's a complete business phone system with a built-in AI agent called Sona. For teams already needing a phone system, this bundled approach can be cost-effective. Sona answers calls, captures messages, handles FAQs, and sends automatic SMS follow-ups to callers.</p>
             <p>The caveat: Allo only makes sense if you're replacing your entire phone system. If you just want AI answering layered onto your existing number, other services on this list are a better fit.</p>
 
             <div class="pros-cons">
                 <div class="pros">
-                    <h4>✅ Strengths</h4>
+                    <h4>Strengths</h4>
                     <ul>
                         <li><span>Full phone system + AI answering</span></li>
                         <li><span>Flat pricing, no per-minute fees</span></li>
@@ -825,7 +933,7 @@
                     </ul>
                 </div>
                 <div class="cons">
-                    <h4>❌ Limitations</h4>
+                    <h4>Limitations</h4>
                     <ul>
                         <li><span>Requires adopting Allo as phone system</span></li>
                         <li><span>Per-user pricing adds up for teams</span></li>
@@ -841,9 +949,9 @@
 
         <!-- ===== CTA ===== -->
         <div class="cta-box">
-            <h3>📞 Try CallBird Free for 7 Days</h3>
+            <h3>Try CallBird Free for 7 Days</h3>
             <p>Industry-specific AI answering for your business. No credit card required.</p>
-            <a href="/start" class="btn-accent">Start Free Trial →</a>
+            <a href="/start" class="btn-accent">Start Free Trial</a>
             <p class="cta-subtext">Setup takes under 10 minutes. Cancel anytime.</p>
         </div>
 
@@ -926,7 +1034,7 @@
         </div>
 
         <div class="callout">
-            <p><strong>💡 The hidden math:</strong> A full-time receptionist works 40 hours per week and costs $2,830-$4,000/month with benefits. An AI answering service works 168 hours per week (24/7/365) for $49-$199/month. That's 4x the coverage at 5-10% of the cost.</p>
+            <p><strong>The hidden math:</strong> A full-time receptionist works 40 hours per week and costs $2,830-$4,000/month with benefits. An AI answering service works 168 hours per week (24/7/365) for $49-$199/month. That's 4x the coverage at 5-10% of the cost.</p>
         </div>
 
 
@@ -1169,16 +1277,16 @@
 
         <!-- Final CTA -->
         <div class="cta-box">
-            <h3>📞 Ready to Stop Missing Calls?</h3>
+            <h3>Ready to Stop Missing Calls?</h3>
             <p>CallBird AI answers every call with industry-specific intelligence. 24/7. Starting at $49/month.</p>
-            <a href="/start" class="btn-accent">Start Free 7-Day Trial →</a>
+            <a href="/start" class="btn-accent">Start Free 7-Day Trial</a>
             <p class="cta-subtext">No credit card required. Works with your existing phone number.</p>
         </div>
 
 
         <!-- ===== RELATED POSTS ===== -->
         <div class="related-posts">
-            <h2>📚 Related Reading</h2>
+            <h2>Related Reading</h2>
             <div class="related-grid">
                 <a href="blog-what-is-ai-receptionist.html" class="related-card">
                     <h4>What is an AI Receptionist?</h4>
@@ -1203,17 +1311,21 @@
 
     <footer class="footer">
         <div class="footer-content">
+            <h4>CallBird AI</h4>
+            <p class="footer-tagline">AI-powered call answering, appointment booking &amp; instant summaries for small businesses.</p>
             <div class="footer-links">
                 <a href="index.html">Home</a>
                 <a href="index.html#features">Features</a>
                 <a href="index.html#pricing">Pricing</a>
                 <a href="index.html#industries">Industries</a>
                 <a href="blog.html">Blog</a>
+                <a href="https://myvoiceaiconnect.com" target="_blank">White Label</a>
                 <a href="mailto:support@callbirdai.com">Contact</a>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 CallBird AI. All rights reserved.</p>
-                <p style="margin-top: 0.5rem;">Atlanta, GA | <a href="tel:+16783161454" style="color: rgba(255,255,255,0.6);">(678) 316-1454</a></p>
+                <p>Atlanta, GA | <a href="tel:+15055945806" style="color: rgba(255,255,255,0.6);">(505) 594-5806</a></p>
+                <p style="margin-top: 0.5rem;">A2P 10DLC Compliant &bull; SOC 2 Type II Certified</p>
             </div>
         </div>
     </footer>
