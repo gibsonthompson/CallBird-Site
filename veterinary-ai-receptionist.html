@@ -1,345 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-M9WVK3WD');</script>
-    <!-- End Google Tag Manager -->
-    
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-M9WVK3WD');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AI Receptionist for Veterinary Clinics & Animal Hospitals. 24/7 appointment scheduling, emergency triage, prescription refills. Never miss a pet owner's call. From $49/month.">
+    <meta name="description" content="AI Receptionist for Veterinary Clinics & Animal Hospitals. 24/7 appointment scheduling, emergency triage, prescription refills. Never miss a pet owner's call. Starting at $99/month.">
     <meta name="keywords" content="AI receptionist for veterinarians, vet clinic answering service, veterinary appointment scheduling, animal hospital phone system, vet practice receptionist AI">
+    <link rel="icon" type="image/png" href="https://i.imgur.com/qwyQQW5.png">
+    <link rel="apple-touch-icon" href="https://i.imgur.com/qwyQQW5.png">
+    <link rel="shortcut icon" href="https://i.imgur.com/qwyQQW5.png">
+    <meta name="theme-color" content="#122092">
     <title>AI Receptionist for Veterinary Clinics & Animal Hospitals | CallBird</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- Schema Markup for SEO -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "CallBird AI for Veterinary Clinics",
-      "applicationCategory": "BusinessApplication",
-      "offers": {
-        "@type": "Offer",
-        "price": "49",
-        "priceCurrency": "USD"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "ratingCount": "143"
-      }
-    }
+    {"@context":"https://schema.org","@type":"SoftwareApplication","name":"CallBird AI for Veterinary Clinics","applicationCategory":"BusinessApplication","offers":{"@type":"Offer","price":"99","priceCurrency":"USD"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","ratingCount":"143"}}
     </script>
+    <style>
+        html { zoom: 0.8; -moz-transform: scale(0.8); -moz-transform-origin: 0 0; }
+        .problem-icon, .feature-icon { display: flex; align-items: center; justify-content: center; width: 100%; }
+        .problem-icon svg, .feature-icon svg { width: 3rem; height: 3rem; display: block; margin: 0 auto; }
+        .problem-card, .feature-card { text-align: center !important; }
+        .problem-card .problem-icon, .feature-card .feature-icon { justify-content: center !important; margin: 0 auto 1rem !important; }
+        .feature-integrations { justify-content: center !important; }
+        .author-avatar { display: flex; align-items: center; justify-content: center; width: 3rem; height: 3rem; background: var(--bg-light, #f5f7fa); border-radius: 50%; }
+        .author-avatar svg { width: 1.75rem; height: 1.75rem; }
+        .faq-answer { display: none; padding: 0 1.25rem 1.25rem; }
+        .faq-item.active .faq-answer { display: block; }
+        .faq-question { width: 100%; text-align: left; background: none; border: none; cursor: pointer; padding: 1.25rem; font-size: 1.05rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color: var(--text-dark, #1a1a2e); font-family: inherit; }
+        .faq-question:hover { color: var(--primary-color, #122092); }
+        .faq-icon { font-size: 1.5rem; font-weight: 300; line-height: 1; flex-shrink: 0; transition: transform 0.2s ease; }
+        .faq-item.active .faq-icon { transform: rotate(45deg); }
+        .footer { background: #122092 !important; color: #fff !important; }
+        .footer a { color: rgba(255,255,255,0.85) !important; } .footer a:hover { color: #fff !important; }
+        .footer h4 { color: #f6b828 !important; }
+        .footer-tagline { color: rgba(255,255,255,0.7) !important; }
+        .footer-bottom { border-top-color: rgba(255,255,255,0.15) !important; color: rgba(255,255,255,0.6) !important; }
+    </style>
+    <style>
+        .mobile-nav-overlay { display: none; position: fixed; inset: 0; z-index: 999; background: rgba(0,0,0,0.5); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }
+        .mobile-nav-overlay.active { display: block; }
+        .mobile-nav-panel { position: fixed; top: 0; right: 0; bottom: 0; width: 280px; max-width: 85vw; background: white; z-index: 1000; transform: translateX(100%); transition: transform 0.3s ease; display: flex; flex-direction: column; box-shadow: -4px 0 20px rgba(0,0,0,0.15); }
+        .mobile-nav-panel.active { transform: translateX(0); }
+        .mobile-nav-header { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.25rem; border-bottom: 1px solid #e5e7eb; }
+        .mobile-nav-close { width: 36px; height: 36px; border: none; background: #f3f4f6; border-radius: 8px; font-size: 1.25rem; cursor: pointer; display: flex; align-items: center; justify-content: center; color: #374151; }
+        .mobile-nav-links { flex: 1; padding: 1rem 0; overflow-y: auto; }
+        .mobile-nav-links a { display: block; padding: 0.875rem 1.25rem; color: var(--text-dark); font-size: 1rem; font-weight: 500; text-decoration: none; }
+        .mobile-nav-cta { padding: 1rem 1.25rem; border-top: 1px solid #e5e7eb; }
+        .mobile-nav-cta a { display: block; text-align: center; padding: 0.875rem; background: var(--primary-color); color: white; border-radius: 8px; font-weight: 600; text-decoration: none; }
+        @media (max-width: 768px) { .features-grid, .testimonials-grid, .problems-grid { grid-template-columns: 1fr !important; } }
+        @media (max-width: 1100px) { .features-grid { grid-template-columns: repeat(2, 1fr) !important; } }
+        @media (max-width: 480px) { .hero-title { font-size: 1.75rem !important; } .section-header h2 { font-size: 1.5rem !important; } .trust-bar { flex-direction: column !important; gap: 0.5rem !important; } .hero-ctas { flex-direction: column !important; gap: 0.75rem !important; } .hero-ctas .btn-large { width: 100% !important; text-align: center !important; } .btn-ghost.btn-small, .nav-actions .btn-ghost { display: none !important; } }
+    </style>
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9WVK3WD"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9WVK3WD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <nav class="navbar"><div class="container"><div class="nav-content">
+        <div class="logo"><a href="index.html"><img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird AI" class="logo-image"></a></div>
+        <ul class="nav-links"><li><a href="index.html#features">Features</a></li><li><a href="index.html#pricing">Pricing</a></li><li><a href="blog.html">Blog</a></li><li><a href="#faq">FAQ</a></li></ul>
+        <div class="nav-actions"><a href="tel:+15055945806" class="btn-ghost">Call Us</a><a href="/start" class="btn-primary">Start Free Trial</a></div>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu" onclick="openMobileNav()"><span></span><span></span><span></span></button>
+    </div></div></nav>
+    <div class="mobile-nav-overlay" id="mobileNavOverlay" onclick="closeMobileNav()"></div>
+    <div class="mobile-nav-panel" id="mobileNavPanel">
+        <div class="mobile-nav-header"><img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird" style="height:32px;"><button class="mobile-nav-close" onclick="closeMobileNav()">&times;</button></div>
+        <div class="mobile-nav-links"><a href="index.html#features" onclick="closeMobileNav()">Features</a><a href="index.html#pricing" onclick="closeMobileNav()">Pricing</a><a href="blog.html" onclick="closeMobileNav()">Blog</a><a href="#faq" onclick="closeMobileNav()">FAQ</a><a href="tel:+15055945806" onclick="closeMobileNav()">Call Us: (505) 594-5806</a></div>
+        <div class="mobile-nav-cta"><a href="/start">Start Free Trial</a></div>
+    </div>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <div class="logo">
-                    <a href="index.html"><img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird AI" class="logo-image"></a>
+    <section class="hero"><div class="container"><div class="hero-content">
+        <div class="hero-badge"><span class="badge-dot"></span><span>For Veterinary Clinics & Animal Hospitals</span></div>
+        <h1 class="hero-title">AI Receptionist for Veterinary<br>Clinics & Animal Hospitals</h1>
+        <p class="hero-subtitle">24/7 Appointment Scheduling, Emergency Triage & Prescription Refills. Never Miss a Pet Owner's Call While You're Treating Patients.</p>
+        <div class="trust-bar"><div class="trust-item">✓ 44% of Vet Clinic Calls Go Unanswered</div><div class="trust-item">✓ $72K-$185K Lost Annually to Missed Emergency Calls</div><div class="trust-item">✓ Setup in 10 Minutes</div></div>
+        <div class="hero-ctas"><a href="/start" class="btn-large btn-primary">Start Free Trial - 7 Days</a><a href="index.html" class="btn-large btn-ghost">← Back to Home</a></div>
+    </div></div><div class="hero-bg"><div class="hero-gradient"></div><div class="hero-pattern"></div></div></section>
+
+    <section class="problem-solution"><div class="container">
+        <div class="section-header"><h2>The Hidden Cost of Missed Calls for Veterinary Practices</h2></div>
+        <div class="problems-grid">
+            <div class="problem-card">
+                <div class="problem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg></div>
+                <h3>Emergency Calls Lost to Competitors</h3>
+                <p>It's 7:45 PM on Saturday. A panicked pet owner's dog just ate chocolate. They're calling every vet in the area. Your phone goes to voicemail. They're not going to wait — their dog could die. They call the next clinic that has 24/7 answering. That's a $1,800 emergency visit plus a lifetime client gone in 60 seconds.</p>
+                <p class="problem-stat"><strong>Real impact:</strong> A 4-vet practice tracked after-hours calls for 90 days. They averaged 23 calls per week outside business hours, with 62% being true emergencies. After implementing AI with emergency triage and dispatch to the on-call vet, they captured tens of thousands in emergency revenue in their first month.</p>
+            </div>
+            <div class="problem-card">
+                <div class="problem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg></div>
+                <h3>Prescription Refills Overwhelming Your Staff</h3>
+                <p>Your front desk spends 12-18 hours a week just processing prescription refill requests. Each refill call takes 8-12 minutes: pulling the record, verifying exam dates, checking eligibility, calling the pharmacy, then calling the owner back. With 60-80 refill calls weekly, your front desk is drowning while new client calls go to voicemail.</p>
+                <p class="problem-stat"><strong>Real impact:</strong> A 3-vet practice calculated they were missing an average of 37 new client calls per week because the front desk was tied up on refills. After implementing AI to handle routine refills automatically, their front desk freed up 14 hours weekly to focus on new clients and in-clinic care.</p>
+            </div>
+            <div class="problem-card">
+                <div class="problem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg></div>
+                <h3>Schedule Gaps From No-Shows</h3>
+                <p>The veterinary industry average no-show rate runs 15-20%. For a busy practice with 180 appointments a week, that's 27-36 empty slots. Add same-day cancellations you can't fill, and 20-30% of your schedule is wasted capacity. Your vets sit idle when they could be treating patients.</p>
+                <p class="problem-stat"><strong>Real impact:</strong> A small animal hospital with 3 vets had an 18% no-show rate plus 11% same-day cancellations. After implementing automated reminders and waitlist management, no-shows dropped to 6% and they filled 70% of cancellations from the waitlist.</p>
+            </div>
+        </div>
+    </div></section>
+
+    <section class="how-it-works"><div class="container">
+        <div class="section-header"><h2>CallBird AI: Your 24/7 Veterinary Receptionist</h2><p class="subtitle">Purpose-built for veterinary clinics, animal hospitals, and mobile vet services</p></div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></div>
+                <h3>Emergency Call Triage & Dispatch</h3>
+                <p>CallBird recognizes veterinary emergencies using clinical keywords and symptom assessment: difficulty breathing, seizures, bloat, severe trauma, poisoning (chocolate, xylitol, rat poison, antifreeze), and uncontrolled bleeding. True emergencies trigger an immediate text to your on-call vet with pet owner info, pet details, symptoms, and urgency level.</p>
+                <p class="feature-highlight"><strong>Average result:</strong> Veterinary practices capture 85-92% more after-hours emergencies</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg></div>
+                <h3>Complete Patient Intake</h3>
+                <p>The AI registers new patients over the phone: owner info, pet name, species, breed, age, weight, spay/neuter status, medical history, vaccinations, reason for visit, and pet insurance. Returning patients are recognized automatically. Everything syncs to your practice management system with no manual entry.</p>
+                <p class="feature-stat"><strong>Real stat:</strong> Front desk staff save 12-18 hours weekly on phone intake</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div>
+                <h3>Smart Appointment Scheduling</h3>
+                <p>Real-time integration with your practice management software to book with the right time blocks (wellness 30min, sick visit 20min, surgery drop-off 10min, dental 60min), vet-specific scheduling, exam room availability, and urgent appointment prioritization. Clients get confirmation texts with details and pre-visit forms.</p>
+                <p class="feature-example">Example: "Routine wellness exam for 5-year-old Lab" → AI books 30-minute slot, sends confirmation, reminds client to bring vaccination records</p>
+                <div class="feature-integrations"><span>✓ Cornerstone</span><span>✓ AVImark</span><span>✓ ezyVet</span><span>✓ Impromed</span></div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg></div>
+                <h3>Automated Prescription Refill Management</h3>
+                <p>The AI handles routine refills automatically: checks patient records, verifies the last exam was within the required timeframe, confirms eligibility, processes approved refills, and notifies the owner when ready. Refills needing vet approval get flagged with full context for quick review.</p>
+                <p class="feature-highlight"><strong>Average result:</strong> Front desk saves 12-18 hours weekly, clients get refills same-day instead of 24-48 hours</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg></div>
+                <h3>No-Show Prevention & Waitlist Management</h3>
+                <p>Automated reminders at booking, 48 hours before, and 2 hours before with easy reschedule buttons. When clients cancel, the AI immediately offers the slot to waitlist patients. For chronic no-shows, the system can require confirmation or credit card holds.</p>
+                <p class="feature-use">Perfect for busy clinics with high appointment volumes and long wait times for popular slots</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><polyline points="7 23 3 19 7 15"></polyline><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg></div>
+                <h3>Veterinary Practice Management Integration</h3>
+                <p>Seamless two-way integration with Cornerstone, AVImark, ezyVet, Impromed, and PetDesk. Appointments, patient records, prescription requests, and communications sync automatically. No duplicate entry, no scheduling conflicts.</p>
+                <div class="feature-integrations"><span>✓ Cornerstone</span><span>✓ AVImark</span><span>✓ ezyVet</span><span>✓ Impromed</span></div>
+            </div>
+        </div>
+        <div class="cta-box">
+            <h3>Stop Losing $72K-$185K Annually to Missed Emergency Calls</h3>
+            <p>Every after-hours emergency call that goes to voicemail is a lifetime client choosing another vet. CallBird ensures you capture every opportunity.</p>
+            <a href="/start" class="btn-large btn-primary">Start Free Trial - Setup in 10 Minutes</a>
+            <p class="cta-subtext">Starting at $99/month • 7-day free trial • No credit card required</p>
+        </div>
+    </div></section>
+
+    <section class="testimonials"><div class="container">
+        <div class="section-header"><h2>What Veterinarians Say About CallBird</h2></div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-rating"><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+                <h3>"We finally capture after-hours emergencies"</h3>
+                <p>"We're a 4-vet emergency and general practice. Before CallBird, our after-hours voicemail said leave a message and we'll call back. For emergencies, pet owners don't leave messages. They keep calling vets until someone answers. We were getting 23 after-hours calls weekly but only capturing about 8 of them. With CallBird, every call gets answered, true emergencies go straight to our on-call vet, and urgent cases get scheduled for first thing in the morning. The system paid for itself within the first few hours."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
+                    <div class="author-info"><strong>Dr. Jennifer Martinez, DVM</strong><span>Paws & Claws Veterinary Hospital, Denver, CO</span><span class="author-stats">CallBird customer since December 2025</span></div>
                 </div>
-                <ul class="nav-links">
-                    <li><a href="index.html#features">Features</a></li>
-                    <li><a href="index.html#industries">Industries</a></li>
-                    <li><a href="index.html#pricing">Pricing</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                </ul>
-                <div class="nav-actions">
-                    <a href="tel:+16783161454" class="btn-ghost">Call Us</a>
-                    <a href="/start" class="btn-primary">Start Free Trial</a>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-rating"><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+                <h3>"Front desk freed up 14 hours per week"</h3>
+                <p>"Prescription refills were drowning my front desk. They were spending 14 hours every week just processing refills while new client calls went to voicemail. CallBird now handles 80% of refills automatically. It checks the record, verifies the exam date, processes approved refills, and only escalates the ones that need my sign-off. My front desk can actually focus on greeting clients and answering new patient calls now. We went from missing dozens of new client calls a week to capturing almost all of them."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
+                    <div class="author-info"><strong>Dr. Michael Chen, DVM</strong><span>Riverside Animal Clinic, Portland, OR</span><span class="author-stats">CallBird customer since October 2025</span></div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-rating"><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+                <h3>"No-show rate dropped from 18% to 6%"</h3>
+                <p>"No-shows were killing our schedule. We were at 18%, which meant 31 empty slots every week. CallBird sends texts at booking, 48 hours before, and 2 hours before with easy reschedule buttons. No-shows dropped to 6% within the first month. And when someone does cancel, the AI immediately offers that slot to waitlist patients. We're filling 70% of cancellations now. It's like adding another vet's worth of production without hiring anyone."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
+                    <div class="author-info"><strong>Dr. Sarah Thompson, DVM</strong><span>Northside Veterinary Clinic, Austin, TX</span><span class="author-stats">CallBird customer since November 2025</span></div>
                 </div>
             </div>
         </div>
-    </nav>
+    </div></section>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <span class="badge-dot"></span>
-                    <span>For Veterinary Clinics & Animal Hospitals</span>
-                </div>
-                
-                <h1 class="hero-title">
-                    AI Receptionist for Veterinary<br>Clinics & Animal Hospitals
-                </h1>
-                
-                <p class="hero-subtitle">
-                    24/7 Appointment Scheduling, Emergency Triage & Prescription Refills. Never Miss a Pet Owner's Call While You're Treating Patients.
-                </p>
-
-                <div class="trust-bar">
-                    <div class="trust-item">✓ 44% of Vet Clinic Calls Go Unanswered</div>
-                    <div class="trust-item">✓ $72K-$185K Lost Annually to Missed Emergency Calls</div>
-                    <div class="trust-item">✓ Setup in 10 Minutes</div>
-                </div>
-
-                <div class="hero-ctas">
-                    <a href="/start" class="btn-large btn-primary">Start Free Trial - 7 Days</a>
-                    <a href="index.html" class="btn-large btn-ghost">← Back to Home</a>
-                </div>
-            </div>
+    <section id="faq" class="faq"><div class="container">
+        <div class="section-header"><h2>Questions About CallBird for Veterinary Clinics</h2></div>
+        <div class="faq-grid">
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)"><span>How does CallBird handle veterinary emergencies?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>The AI recognizes emergencies like difficulty breathing, seizures, bloat, poisoning, severe trauma, and uncontrolled bleeding. It immediately texts your on-call veterinarian with the pet owner's info, pet details, symptoms, and urgency level. Urgent but stable cases get priority scheduling for the next morning.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)"><span>Can CallBird handle prescription refill requests?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Yes. The AI checks patient records, verifies the last exam was within the required timeframe, confirms eligibility, and processes approved refills automatically. Refills that need veterinarian approval (controlled substances, new symptoms, overdue exams) get flagged with full context for quick review.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)"><span>Does it integrate with my veterinary practice management software?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Yes. CallBird integrates with Cornerstone, AVImark, ezyVet, Impromed, and PetDesk. Appointments, patient records, prescription requests, and communications sync automatically in both directions.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)"><span>How does the no-show prevention work?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>CallBird sends automated reminders at booking, 48 hours before, and 2 hours before the appointment with easy confirm or reschedule buttons. When clients cancel, the AI immediately offers the slot to waitlist patients so your schedule stays full.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)"><span>How much does CallBird cost for a veterinary clinic?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Plans start at $99/month for the Starter plan. The Professional plan at $249/month is the most popular for busy clinics and includes team member access and up to 500 calls. The Enterprise plan at $499/month includes unlimited calls. All plans include a 7-day free trial with no credit card required.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)"><span>Can the AI register new patients over the phone?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Yes. CallBird collects complete new patient information: owner details, pet name, species, breed, age, weight, medical history, vaccinations, reason for visit, and insurance info. Everything syncs directly to your practice management system with no manual data entry.</p></div></div>
         </div>
-        
-        <div class="hero-bg">
-            <div class="hero-gradient"></div>
-            <div class="hero-pattern"></div>
+    </div></section>
+
+    <section class="final-cta"><div class="container"><div class="final-cta-content">
+        <h2>Start Capturing Every Client Call Today</h2>
+        <p class="final-cta-text">Right now, while you're treating a patient, a pet owner with an emergency is calling vets in your area. The first clinic to answer gets the client. While you're in surgery, CallBird is triaging emergencies and booking appointments. <strong>Never miss another emergency call, starting at $99/month.</strong></p>
+        <div class="final-cta-boxes"><div class="cta-box-secondary"><a href="/start" class="btn-large btn-primary">Start Your 7-Day Free Trial</a><div class="cta-benefits"><span>✓ Setup in 10 minutes</span><span>✓ No credit card required</span><span>✓ Cancel anytime</span></div></div></div>
+        <div class="final-trust"><p><strong>Trusted by 140+ veterinary clinics nationwide:</strong></p><div class="trust-stats"><span>✓ 60-70% reduction in no-shows</span><span>✓ Works with Cornerstone, AVImark, ezyVet, Impromed</span></div></div>
+    </div></div></section>
+
+    <footer class="footer"><div class="container">
+        <div class="footer-grid">
+            <div class="footer-col"><div class="footer-logo"><img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird AI" class="logo-image"></div><p class="footer-tagline">AI-powered call answering, appointment booking & instant summaries for small businesses.</p><div class="footer-contact"><p>Atlanta, GA</p><p><a href="tel:+15055945806">(505) 594-5806</a></p><p><a href="mailto:support@callbirdai.com">support@callbirdai.com</a></p></div></div>
+            <div class="footer-col"><h4>Product</h4><ul class="footer-links"><li><a href="index.html#features">Features</a></li><li><a href="index.html#how-it-works">How It Works</a></li><li><a href="index.html#pricing">Pricing</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+            <div class="footer-col"><h4>Industries</h4><ul class="footer-links"><li><a href="home-services-ai-receptionist.html">Home Services</a></li><li><a href="dental-ai-receptionist.html">Medical & Dental</a></li><li><a href="restaurants-ai-receptionist.html">Restaurants</a></li><li><a href="legal-ai-receptionist.html">Legal</a></li><li><a href="professional-services-ai-receptionist.html">Professional Services</a></li><li><a href="retail-ai-receptionist.html">Retail</a></li><li><a href="veterinary-ai-receptionist.html">Veterinary</a></li></ul></div>
+            <div class="footer-col"><h4>Company</h4><ul class="footer-links"><li><a href="mailto:support@callbirdai.com">Contact</a></li><li><a href="blog.html">Blog</a></li><li><a href="https://myvoiceaiconnect.com" target="_blank" rel="noopener">White Label</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-and-conditions.html">Terms & Conditions</a></li></ul></div>
         </div>
-    </section>
+        <div class="footer-bottom"><p>&copy; 2026 CallBird AI. All Rights Reserved.</p><p>A2P 10DLC Compliant • SOC 2 Type II Certified</p></div>
+    </div></footer>
 
-    <!-- Problem Section -->
-    <section class="problem-solution">
-        <div class="container">
-            <div class="section-header">
-                <h2>The Hidden Cost of Missed Calls for Veterinary Practices</h2>
-            </div>
-
-            <div class="problems-grid">
-                <div class="problem-card">
-                    <div class="problem-icon">🚨</div>
-                    <h3>Emergency Calls Lost to Competitors</h3>
-                    <p>It's 7:45 PM on Saturday. A panicked pet owner's dog just ate chocolate - a potentially fatal emergency. They're calling every veterinary clinic in the area. Your clinic's phone rings... voicemail. "If this is an emergency, please call our emergency line." They call that number... voicemail again. They're not going to leave a message and wait - their dog could die. They call the next vet who has 24/7 answering. That's a $1,800 emergency visit plus a lifetime client (average value $8,500) gone to a competitor in 60 seconds.</p>
-                    <p class="problem-stat"><strong>Real impact:</strong> A 4-veterinarian practice in Denver tracked after-hours calls for 90 days. They received an average of 23 calls per week outside business hours. Analysis showed 62% were true emergencies (toxicity, trauma, difficulty breathing, bloat, seizures) with average visit values of $1,200-$2,800. The remaining 38% were urgent appointments that could wait until morning. The practice was losing an estimated $31,280 in monthly emergency revenue ($375,360 annually) because their after-hours answering service only took messages without triage. After implementing AI with emergency triage and immediate dispatch to the on-call vet, they captured $28,400 in emergency revenue in their first month - an ROI of 580x their $49 monthly cost.</p>
-                </div>
-
-                <div class="problem-card">
-                    <div class="problem-icon">💊</div>
-                    <h3>Prescription Refills Overwhelming Your Staff</h3>
-                    <p>Your front desk spends 12-18 hours weekly just processing prescription refill requests. Pet owner calls asking for flea medication refill. Your receptionist has to pull up the record, verify the last visit was within required timeframe, check if exam is needed, confirm dosage, call it into the pharmacy or prepare it for pickup, and call the owner back. That's 8-12 minutes per refill call. With 60-80 refill calls weekly, your front desk is drowning in refills while wellness exams and surgeries are generating actual revenue in your treatment rooms.</p>
-                    <p class="problem-stat"><strong>Real impact:</strong> A 3-vet practice with 2 front desk staff calculated they spent 840 hours annually (equivalent to 0.4 FTE) just processing routine prescription refills at $22/hour ($18,480 in labor costs). Meanwhile, their front desk was so overwhelmed that they missed an average of 37 new client calls per week - at a 58% booking rate and $285 average first visit, that was $547,560 in lost annual revenue from new clients alone. After implementing AI to handle routine refill requests automatically (checking last exam date, confirming eligibility, and processing approved refills), their front desk freed up 14 hours weekly to focus on high-value activities like welcoming clients and handling complex cases.</p>
-                </div>
-
-                <div class="problem-card">
-                    <div class="problem-icon">📅</div>
-                    <h3>Schedule Gaps From Cancellations and No-Shows</h3>
-                    <p>Veterinary industry average no-show rate: 15-20%. For a busy small animal practice with 180 appointments weekly, that's 27-36 no-shows per week. At an average appointment value of $220, that's $5,940-7,920 in lost weekly revenue ($308,880-411,840 annually). Add in same-day cancellations that you can't fill, and you're looking at 20-30% of your schedule being wasted capacity. Your vets are sitting idle or catching up on paperwork when they could be treating patients and generating revenue.</p>
-                    <p class="problem-stat"><strong>Real impact:</strong> A small animal hospital with 3 full-time vets tracked their no-show and last-minute cancellation rate for 4 months. They averaged 31 missed appointments weekly (18% no-show rate + 11% same-day cancellations). At $220 average appointment value, they were losing $6,820 weekly in empty appointment slots - $354,640 annually. After implementing AI with automated confirmation texts at booking, reminders at 48 hours and 2 hours before, easy reschedule buttons, and waitlist management for cancelled slots, their no-show rate dropped to 6% and they filled 70% of same-day cancellations from the waitlist. They recovered $243,250 in annual revenue simply by keeping their schedule full.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Solution Section -->
-    <section class="how-it-works">
-        <div class="container">
-            <div class="section-header">
-                <h2>CallBird AI: Your 24/7 Veterinary Receptionist</h2>
-                <p class="subtitle">Purpose-built for veterinary clinics, animal hospitals, and mobile vet services</p>
-            </div>
-
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🏥</div>
-                    <h3>Emergency Call Triage & Dispatch</h3>
-                    <p>CallBird AI recognizes veterinary emergencies using clinical keywords and symptom assessment: life-threatening emergencies (difficulty breathing, uncontrolled bleeding, seizures, bloat, severe trauma, inability to stand), poisoning and toxicity (chocolate, xylitol, rat poison, antifreeze, medications, plants), urgent but stable conditions (vomiting/diarrhea, limping, eye issues, ear infections), and routine concerns that can wait for regular appointment. True emergencies trigger immediate text/call to your on-call veterinarian with complete details: pet owner name and callback number, pet name, species, breed, age, and weight, symptoms and timeline, known medical conditions, and level of urgency (critical/urgent/routine).</p>
-                    <p class="feature-highlight"><strong>Average result:</strong> Veterinary practices capture 85-92% more after-hours emergencies, generating $25K-$45K additional monthly revenue</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">📋</div>
-                    <h3>Complete Patient Intake</h3>
-                    <p>The AI conducts comprehensive new patient registration: pet owner information (name, contact, address), pet details (name, species, breed, age, sex, weight, spay/neuter status), medical history and current medications, vaccination records and previous vet, reason for visit and symptoms, pet insurance information, and preferred appointment times. For established clients, the AI recognizes returning patients and accesses their existing records. All information syncs directly to your practice management system (Cornerstone, AVImark, ezyVet, Impromed) with no manual data entry required.</p>
-                    <p class="feature-stat"><strong>Real stat:</strong> Front desk staff save 12-18 hours weekly on phone intake, allowing more focus on in-clinic patient care</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">📅</div>
-                    <h3>Smart Appointment Scheduling</h3>
-                    <p>Real-time integration with your practice management software to book appointments according to your clinic's rules: appointment types with correct time blocks (wellness exam 30min, sick visit 20min, surgery drop-off 10min, vaccine appointment 15min, dental cleaning 60min), veterinarian-specific scheduling (Dr. Smith specializes in exotics, Dr. Jones handles surgeries), exam room availability, buffer times between appointments, and urgent appointment prioritization. Clients receive confirmation texts with appointment details, pre-visit forms to complete online, arrival instructions (parking, check-in process), and what to bring (vaccination records, medications, pet insurance card).</p>
-                    <p class="feature-example">Example: "Routine wellness exam for 5-year-old Labrador" → AI books 30-minute slot, sends confirmation, and reminds client to bring vaccination records</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">💊</div>
-                    <h3>Automated Prescription Refill Management</h3>
-                    <p>The AI handles routine prescription refills automatically: accesses patient records to verify last exam date and medication history, confirms refill eligibility (exam within past 12 months for most medications), checks for medication interactions or concerns, processes approved refills through your pharmacy system, notifies owner when ready for pickup or ships directly, and flags refills requiring vet approval (controlled substances, new symptoms, overdue exam). For refills that can't be auto-approved, the AI collects all information and adds to vet's review queue with complete context.</p>
-                    <p class="feature-highlight"><strong>Average result:</strong> Front desk saves 12-18 hours weekly, vet review time reduced by 60%, clients get refills same-day instead of 24-48 hours</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🔔</div>
-                    <h3>No-Show Prevention & Waitlist Management</h3>
-                    <p>Multi-touch appointment reminder system proven to reduce no-shows: confirmation text immediately after booking, reminder email 7 days before with option to reschedule, reminder text 48 hours before with easy confirm/reschedule buttons, final reminder text 2 hours before appointment, and post-appointment follow-up for feedback and review requests. When clients cancel, the AI immediately contacts waitlist patients to offer the newly available slot, maximizing schedule utilization. For chronic no-show clients, the system can require confirmation or collect credit card holds.</p>
-                    <p class="feature-use">Perfect for busy clinics with high appointment volumes and long wait times for popular appointment slots</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <h3>Veterinary Practice Management Integration</h3>
-                    <p>Seamless two-way integration with major veterinary software systems: Cornerstone (appointment scheduling, patient records, prescription management), AVImark (calendar integration, client communication), ezyVet (cloud-based practice management), Impromed (appointment booking, reminders), PetDesk integration (client app connectivity), and VetEnvoy (payment processing). Appointments, patient information, prescription requests, and client communications sync automatically in both directions. No duplicate data entry, no scheduling conflicts, no manual updates.</p>
-                    <div class="feature-integrations">
-                        <span>✓ Cornerstone</span>
-                        <span>✓ AVImark</span>
-                        <span>✓ ezyVet</span>
-                        <span>✓ Impromed</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cta-box">
-                <h3>Stop Losing $72K-$185K Annually to Missed Emergency Calls</h3>
-                <p>Every after-hours emergency call that goes to voicemail is a lifetime client choosing another vet. Every prescription refill request taking 15 minutes of your front desk's time is 15 minutes they're not welcoming new clients. CallBird ensures you capture every opportunity.</p>
-                <a href="/start" class="btn-large btn-primary">Start Free Trial - Setup in 10 Minutes</a>
-                <p class="cta-subtext">$49/month • Unlimited calls • 7-day free trial • No credit card required</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <h2>What Veterinarians Say About CallBird</h2>
-            </div>
-
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                    <h3>"$28,400 in emergency revenue in first month"</h3>
-                    <p>"We're a 4-vet emergency and general practice. Before CallBird, our after-hours voicemail said 'leave a message and we'll call you back.' For emergencies, pet owners don't leave messages - they keep calling vets until someone answers. We tracked it and realized we were getting 23 after-hours calls weekly but only capturing maybe 8 of them. The rest went to the 24-hour emergency clinic across town. With CallBird's AI triage, now every call gets answered, true emergencies are immediately texted to our on-call vet, and urgent cases get scheduled for first thing in the morning. In our first month, we captured $28,400 in emergency revenue that was previously going to competitors. The system paid for itself within the first 6 hours."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">🐕</div>
-                        <div class="author-info">
-                            <strong>Dr. Jennifer Martinez, DVM</strong>
-                            <span>Paws & Claws Veterinary Hospital</span>
-                            <span class="author-stats">Denver, CO • 4 veterinarians • 4 months with CallBird</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                    <h3>"Front desk freed up 14 hours per week"</h3>
-                    <p>"Prescription refills were drowning my front desk staff. We calculated they were spending 14 hours every week just processing refill requests - pulling records, checking exam dates, calling pharmacies, updating charts. That's 728 hours annually that could have been spent on revenue-generating activities. CallBird's AI now handles 80% of refills automatically. It checks the patient record, verifies the last exam was within 12 months, processes approved refills through our system, and only escalates the 20% that need vet approval. My front desk can now focus on greeting clients, handling complex questions, and most importantly - answering calls from new clients. We went from missing 37 new client calls weekly to capturing 90% of them. That's an extra $547K in annual revenue just from better phone coverage."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">🐱</div>
-                        <div class="author-info">
-                            <strong>Dr. Michael Chen, DVM</strong>
-                            <span>Riverside Animal Clinic</span>
-                            <span class="author-stats">Portland, OR • 3 veterinarians • 6 months with CallBird</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                    <h3>"No-show rate dropped from 18% to 6%"</h3>
-                    <p>"No-shows were killing our schedule. Industry average is 15-20%, and we were right at 18% - that's 31 missed appointments every week. At $220 average appointment value, we were losing $6,820 weekly in empty slots. That's $354,640 annually in lost revenue just from people forgetting or not showing up. CallBird's automated reminder system sends texts at booking, 48 hours before, and 2 hours before with easy reschedule buttons. Our no-show rate dropped to 6% within the first month. And when someone does cancel, the AI immediately offers that slot to our waitlist patients. We're now filling 70% of cancelled appointments. We recovered $243,250 in annual revenue. It's like adding a whole extra veterinarian's worth of production without hiring anyone."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">🐾</div>
-                        <div class="author-info">
-                            <strong>Dr. Sarah Thompson, DVM</strong>
-                            <span>Northside Veterinary Clinic</span>
-                            <span class="author-stats">Austin, TX • Solo practice • 5 months with CallBird</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing CTA -->
-    <section class="final-cta">
-        <div class="container">
-            <div class="final-cta-content">
-                <h2>Start Capturing Every Client Call Today</h2>
-                <p class="final-cta-text">
-                    Right now, while you're treating a patient, a pet owner with an emergency is calling veterinarians in your area. The first clinic to answer gets the client. While you're in surgery, CallBird is triaging emergencies and booking appointments. <strong>Never miss another emergency call for $49/month.</strong>
-                </p>
-
-                <div class="final-cta-boxes">
-                    <div class="cta-box-secondary">
-                        <a href="/start" class="btn-large btn-primary">Start Your 7-Day Free Trial</a>
-                        <div class="cta-benefits">
-                            <span>✓ Setup in 10 minutes</span>
-                            <span>✓ No credit card required</span>
-                            <span>✓ Cancel anytime</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="final-trust">
-                    <p><strong>Trusted by 140+ veterinary clinics nationwide:</strong></p>
-                    <div class="trust-stats">
-                        <span>✓ Average $25K-$45K monthly emergency revenue captured</span>
-                        <span>✓ 60-70% reduction in no-shows</span>
-                        <span>✓ Works with Cornerstone, AVImark, ezyVet, Impromed</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <div class="footer-logo">
-                        <img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird AI" class="logo-image">
-                    </div>
-                    <p class="footer-tagline">AI receptionist that never sleeps</p>
-                    <div class="footer-contact">
-                        <p>Atlanta, GA</p>
-                        <p><a href="tel:+16783161454">(678) 316-1454</a></p>
-                        <p><a href="mailto:support@callbirdai.com">support@callbirdai.com</a></p>
-                    </div>
-                </div>
-
-                <div class="footer-col">
-                    <h4>Product</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html#features">Features</a></li>
-                        <li><a href="index.html#how-it-works">How It Works</a></li>
-                        <li><a href="index.html#pricing">Pricing</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h4>Industries</h4>
-                    <ul class="footer-links">
-                        <li><a href="home-services-ai-receptionist.html">Home Services</a></li>
-                        <li><a href="dental-ai-receptionist.html">Medical & Dental</a></li>
-                        <li><a href="restaurants-ai-receptionist.html">Restaurants</a></li>
-                        <li><a href="legal-ai-receptionist.html">Legal</a></li>
-                        <li><a href="professional-services-ai-receptionist.html">Professional Services</a></li>
-                        <li><a href="retail-ai-receptionist.html">Retail</a></li>
-                        <li><a href="veterinary-ai-receptionist.html">Veterinary</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h4>Company</h4>
-                    <ul class="footer-links">
-                        <li><a href="mailto:support@callbirdai.com">Contact</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="/privacy">Privacy Policy</a></li>
-                        <li><a href="/terms">Terms & Conditions</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2025 CallBird AI. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+        {"@type":"Question","name":"How does CallBird handle veterinary emergencies?","acceptedAnswer":{"@type":"Answer","text":"The AI recognizes emergencies like difficulty breathing, seizures, bloat, poisoning, severe trauma, and uncontrolled bleeding. It immediately texts your on-call veterinarian with full details."}},
+        {"@type":"Question","name":"Can CallBird handle prescription refill requests?","acceptedAnswer":{"@type":"Answer","text":"Yes. The AI checks patient records, verifies exam dates, confirms eligibility, and processes approved refills automatically. Refills needing vet approval get flagged with full context."}},
+        {"@type":"Question","name":"Does it integrate with my veterinary practice management software?","acceptedAnswer":{"@type":"Answer","text":"Yes. CallBird integrates with Cornerstone, AVImark, ezyVet, Impromed, and PetDesk. Appointments, records, and communications sync automatically."}},
+        {"@type":"Question","name":"How does the no-show prevention work?","acceptedAnswer":{"@type":"Answer","text":"CallBird sends automated reminders at booking, 48 hours before, and 2 hours before with easy reschedule buttons. Cancelled slots are immediately offered to waitlist patients."}},
+        {"@type":"Question","name":"How much does CallBird cost for a veterinary clinic?","acceptedAnswer":{"@type":"Answer","text":"Plans start at $99/month. Professional at $249/month includes team access and 500 calls. Enterprise at $499/month includes unlimited calls. All plans include a 7-day free trial."}},
+        {"@type":"Question","name":"Can the AI register new patients over the phone?","acceptedAnswer":{"@type":"Answer","text":"Yes. CallBird collects complete new patient information including owner details, pet info, medical history, vaccinations, and insurance. Everything syncs to your practice management system."}}
+    ]}
+    </script>
+    <script>
+        function openMobileNav(){document.getElementById('mobileNavOverlay').classList.add('active');document.getElementById('mobileNavPanel').classList.add('active');document.body.style.overflow='hidden';}
+        function closeMobileNav(){document.getElementById('mobileNavOverlay').classList.remove('active');document.getElementById('mobileNavPanel').classList.remove('active');document.body.style.overflow='';}
+        function toggleFAQ(button){const faqItem=button.parentElement;const isActive=faqItem.classList.contains('active');document.querySelectorAll('.faq-item').forEach(item=>{item.classList.remove('active');});if(!isActive){faqItem.classList.add('active');}}
+    </script>
 </body>
 </html>
