@@ -1,323 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-M9WVK3WD');</script>
-    <!-- End Google Tag Manager -->
-    
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-M9WVK3WD');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AI Receptionist for Professional Services - Accountants, CPAs, Consultants, Financial Advisors, Real Estate Agents, Insurance Agencies. Never miss a client call.">
+    <meta name="description" content="AI Receptionist for Professional Services - Accountants, CPAs, Consultants, Financial Advisors, Real Estate Agents, Insurance Agencies. Never miss a client call. Starting at $99/month.">
+    <link rel="icon" type="image/png" href="https://i.imgur.com/qwyQQW5.png">
+    <link rel="apple-touch-icon" href="https://i.imgur.com/qwyQQW5.png">
+    <link rel="shortcut icon" href="https://i.imgur.com/qwyQQW5.png">
+    <meta name="theme-color" content="#122092">
     <title>AI Receptionist for Professional Services | Accountants, CPAs, Consultants</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        html { zoom: 0.8; -moz-transform: scale(0.8); -moz-transform-origin: 0 0; }
+        .problem-icon, .feature-icon { display: flex; align-items: center; justify-content: center; width: 100%; }
+        .problem-icon svg, .feature-icon svg { width: 3rem; height: 3rem; display: block; margin: 0 auto; }
+        .problem-card, .feature-card { text-align: center !important; }
+        .problem-card .problem-icon, .feature-card .feature-icon { justify-content: center !important; margin: 0 auto 1rem !important; }
+        .feature-integrations { justify-content: center !important; }
+        .author-avatar { display: flex; align-items: center; justify-content: center; width: 3rem; height: 3rem; background: var(--bg-light, #f5f7fa); border-radius: 50%; }
+        .author-avatar svg { width: 1.75rem; height: 1.75rem; }
+        .faq-answer { display: none; padding: 0 1.25rem 1.25rem; }
+        .faq-item.active .faq-answer { display: block; }
+        .faq-question { width: 100%; text-align: left; background: none; border: none; cursor: pointer; padding: 1.25rem; font-size: 1.05rem; font-weight: 600; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color: var(--text-dark, #1a1a2e); font-family: inherit; }
+        .faq-question:hover { color: var(--primary-color, #122092); }
+        .faq-icon { font-size: 1.5rem; font-weight: 300; line-height: 1; flex-shrink: 0; transition: transform 0.2s ease; }
+        .faq-item.active .faq-icon { transform: rotate(45deg); }
+        .footer { background: #122092 !important; color: #fff !important; }
+        .footer a { color: rgba(255,255,255,0.85) !important; } .footer a:hover { color: #fff !important; }
+        .footer h4 { color: #f6b828 !important; }
+        .footer-tagline { color: rgba(255,255,255,0.7) !important; }
+        .footer-bottom { border-top-color: rgba(255,255,255,0.15) !important; color: rgba(255,255,255,0.6) !important; }
+    </style>
+    <style>
+        .mobile-nav-overlay { display: none; position: fixed; inset: 0; z-index: 999; background: rgba(0,0,0,0.5); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }
+        .mobile-nav-overlay.active { display: block; }
+        .mobile-nav-panel { position: fixed; top: 0; right: 0; bottom: 0; width: 280px; max-width: 85vw; background: white; z-index: 1000; transform: translateX(100%); transition: transform 0.3s ease; display: flex; flex-direction: column; box-shadow: -4px 0 20px rgba(0,0,0,0.15); }
+        .mobile-nav-panel.active { transform: translateX(0); }
+        .mobile-nav-header { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.25rem; border-bottom: 1px solid #e5e7eb; }
+        .mobile-nav-close { width: 36px; height: 36px; border: none; background: #f3f4f6; border-radius: 8px; font-size: 1.25rem; cursor: pointer; display: flex; align-items: center; justify-content: center; color: #374151; }
+        .mobile-nav-links { flex: 1; padding: 1rem 0; overflow-y: auto; }
+        .mobile-nav-links a { display: block; padding: 0.875rem 1.25rem; color: var(--text-dark); font-size: 1rem; font-weight: 500; text-decoration: none; }
+        .mobile-nav-links a:hover { background: #f9fafb; }
+        .mobile-nav-cta { padding: 1rem 1.25rem; border-top: 1px solid #e5e7eb; }
+        .mobile-nav-cta a { display: block; text-align: center; padding: 0.875rem; background: var(--primary-color); color: white; border-radius: 8px; font-weight: 600; text-decoration: none; }
+        @media (max-width: 768px) { .features-grid, .testimonials-grid, .problems-grid { grid-template-columns: 1fr !important; } }
+        @media (max-width: 1100px) { .features-grid { grid-template-columns: repeat(2, 1fr) !important; } }
+        @media (max-width: 480px) { .hero-title { font-size: 1.75rem !important; } .section-header h2 { font-size: 1.5rem !important; } .trust-bar { flex-direction: column !important; gap: 0.5rem !important; } .hero-ctas { flex-direction: column !important; gap: 0.75rem !important; } .hero-ctas .btn-large { width: 100% !important; text-align: center !important; } .btn-ghost.btn-small, .nav-actions .btn-ghost { display: none !important; } }
+    </style>
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9WVK3WD"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9WVK3WD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <nav class="navbar"><div class="container"><div class="nav-content">
+        <div class="logo"><a href="index.html"><img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird" class="logo-image"></a></div>
+        <ul class="nav-links"><li><a href="index.html#features">Features</a></li><li><a href="index.html#pricing">Pricing</a></li><li><a href="blog.html">Blog</a></li><li><a href="#faq">FAQ</a></li></ul>
+        <div class="nav-actions"><a href="tel:+16783161454" class="btn-ghost">Call Us</a><a href="/start" class="btn-primary">Start Free Trial</a></div>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu" onclick="openMobileNav()"><span></span><span></span><span></span></button>
+    </div></div></nav>
+    <div class="mobile-nav-overlay" id="mobileNavOverlay" onclick="closeMobileNav()"></div>
+    <div class="mobile-nav-panel" id="mobileNavPanel">
+        <div class="mobile-nav-header"><img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird" style="height:32px;"><button class="mobile-nav-close" onclick="closeMobileNav()">&times;</button></div>
+        <div class="mobile-nav-links"><a href="index.html#features" onclick="closeMobileNav()">Features</a><a href="index.html#pricing" onclick="closeMobileNav()">Pricing</a><a href="blog.html" onclick="closeMobileNav()">Blog</a><a href="#faq" onclick="closeMobileNav()">FAQ</a><a href="tel:+16783161454" onclick="closeMobileNav()">Call Us: (678) 316-1454</a></div>
+        <div class="mobile-nav-cta"><a href="/start">Start Free Trial</a></div>
+    </div>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <div class="logo">
-                    <a href="index.html"><img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird" class="logo-image"></a>
+    <section class="hero"><div class="container"><div class="hero-content">
+        <div class="hero-badge"><span class="badge-dot"></span><span>For Professional Services</span></div>
+        <h1 class="hero-title">AI Receptionist for<br>Accountants, CPAs, Consultants & Professional Services</h1>
+        <p class="hero-subtitle">Never Miss a Client Call or Appointment Again. 24/7 Client Intake, Consultation Scheduling & Lead Qualification</p>
+        <div class="trust-bar"><div class="trust-item">✓ $12K-$30K Lost Monthly to Missed Appointments</div><div class="trust-item">✓ 38% of Calls Come Outside Business Hours</div><div class="trust-item">✓ Setup in 10 Minutes</div></div>
+        <div class="hero-ctas"><a href="/start" class="btn-large btn-primary">Start Free Trial - 7 Days</a><a href="index.html" class="btn-large btn-ghost">← Back to Home</a></div>
+    </div></div><div class="hero-bg"><div class="hero-gradient"></div><div class="hero-pattern"></div></div></section>
+
+    <section class="problem-solution"><div class="container">
+        <div class="section-header"><h2>The Real Cost of Missed Calls for Professional Services</h2></div>
+        <div class="problems-grid">
+            <div class="problem-card">
+                <div class="problem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg></div>
+                <h3>Lost High-Value Clients During Busy Season</h3>
+                <p>For CPAs, January through April is make-or-break. You're buried in returns, meeting with clients back-to-back, and the phone won't stop ringing. New client calls go to voicemail. They need help now and call the next CPA who answers. You lose a client who could have been worth $15,000+ over 5 years of annual service.</p>
+                <p class="problem-stat"><strong>Real impact:</strong> A 3-person CPA firm tracked missed calls during tax season. They averaged 18 missed calls per week in February and March, and follow-up revealed 62% were new client inquiries they never connected with.</p>
+            </div>
+            <div class="problem-card">
+                <div class="problem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg></div>
+                <h3>No-Show Appointments Destroying Revenue</h3>
+                <p>For consultants, financial advisors, and real estate agents, your time is your product. When someone books a 1-hour consultation and doesn't show, that revenue is gone forever. The industry average no-show rate runs 15-25%. If you have 20 consultations a week, that adds up to thousands in lost billable time every month.</p>
+                <p class="problem-stat"><strong>Real impact:</strong> A financial advisory firm had a 22% no-show rate for initial consultations. After implementing automated confirmation texts and reminder calls 24 hours before, their no-show rate dropped to 6%.</p>
+            </div>
+            <div class="problem-card">
+                <div class="problem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg></div>
+                <h3>After-Hours Inquiries Lost Forever</h3>
+                <p>38% of inquiries come outside 9-5. Someone calls at 7 PM asking about life insurance after their friend had a health scare. Voicemail. By morning, they've already gotten quotes from 3 online competitors and made a decision. You never had a chance to compete.</p>
+                <p class="problem-stat"><strong>Real impact:</strong> An independent insurance agent implemented 24/7 AI call handling. In the first quarter, 41 after-hours calls converted to policies. Those are clients who previously would have gone to competitors every single time.</p>
+            </div>
+        </div>
+    </div></section>
+
+    <section class="how-it-works"><div class="container">
+        <div class="section-header"><h2>CallBird AI: Your 24/7 Professional Services Assistant</h2><p class="subtitle">Built for accountants, consultants, advisors, and service professionals</p></div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg></div>
+                <h3>Service-Specific Client Intake</h3>
+                <p>The AI conducts intake customized for your profession. For CPAs: business structure, tax situation, deadlines. For Financial Advisors: assets, investment goals, risk tolerance. For Real Estate: buying or selling, timeline, pre-approval status. For Insurance: coverage type, current policies, household info. All information flows to your CRM automatically.</p>
+                <p class="feature-highlight"><strong>Result:</strong> First consultations are productive instead of administrative</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div>
+                <h3>Intelligent Appointment Scheduling</h3>
+                <p>CallBird integrates with your calendar to check real-time availability and book appointments based on your rules: appointment types (15-min intro, 1-hour consultation, 2-hour deep dive), buffer times, blackout dates, and specific time blocks. Clients get confirmation texts with meeting details, Zoom links for virtual consultations, and reminders.</p>
+                <p class="feature-stat"><strong>Real stat:</strong> Professionals report 82-90% appointment show-rate with automated reminders</p>
+                <div class="feature-integrations"><span>✓ Google Calendar</span><span>✓ Outlook</span><span>✓ Calendly</span><span>✓ Zoom</span></div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div>
+                <h3>Lead Qualification & Filtering</h3>
+                <p>Not every inquiry is a good fit. The AI pre-qualifies leads based on your criteria: service area, minimum engagement size, urgency and timeline, and decision-maker authority. Qualified leads get priority scheduling. Unqualified leads are politely declined with referrals. You only spend time on prospects likely to convert.</p>
+                <p class="feature-example">Example: Financial advisor only meets with prospects having $500K+ investable assets — AI filters automatically</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div>
+                <h3>24/7 Availability for Client Calls</h3>
+                <p>Existing clients calling with questions get appropriate handling: routine questions answered by the AI, urgent matters forwarded to you immediately with context, and follow-up meetings scheduled on the spot. The AI recognizes VIP clients and high-value prospects for priority treatment.</p>
+                <p class="feature-use">Perfect for busy seasons (tax season for CPAs, enrollment for insurance, spring for real estate)</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg></div>
+                <h3>No-Show Prevention System</h3>
+                <p>Automated reminders that drastically reduce no-shows: confirmation text at booking, reminder 24 hours before with easy reschedule option, and final reminder 1 hour before. For high-value consultations, the AI can make a confirmation call. Clients can confirm, reschedule, or cancel via text reply.</p>
+                <p class="feature-highlight"><strong>Average result:</strong> 60-70% reduction in no-show rate</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><polyline points="7 23 3 19 7 15"></polyline><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg></div>
+                <h3>CRM & Calendar Integration</h3>
+                <p>Seamless integration with professional tools: Salesforce, HubSpot, QuickBooks, Calendly, Google Workspace, Microsoft 365, and Zoom. All client interactions documented automatically for compliance and follow-up.</p>
+                <div class="feature-integrations"><span>✓ Salesforce</span><span>✓ HubSpot</span><span>✓ QuickBooks</span><span>✓ Calendly</span></div>
+            </div>
+        </div>
+        <div class="cta-box">
+            <h3>Stop Losing Clients to Missed Calls</h3>
+            <p>Every missed call during busy season is a potential client going to your competitor. Every no-show appointment is lost revenue. CallBird captures appointments and reduces no-shows — 24/7.</p>
+            <a href="/start" class="btn-large btn-primary">Start Free Trial - Setup in 10 Minutes</a>
+            <p class="cta-subtext">Starting at $99/month • 7-day free trial • No credit card required</p>
+        </div>
+    </div></section>
+
+    <section class="testimonials"><div class="container">
+        <div class="section-header"><h2>What Professionals Say</h2></div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-rating"><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+                <h3>"Signed 14 new clients during tax season"</h3>
+                <p>"Tax season is chaos. Phone ringing constantly while I'm head-down in returns. Before CallBird, I was missing 15 to 20 calls a week and most of them were new client inquiries I never even knew about. This year, CallBird answered every call, collected their tax situation details, and scheduled consultations directly in my calendar. I signed 14 new clients from calls I would have completely missed. Should have done this years ago."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
+                    <div class="author-info"><strong>Robert Chen, CPA</strong><span>Chen & Associates Tax Services, Seattle, WA</span><span class="author-stats">CallBird customer since January 2026</span></div>
                 </div>
-                <ul class="nav-links">
-                    <li><a href="index.html#features">Features</a></li>
-                    <li><a href="index.html#industries">Industries</a></li>
-                    <li><a href="index.html#pricing">Pricing</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                </ul>
-                <div class="nav-actions">
-                    <a href="tel:+16783161454" class="btn-ghost">Call Us</a>
-                    <a href="/start" class="btn-primary">Start Free Trial</a>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-rating"><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+                <h3>"No-show rate dropped from 23% to 5%"</h3>
+                <p>"As a financial advisor, no-shows were killing me. I'd block out an hour for a consultation, they wouldn't show, and that time was just gone. CallBird sends automated confirmation texts and reminder calls. My no-show rate went from 23% to 5%. Plus the AI handles after-hours inquiries and schedules consultations while I sleep. Best business decision I've made this year."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
+                    <div class="author-info"><strong>Jennifer Martinez, CFP</strong><span>Martinez Wealth Management, Phoenix, AZ</span><span class="author-stats">CallBird customer since November 2025</span></div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-rating"><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width:1.25rem;height:1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div>
+                <h3>"After-hours calls are now my best source of new policies"</h3>
+                <p>"I'm an independent insurance agent. People call about life insurance at night when they're thinking about their family's future, not during my 9 to 5. I was losing so many inquiries to voicemail. CallBird now answers around the clock, collects detailed information, and schedules follow-up calls. In my first quarter, 41 policies came from after-hours calls alone. Those are clients I was completely missing before."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
+                    <div class="author-info"><strong>Michael Thompson</strong><span>Independent Insurance Agent, Dallas, TX</span><span class="author-stats">CallBird customer since December 2025</span></div>
                 </div>
             </div>
         </div>
-    </nav>
+    </div></section>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <span class="badge-dot"></span>
-                    <span>For Professional Services</span>
-                </div>
-                
-                <h1 class="hero-title">
-                    AI Receptionist for<br>Accountants, CPAs, Consultants & Professional Services
-                </h1>
-                
-                <p class="hero-subtitle">
-                    Never Miss a Client Call or Appointment Again. 24/7 Client Intake, Consultation Scheduling & Lead Qualification
-                </p>
-
-                <div class="trust-bar">
-                    <div class="trust-item">✓ $12K-$30K Lost Monthly to Missed Appointments</div>
-                    <div class="trust-item">✓ 38% of Calls Come Outside Business Hours</div>
-                    <div class="trust-item">✓ Setup in 10 Minutes</div>
-                </div>
-
-                <div class="hero-ctas">
-                    <a href="/start" class="btn-large btn-primary">Start Free Trial - 7 Days</a>
-                    <a href="index.html" class="btn-large btn-ghost">← Back to Home</a>
-                </div>
-            </div>
+    <section id="faq" class="faq"><div class="container">
+        <div class="section-header"><h2>Questions About CallBird for Professional Services</h2></div>
+        <div class="faq-grid">
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)"><span>What types of professional services does CallBird work for?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>CallBird works for CPAs, accountants, financial advisors, insurance agents, real estate agents, management consultants, business coaches, and any service professional who books appointments and handles client calls. The AI intake questions are customized for each profession.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)"><span>Does CallBird integrate with my CRM and calendar?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Yes. CallBird integrates with Salesforce, HubSpot, QuickBooks, Calendly, Google Workspace, Microsoft 365, and Zoom. Appointments, client information, and communications sync automatically so there's no duplicate data entry.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)"><span>Can the AI qualify leads before scheduling consultations?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Yes. You set your qualification criteria and the AI applies them on every call. This can include minimum engagement size, geographic service area, budget range, timeline, and decision-maker authority. Qualified leads get priority scheduling. Unqualified leads are politely declined with referrals when appropriate.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)"><span>How does the no-show prevention system work?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>CallBird sends automated reminders at multiple touchpoints: confirmation text at booking, reminder 24 hours before with easy reschedule option, and final reminder 1 hour before the appointment. Clients can confirm, reschedule, or cancel via text reply. For high-value consultations, the AI can also make a confirmation call.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)"><span>How much does CallBird cost?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Plans start at $99/month for the Starter plan. The Professional plan at $249/month is the most popular and includes team member access and up to 500 calls per month. The Enterprise plan at $499/month includes unlimited calls. All plans include a 7-day free trial with no credit card required.</p></div></div>
+            <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)"><span>Is CallBird good for seasonal businesses like tax practices?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>CallBird is ideal for seasonal businesses. During busy season like tax time, the AI handles the surge in call volume so you can focus on client work. During slower months, it still captures every inquiry and schedules appointments. You can adjust your plan anytime as call volume changes.</p></div></div>
         </div>
-        
-        <div class="hero-bg">
-            <div class="hero-gradient"></div>
-            <div class="hero-pattern"></div>
+    </div></section>
+
+    <section class="final-cta"><div class="container"><div class="final-cta-content">
+        <h2>Start Capturing Every Client Opportunity Today</h2>
+        <p class="final-cta-text">Every missed call during busy season is a potential client going elsewhere. Every no-show appointment is lost billable time you can never recover. Every after-hours inquiry going to voicemail is revenue walking to competitors. <strong>CallBird captures it all, starting at $99/month.</strong></p>
+        <div class="final-cta-boxes"><div class="cta-box-secondary"><a href="/start" class="btn-large btn-primary">Start Your 7-Day Free Trial</a><div class="cta-benefits"><span>✓ Setup in 10 minutes</span><span>✓ No credit card required</span><span>✓ Cancel anytime</span></div></div></div>
+        <div class="final-trust"><p><strong>Trusted by 200+ professional services businesses:</strong></p><div class="trust-stats"><span>✓ Average 60-70% reduction in no-shows</span><span>✓ Works with Salesforce, HubSpot, QuickBooks, Calendly</span></div></div>
+    </div></div></section>
+
+    <footer class="footer"><div class="container">
+        <div class="footer-grid">
+            <div class="footer-col"><div class="footer-logo"><img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird AI" class="logo-image"></div><p class="footer-tagline">AI-powered call answering, appointment booking & instant summaries for small businesses.</p><div class="footer-contact"><p>Atlanta, GA</p><p><a href="tel:+16783161454">(678) 316-1454</a></p><p><a href="mailto:support@callbirdai.com">support@callbirdai.com</a></p></div></div>
+            <div class="footer-col"><h4>Product</h4><ul class="footer-links"><li><a href="index.html#features">Features</a></li><li><a href="index.html#how-it-works">How It Works</a></li><li><a href="index.html#pricing">Pricing</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+            <div class="footer-col"><h4>Industries</h4><ul class="footer-links"><li><a href="home-services-ai-receptionist.html">Home Services</a></li><li><a href="dental-ai-receptionist.html">Medical & Dental</a></li><li><a href="restaurants-ai-receptionist.html">Restaurants</a></li><li><a href="legal-ai-receptionist.html">Legal</a></li><li><a href="professional-services-ai-receptionist.html">Professional Services</a></li><li><a href="retail-ai-receptionist.html">Retail</a></li><li><a href="veterinary-ai-receptionist.html">Veterinary</a></li></ul></div>
+            <div class="footer-col"><h4>Company</h4><ul class="footer-links"><li><a href="mailto:support@callbirdai.com">Contact</a></li><li><a href="blog.html">Blog</a></li><li><a href="https://myvoiceaiconnect.com" target="_blank" rel="noopener">White Label</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-and-conditions.html">Terms & Conditions</a></li></ul></div>
         </div>
-    </section>
+        <div class="footer-bottom"><p>&copy; 2026 CallBird AI. All Rights Reserved.</p><p>A2P 10DLC Compliant • SOC 2 Type II Certified</p></div>
+    </div></footer>
 
-    <!-- Problem Section -->
-    <section class="problem-solution">
-        <div class="container">
-            <div class="section-header">
-                <h2>The Real Cost of Missed Calls for Professional Services</h2>
-            </div>
-
-            <div class="problems-grid">
-                <div class="problem-card">
-                    <div class="problem-icon">💼</div>
-                    <h3>Lost High-Value Clients During Tax Season</h3>
-                    <p>For CPAs and accounting firms, January through April is make-or-break season. You're buried in tax returns, meeting with clients back-to-back, and the phone won't stop ringing. New client calls go to voicemail. They need help NOW and call the next CPA who answers. You lose a $2,500 tax prep client who could have been worth $15,000+ over 5 years of annual service.</p>
-                    <p class="problem-stat"><strong>Real impact:</strong> A 3-person CPA firm tracked missed calls during tax season. They averaged 18 missed calls per week in February-March. Follow-up revealed 62% were new client inquiries. At an average $2,800 per new client (tax prep + advisory), they lost $31,248 in revenue in just 8 weeks - their most profitable period - to missed calls.</p>
-                </div>
-
-                <div class="problem-card">
-                    <div class="problem-icon">📅</div>
-                    <h3>No-Show Appointments Destroying Revenue</h3>
-                    <p>For consultants, financial advisors, and real estate agents, your time IS your product. When someone books a 1-hour consultation and doesn't show up, that's lost revenue you can never recover. Industry average no-show rate: 15-25%. If you have 20 consultations weekly at $200/hour average, no-shows cost you $600-1,000 weekly ($31,200-52,000 annually).</p>
-                    <p class="problem-stat"><strong>Real impact:</strong> A financial advisory firm had a 22% no-show rate for initial consultations. They implemented AI-powered confirmation texts and reminder calls 24 hours before appointments. No-show rate dropped to 6%. For their 60 monthly consultations at $250/hour average, this recovered $2,400 monthly ($28,800 annually) in previously lost billable time.</p>
-                </div>
-
-                <div class="problem-card">
-                    <div class="problem-icon">🕐</div>
-                    <h3>After-Hours Inquiries Lost Forever</h3>
-                    <p>For insurance agents, real estate professionals, and consultants, 38% of inquiries come outside 9-5 hours. Someone calls at 7 PM asking about life insurance quotes after their friend just had a health scare. Voicemail. By morning, they've already gotten quotes from 3 online-only competitors and made a decision. You never had a chance.</p>
-                    <p class="problem-stat"><strong>Real impact:</strong> A State Farm insurance agent implemented 24/7 AI call handling. In the first quarter, they received 127 after-hours calls. The AI collected complete information and scheduled follow-up consultations. 41 converted to policies averaging $1,850 annual premium. That's $75,850 in annual premium revenue that previously went to competitors - generating $11,378 in first-year commissions from calls they used to miss completely.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Solution Section -->
-    <section class="how-it-works">
-        <div class="container">
-            <div class="section-header">
-                <h2>CallBird AI: Your 24/7 Professional Services Assistant</h2>
-                <p class="subtitle">Built for accountants, consultants, advisors, and service professionals</p>
-            </div>
-
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">📋</div>
-                    <h3>Service-Specific Client Intake</h3>
-                    <p>The AI conducts comprehensive intake customized for your profession. For CPAs: business structure, tax situation, deadlines, prior CPA. For Financial Advisors: assets under management, investment goals, risk tolerance, current advisor. For Real Estate Agents: buying/selling, timeline, pre-approval status, must-haves. For Insurance: coverage type, current policies, household info, health factors. All information flows to your CRM automatically.</p>
-                    <p class="feature-highlight"><strong>Result:</strong> First consultations are productive instead of administrative</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">📅</div>
-                    <h3>Intelligent Appointment Scheduling</h3>
-                    <p>CallBird integrates with your calendar (Google, Outlook, Calendly) to check real-time availability and book appointments based on your rules: appointment types (15-min intro, 1-hour consultation, 2-hour deep dive), buffer times between meetings, blackout dates for holidays/conferences, and specific available time blocks. Clients get confirmation texts with meeting details, Zoom links for virtual consultations, and reminder notifications 24 hours and 1 hour before appointments.</p>
-                    <p class="feature-stat"><strong>Real stat:</strong> Professionals report 82-90% appointment show-rate with automated reminders</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">✅</div>
-                    <h3>Lead Qualification & Filtering</h3>
-                    <p>Not every inquiry is a good fit. The AI pre-qualifies leads based on your criteria: service area (geographic restrictions), minimum engagement size (assets under management, company revenue, budget), urgency and timeline, and decision-maker authority. Qualified leads get priority scheduling. Unqualified leads are politely declined with referrals when appropriate. You only spend time on prospects likely to convert.</p>
-                    <p class="feature-example">Example: Financial advisor only meets with prospects having $500K+ investable assets - AI filters automatically</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">📞</div>
-                    <h3>24/7 Availability for Client Calls</h3>
-                    <p>Existing clients calling with questions get appropriate handling: routine questions answered by AI (account balance, appointment time, office hours, document submission), urgent matters forwarded to you immediately with context, and appointment scheduling for follow-up meetings. The AI recognizes VIP clients and high-value prospects for special treatment.</p>
-                    <p class="feature-use">Perfect for busy seasons (tax season for CPAs, enrollment for insurance, spring for real estate)</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🔔</div>
-                    <h3>No-Show Prevention System</h3>
-                    <p>Automated reminders drastically reduce no-shows: confirmation text sent immediately after booking, reminder email 3 days before appointment, reminder text 24 hours before with easy reschedule option, and final reminder text 1 hour before. For high-value consultations, the AI can make a confirmation call 24 hours prior. Clients can confirm, reschedule, or cancel via text reply.</p>
-                    <p class="feature-highlight"><strong>Average result:</strong> 60-70% reduction in no-show rate, recovering thousands in lost billable time monthly</p>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <h3>CRM & Calendar Integration</h3>
-                    <p>Seamless integration with professional tools: Salesforce (lead tracking, opportunity management), HubSpot (contact management, email campaigns), QuickBooks (for CPAs - client data access), Calendly (advanced scheduling rules), Google Workspace (calendar, email, contacts), Microsoft 365 (Outlook, Teams meetings), and Zoom (automatic meeting link generation). All client interactions documented automatically for compliance and follow-up.</p>
-                    <div class="feature-integrations">
-                        <span>✓ Salesforce</span>
-                        <span>✓ HubSpot</span>
-                        <span>✓ QuickBooks</span>
-                        <span>✓ Calendly</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cta-box">
-                <h3>Stop Losing Clients to Missed Calls</h3>
-                <p>Every missed call during busy season is a potential client going to your competitor. Every no-show appointment is lost revenue. CallBird captures appointments and reduces no-shows - 24/7.</p>
-                <a href="/start" class="btn-large btn-primary">Start Free Trial - Setup in 10 Minutes</a>
-                <p class="cta-subtext">$49/month • Unlimited calls • 7-day free trial • No credit card required</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <h2>What Professionals Say</h2>
-            </div>
-
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                    <h3>"Signed 14 new clients during tax season"</h3>
-                    <p>"Tax season is chaos. Phone ringing constantly while I'm head-down in returns. Before CallBird, I was missing 15-20 calls weekly - mostly new client inquiries I never even knew about. This year, CallBird answered every call, collected tax situation details, and scheduled consultations directly in my calendar. I signed 14 new clients from calls I would have completely missed. That's $39,200 in tax prep revenue alone, plus multi-year annual clients. ROI is insane."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">💼</div>
-                        <div class="author-info">
-                            <strong>Robert Chen, CPA</strong>
-                            <span>Chen & Associates Tax Services</span>
-                            <span class="author-stats">Seattle, WA • Solo practice</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                    <h3>"No-show rate dropped from 23% to 5%"</h3>
-                    <p>"As a financial advisor, no-shows were killing me. I'd block out an hour for a consultation, they wouldn't show, and that time was just... gone. I was losing $2,000-3,000 monthly in billable time. CallBird sends automated confirmation texts and reminder calls. My no-show rate went from 23% to 5%. That's recovering about $2,400 monthly in previously lost time. Plus, the AI handles after-hours inquiries and schedules consultations while I sleep. Best business decision I've made."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">💼</div>
-                        <div class="author-info">
-                            <strong>Jennifer Martinez, CFP</strong>
-                            <span>Martinez Wealth Management</span>
-                            <span class="author-stats">Phoenix, AZ • Independent advisor</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
-                    <h3>"$75K in annual premiums from after-hours calls"</h3>
-                    <p>"I'm an independent insurance agent. People call about life insurance at night when they're thinking about their family's future, not during my 9-5 hours. I was losing so many inquiries to voicemail. CallBird now answers 24/7, collects detailed information, and schedules follow-up calls. In my first quarter, 41 policies came from after-hours calls - that's $75,850 in annual premium revenue I was completely missing before. The AI paid for itself in the first week."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">💼</div>
-                        <div class="author-info">
-                            <strong>Michael Thompson</strong>
-                            <span>Independent Insurance Agent</span>
-                            <span class="author-stats">Dallas, TX • Multi-carrier</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing CTA -->
-    <section class="final-cta">
-        <div class="container">
-            <div class="final-cta-content">
-                <h2>Start Capturing Every Client Opportunity Today</h2>
-                <p class="final-cta-text">
-                    Every missed call during busy season is a potential client going elsewhere. Every no-show appointment is lost billable time you can never recover. Every after-hours inquiry going to voicemail is revenue walking to competitors. <strong>CallBird captures it all for $49/month.</strong>
-                </p>
-
-                <div class="final-cta-boxes">
-                    <div class="cta-box-secondary">
-                        <a href="/start" class="btn-large btn-primary">Start Your 7-Day Free Trial</a>
-                        <div class="cta-benefits">
-                            <span>✓ Setup in 10 minutes</span>
-                            <span>✓ No credit card required</span>
-                            <span>✓ Cancel anytime</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="final-trust">
-                    <p><strong>Trusted by 200+ professional services businesses:</strong></p>
-                    <div class="trust-stats">
-                        <span>✓ Average 60-70% reduction in no-shows</span>
-                        <span>✓ $12K-$30K additional monthly revenue</span>
-                        <span>✓ Works with Salesforce, HubSpot, QuickBooks, Calendly</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <div class="footer-logo">
-                        <img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird" class="logo-image">
-                    </div>
-                    <p class="footer-tagline">AI receptionist that never sleeps</p>
-                    <div class="footer-contact">
-                        <p>Atlanta, GA</p>
-                        <p><a href="tel:+16783161454">(678) 316-1454</a></p>
-                        <p><a href="mailto:support@callbirdai.com">support@callbirdai.com</a></p>
-                    </div>
-                </div>
-
-                <div class="footer-col">
-                    <h4>Product</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html#features">Features</a></li>
-                        <li><a href="index.html#how-it-works">How It Works</a></li>
-                        <li><a href="index.html#pricing">Pricing</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h4>Industries</h4>
-                    <ul class="footer-links">
-                        <li><a href="home-services-ai-receptionist.html">Home Services</a></li>
-                        <li><a href="dental-ai-receptionist.html">Medical & Dental</a></li>
-                        <li><a href="restaurants-ai-receptionist.html">Restaurants</a></li>
-                        <li><a href="legal-ai-receptionist.html">Legal</a></li>
-                        <li><a href="professional-services-ai-receptionist.html">Professional Services</a></li>
-                        <li><a href="retail-ai-receptionist.html">Retail</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h4>Company</h4>
-                    <ul class="footer-links">
-                        <li><a href="mailto:support@callbirdai.com">Contact</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="/privacy">Privacy Policy</a></li>
-                        <li><a href="/terms">Terms & Conditions</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2025 CallBird AI. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+        {"@type":"Question","name":"What types of professional services does CallBird work for?","acceptedAnswer":{"@type":"Answer","text":"CallBird works for CPAs, accountants, financial advisors, insurance agents, real estate agents, management consultants, business coaches, and any service professional who books appointments and handles client calls."}},
+        {"@type":"Question","name":"Does CallBird integrate with my CRM and calendar?","acceptedAnswer":{"@type":"Answer","text":"Yes. CallBird integrates with Salesforce, HubSpot, QuickBooks, Calendly, Google Workspace, Microsoft 365, and Zoom. Appointments and client information sync automatically."}},
+        {"@type":"Question","name":"Can the AI qualify leads before scheduling consultations?","acceptedAnswer":{"@type":"Answer","text":"Yes. You set your qualification criteria and the AI applies them on every call including minimum engagement size, geographic service area, budget range, timeline, and decision-maker authority."}},
+        {"@type":"Question","name":"How does the no-show prevention system work?","acceptedAnswer":{"@type":"Answer","text":"CallBird sends automated reminders: confirmation text at booking, reminder 24 hours before with easy reschedule option, and final reminder 1 hour before. Clients can confirm, reschedule, or cancel via text reply."}},
+        {"@type":"Question","name":"How much does CallBird cost?","acceptedAnswer":{"@type":"Answer","text":"Plans start at $99/month for the Starter plan. The Professional plan at $249/month includes team member access and up to 500 calls. The Enterprise plan at $499/month includes unlimited calls. All plans include a 7-day free trial."}},
+        {"@type":"Question","name":"Is CallBird good for seasonal businesses like tax practices?","acceptedAnswer":{"@type":"Answer","text":"CallBird is ideal for seasonal businesses. During busy season the AI handles the surge in call volume so you can focus on client work. You can adjust your plan anytime as call volume changes."}}
+    ]}
+    </script>
+    <script>
+        function openMobileNav(){document.getElementById('mobileNavOverlay').classList.add('active');document.getElementById('mobileNavPanel').classList.add('active');document.body.style.overflow='hidden';}
+        function closeMobileNav(){document.getElementById('mobileNavOverlay').classList.remove('active');document.getElementById('mobileNavPanel').classList.remove('active');document.body.style.overflow='';}
+        function toggleFAQ(button){const faqItem=button.parentElement;const isActive=faqItem.classList.contains('active');document.querySelectorAll('.faq-item').forEach(item=>{item.classList.remove('active');});if(!isActive){faqItem.classList.add('active');}}
+    </script>
 </body>
 </html>
