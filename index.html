@@ -11,7 +11,7 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="$49/month AI receptionist for small businesses. Setup in 10 minutes. Never miss a customer call again.">
+    <meta name="description" content="AI receptionist for small businesses starting at $99/month. Setup in 10 minutes. Never miss a customer call again.">
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://i.imgur.com/qwyQQW5.png">
@@ -19,7 +19,7 @@
     <link rel="shortcut icon" href="https://i.imgur.com/qwyQQW5.png">
     <meta name="theme-color" content="#122092">
     
-    <title>CallBird AI - $49/Month AI Receptionist | 10-Minute Setup</title>
+    <title>CallBird AI - AI Receptionist for Small Business | 10-Minute Setup</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -198,6 +198,28 @@
         .audio-card .audio-icon {
             margin-right: 0.75rem !important;
         }
+
+        /* Footer override to match site blue */
+        .footer {
+            background: #122092 !important;
+            color: #fff !important;
+        }
+        .footer a {
+            color: rgba(255,255,255,0.85) !important;
+        }
+        .footer a:hover {
+            color: #fff !important;
+        }
+        .footer h4 {
+            color: #f6b828 !important;
+        }
+        .footer-tagline {
+            color: rgba(255,255,255,0.7) !important;
+        }
+        .footer-bottom {
+            border-top-color: rgba(255,255,255,0.15) !important;
+            color: rgba(255,255,255,0.6) !important;
+        }
     </style>
 
     <!-- EDIT 3: Mobile nav drawer CSS + grid overrides -->
@@ -239,7 +261,7 @@
             font-weight: 600; text-decoration: none;
         }
 
-        /* Mobile grid fixes — force single column, prevent overflow */
+        /* Mobile grid fixes */
         @media (max-width: 768px) {
             .audio-grid,
             .features-grid,
@@ -284,6 +306,133 @@
             .comparison-summary ol {
                 margin-left: 1rem;
             }
+            /* Mobile: stack final CTA boxes */
+            .final-cta-boxes {
+                flex-direction: column !important;
+                gap: 1.5rem !important;
+            }
+            .cta-box-primary,
+            .cta-box-secondary {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+            .cta-box-divider {
+                display: none !important;
+            }
+            .cta-phone-large {
+                font-size: 1.25rem !important;
+            }
+        }
+
+        /* ── Final CTA box layout fix (desktop) ── */
+        .final-cta-boxes {
+            display: flex !important;
+            align-items: stretch !important;
+            justify-content: center !important;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .cta-box-primary,
+        .cta-box-secondary {
+            flex: 1 1 0 !important;
+            min-width: 280px !important;
+            max-width: 480px !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+        .cta-box-divider {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            flex-shrink: 0 !important;
+            padding: 0 0.5rem !important;
+        }
+
+        /* ── 80% zoom / smaller viewport optimization ── */
+        @media (max-width: 1100px) {
+            .pricing-grid {
+                gap: 1rem !important;
+            }
+            .pricing-card {
+                padding: 1.5rem 1rem !important;
+            }
+            .price-amount {
+                font-size: 2.25rem !important;
+            }
+            .pricing-features li {
+                font-size: 0.875rem !important;
+            }
+            .industries-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+            .comparison-table-wrapper {
+                overflow-x: auto !important;
+                -webkit-overflow-scrolling: touch;
+            }
+        }
+        @media (max-width: 900px) {
+            .steps-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+            .testimonials-grid {
+                grid-template-columns: 1fr !important;
+            }
+            .audio-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
+
+        /* ── Small mobile (≤ 480px) polish ── */
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 1.75rem !important;
+            }
+            .hero-title .subtitle {
+                font-size: 0.95rem !important;
+            }
+            .section-header h2 {
+                font-size: 1.5rem !important;
+            }
+            .pricing-card {
+                padding: 1.25rem !important;
+            }
+            .price-amount {
+                font-size: 2.5rem !important;
+            }
+            /* Keep Start Free Trial, just hide Call Us on tiny screens */
+            .btn-ghost.btn-small,
+            .nav-actions .btn-ghost {
+                display: none !important;
+            }
+            .trust-bar {
+                flex-direction: column !important;
+                gap: 0.5rem !important;
+            }
+            .hero-ctas {
+                flex-direction: column !important;
+                gap: 0.75rem !important;
+            }
+            .hero-ctas .btn-large {
+                width: 100% !important;
+                text-align: center !important;
+            }
+            .live-stats {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 1rem !important;
+            }
+            .sticky-cta-content {
+                flex-direction: column !important;
+                gap: 0.75rem !important;
+                text-align: center !important;
+            }
+            .sticky-cta-actions {
+                justify-content: center !important;
+            }
         }
     </style>
 </head>
@@ -311,7 +460,6 @@
                     <a href="tel:+16783161454" class="btn-ghost">Call Us</a>
                     <a href="/start" class="btn-primary">Start Free Trial</a>
                 </div>
-                <!-- EDIT 1: Added onclick -->
                 <button class="mobile-menu-toggle" aria-label="Toggle menu" onclick="openMobileNav()">
                     <span></span>
                     <span></span>
@@ -321,7 +469,7 @@
         </div>
     </nav>
 
-    <!-- EDIT 2: Mobile Nav Drawer -->
+    <!-- Mobile Nav Drawer -->
     <div class="mobile-nav-overlay" id="mobileNavOverlay" onclick="closeMobileNav()"></div>
     <div class="mobile-nav-panel" id="mobileNavPanel">
         <div class="mobile-nav-header">
@@ -353,7 +501,7 @@
                 <h1 class="hero-title">
                     <span style="display: block;">Run Your Business.</span>
                     <span style="display: block;">We'll Answer Your Calls.</span>
-                    <span class="subtitle">AI Receptionist • $49/Month</span>
+                    <span class="subtitle">AI Receptionist • Starting at $99/Month</span>
                 </h1>
                 
                 <p class="hero-subtitle">
@@ -623,7 +771,7 @@
             </div>
 
             <div class="solution-box">
-                <h2>CallBird Is Your $49/Month AI Receptionist That Never Sleeps</h2>
+                <h2>CallBird Is Your AI Receptionist That Never Sleeps</h2>
                 <p class="solution-text">
                     No more missed opportunities. No more paying thousands for staff. No more generic answering services.
                 </p>
@@ -962,7 +1110,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td><strong>Monthly Cost</strong></td><td class="highlight-col"><strong>$49-197</strong></td><td>$3,000-4,500</td><td>$299-600</td><td>$0</td></tr>
+                        <tr><td><strong>Monthly Cost</strong></td><td class="highlight-col"><strong>$99-499</strong></td><td>$3,000-4,500</td><td>$299-600</td><td>$0</td></tr>
                         <tr><td><strong>Setup Time</strong></td><td class="highlight-col"><strong>10 min</strong></td><td>2-4 weeks</td><td>3-5 days</td><td>Instant</td></tr>
                         <tr><td><strong>Available</strong></td><td class="highlight-col"><strong>24/7/365</strong></td><td>Business hours</td><td>24/7</td><td>24/7</td></tr>
                         <tr><td><strong>Books Appointments</strong></td><td class="highlight-col">✓ Yes</td><td>✓ Yes</td><td>✓ Yes</td><td>✗ No</td></tr>
@@ -980,7 +1128,7 @@
                 <ol>
                     <li><strong>Hire staff:</strong> Professional, but $36,000-54,000 per year + benefits + time off</li>
                     <li><strong>Traditional answering service:</strong> Available 24/7, but generic, can't book appointments, $300-600/month</li>
-                    <li><strong>CallBird:</strong> Custom AI trained on your business, books appointments, texts you summaries, all from an app—$49/month</li>
+                    <li><strong>CallBird:</strong> Custom AI trained on your business, books appointments, texts you summaries, all from an app—starting at $99/month</li>
                 </ol>
                 <p class="comparison-conclusion">The choice is obvious.</p>
             </div>
@@ -1052,27 +1200,56 @@
             </div>
             <div class="pricing-grid">
                 <div class="pricing-card">
-                    <div class="pricing-header"><h3>Starter</h3><div class="pricing-price"><span class="price-currency">$</span><span class="price-amount">49</span><span class="price-period">/month</span></div><p class="pricing-subtitle">Perfect for solo operators and small teams</p></div>
-                    <ul class="pricing-features"><li>✓ 1 AI phone number</li><li>✓ Up to 50 calls per month</li><li>✓ Basic appointment booking</li><li>✓ Google Calendar integration</li><li>✓ Emergency call transfer</li><li>✓ Text summaries after each call</li><li>✓ CallBird mobile app access</li><li>✓ Call recordings & transcripts</li><li>✓ Email support</li></ul>
+                    <div class="pricing-header"><h3>Starter</h3><div class="pricing-price"><span class="price-currency">$</span><span class="price-amount">99</span><span class="price-period">/month</span></div><p class="pricing-subtitle">Perfect for solo operators and small teams</p></div>
+                    <ul class="pricing-features">
+                        <li>✓ Up to 50 calls per month</li>
+                        <li>✓ Basic appointment booking</li>
+                        <li>✓ Emergency call transfer</li>
+                        <li>✓ Text summaries after each call</li>
+                        <li>✓ Call recordings & transcripts</li>
+                        <li>✓ Business hours routing</li>
+                        <li>✓ Website knowledge base training</li>
+                        <li>✓ Email support</li>
+                    </ul>
                     <a href="/start" class="btn-pricing">Start 7-Day Free Trial</a>
                 </div>
                 <div class="pricing-card pricing-popular">
                     <div class="pricing-badge"><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1rem; height: 1rem; margin-right: 0.25rem; vertical-align: middle;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>Most Popular</div>
-                    <div class="pricing-header"><h3>Professional</h3><div class="pricing-price"><span class="price-currency">$</span><span class="price-amount">99</span><span class="price-period">/month</span></div><p class="pricing-subtitle">For growing businesses with higher call volume</p></div>
-                    <ul class="pricing-features"><li><strong>Everything in Starter, plus:</strong></li><li>✓ Up to 300 calls per month</li><li>✓ Advanced appointment booking</li><li>✓ Multiple calendar integration</li><li>✓ Custom business hours</li><li>✓ Lead qualification questions</li><li>✓ Priority call transfer rules</li><li>✓ Analytics dashboard</li><li>✓ Priority email support</li></ul>
+                    <div class="pricing-header"><h3>Professional</h3><div class="pricing-price"><span class="price-currency">$</span><span class="price-amount">249</span><span class="price-period">/month</span></div><p class="pricing-subtitle">For growing businesses with higher call volume</p></div>
+                    <ul class="pricing-features">
+                        <li><strong>Everything in Starter, plus:</strong></li>
+                        <li>✓ 2 team members / users</li>
+                        <li>✓ Up to 500 calls per month</li>
+                        <li>✓ Advanced appointment booking</li>
+                        <li>✓ Google Calendar integration</li>
+                        <li>✓ Custom business hours routing</li>
+                        <li>✓ Priority call transfer rules</li>
+                        <li>✓ Custom FAQ & knowledge base editing</li>
+                        <li>✓ Spam call filtering</li>
+                        <li>✓ Priority email + call support</li>
+                    </ul>
                     <a href="/start" class="btn-pricing btn-primary">Start 7-Day Free Trial</a>
                     <p class="pricing-recommendation">Most businesses choose Professional</p>
                 </div>
                 <div class="pricing-card">
-                    <div class="pricing-header"><h3>Enterprise</h3><div class="pricing-price"><span class="price-currency">$</span><span class="price-amount">197</span><span class="price-period">/month</span></div><p class="pricing-subtitle">For high-volume and multi-location operations</p></div>
-                    <ul class="pricing-features"><li><strong>Everything in Professional, plus:</strong></li><li>✓ Unlimited calls per month</li><li>✓ Up to 5 AI phone numbers</li><li>✓ Advanced CRM integration</li><li>✓ Custom AI training</li><li>✓ Multi-language support</li><li>✓ Dedicated account manager</li><li>✓ Custom reporting</li><li>✓ Priority 24/7 phone support</li><li>✓ API access</li></ul>
+                    <div class="pricing-header"><h3>Enterprise</h3><div class="pricing-price"><span class="price-currency">$</span><span class="price-amount">499</span><span class="price-period">/month</span></div><p class="pricing-subtitle">For high-volume and multi-location operations</p></div>
+                    <ul class="pricing-features">
+                        <li><strong>Everything in Professional, plus:</strong></li>
+                        <li>✓ Unlimited calls per month</li>
+                        <li>✓ Custom AI voice & personality training</li>
+                        <li>✓ Multi-language support</li>
+                        <li>✓ Caller recognition & VIP routing</li>
+                        <li>✓ Dedicated account manager</li>
+                        <li>✓ Custom reporting & analytics</li>
+                        <li>✓ API access</li>
+                    </ul>
                     <div class="pricing-note">Best value for high call volume</div>
                     <a href="/start" class="btn-pricing">Start 7-Day Free Trial</a>
                 </div>
             </div>
             <div class="pricing-guarantee">
                 <p><strong>All plans include:</strong> 7-day free trial (no credit card required) • Cancel anytime (no contracts) • Setup in under 10 minutes • 30-day money-back guarantee • Free migration support</p>
-                <p class="pricing-custom">Have 500+ calls per month? <a href="mailto:support@callbirdai.com">Contact us for custom pricing →</a></p>
+                <p class="pricing-custom">Have 1,000+ calls per month? <a href="mailto:support@callbirdai.com">Contact us for custom pricing →</a></p>
             </div>
         </div>
     </section>
@@ -1127,12 +1304,12 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <div class="footer-logo"><img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird" class="logo-image"></div>
-                    <p class="footer-tagline">AI receptionist that never sleeps</p>
-                    <div class="footer-contact"><p>Atlanta, GA</p><p><a href="tel:+16783161454">(678) 316-1454</a></p><p><a href="mailto:support@callbirdai.com">support@callbirdai.com</a></p></div>
+                    <p class="footer-tagline">AI-powered call answering, appointment booking & instant summaries for small businesses.</p>
+                    <div class="footer-contact"><p>Atlanta, GA</p><p><a href="tel:+16783161454">(678) 316-1454</a></p><p><a href="/cdn-cgi/l/email-protection#deadabaeaeb1acaa9ebdbfb2b2bcb7acbabfb7f0bdb1b3"><span class="__cf_email__" data-cfemail="51222421213e23251132303d3d3338233530387f323e3c">[email&#160;protected]</span></a></p></div>
                 </div>
                 <div class="footer-col"><h4>Product</h4><ul class="footer-links"><li><a href="#features">Features</a></li><li><a href="#how-it-works">How It Works</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#faq">FAQ</a></li></ul></div>
                 <div class="footer-col"><h4>Industries</h4><ul class="footer-links"><li><a href="home-services-ai-receptionist.html">Home Services</a></li><li><a href="dental-ai-receptionist.html">Medical & Dental</a></li><li><a href="restaurants-ai-receptionist.html">Restaurants</a></li><li><a href="legal-ai-receptionist.html">Legal</a></li><li><a href="professional-services-ai-receptionist.html">Professional Services</a></li><li><a href="retail-ai-receptionist.html">Retail</a></li><li><a href="veterinary-ai-receptionist.html">Veterinary</a></li></ul></div>
-                <div class="footer-col"><h4>Company</h4><ul class="footer-links"><li><a href="mailto:support@callbirdai.com">Contact</a></li><li><a href="blog.html">Blog</a></li><li><a href="https://myvoiceaiconnect.com" target="_blank" rel="noopener">White Label</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-and-conditions.html">Terms & Conditions</a></li></ul></div>
+                <div class="footer-col"><h4>Company</h4><ul class="footer-links"><li><a href="/cdn-cgi/l/email-protection#acdfd9dcdcc3ded8eccfcdc0c0cec5dec8cdc582cfc3c1">Contact</a></li><li><a href="blog.html">Blog</a></li><li><a href="https://myvoiceaiconnect.com" target="_blank" rel="noopener">White Label</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-and-conditions.html">Terms & Conditions</a></li></ul></div>
             </div>
             <div class="footer-bottom"><p>&copy; 2026 CallBird AI. All Rights Reserved.</p><p>A2P 10DLC Compliant • SOC 2 Type II Certified</p></div>
         </div>
@@ -1166,13 +1343,13 @@
     </div>
 
     <!-- Chatbase AI Chat Widget -->
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="uxMqEBMKnHih2W2JLg2VL";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
     </script>
 
     <!-- Main JavaScript -->
     <script>
-        // EDIT 4: Mobile nav functions
+        // Mobile nav functions
         function openMobileNav() {
             document.getElementById('mobileNavOverlay').classList.add('active');
             document.getElementById('mobileNavPanel').classList.add('active');
@@ -1313,16 +1490,3 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    animateCounters();
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        const statsSection = document.querySelector('.live-stats');
-        if (statsSection) {
-            observer.observe(statsSection);
-        }
-    </script>
-</body>
-</html>
