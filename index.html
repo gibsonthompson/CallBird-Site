@@ -26,6 +26,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <style>
+        /* Global 80% scale */
+        html {
+            zoom: 0.8;
+            -moz-transform: scale(0.8);
+            -moz-transform-origin: 0 0;
+        }
+        /* Prevent phone number from stacking */
+        .cta-phone-large,
+        .demo-phone {
+            white-space: nowrap !important;
+        }
+
         /* SVG Icon Styles */
         .icon-svg {
             display: inline-flex;
@@ -197,6 +209,44 @@
         }
         .audio-card .audio-icon {
             margin-right: 0.75rem !important;
+        }
+
+        /* FAQ toggle behavior */
+        .faq-answer {
+            display: none;
+            padding: 0 1.25rem 1.25rem;
+        }
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 1.25rem;
+            font-size: 1.05rem;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            color: var(--text-dark, #1a1a2e);
+            font-family: inherit;
+        }
+        .faq-question:hover {
+            color: var(--primary-color, #122092);
+        }
+        .faq-icon {
+            font-size: 1.5rem;
+            font-weight: 300;
+            line-height: 1;
+            flex-shrink: 0;
+            transition: transform 0.2s ease;
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
         }
 
         /* Footer override to match site blue */
@@ -1151,10 +1201,10 @@
                         <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
                     </div>
                     <h3>"We were missing 30% of our calls before CallBird"</h3>
-                    <p>"Now every patient gets through, our appointment book stays full, and I'm not chained to the front desk. The text summaries are game-changing—I know exactly who called and what they need before I even call back."</p>
+                    <p>"Now every patient gets through, our appointment book stays full, and I'm not chained to the front desk. The text summaries alone are worth it. I know exactly who called and what they need before I even call back."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
-                        <div class="author-info"><strong>Dr. Sarah Chen</strong><span>Riverside Dental Practice</span><span class="author-stats">Using CallBird for 4 months • 487 calls handled</span></div>
+                        <div class="author-info"><strong>Dr. Sarah Chen</strong><span>Riverside Dental Practice</span><span class="author-stats">CallBird customer since December 2025</span></div>
                     </div>
                 </div>
                 <div class="testimonial-card">
@@ -1166,10 +1216,10 @@
                         <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
                     </div>
                     <h3>"Setup literally took 8 minutes"</h3>
-                    <p>"I signed up, forwarded my phone, and CallBird was answering calls before I finished lunch. The first call was a $3,200 kitchen remodel job. Paid for itself in an hour."</p>
+                    <p>"I signed up, forwarded my phone, and CallBird was answering calls before I finished lunch. The first call it took was a $3,200 kitchen remodel job. Paid for itself before I even got home that day."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
-                        <div class="author-info"><strong>Carlos Martinez</strong><span>Elite Home Renovations</span><span class="author-stats">Using CallBird for 2 months • 156 calls • 23 appointments booked</span></div>
+                        <div class="author-info"><strong>Carlos Martinez</strong><span>Elite Home Renovations</span><span class="author-stats">CallBird customer since February 2026</span></div>
                     </div>
                 </div>
                 <div class="testimonial-card">
@@ -1181,10 +1231,10 @@
                         <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
                     </div>
                     <h3>"Emergency calls get through, routine stuff is handled"</h3>
-                    <p>"As a vet, I need to know when there's a real emergency. CallBird transfers those immediately, but handles appointment bookings and prescription refills automatically. My staff loves it because their phone isn't ringing off the hook."</p>
+                    <p>"As a vet, I need to know immediately when there's a real emergency. CallBird transfers those to me right away, but handles appointment bookings and prescription refills on its own. My front desk staff loves it because the phone isn't ringing off the hook all day."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
-                        <div class="author-info"><strong>Dr. James Park</strong><span>Oakwood Animal Hospital</span><span class="author-stats">Using CallBird for 6 months • 892 calls • 4.9/5 rating</span></div>
+                        <div class="author-info"><strong>Dr. James Park</strong><span>Oakwood Animal Hospital</span><span class="author-stats">CallBird customer since October 2025</span></div>
                     </div>
                 </div>
             </div>
@@ -1249,7 +1299,6 @@
             </div>
             <div class="pricing-guarantee">
                 <p><strong>All plans include:</strong> 7-day free trial (no credit card required) • Cancel anytime (no contracts) • Setup in under 10 minutes • 30-day money-back guarantee • Free migration support</p>
-                <p class="pricing-custom">Have 1,000+ calls per month? <a href="mailto:support@callbirdai.com">Contact us for custom pricing →</a></p>
             </div>
         </div>
     </section>
@@ -1342,8 +1391,66 @@
         </div>
     </div>
 
+    <!-- FAQ Schema Markup (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How quickly can I get my AI phone number?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Your CallBird number is ready within 10 minutes of completing signup. You fill out the signup form in 2 minutes, we create your AI and train it on your website in 5 minutes, you get your phone number and forward settings in 2 minutes, and your first call is answered by CallBird. Some customers have gotten their first real customer call within 15 minutes of signing up."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does CallBird integrate with my existing calendar?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. CallBird works with Google Calendar, Microsoft Outlook, Apple Calendar, and CallBird's built-in calendar. When CallBird books an appointment, it checks your calendar for availability in real-time, books the appointment, sends you a calendar invite, texts the customer a confirmation, and sends you a text summary."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What happens if CallBird gets a call it can't handle?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "CallBird has three built-in safety nets: Instant Transfer for emergencies or complex questions where CallBird transfers the call to your cell phone immediately with full context, Take a Message where CallBird collects their name, number, email, and reason for calling if you're unavailable, and Smart Escalation where you can set rules like transfer all calls with emergency in them or transfer VIP customers automatically. 96% of calls are fully handled by AI, and the other 4% get transferred with full context."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How does the AI know about my business?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "During setup, CallBird reads your website to learn about your services, pricing, hours, and location. It asks you key questions about your most common customer inquiries and greeting preferences. It learns your booking rules and stores your FAQs with custom Q&A pairs. You can update the AI knowledge base anytime in the app. Add new services, change pricing, update hours in about 30 seconds."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I customize how CallBird answers calls?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutely. You control the greeting with custom greetings you write yourself, the voice with male or female options and friendly, professional, or casual tones, the responses including what services to mention first and how to handle pricing questions, and business rules like hours of operation, appointment lengths, buffer time, and blackout dates. Everything is editable in the CallBird app and changes take effect in under 60 seconds."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do I need to change my phone number?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. You have three options: Use CallBird's dedicated number on your website, Google Business Profile, and ads while keeping your existing number. Forward your existing business number to CallBird so all calls go through CallBird first. Or use the Hybrid approach, which is the most popular, where you forward your main line to CallBird when you're busy or closed and keep answering directly when you're available. You can toggle forwarding on and off from the CallBird app."
+                }
+            }
+        ]
+    }
+    </script>
+
     <!-- Chatbase AI Chat Widget -->
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="uxMqEBMKnHih2W2JLg2VL";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
     </script>
 
@@ -1485,8 +1592,3 @@
                     }
                 }, 30);
             });
-        }
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
