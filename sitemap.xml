@@ -4,7 +4,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://callbirdai.com/</loc>
-    <lastmod>2026-04-02</lastmod>
+    <lastmod>2026-04-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -23,9 +23,13 @@
   <url><loc>https://callbirdai.com/start</loc><lastmod>2026-03-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
   <!-- Blog Index -->
-  <url><loc>https://callbirdai.com/blog</loc><lastmod>2026-04-02</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://callbirdai.com/blog</loc><lastmod>2026-04-08</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 
   <!-- ==================== BLOG POSTS ==================== -->
+
+  <!-- April 8, 2026 (Batch 3) -->
+  <url><loc>https://callbirdai.com/blog-ai-receptionist-vs-chatbot</loc><lastmod>2026-04-08</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://callbirdai.com/blog-how-to-set-up-ai-receptionist</loc><lastmod>2026-04-08</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- April 2, 2026 (Batch 2) -->
   <url><loc>https://callbirdai.com/blog-best-ai-receptionist-auto-repair</loc><lastmod>2026-04-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
