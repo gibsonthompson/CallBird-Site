@@ -26,11 +26,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     
     <style>
-        /* Global 80% scale */
-        html {
-            zoom: 0.8;
-            -moz-transform: scale(0.8);
-            -moz-transform-origin: 0 0;
+        /* Global 80% scale — DESKTOP ONLY */
+        @media (min-width: 769px) {
+            html {
+                zoom: 0.8;
+                -moz-transform: scale(0.8);
+                -moz-transform-origin: 0 0;
+            }
         }
         /* Prevent phone number from stacking */
         .cta-phone-large,
@@ -1584,4 +1586,31 @@
                 const increment = target / 50;
                 const timer = setInterval(() => {
                     current += increment;
-                    if (current >=
+                    if (current >= target) {
+                        counter.textContent = target + suffix;
+                        clearInterval(timer);
+                    } else {
+                        counter.textContent = Math.ceil(current) + suffix;
+                    }
+                }, 30);
+            });
+        }
+
+        // Intersection Observer for animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    if (entry.target.classList.contains('live-stats')) {
+                        animateCounters();
+                    }
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, { threshold: 0.2 });
+
+        document.querySelectorAll('.live-stats, .step-card, .feature-card, .industry-card, .testimonial-card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
