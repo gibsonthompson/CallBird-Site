@@ -315,16 +315,31 @@
 
         /* Mobile grid fixes */
         @media (max-width: 768px) {
-            .audio-grid,
-            .features-grid,
-            .industries-grid,
-            .testimonials-grid,
-            .pricing-grid {
+            body .audio-grid,
+            body .features-grid,
+            body .industries-grid,
+            body .testimonials-grid,
+            body .pricing-grid,
+            .container .audio-grid,
+            .container .features-grid,
+            .container .industries-grid,
+            .container .testimonials-grid,
+            .container .pricing-grid {
+                display: grid !important;
                 grid-template-columns: 1fr !important;
+                gap: 1.5rem !important;
             }
-            .steps-grid {
+            body .steps-grid,
+            .container .steps-grid {
+                display: grid !important;
                 grid-template-columns: 1fr !important;
                 gap: 2rem !important;
+            }
+            body .problems-grid,
+            .container .problems-grid {
+                display: grid !important;
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem !important;
             }
             .step-card {
                 margin-top: 1.5rem;
