@@ -1,72 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-M9WVK3WD');</script>
-    <!-- End Google Tag Manager -->
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Start your 7-day free trial with CallBird AI. Setup your AI receptionist in under 10 minutes.">
-    
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="https://i.imgur.com/qwyQQW5.png">
     <link rel="apple-touch-icon" href="https://i.imgur.com/qwyQQW5.png">
     <link rel="shortcut icon" href="https://i.imgur.com/qwyQQW5.png">
     <meta name="theme-color" content="#122092">
-    
     <title>Start Your Free Trial - CallBird AI</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
     <style>
-        /* Global 80% scale */
-        html { zoom: 0.8; -moz-transform: scale(0.8); -moz-transform-origin: 0 0; }
+        /* Global 80% scale — DESKTOP ONLY */
+        @media (min-width: 769px) { html { zoom: 0.8; -moz-transform: scale(0.8); -moz-transform-origin: 0 0; } }
 
-        /* ===============================================================
-           START PAGE STYLES
-           =============================================================== */
-        .start-hero {
-            padding: 8rem 0 4rem;
-            margin-top: 4rem;
-            background: linear-gradient(135deg, #f9f9f7 0%, #ffffff 100%);
-            overflow-x: hidden;
-        }
+        .start-hero { padding: 8rem 0 4rem; margin-top: 4rem; background: linear-gradient(135deg, #f9f9f7 0%, #ffffff 100%); overflow-x: hidden; }
         .start-content { max-width: 1200px; margin: 0 auto; }
-        .start-header {
-            text-align: center;
-            margin-bottom: 3rem;
-            animation: fadeInUp 0.6s ease-out;
-        }
-        .start-badge {
-            display: inline-flex; align-items: center; gap: 0.5rem;
-            padding: 0.5rem 1rem; background: rgba(18, 32, 146, 0.1);
-            border-radius: var(--radius-full); font-size: 0.875rem;
-            font-weight: 600; color: var(--primary-color); margin-bottom: 1.5rem;
-        }
-        .start-title {
-            font-size: clamp(2rem, 4vw, 3rem); color: var(--text-dark);
-            margin-bottom: 1rem; word-wrap: break-word;
-        }
-        .start-subtitle {
-            font-size: 1.25rem; color: var(--text-medium); margin-bottom: 2rem;
-            max-width: 700px; margin-left: auto; margin-right: auto;
-        }
-        .start-grid {
-            display: grid; grid-template-columns: 1fr 1fr;
-            gap: 3rem; align-items: start;
-        }
-        .form-container {
-            background: white; border-radius: var(--radius-lg);
-            padding: 2.5rem; box-shadow: var(--shadow-xl);
-            animation: fadeInUp 0.6s ease-out 0.2s both;
-        }
+        .start-header { text-align: center; margin-bottom: 3rem; animation: fadeInUp 0.6s ease-out; }
+        .start-badge { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; background: rgba(18, 32, 146, 0.1); border-radius: var(--radius-full); font-size: 0.875rem; font-weight: 600; color: var(--primary-color); margin-bottom: 1.5rem; }
+        .start-title { font-size: clamp(2rem, 4vw, 3rem); color: var(--text-dark); margin-bottom: 1rem; word-wrap: break-word; }
+        .start-subtitle { font-size: 1.25rem; color: var(--text-medium); margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .start-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+        .form-container { background: white; border-radius: var(--radius-lg); padding: 2.5rem; box-shadow: var(--shadow-xl); animation: fadeInUp 0.6s ease-out 0.2s both; }
         .form-header { text-align: center; margin-bottom: 2rem; }
         .form-header h2 { font-size: 1.75rem; color: var(--text-dark); margin-bottom: 0.5rem; }
         .form-header p { color: var(--text-medium); font-size: 0.9375rem; }
@@ -74,21 +37,9 @@
         .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
         .form-group label { font-size: 0.875rem; font-weight: 600; color: var(--text-dark); }
         .form-group label .required { color: #dc2626; }
-        .form-group input, .form-group select {
-            padding: 0.875rem 1rem; border: 2px solid #e5e7eb;
-            border-radius: var(--radius-md); font-size: 1rem;
-            font-family: inherit; transition: all 0.2s ease; background: white;
-            -webkit-appearance: none; appearance: none;
-        }
-        .form-group select {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%236b7280' viewBox='0 0 16 16'%3E%3Cpath d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
-            background-repeat: no-repeat; background-position: right 1rem center;
-            padding-right: 2.5rem;
-        }
-        .form-group input:focus, .form-group select:focus {
-            outline: none; border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(18, 32, 146, 0.1);
-        }
+        .form-group input, .form-group select { padding: 0.875rem 1rem; border: 2px solid #e5e7eb; border-radius: var(--radius-md); font-size: 1rem; font-family: inherit; transition: all 0.2s ease; background: white; -webkit-appearance: none; appearance: none; }
+        .form-group select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%236b7280' viewBox='0 0 16 16'%3E%3Cpath d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.5rem; }
+        .form-group input:focus, .form-group select:focus { outline: none; border-color: var(--primary-color); box-shadow: 0 0 0 3px rgba(18, 32, 146, 0.1); }
         .form-group input::placeholder { color: #9ca3af; }
         .form-group .help-text { font-size: 0.8125rem; color: var(--text-medium); }
         .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
@@ -96,46 +47,24 @@
         .form-group .error-text { color: #dc2626; font-size: 0.8125rem; }
         #otherReferralGroup { display: none; margin-top: 0.5rem; }
         #otherReferralGroup.active { display: block; }
-        .submit-btn {
-            background: var(--primary-color); color: white; border: none;
-            padding: 1rem 2rem; font-size: 1.125rem; font-weight: 600;
-            border-radius: var(--radius-md); cursor: pointer;
-            transition: all 0.2s ease; display: flex; align-items: center;
-            justify-content: center; gap: 0.5rem; margin-top: 0.5rem; width: 100%;
-        }
-        .submit-btn:hover {
-            background: #0f1a7a; transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(18, 32, 146, 0.3);
-        }
+        .submit-btn { background: var(--primary-color); color: white; border: none; padding: 1rem 2rem; font-size: 1.125rem; font-weight: 600; border-radius: var(--radius-md); cursor: pointer; transition: all 0.2s ease; display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 0.5rem; width: 100%; }
+        .submit-btn:hover { background: #0f1a7a; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(18, 32, 146, 0.3); }
         .submit-btn:disabled { background: #9ca3af; cursor: not-allowed; transform: none; box-shadow: none; }
-        .submit-btn .spinner {
-            width: 20px; height: 20px; border: 2px solid transparent;
-            border-top-color: white; border-radius: 50%; animation: spin 0.8s linear infinite;
-        }
+        .submit-btn .spinner { width: 20px; height: 20px; border: 2px solid transparent; border-top-color: white; border-radius: 50%; animation: spin 0.8s linear infinite; }
         @keyframes spin { to { transform: rotate(360deg); } }
-        .error-banner {
-            display: none; background: #fef2f2; border: 1px solid #fecaca;
-            border-radius: var(--radius-md); padding: 1rem; margin-bottom: 1rem; color: #991b1b;
-        }
+        .error-banner { display: none; background: #fef2f2; border: 1px solid #fecaca; border-radius: var(--radius-md); padding: 1rem; margin-bottom: 1rem; color: #991b1b; }
         .error-banner.active { display: block; }
         .benefits-section { animation: fadeInUp 0.6s ease-out 0.3s both; }
         .benefits-header { margin-bottom: 2rem; }
         .benefits-header h3 { font-size: 1.5rem; color: var(--text-dark); margin-bottom: 0.5rem; }
         .benefits-list { display: flex; flex-direction: column; gap: 1.5rem; }
-        .benefit-item {
-            display: flex; gap: 1rem; align-items: flex-start;
-            padding: 1.5rem; background: white; border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-md); transition: all var(--transition-base);
-        }
+        .benefit-item { display: flex; gap: 1rem; align-items: flex-start; padding: 1.5rem; background: white; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); transition: all var(--transition-base); text-align: left !important; }
         .benefit-item:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
-        .benefit-icon { flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
-        .benefit-icon svg { width: 2.5rem; height: 2.5rem; }
+        .benefit-icon { flex-shrink: 0; display: flex; align-items: center; justify-content: center; width: auto !important; margin: 0 !important; }
+        .benefit-icon svg { width: 2.5rem; height: 2.5rem; margin: 0 !important; }
         .benefit-content h4 { color: var(--text-dark); font-size: 1.125rem; margin-bottom: 0.5rem; }
         .benefit-content p { color: var(--text-medium); font-size: 0.9375rem; margin-bottom: 0; }
-        .trust-badges {
-            background: white; padding: 2rem; border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-md); margin-top: 2rem;
-        }
+        .trust-badges { background: white; padding: 2rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-md); margin-top: 2rem; }
         .trust-badges h4 { text-align: center; color: var(--text-dark); margin-bottom: 1.5rem; font-size: 1.125rem; }
         .badges-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; text-align: center; }
         .badge-item { padding: 1rem 0.5rem; border-radius: var(--radius-md); background: var(--bg-light); }
@@ -143,94 +72,37 @@
         .badge-label { font-size: 0.8125rem; font-weight: 600; color: var(--text-dark); }
         .help-link { text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border-color); }
         .help-link p { color: var(--text-medium); margin-bottom: 0.75rem; }
-        .help-link a {
-            color: var(--primary-color); font-weight: 600; display: inline-flex;
-            align-items: center; gap: 0.5rem; transition: all var(--transition-base);
-        }
+        .help-link a { color: var(--primary-color); font-weight: 600; display: inline-flex; align-items: center; gap: 0.5rem; transition: all var(--transition-base); }
         .help-link a:hover { gap: 0.75rem; }
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
         .success-screen { display: none; text-align: center; animation: fadeInUp 0.5s ease-out; }
         .success-screen.active { display: block; }
-        .success-icon {
-            width: 64px; height: 64px; border-radius: 16px;
-            background: rgba(18, 32, 146, 0.1); display: inline-flex;
-            align-items: center; justify-content: center; margin-bottom: 1.5rem;
-        }
+        .success-icon { width: 64px; height: 64px; border-radius: 16px; background: rgba(18, 32, 146, 0.1); display: inline-flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; }
         .success-icon svg { width: 32px; height: 32px; color: var(--primary-color); }
-        .credential-box {
-            background: #f9fafb; border: 1px solid #e5e7eb; border-radius: var(--radius-md);
-            padding: 1.25rem; margin: 1rem 0; text-align: left;
-        }
+        .credential-box { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: var(--radius-md); padding: 1.25rem; margin: 1rem 0; text-align: left; }
         .credential-box .cred-label { font-size: 0.75rem; color: var(--text-medium); margin-bottom: 0.25rem; }
-        .credential-box .cred-row {
-            display: flex; align-items: center; justify-content: space-between;
-            padding: 0.5rem 0; border-bottom: 1px solid #e5e7eb; gap: 0.5rem;
-        }
+        .credential-box .cred-row { display: flex; align-items: center; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid #e5e7eb; gap: 0.5rem; }
         .credential-box .cred-row:last-child { border-bottom: none; }
-        .credential-box .cred-value {
-            font-family: 'Sora', monospace; font-weight: 600; font-size: 0.9375rem;
-            color: var(--text-dark); word-break: break-all; min-width: 0;
-        }
+        .credential-box .cred-value { font-family: 'Sora', monospace; font-weight: 600; font-size: 0.9375rem; color: var(--text-dark); word-break: break-all; min-width: 0; }
         .credential-box .cred-value.phone-value { color: var(--primary-color); font-size: 1.25rem; }
-        .copy-btn {
-            background: none; border: 1px solid #e5e7eb; border-radius: 6px;
-            padding: 4px 10px; font-size: 0.75rem; cursor: pointer;
-            color: var(--text-medium); transition: all 0.2s; flex-shrink: 0; white-space: nowrap;
-        }
+        .copy-btn { background: none; border: 1px solid #e5e7eb; border-radius: 6px; padding: 4px 10px; font-size: 0.75rem; cursor: pointer; color: var(--text-medium); transition: all 0.2s; flex-shrink: 0; white-space: nowrap; }
         .copy-btn:hover { background: #f3f4f6; }
         .copy-btn.copied { background: #ecfdf5; color: #059669; border-color: #a7f3d0; }
-        .warning-box {
-            background: #fffbeb; border: 1px solid #fde68a; border-radius: var(--radius-md);
-            padding: 0.75rem 1rem; margin: 1rem 0; font-size: 0.8125rem; color: #92400e;
-        }
-        .dashboard-btn {
-            display: inline-flex; align-items: center; gap: 0.5rem;
-            background: var(--primary-color); color: white; border: none;
-            padding: 1rem 2rem; font-size: 1.125rem; font-weight: 600;
-            border-radius: var(--radius-md); cursor: pointer;
-            transition: all 0.2s ease; text-decoration: none; margin-top: 0.5rem;
-        }
-        .dashboard-btn:hover {
-            background: #0f1a7a; transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(18, 32, 146, 0.3);
-        }
-        .mobile-nav-overlay {
-            display: none; position: fixed; inset: 0; z-index: 999;
-            background: rgba(0,0,0,0.5); backdrop-filter: blur(4px);
-            -webkit-backdrop-filter: blur(4px);
-        }
+        .warning-box { background: #fffbeb; border: 1px solid #fde68a; border-radius: var(--radius-md); padding: 0.75rem 1rem; margin: 1rem 0; font-size: 0.8125rem; color: #92400e; }
+        .dashboard-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--primary-color); color: white; border: none; padding: 1rem 2rem; font-size: 1.125rem; font-weight: 600; border-radius: var(--radius-md); cursor: pointer; transition: all 0.2s ease; text-decoration: none; margin-top: 0.5rem; }
+        .dashboard-btn:hover { background: #0f1a7a; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(18, 32, 146, 0.3); }
+        .mobile-nav-overlay { display: none; position: fixed; inset: 0; z-index: 999; background: rgba(0,0,0,0.5); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }
         .mobile-nav-overlay.active { display: block; }
-        .mobile-nav-panel {
-            position: fixed; top: 0; right: 0; bottom: 0;
-            width: 280px; max-width: 85vw; background: white; z-index: 1000;
-            transform: translateX(100%); transition: transform 0.3s ease;
-            display: flex; flex-direction: column;
-            box-shadow: -4px 0 20px rgba(0,0,0,0.15);
-        }
+        .mobile-nav-panel { position: fixed; top: 0; right: 0; bottom: 0; width: 280px; max-width: 85vw; background: white; z-index: 1000; transform: translateX(100%); transition: transform 0.3s ease; display: flex; flex-direction: column; box-shadow: -4px 0 20px rgba(0,0,0,0.15); }
         .mobile-nav-panel.active { transform: translateX(0); }
-        .mobile-nav-header {
-            display: flex; align-items: center; justify-content: space-between;
-            padding: 1rem 1.25rem; border-bottom: 1px solid #e5e7eb;
-        }
+        .mobile-nav-header { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.25rem; border-bottom: 1px solid #e5e7eb; }
         .mobile-nav-header img { height: 32px; }
-        .mobile-nav-close {
-            width: 36px; height: 36px; border: none; background: #f3f4f6;
-            border-radius: 8px; font-size: 1.25rem; cursor: pointer;
-            display: flex; align-items: center; justify-content: center; color: #374151;
-        }
+        .mobile-nav-close { width: 36px; height: 36px; border: none; background: #f3f4f6; border-radius: 8px; font-size: 1.25rem; cursor: pointer; display: flex; align-items: center; justify-content: center; color: #374151; }
         .mobile-nav-links { flex: 1; padding: 1rem 0; overflow-y: auto; }
-        .mobile-nav-links a {
-            display: block; padding: 0.875rem 1.25rem; color: var(--text-dark);
-            font-size: 1rem; font-weight: 500; text-decoration: none; transition: background 0.15s;
-        }
+        .mobile-nav-links a { display: block; padding: 0.875rem 1.25rem; color: var(--text-dark); font-size: 1rem; font-weight: 500; text-decoration: none; transition: background 0.15s; }
         .mobile-nav-links a:hover { background: #f9fafb; }
         .mobile-nav-cta { padding: 1rem 1.25rem; border-top: 1px solid #e5e7eb; }
-        .mobile-nav-cta a {
-            display: block; text-align: center; padding: 0.875rem;
-            background: var(--primary-color); color: white; border-radius: 8px;
-            font-weight: 600; text-decoration: none; font-size: 0.9375rem;
-        }
-        /* Footer override */
+        .mobile-nav-cta a { display: block; text-align: center; padding: 0.875rem; background: var(--primary-color); color: white; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 0.9375rem; }
         .footer { background: #122092 !important; color: #fff !important; }
         .footer a { color: rgba(255,255,255,0.85) !important; }
         .footer a:hover { color: #fff !important; }
@@ -238,10 +110,7 @@
         .footer-tagline { color: rgba(255,255,255,0.7) !important; }
         .footer-bottom { border-top-color: rgba(255,255,255,0.15) !important; color: rgba(255,255,255,0.6) !important; }
 
-        @media (max-width: 968px) {
-            .start-grid { grid-template-columns: 1fr; gap: 2rem; }
-            .benefits-section { order: -1; }
-        }
+        @media (max-width: 968px) { .start-grid { grid-template-columns: 1fr; gap: 2rem; } .benefits-section { order: -1; } }
         @media (max-width: 768px) {
             .start-hero { padding: 6rem 0 2rem; margin-top: 0; }
             .start-header { margin-bottom: 1.5rem; }
@@ -293,503 +162,84 @@
             .badge-icon { font-size: 1.125rem; }
             .badge-label { font-size: 0.625rem; }
         }
-        @supports (-webkit-touch-callout: none) {
-            .form-group input, .form-group select { font-size: max(1rem, 16px); }
-        }
+        @supports (-webkit-touch-callout: none) { .form-group input, .form-group select { font-size: max(1rem, 16px); } }
     </style>
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9WVK3WD"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <div class="logo">
-                    <img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird" class="logo-image">
-                </div>
-                <ul class="nav-links">
-                    <li><a href="index.html#features">Features</a></li>
-                    <li><a href="index.html#how-it-works">How It Works</a></li>
-                    <li><a href="index.html#pricing">Pricing</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="index.html#faq">FAQ</a></li>
-                </ul>
-                <div class="nav-actions">
-                    <a href="tel:+15055945806" class="btn-ghost">Call Us</a>
-                    <a href="index.html" class="btn-secondary">&larr; Back to Home</a>
-                </div>
-                <button class="mobile-menu-toggle" aria-label="Toggle menu" onclick="openMobileNav()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Mobile Nav Drawer -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9WVK3WD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <nav class="navbar"><div class="container"><div class="nav-content"><div class="logo"><img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird" class="logo-image"></div><ul class="nav-links"><li><a href="index.html#features">Features</a></li><li><a href="index.html#how-it-works">How It Works</a></li><li><a href="index.html#pricing">Pricing</a></li><li><a href="blog.html">Blog</a></li><li><a href="index.html#faq">FAQ</a></li></ul><div class="nav-actions"><a href="tel:+15055945806" class="btn-ghost">Call Us</a><a href="index.html" class="btn-secondary">&larr; Back to Home</a></div><button class="mobile-menu-toggle" aria-label="Toggle menu" onclick="openMobileNav()"><span></span><span></span><span></span></button></div></div></nav>
     <div class="mobile-nav-overlay" id="mobileNavOverlay" onclick="closeMobileNav()"></div>
-    <div class="mobile-nav-panel" id="mobileNavPanel">
-        <div class="mobile-nav-header">
-            <img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird">
-            <button class="mobile-nav-close" onclick="closeMobileNav()">&times;</button>
+    <div class="mobile-nav-panel" id="mobileNavPanel"><div class="mobile-nav-header"><img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird"><button class="mobile-nav-close" onclick="closeMobileNav()">&times;</button></div><div class="mobile-nav-links"><a href="index.html#features" onclick="closeMobileNav()">Features</a><a href="index.html#how-it-works" onclick="closeMobileNav()">How It Works</a><a href="index.html#pricing" onclick="closeMobileNav()">Pricing</a><a href="blog.html" onclick="closeMobileNav()">Blog</a><a href="index.html#faq" onclick="closeMobileNav()">FAQ</a><a href="tel:+15055945806" onclick="closeMobileNav()">Call Us: (505) 594-5806</a></div><div class="mobile-nav-cta"><a href="index.html">&larr; Back to Home</a></div></div>
+    <section class="start-hero"><div class="container"><div class="start-content">
+        <div class="start-header">
+            <div class="start-badge"><span class="badge-dot"></span><span>7-Day Free Trial &bull; No Credit Card Required</span></div>
+            <h1 class="start-title">Start Your Free Trial</h1>
+            <p class="start-subtitle">Your AI receptionist will be ready to answer calls in under 10 minutes. Fill out the form below to get started.</p>
         </div>
-        <div class="mobile-nav-links">
-            <a href="index.html#features" onclick="closeMobileNav()">Features</a>
-            <a href="index.html#how-it-works" onclick="closeMobileNav()">How It Works</a>
-            <a href="index.html#pricing" onclick="closeMobileNav()">Pricing</a>
-            <a href="blog.html" onclick="closeMobileNav()">Blog</a>
-            <a href="index.html#faq" onclick="closeMobileNav()">FAQ</a>
-            <a href="tel:+15055945806" onclick="closeMobileNav()">Call Us: (505) 594-5806</a>
-        </div>
-        <div class="mobile-nav-cta">
-            <a href="index.html">&larr; Back to Home</a>
-        </div>
-    </div>
-
-    <!-- Start Hero Section -->
-    <section class="start-hero">
-        <div class="container">
-            <div class="start-content">
-                <div class="start-header">
-                    <div class="start-badge">
-                        <span class="badge-dot"></span>
-                        <span>7-Day Free Trial &bull; No Credit Card Required</span>
-                    </div>
-                    <h1 class="start-title">Start Your Free Trial</h1>
-                    <p class="start-subtitle">Your AI receptionist will be ready to answer calls in under 10 minutes. Fill out the form below to get started.</p>
+        <div class="start-grid">
+            <div class="form-container">
+                <div id="formSection">
+                    <div class="form-header"><h2>Create Your Account</h2><p>Setup takes less than 2 minutes</p></div>
+                    <div id="errorBanner" class="error-banner"><strong>Oops!</strong> <span id="errorMessage"></span></div>
+                    <form id="signupForm" class="signup-form">
+                        <div class="form-group"><label for="firstName">First Name <span class="required">*</span></label><input type="text" id="firstName" name="firstName" placeholder="John" required></div>
+                        <div class="form-group"><label for="email">Email <span class="required">*</span></label><input type="email" id="email" name="email" placeholder="john@example.com" required></div>
+                        <div class="form-group"><label for="phone">Phone <span class="required">*</span></label><input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required><span class="help-text">We'll send SMS summaries here</span></div>
+                        <div class="form-group"><label for="businessName">Business Name <span class="required">*</span></label><input type="text" id="businessName" name="businessName" placeholder="Your Business" required></div>
+                        <div class="form-group"><label for="websiteUrl">Website URL <span style="color: var(--text-medium); font-weight: normal;">(optional)</span></label><input type="text" id="websiteUrl" name="websiteUrl" placeholder="yourbusiness.com"><span class="help-text">We'll train your AI on your website content</span></div>
+                        <div class="form-group"><label for="industry">Industry <span class="required">*</span></label><select id="industry" name="industry" required><option value="">Please select...</option><option value="home_services">Home Services (plumbing, HVAC, contractors)</option><option value="medical_dental">Medical / Dental</option><option value="legal">Legal Services</option><option value="professional_services">Professional Services (accounting, consulting)</option><option value="real_estate">Real Estate</option><option value="financial">Financial Services</option><option value="restaurants">Restaurants / Food Service</option><option value="salon_spa">Salon / Spa (hair, nails, skincare)</option><option value="fitness">Fitness / Gym / Wellness</option><option value="automotive">Automotive (repair, dealerships)</option><option value="retail">Retail / E-commerce</option></select></div>
+                        <div class="form-row"><div class="form-group"><label for="businessCity">City <span class="required">*</span></label><input type="text" id="businessCity" name="businessCity" placeholder="Atlanta" required></div><div class="form-group"><label for="businessState">State <span class="required">*</span></label><input type="text" id="businessState" name="businessState" placeholder="GA" maxlength="2" required></div></div>
+                        <div class="form-group"><label for="referralSource">How did you hear about us? <span class="required">*</span></label><select id="referralSource" name="referralSource" required><option value="">Please select...</option><option value="Google Search">Google Search</option><option value="AI Recommendation">AI Recommendation (ChatGPT, Claude, etc.)</option><option value="Social Media">Social Media</option><option value="Friend/Colleague">Friend/Colleague</option><option value="Advertisement">Advertisement</option><option value="Blog/Article">Blog/Article</option><option value="Other">Other</option></select><div id="otherReferralGroup"><input type="text" id="otherReferral" name="otherReferral" placeholder="Please specify..."></div></div>
+                        <button type="submit" class="submit-btn" id="submitBtn"><span id="btnText">Start Free Trial &rarr;</span><span id="btnSpinner" class="spinner" style="display: none;"></span></button>
+                        <p style="font-size: 0.8125rem; color: var(--text-medium); text-align: center; margin-top: 0.5rem;">By signing up, you agree to our <a href="terms-and-conditions.html" style="color: var(--primary-color);">Terms</a> and <a href="privacy-policy.html" style="color: var(--primary-color);">Privacy Policy</a></p>
+                    </form>
+                    <div class="help-link"><p>Need help getting started?</p><a href="tel:+15055945806"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1.25rem;height:1.25rem;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>Call us at (505) 594-5806 &rarr;</a></div>
                 </div>
-
-                <div class="start-grid">
-                    <!-- Form Column -->
-                    <div class="form-container">
-                        <div id="formSection">
-                            <div class="form-header">
-                                <h2>Create Your Account</h2>
-                                <p>Setup takes less than 2 minutes</p>
-                            </div>
-
-                            <div id="errorBanner" class="error-banner">
-                                <strong>Oops!</strong> <span id="errorMessage"></span>
-                            </div>
-
-                            <form id="signupForm" class="signup-form">
-                                <div class="form-group">
-                                    <label for="firstName">First Name <span class="required">*</span></label>
-                                    <input type="text" id="firstName" name="firstName" placeholder="John" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email <span class="required">*</span></label>
-                                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="phone">Phone <span class="required">*</span></label>
-                                    <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
-                                    <span class="help-text">We'll send SMS summaries here</span>
-                                </div>
-                                <div class="form-group">
-                                    <label for="businessName">Business Name <span class="required">*</span></label>
-                                    <input type="text" id="businessName" name="businessName" placeholder="Your Business" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="websiteUrl">Website URL <span style="color: var(--text-medium); font-weight: normal;">(optional)</span></label>
-                                    <input type="text" id="websiteUrl" name="websiteUrl" placeholder="yourbusiness.com">
-                                    <span class="help-text">We'll train your AI on your website content</span>
-                                </div>
-                                <div class="form-group">
-                                    <label for="industry">Industry <span class="required">*</span></label>
-                                    <select id="industry" name="industry" required>
-                                        <option value="">Please select...</option>
-                                        <option value="home_services">Home Services (plumbing, HVAC, contractors)</option>
-                                        <option value="medical_dental">Medical / Dental</option>
-                                        <option value="legal">Legal Services</option>
-                                        <option value="professional_services">Professional Services (accounting, consulting)</option>
-                                        <option value="real_estate">Real Estate</option>
-                                        <option value="financial">Financial Services</option>
-                                        <option value="restaurants">Restaurants / Food Service</option>
-                                        <option value="salon_spa">Salon / Spa (hair, nails, skincare)</option>
-                                        <option value="fitness">Fitness / Gym / Wellness</option>
-                                        <option value="automotive">Automotive (repair, dealerships)</option>
-                                        <option value="retail">Retail / E-commerce</option>
-                                    </select>
-                                </div>
-                                <div class="form-row">
-                                    <div class="form-group">
-                                        <label for="businessCity">City <span class="required">*</span></label>
-                                        <input type="text" id="businessCity" name="businessCity" placeholder="Atlanta" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="businessState">State <span class="required">*</span></label>
-                                        <input type="text" id="businessState" name="businessState" placeholder="GA" maxlength="2" required>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="referralSource">How did you hear about us? <span class="required">*</span></label>
-                                    <select id="referralSource" name="referralSource" required>
-                                        <option value="">Please select...</option>
-                                        <option value="Google Search">Google Search</option>
-                                        <option value="AI Recommendation">AI Recommendation (ChatGPT, Claude, etc.)</option>
-                                        <option value="Social Media">Social Media</option>
-                                        <option value="Friend/Colleague">Friend/Colleague</option>
-                                        <option value="Advertisement">Advertisement</option>
-                                        <option value="Blog/Article">Blog/Article</option>
-                                        <option value="Other">Other</option>
-                                    </select>
-                                    <div id="otherReferralGroup">
-                                        <input type="text" id="otherReferral" name="otherReferral" placeholder="Please specify...">
-                                    </div>
-                                </div>
-                                <button type="submit" class="submit-btn" id="submitBtn">
-                                    <span id="btnText">Start Free Trial &rarr;</span>
-                                    <span id="btnSpinner" class="spinner" style="display: none;"></span>
-                                </button>
-                                <p style="font-size: 0.8125rem; color: var(--text-medium); text-align: center; margin-top: 0.5rem;">
-                                    By signing up, you agree to our <a href="terms-and-conditions.html" style="color: var(--primary-color);">Terms</a> and <a href="privacy-policy.html" style="color: var(--primary-color);">Privacy Policy</a>
-                                </p>
-                            </form>
-
-                            <div class="help-link">
-                                <p>Need help getting started?</p>
-                                <a href="tel:+15055945806">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1.25rem;height:1.25rem;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                                    Call us at (505) 594-5806 &rarr;
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- SUCCESS SCREEN -->
-                        <div id="successSection" class="success-screen">
-                            <div class="success-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                            </div>
-                            <h2 style="font-size: 1.75rem; color: var(--text-dark); margin-bottom: 0.5rem;">You're All Set!</h2>
-                            <p style="color: var(--text-medium); margin-bottom: 1.5rem;">Your AI receptionist is ready to take calls.</p>
-                            <div id="successPhone" class="credential-box" style="background: rgba(18,32,146,0.04); border-color: rgba(18,32,146,0.15);">
-                                <div class="cred-label">Your AI Phone Number</div>
-                                <div class="cred-row" style="border-bottom: none;">
-                                    <span class="cred-value phone-value" id="successPhoneNumber"></span>
-                                    <button class="copy-btn" onclick="copyToClipboard(this, 'phone')">Copy</button>
-                                </div>
-                            </div>
-                            <div class="credential-box">
-                                <div class="cred-label" style="margin-bottom: 0.75rem; font-weight: 600;">Your Login Credentials</div>
-                                <div class="cred-row">
-                                    <div style="min-width: 0; flex: 1;">
-                                        <div class="cred-label">Email</div>
-                                        <span class="cred-value" id="successEmail"></span>
-                                    </div>
-                                    <button class="copy-btn" onclick="copyToClipboard(this, 'email')">Copy</button>
-                                </div>
-                                <div class="cred-row">
-                                    <div style="min-width: 0; flex: 1;">
-                                        <div class="cred-label">Temporary Password</div>
-                                        <span class="cred-value" id="successPassword"></span>
-                                    </div>
-                                    <button class="copy-btn" onclick="copyToClipboard(this, 'password')">Copy</button>
-                                </div>
-                            </div>
-                            <div class="warning-box">
-                                Save your password now &mdash; you won't see it again. Check your email for a backup link.
-                            </div>
-                            <a href="https://app.callbirdai.com/client/login?signup=success" class="dashboard-btn">
-                                Log In to Dashboard &rarr;
-                            </a>
-                            <p style="font-size: 0.8125rem; color: var(--text-medium); margin-top: 1rem;">
-                                Your 7-day free trial has started. No credit card required.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Benefits Column -->
-                    <div class="benefits-section">
-                        <div class="benefits-header">
-                            <h3>What You'll Get:</h3>
-                        </div>
-                        <div class="benefits-list">
-                            <div class="benefit-item">
-                                <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></div>
-                                <div class="benefit-content">
-                                    <h4>10-Minute Setup</h4>
-                                    <p>Your AI receptionist is ready to answer calls in under 10 minutes. No technical skills required.</p>
-                                </div>
-                            </div>
-                            <div class="benefit-item">
-                                <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div>
-                                <div class="benefit-content">
-                                    <h4>Dedicated Phone Number</h4>
-                                    <p>Get your own CallBird number, or forward your existing business line. Your choice.</p>
-                                </div>
-                            </div>
-                            <div class="benefit-item">
-                                <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg></div>
-                                <div class="benefit-content">
-                                    <h4>Custom AI Training</h4>
-                                    <p>We train your AI on your business, services, and FAQs. It knows your business inside and out.</p>
-                                </div>
-                            </div>
-                            <div class="benefit-item">
-                                <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg></div>
-                                <div class="benefit-content">
-                                    <h4>Mobile App Access</h4>
-                                    <p>Manage calls, view transcripts, and listen to recordings from your phone.</p>
-                                </div>
-                            </div>
-                            <div class="benefit-item">
-                                <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></div>
-                                <div class="benefit-content">
-                                    <h4>Instant Text Summaries</h4>
-                                    <p>Get a text summary of every call the moment it ends. Know who called and what they need.</p>
-                                </div>
-                            </div>
-                            <div class="benefit-item">
-                                <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div>
-                                <div class="benefit-content">
-                                    <h4>Calendar Integration</h4>
-                                    <p>Automatically books appointments in your Google Calendar, Outlook, or our built-in system.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="trust-badges">
-                            <h4>Trusted by 200+ Businesses</h4>
-                            <div class="badges-grid">
-                                <div class="badge-item"><div class="badge-icon">&#10003;</div><div class="badge-label">No Credit Card</div></div>
-                                <div class="badge-item"><div class="badge-icon">&#10003;</div><div class="badge-label">7-Day Trial</div></div>
-                                <div class="badge-item"><div class="badge-icon">&#10003;</div><div class="badge-label">Cancel Anytime</div></div>
-                            </div>
-                        </div>
-                    </div>
+                <div id="successSection" class="success-screen">
+                    <div class="success-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+                    <h2 style="font-size: 1.75rem; color: var(--text-dark); margin-bottom: 0.5rem;">You're All Set!</h2>
+                    <p style="color: var(--text-medium); margin-bottom: 1.5rem;">Your AI receptionist is ready to take calls.</p>
+                    <div id="successPhone" class="credential-box" style="background: rgba(18,32,146,0.04); border-color: rgba(18,32,146,0.15);"><div class="cred-label">Your AI Phone Number</div><div class="cred-row" style="border-bottom: none;"><span class="cred-value phone-value" id="successPhoneNumber"></span><button class="copy-btn" onclick="copyToClipboard(this, 'phone')">Copy</button></div></div>
+                    <div class="credential-box"><div class="cred-label" style="margin-bottom: 0.75rem; font-weight: 600;">Your Login Credentials</div><div class="cred-row"><div style="min-width: 0; flex: 1;"><div class="cred-label">Email</div><span class="cred-value" id="successEmail"></span></div><button class="copy-btn" onclick="copyToClipboard(this, 'email')">Copy</button></div><div class="cred-row"><div style="min-width: 0; flex: 1;"><div class="cred-label">Temporary Password</div><span class="cred-value" id="successPassword"></span></div><button class="copy-btn" onclick="copyToClipboard(this, 'password')">Copy</button></div></div>
+                    <div class="warning-box">Save your password now &mdash; you won't see it again. Check your email for a backup link.</div>
+                    <a href="https://app.callbirdai.com/client/login?signup=success" class="dashboard-btn">Log In to Dashboard &rarr;</a>
+                    <p style="font-size: 0.8125rem; color: var(--text-medium); margin-top: 1rem;">Your 7-day free trial has started. No credit card required.</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <div class="footer-logo"><img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird" class="logo-image"></div>
-                    <p class="footer-tagline">AI-powered call answering, appointment booking & instant summaries for small businesses.</p>
-                    <div class="footer-contact">
-                        <p>Atlanta, GA</p>
-                        <p><a href="tel:+15055945806">(505) 594-5806</a></p>
-                        <p><a href="mailto:support@callbirdai.com">support@callbirdai.com</a></p>
-                    </div>
+            <div class="benefits-section">
+                <div class="benefits-header"><h3>What You'll Get:</h3></div>
+                <div class="benefits-list">
+                    <div class="benefit-item"><div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></div><div class="benefit-content"><h4>10-Minute Setup</h4><p>Your AI receptionist is ready to answer calls in under 10 minutes. No technical skills required.</p></div></div>
+                    <div class="benefit-item"><div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div><div class="benefit-content"><h4>Dedicated Phone Number</h4><p>Get your own CallBird number, or forward your existing business line. Your choice.</p></div></div>
+                    <div class="benefit-item"><div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg></div><div class="benefit-content"><h4>Custom AI Training</h4><p>We train your AI on your business, services, and FAQs. It knows your business inside and out.</p></div></div>
+                    <div class="benefit-item"><div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg></div><div class="benefit-content"><h4>Mobile App Access</h4><p>Manage calls, view transcripts, and listen to recordings from your phone.</p></div></div>
+                    <div class="benefit-item"><div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></div><div class="benefit-content"><h4>Instant Text Summaries</h4><p>Get a text summary of every call the moment it ends. Know who called and what they need.</p></div></div>
+                    <div class="benefit-item"><div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div><div class="benefit-content"><h4>Calendar Integration</h4><p>Automatically books appointments in your Google Calendar, Outlook, or our built-in system.</p></div></div>
                 </div>
-                <div class="footer-col"><h4>Product</h4><ul class="footer-links"><li><a href="index.html#features">Features</a></li><li><a href="index.html#how-it-works">How It Works</a></li><li><a href="index.html#pricing">Pricing</a></li><li><a href="index.html#faq">FAQ</a></li></ul></div>
-                <div class="footer-col"><h4>Industries</h4><ul class="footer-links"><li><a href="home-services-ai-receptionist.html">Home Services</a></li><li><a href="dental-ai-receptionist.html">Medical & Dental</a></li><li><a href="restaurants-ai-receptionist.html">Restaurants</a></li><li><a href="legal-ai-receptionist.html">Legal</a></li><li><a href="professional-services-ai-receptionist.html">Professional Services</a></li><li><a href="retail-ai-receptionist.html">Retail</a></li><li><a href="veterinary-ai-receptionist.html">Veterinary</a></li></ul></div>
-                <div class="footer-col"><h4>Company</h4><ul class="footer-links"><li><a href="mailto:support@callbirdai.com">Contact</a></li><li><a href="blog.html">Blog</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-and-conditions.html">Terms & Conditions</a></li></ul></div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 CallBird AI. All Rights Reserved.</p>
-                <p>A2P 10DLC Compliant &bull; SOC 2 Type II Certified</p>
+                <div class="trust-badges"><h4>Trusted by 200+ Businesses</h4><div class="badges-grid"><div class="badge-item"><div class="badge-icon">&#10003;</div><div class="badge-label">No Credit Card</div></div><div class="badge-item"><div class="badge-icon">&#10003;</div><div class="badge-label">7-Day Trial</div></div><div class="badge-item"><div class="badge-icon">&#10003;</div><div class="badge-label">Cancel Anytime</div></div></div></div>
             </div>
         </div>
-    </footer>
-
+    </div></div></section>
+    <footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-col"><div class="footer-logo"><img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird" class="logo-image"></div><p class="footer-tagline">AI-powered call answering, appointment booking & instant summaries for small businesses.</p><div class="footer-contact"><p>Atlanta, GA</p><p><a href="tel:+15055945806">(505) 594-5806</a></p><p><a href="mailto:support@callbirdai.com">support@callbirdai.com</a></p></div></div><div class="footer-col"><h4>Product</h4><ul class="footer-links"><li><a href="index.html#features">Features</a></li><li><a href="index.html#how-it-works">How It Works</a></li><li><a href="index.html#pricing">Pricing</a></li><li><a href="index.html#faq">FAQ</a></li></ul></div><div class="footer-col"><h4>Industries</h4><ul class="footer-links"><li><a href="home-services-ai-receptionist.html">Home Services</a></li><li><a href="dental-ai-receptionist.html">Medical & Dental</a></li><li><a href="restaurants-ai-receptionist.html">Restaurants</a></li><li><a href="legal-ai-receptionist.html">Legal</a></li><li><a href="professional-services-ai-receptionist.html">Professional Services</a></li><li><a href="retail-ai-receptionist.html">Retail</a></li><li><a href="veterinary-ai-receptionist.html">Veterinary</a></li></ul></div><div class="footer-col"><h4>Company</h4><ul class="footer-links"><li><a href="mailto:support@callbirdai.com">Contact</a></li><li><a href="blog.html">Blog</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-and-conditions.html">Terms & Conditions</a></li></ul></div></div><div class="footer-bottom"><p>&copy; 2026 CallBird AI. All Rights Reserved.</p><p>A2P 10DLC Compliant &bull; SOC 2 Type II Certified</p></div></div></footer>
     <script>
-        // Mobile nav
-        function openMobileNav() {
-            document.getElementById('mobileNavOverlay').classList.add('active');
-            document.getElementById('mobileNavPanel').classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-        function closeMobileNav() {
-            document.getElementById('mobileNavOverlay').classList.remove('active');
-            document.getElementById('mobileNavPanel').classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
-        var API_URL = 'https://urchin-app-bqb4i.ondigitalocean.app/api/client/signup';
-
-        function generateTempPassword() {
-            var chars = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnpqrstuvwxyz23456789';
-            var password = '';
-            for (var i = 0; i < 8; i++) {
-                password += chars.charAt(Math.floor(Math.random() * chars.length));
-            }
-            return password;
-        }
-
-        function formatPhoneDisplay(phone) {
-            if (!phone) return '';
-            var digits = phone.replace(/\D/g, '');
-            var ten = digits.length === 11 && digits.charAt(0) === '1' ? digits.slice(1) : digits;
-            if (ten.length === 10) return '(' + ten.slice(0,3) + ') ' + ten.slice(3,6) + '-' + ten.slice(6);
-            return phone;
-        }
-
-        var _credentials = { email: '', password: '', phone: '' };
-
-        function copyToClipboard(btn, field) {
-            var text = _credentials[field] || '';
-            navigator.clipboard.writeText(text).then(function() {
-                btn.textContent = 'Copied!';
-                btn.classList.add('copied');
-                setTimeout(function() { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 2000);
-            });
-        }
-
-        var form = document.getElementById('signupForm');
-        var submitBtn = document.getElementById('submitBtn');
-        var btnText = document.getElementById('btnText');
-        var btnSpinner = document.getElementById('btnSpinner');
-        var errorBanner = document.getElementById('errorBanner');
-        var errorMessage = document.getElementById('errorMessage');
-        
-        var phoneInput = document.getElementById('phone');
-        phoneInput.addEventListener('input', function(e) {
-            var value = e.target.value.replace(/\D/g, '');
-            if (value.length > 0) {
-                if (value.length <= 3) value = '(' + value;
-                else if (value.length <= 6) value = '(' + value.slice(0,3) + ') ' + value.slice(3);
-                else value = '(' + value.slice(0,3) + ') ' + value.slice(3,6) + '-' + value.slice(6,10);
-            }
-            e.target.value = value;
-        });
-        
-        document.getElementById('businessState').addEventListener('input', function(e) {
-            e.target.value = e.target.value.toUpperCase();
-        });
-        
-        var referralSelect = document.getElementById('referralSource');
-        var otherReferralGroup = document.getElementById('otherReferralGroup');
-        var otherReferralInput = document.getElementById('otherReferral');
-        
-        referralSelect.addEventListener('change', function(e) {
-            if (e.target.value === 'Other') {
-                otherReferralGroup.classList.add('active');
-                otherReferralInput.setAttribute('required', 'required');
-            } else {
-                otherReferralGroup.classList.remove('active');
-                otherReferralInput.removeAttribute('required');
-                otherReferralInput.value = '';
-            }
-        });
-        
-        function normalizeWebsiteUrl(url) {
-            if (!url || url.trim() === '') return '';
-            url = url.trim().toLowerCase();
-            url = url.replace(/^(https?:\/\/)?/, '');
-            url = url.replace(/^www\./, '');
-            return 'https://' + url;
-        }
-        
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            errorBanner.classList.remove('active');
-            
-            var websiteUrl = document.getElementById('websiteUrl').value.trim();
-            if (websiteUrl) websiteUrl = normalizeWebsiteUrl(websiteUrl);
-            
-            var referralSource = document.getElementById('referralSource').value;
-            if (referralSource === 'Other' && otherReferralInput.value.trim()) {
-                referralSource = 'Other: ' + otherReferralInput.value.trim();
-            }
-            
-            var tempPassword = generateTempPassword();
-
-            var formData = {
-                agencyId: '00000000-0000-0000-0000-000000000001',
-                firstName: document.getElementById('firstName').value.trim(),
-                email: document.getElementById('email').value.trim().toLowerCase(),
-                phone: document.getElementById('phone').value.trim(),
-                businessName: document.getElementById('businessName').value.trim(),
-                websiteUrl: websiteUrl,
-                industry: document.getElementById('industry').value,
-                businessCity: document.getElementById('businessCity').value.trim(),
-                businessState: document.getElementById('businessState').value.trim().toUpperCase(),
-                referralSource: referralSource,
-                password: tempPassword
-            };
-            
-            if (!formData.firstName || !formData.email || !formData.phone || 
-                !formData.businessName || !formData.industry || 
-                !formData.businessCity || !formData.businessState || !formData.referralSource) {
-                showError('Please fill in all required fields.');
-                return;
-            }
-            
-            if (document.getElementById('referralSource').value === 'Other' && !otherReferralInput.value.trim()) {
-                showError('Please specify how you heard about us.');
-                return;
-            }
-            
-            if (formData.email.indexOf('@') === -1 || formData.email.indexOf('.') === -1) {
-                showError('Please enter a valid email address.');
-                return;
-            }
-            
-            if (formData.phone.replace(/\D/g, '').length < 10) {
-                showError('Please enter a valid phone number.');
-                return;
-            }
-            
-            setLoading(true);
-            
-            window.dataLayer = window.dataLayer || [];
-            window.dataLayer.push({ 'event': 'signup_form_submit', 'industry': formData.industry, 'referral_source': formData.referralSource });
-            
-            fetch(API_URL, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData)
-            })
-            .then(function(response) {
-                return response.json().then(function(data) {
-                    if (!response.ok) throw new Error(data.message || data.error || 'Something went wrong');
-                    return data;
-                });
-            })
-            .then(function(data) {
-                console.log('Signup successful:', data);
-                
-                window.dataLayer.push({
-                    'event': 'signup_success',
-                    'client_id': data.client && data.client.id,
-                    'phone_number': data.client && data.client.phone_number
-                });
-                
-                _credentials.email = formData.email;
-                _credentials.password = tempPassword;
-                _credentials.phone = (data.client && data.client.phone_number) || '';
-
-                document.getElementById('successEmail').textContent = formData.email;
-                document.getElementById('successPassword').textContent = tempPassword;
-                document.getElementById('successPhoneNumber').textContent = formatPhoneDisplay(_credentials.phone);
-
-                document.getElementById('formSection').style.display = 'none';
-                document.getElementById('successSection').classList.add('active');
-                document.querySelector('.form-container').scrollIntoView({ behavior: 'smooth', block: 'start' });
-            })
-            .catch(function(error) {
-                console.error('Signup error:', error);
-                showError(error.message || 'Something went wrong. Please try again.');
-                window.dataLayer.push({ 'event': 'signup_error', 'error_message': error.message });
-            })
-            .finally(function() {
-                setLoading(false);
-            });
-        });
-        
-        function setLoading(loading) {
-            submitBtn.disabled = loading;
-            btnText.style.display = loading ? 'none' : 'inline';
-            btnSpinner.style.display = loading ? 'inline-block' : 'none';
-        }
-        
-        function showError(message) {
-            errorMessage.textContent = message;
-            errorBanner.classList.add('active');
-            errorBanner.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-        
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({ 'event': 'signup_page_view', 'page_type': 'signup' });
+        function openMobileNav(){document.getElementById('mobileNavOverlay').classList.add('active');document.getElementById('mobileNavPanel').classList.add('active');document.body.style.overflow='hidden';}
+        function closeMobileNav(){document.getElementById('mobileNavOverlay').classList.remove('active');document.getElementById('mobileNavPanel').classList.remove('active');document.body.style.overflow='';}
+        var API_URL='https://urchin-app-bqb4i.ondigitalocean.app/api/client/signup';
+        function generateTempPassword(){var c='ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnpqrstuvwxyz23456789',p='';for(var i=0;i<8;i++)p+=c.charAt(Math.floor(Math.random()*c.length));return p;}
+        function formatPhoneDisplay(ph){if(!ph)return'';var d=ph.replace(/\D/g,'');var t=d.length===11&&d.charAt(0)==='1'?d.slice(1):d;if(t.length===10)return'('+t.slice(0,3)+') '+t.slice(3,6)+'-'+t.slice(6);return ph;}
+        var _credentials={email:'',password:'',phone:''};
+        function copyToClipboard(btn,field){var t=_credentials[field]||'';navigator.clipboard.writeText(t).then(function(){btn.textContent='Copied!';btn.classList.add('copied');setTimeout(function(){btn.textContent='Copy';btn.classList.remove('copied');},2000);});}
+        var form=document.getElementById('signupForm'),submitBtn=document.getElementById('submitBtn'),btnText=document.getElementById('btnText'),btnSpinner=document.getElementById('btnSpinner'),errorBanner=document.getElementById('errorBanner'),errorMessage=document.getElementById('errorMessage');
+        var phoneInput=document.getElementById('phone');
+        phoneInput.addEventListener('input',function(e){var v=e.target.value.replace(/\D/g,'');if(v.length>0){if(v.length<=3)v='('+v;else if(v.length<=6)v='('+v.slice(0,3)+') '+v.slice(3);else v='('+v.slice(0,3)+') '+v.slice(3,6)+'-'+v.slice(6,10);}e.target.value=v;});
+        document.getElementById('businessState').addEventListener('input',function(e){e.target.value=e.target.value.toUpperCase();});
+        var referralSelect=document.getElementById('referralSource'),otherReferralGroup=document.getElementById('otherReferralGroup'),otherReferralInput=document.getElementById('otherReferral');
+        referralSelect.addEventListener('change',function(e){if(e.target.value==='Other'){otherReferralGroup.classList.add('active');otherReferralInput.setAttribute('required','required');}else{otherReferralGroup.classList.remove('active');otherReferralInput.removeAttribute('required');otherReferralInput.value='';}});
+        function normalizeWebsiteUrl(url){if(!url||url.trim()==='')return'';url=url.trim().toLowerCase();url=url.replace(/^(https?:\/\/)?/,'');url=url.replace(/^www\./,'');return'https://'+url;}
+        form.addEventListener('submit',function(e){e.preventDefault();errorBanner.classList.remove('active');var websiteUrl=document.getElementById('websiteUrl').value.trim();if(websiteUrl)websiteUrl=normalizeWebsiteUrl(websiteUrl);var referralSource=document.getElementById('referralSource').value;if(referralSource==='Other'&&otherReferralInput.value.trim())referralSource='Other: '+otherReferralInput.value.trim();var tempPassword=generateTempPassword();var formData={agencyId:'00000000-0000-0000-0000-000000000001',firstName:document.getElementById('firstName').value.trim(),email:document.getElementById('email').value.trim().toLowerCase(),phone:document.getElementById('phone').value.trim(),businessName:document.getElementById('businessName').value.trim(),websiteUrl:websiteUrl,industry:document.getElementById('industry').value,businessCity:document.getElementById('businessCity').value.trim(),businessState:document.getElementById('businessState').value.trim().toUpperCase(),referralSource:referralSource,password:tempPassword};if(!formData.firstName||!formData.email||!formData.phone||!formData.businessName||!formData.industry||!formData.businessCity||!formData.businessState||!formData.referralSource){showError('Please fill in all required fields.');return;}if(document.getElementById('referralSource').value==='Other'&&!otherReferralInput.value.trim()){showError('Please specify how you heard about us.');return;}if(formData.email.indexOf('@')===-1||formData.email.indexOf('.')===-1){showError('Please enter a valid email address.');return;}if(formData.phone.replace(/\D/g,'').length<10){showError('Please enter a valid phone number.');return;}setLoading(true);window.dataLayer=window.dataLayer||[];window.dataLayer.push({'event':'signup_form_submit','industry':formData.industry,'referral_source':formData.referralSource});fetch(API_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(formData)}).then(function(response){return response.json().then(function(data){if(!response.ok)throw new Error(data.message||data.error||'Something went wrong');return data;});}).then(function(data){console.log('Signup successful:',data);window.dataLayer.push({'event':'signup_success','client_id':data.client&&data.client.id,'phone_number':data.client&&data.client.phone_number});_credentials.email=formData.email;_credentials.password=tempPassword;_credentials.phone=(data.client&&data.client.phone_number)||'';document.getElementById('successEmail').textContent=formData.email;document.getElementById('successPassword').textContent=tempPassword;document.getElementById('successPhoneNumber').textContent=formatPhoneDisplay(_credentials.phone);document.getElementById('formSection').style.display='none';document.getElementById('successSection').classList.add('active');document.querySelector('.form-container').scrollIntoView({behavior:'smooth',block:'start'});}).catch(function(error){console.error('Signup error:',error);showError(error.message||'Something went wrong. Please try again.');window.dataLayer.push({'event':'signup_error','error_message':error.message});}).finally(function(){setLoading(false);});});
+        function setLoading(l){submitBtn.disabled=l;btnText.style.display=l?'none':'inline';btnSpinner.style.display=l?'inline-block':'none';}
+        function showError(m){errorMessage.textContent=m;errorBanner.classList.add('active');errorBanner.scrollIntoView({behavior:'smooth',block:'center'});}
+        window.dataLayer=window.dataLayer||[];window.dataLayer.push({'event':'signup_page_view','page_type':'signup'});
     </script>
 </body>
 </html>
