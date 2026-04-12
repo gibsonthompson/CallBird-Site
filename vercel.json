@@ -8,6 +8,16 @@
       "permanent": true
     },
     {
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/about",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/blog-contractors-ai-receptionist.html",
       "destination": "/blog.html",
       "permanent": true
