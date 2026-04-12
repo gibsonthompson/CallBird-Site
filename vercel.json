@@ -19,7 +19,47 @@
     },
     {
       "source": "/blog-contractors-ai-receptionist.html",
-      "destination": "/blog.html",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/blog-emergency-calls-contractors.html",
+      "destination": "/blog-emergency-calls-contractors",
+      "permanent": true
+    },
+    {
+      "source": "/blog-ai-receptionist-cost-pricing-guide.html",
+      "destination": "/blog-ai-receptionist-cost-pricing-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-ai-receptionist-guide.html",
+      "destination": "/blog-ai-receptionist-guide",
+      "permanent": true
+    },
+    {
+      "source": "/blog-best-ai-receptionist-dentists.html",
+      "destination": "/blog-best-ai-receptionist-dentists",
+      "permanent": true
+    },
+    {
+      "source": "/blog-after-hours-answering-contractors.html",
+      "destination": "/blog-after-hours-answering-contractors",
+      "permanent": true
+    },
+    {
+      "source": "/blog-ai-receptionist-comparison-2025.html",
+      "destination": "/blog-ai-receptionist-comparison-2025",
+      "permanent": true
+    },
+    {
+      "source": "/blog-best-ai-receptionist-real-estate.html",
+      "destination": "/blog-best-ai-receptionist-real-estate",
+      "permanent": true
+    },
+    {
+      "source": "/blog-best-ai-receptionist-veterinarians.html",
+      "destination": "/blog-best-ai-receptionist-veterinarians",
       "permanent": true
     },
     {
