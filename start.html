@@ -19,24 +19,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        /* Global 80% scale — DESKTOP ONLY */
         @media (min-width: 769px) { html { zoom: 0.8; -moz-transform: scale(0.8); -moz-transform-origin: 0 0; } }
-
-        /* MOBILE OVERFLOW FIX — prevent ANY horizontal scroll */
         html { overflow-x: hidden; width: 100%; }
         body { overflow-x: hidden; width: 100%; max-width: 100%; }
-        .start-hero, .start-content, .start-grid,
-        .form-container, .benefits-section, .benefits-list,
-        .benefit-item, .trust-badges, .badges-grid,
-        .footer, .footer-grid { 
-            max-width: 100% !important; 
-            overflow-x: hidden !important;
-            box-sizing: border-box !important;
-        }
-        @media (max-width: 768px) {
-            .container { max-width: 100% !important; overflow: hidden !important; box-sizing: border-box !important; padding: 0 1rem !important; }
-        }
-
+        .start-hero, .start-content, .start-grid, .form-container, .benefits-section, .benefits-list, .benefit-item, .trust-badges, .badges-grid, .footer, .footer-grid { max-width: 100% !important; overflow-x: hidden !important; box-sizing: border-box !important; }
+        @media (max-width: 768px) { .container { max-width: 100% !important; overflow: hidden !important; box-sizing: border-box !important; padding: 0 1rem !important; } }
         .start-hero { padding: 8rem 0 4rem; margin-top: 4rem; background: linear-gradient(135deg, #f9f9f7 0%, #ffffff 100%); overflow-x: hidden; }
         .start-content { max-width: 1200px; margin: 0 auto; }
         .start-header { text-align: center; margin-bottom: 3rem; animation: fadeInUp 0.6s ease-out; }
@@ -124,107 +111,17 @@
         .footer h4 { color: #f6b828 !important; }
         .footer-tagline { color: rgba(255,255,255,0.7) !important; }
         .footer-bottom { border-top-color: rgba(255,255,255,0.15) !important; color: rgba(255,255,255,0.6) !important; }
-
-        @media (max-width: 968px) {
-            body .start-grid,
-            .start-content .start-grid {
-                display: grid !important;
-                grid-template-columns: 1fr !important;
-                gap: 2rem !important;
-            }
-            body .benefits-section { order: -1 !important; }
-        }
-        @media (max-width: 768px) {
-            html, body { overflow-x: hidden !important; max-width: 100% !important; width: 100% !important; }
-            body .start-hero,
-            .start-hero { padding: 5rem 0 2rem !important; margin-top: 0 !important; }
-            body .start-header { margin-bottom: 1.5rem !important; }
-            body .start-title { font-size: 1.5rem !important; line-height: 1.3 !important; }
-            body .start-subtitle { font-size: 0.9375rem !important; margin-bottom: 1.5rem !important; padding: 0 0.5rem !important; }
-            body .start-grid,
-            .start-content .start-grid {
-                display: grid !important;
-                grid-template-columns: 1fr !important;
-                gap: 1.5rem !important;
-            }
-            body .form-container { padding: 1.25rem !important; border-radius: 12px !important; box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important; }
-            body .form-header { margin-bottom: 1.25rem !important; }
-            body .form-header h2 { font-size: 1.25rem !important; }
-            body .form-header p { font-size: 0.8125rem !important; }
-            body .signup-form { gap: 1rem !important; }
-            body .form-group label { font-size: 0.8125rem !important; }
-            body .form-group input,
-            body .form-group select { padding: 0.75rem 0.875rem !important; font-size: 1rem !important; border-width: 1.5px !important; }
-            body .form-row { grid-template-columns: 1fr 1fr !important; gap: 0.75rem !important; }
-            body .submit-btn { padding: 0.875rem 1.5rem !important; font-size: 1rem !important; }
-            /* Benefits - override homepage centering styles */
-            body .benefits-section .benefits-list { display: flex !important; flex-direction: column !important; gap: 0.75rem !important; }
-            body .benefits-section .benefit-item {
-                display: flex !important;
-                flex-direction: row !important;
-                gap: 0.75rem !important;
-                align-items: flex-start !important;
-                text-align: left !important;
-                padding: 1rem !important;
-                width: 100% !important;
-                box-sizing: border-box !important;
-            }
-            body .benefits-section .benefit-icon {
-                flex-shrink: 0 !important;
-                width: 2.5rem !important;
-                height: 2.5rem !important;
-                margin: 0 !important;
-                justify-content: flex-start !important;
-            }
-            body .benefits-section .benefit-icon svg {
-                width: 1.75rem !important;
-                height: 1.75rem !important;
-                margin: 0 !important;
-                display: block !important;
-            }
-            body .benefits-section .benefit-content { flex: 1 !important; min-width: 0 !important; overflow: hidden !important; word-wrap: break-word !important; overflow-wrap: break-word !important; }
-            body .benefits-section .benefit-content h4 { font-size: 0.9375rem !important; margin-bottom: 0.25rem !important; text-align: left !important; }
-            body .benefits-section .benefit-content p { font-size: 0.8125rem !important; line-height: 1.4 !important; text-align: left !important; }
-            body .trust-badges { padding: 1.25rem !important; margin-top: 1.5rem !important; }
-            body .trust-badges h4 { font-size: 1rem !important; margin-bottom: 1rem !important; }
-            body .badges-grid { gap: 0.5rem !important; }
-            body .badge-item { padding: 0.625rem 0.5rem !important; }
-            body .badge-icon { font-size: 1.25rem !important; margin-bottom: 0.25rem !important; }
-            body .badge-label { font-size: 0.6875rem !important; }
-            body .help-link { margin-top: 1.5rem !important; padding-top: 1.5rem !important; }
-            body .credential-box { padding: 1rem !important; }
-            body .credential-box .cred-value { font-size: 0.8125rem !important; }
-            body .credential-box .cred-value.phone-value { font-size: 1.125rem !important; }
-            body .dashboard-btn { width: 100% !important; justify-content: center !important; padding: 0.875rem 1.5rem !important; font-size: 1rem !important; }
-            body .nav-links { display: none !important; }
-            body .mobile-menu-toggle { display: flex !important; }
-            body .container { padding-left: 1rem !important; padding-right: 1rem !important; max-width: 100% !important; box-sizing: border-box !important; }
-        }
-        @media (max-width: 480px) {
-            body .start-hero { padding: 4.5rem 0 1.5rem !important; }
-            body .start-title { font-size: 1.375rem !important; }
-            body .start-subtitle { font-size: 0.875rem !important; }
-            body .start-badge { font-size: 0.75rem !important; padding: 0.375rem 0.75rem !important; }
-            body .form-container { padding: 1rem !important; }
-            body .form-header h2 { font-size: 1.125rem !important; }
-            body .form-row { gap: 0.5rem !important; }
-            body .benefits-section .benefit-item { padding: 0.875rem !important; gap: 0.75rem !important; }
-            body .benefits-section .benefit-icon svg { width: 1.5rem !important; height: 1.5rem !important; }
-            body .benefits-section .benefit-content h4 { font-size: 0.875rem !important; }
-            body .benefits-section .benefit-content p { font-size: 0.75rem !important; }
-            body .badges-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 0.375rem !important; }
-            body .badge-item { padding: 0.5rem 0.25rem !important; }
-            body .badge-icon { font-size: 1.125rem !important; }
-            body .badge-label { font-size: 0.625rem !important; }
-        }
+        @media (max-width: 968px) { body .start-grid, .start-content .start-grid { display: grid !important; grid-template-columns: 1fr !important; gap: 2rem !important; } body .benefits-section { order: -1 !important; } }
+        @media (max-width: 768px) { html, body { overflow-x: hidden !important; max-width: 100% !important; width: 100% !important; } body .start-hero, .start-hero { padding: 5rem 0 2rem !important; margin-top: 0 !important; } body .start-header { margin-bottom: 1.5rem !important; } body .start-title { font-size: 1.5rem !important; line-height: 1.3 !important; } body .start-subtitle { font-size: 0.9375rem !important; margin-bottom: 1.5rem !important; padding: 0 0.5rem !important; } body .start-grid, .start-content .start-grid { display: grid !important; grid-template-columns: 1fr !important; gap: 1.5rem !important; } body .form-container { padding: 1.25rem !important; border-radius: 12px !important; box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important; } body .form-header { margin-bottom: 1.25rem !important; } body .form-header h2 { font-size: 1.25rem !important; } body .form-header p { font-size: 0.8125rem !important; } body .signup-form { gap: 1rem !important; } body .form-group label { font-size: 0.8125rem !important; } body .form-group input, body .form-group select { padding: 0.75rem 0.875rem !important; font-size: 1rem !important; border-width: 1.5px !important; } body .form-row { grid-template-columns: 1fr 1fr !important; gap: 0.75rem !important; } body .submit-btn { padding: 0.875rem 1.5rem !important; font-size: 1rem !important; } body .benefits-section .benefits-list { display: flex !important; flex-direction: column !important; gap: 0.75rem !important; } body .benefits-section .benefit-item { display: flex !important; flex-direction: row !important; gap: 0.75rem !important; align-items: flex-start !important; text-align: left !important; padding: 1rem !important; width: 100% !important; box-sizing: border-box !important; } body .benefits-section .benefit-icon { flex-shrink: 0 !important; width: 2.5rem !important; height: 2.5rem !important; margin: 0 !important; justify-content: flex-start !important; } body .benefits-section .benefit-icon svg { width: 1.75rem !important; height: 1.75rem !important; margin: 0 !important; display: block !important; } body .benefits-section .benefit-content { flex: 1 !important; min-width: 0 !important; overflow: hidden !important; word-wrap: break-word !important; overflow-wrap: break-word !important; } body .benefits-section .benefit-content h4 { font-size: 0.9375rem !important; margin-bottom: 0.25rem !important; text-align: left !important; } body .benefits-section .benefit-content p { font-size: 0.8125rem !important; line-height: 1.4 !important; text-align: left !important; } body .trust-badges { padding: 1.25rem !important; margin-top: 1.5rem !important; } body .trust-badges h4 { font-size: 1rem !important; margin-bottom: 1rem !important; } body .badges-grid { gap: 0.5rem !important; } body .badge-item { padding: 0.625rem 0.5rem !important; } body .badge-icon { font-size: 1.25rem !important; margin-bottom: 0.25rem !important; } body .badge-label { font-size: 0.6875rem !important; } body .help-link { margin-top: 1.5rem !important; padding-top: 1.5rem !important; } body .credential-box { padding: 1rem !important; } body .credential-box .cred-value { font-size: 0.8125rem !important; } body .credential-box .cred-value.phone-value { font-size: 1.125rem !important; } body .dashboard-btn { width: 100% !important; justify-content: center !important; padding: 0.875rem 1.5rem !important; font-size: 1rem !important; } body .nav-links { display: none !important; } body .mobile-menu-toggle { display: flex !important; } body .container { padding-left: 1rem !important; padding-right: 1rem !important; max-width: 100% !important; box-sizing: border-box !important; } }
+        @media (max-width: 480px) { body .start-hero { padding: 4.5rem 0 1.5rem !important; } body .start-title { font-size: 1.375rem !important; } body .start-subtitle { font-size: 0.875rem !important; } body .start-badge { font-size: 0.75rem !important; padding: 0.375rem 0.75rem !important; } body .form-container { padding: 1rem !important; } body .form-header h2 { font-size: 1.125rem !important; } body .form-row { gap: 0.5rem !important; } body .benefits-section .benefit-item { padding: 0.875rem !important; gap: 0.75rem !important; } body .benefits-section .benefit-icon svg { width: 1.5rem !important; height: 1.5rem !important; } body .benefits-section .benefit-content h4 { font-size: 0.875rem !important; } body .benefits-section .benefit-content p { font-size: 0.75rem !important; } body .badges-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 0.375rem !important; } body .badge-item { padding: 0.5rem 0.25rem !important; } body .badge-icon { font-size: 1.125rem !important; } body .badge-label { font-size: 0.625rem !important; } }
         @supports (-webkit-touch-callout: none) { .form-group input, .form-group select { font-size: max(1rem, 16px); } }
     </style>
 </head>
 <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9WVK3WD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <nav class="navbar"><div class="container"><div class="nav-content"><div class="logo"><img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird" class="logo-image"></div><ul class="nav-links"><li><a href="index.html#features">Features</a></li><li><a href="index.html#how-it-works">How It Works</a></li><li><a href="index.html#pricing">Pricing</a></li><li><a href="blog.html">Blog</a></li><li><a href="index.html#faq">FAQ</a></li></ul><div class="nav-actions"><a href="tel:+15055945806" class="btn-ghost">Call Us</a><a href="index.html" class="btn-secondary">&larr; Back to Home</a></div><button class="mobile-menu-toggle" aria-label="Toggle menu" onclick="openMobileNav()"><span></span><span></span><span></span></button></div></div></nav>
+    <nav class="navbar"><div class="container"><div class="nav-content"><div class="logo"><img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird" class="logo-image"></div><ul class="nav-links"><li><a href="index.html#features">Features</a></li><li><a href="index.html#how-it-works">How It Works</a></li><li><a href="index.html#pricing">Pricing</a></li><li><a href="blog.html">Blog</a></li><li><a href="index.html#faq">FAQ</a></li></ul><div class="nav-actions"><a href="demo.html" class="btn-ghost">Book a Demo</a><a href="index.html" class="btn-secondary">&larr; Back to Home</a></div><button class="mobile-menu-toggle" aria-label="Toggle menu" onclick="openMobileNav()"><span></span><span></span><span></span></button></div></div></nav>
     <div class="mobile-nav-overlay" id="mobileNavOverlay" onclick="closeMobileNav()"></div>
-    <div class="mobile-nav-panel" id="mobileNavPanel"><div class="mobile-nav-header"><img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird"><button class="mobile-nav-close" onclick="closeMobileNav()">&times;</button></div><div class="mobile-nav-links"><a href="index.html#features" onclick="closeMobileNav()">Features</a><a href="index.html#how-it-works" onclick="closeMobileNav()">How It Works</a><a href="index.html#pricing" onclick="closeMobileNav()">Pricing</a><a href="blog.html" onclick="closeMobileNav()">Blog</a><a href="index.html#faq" onclick="closeMobileNav()">FAQ</a><a href="tel:+15055945806" onclick="closeMobileNav()">Call Us: (505) 594-5806</a></div><div class="mobile-nav-cta"><a href="index.html">&larr; Back to Home</a></div></div>
+    <div class="mobile-nav-panel" id="mobileNavPanel"><div class="mobile-nav-header"><img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird"><button class="mobile-nav-close" onclick="closeMobileNav()">&times;</button></div><div class="mobile-nav-links"><a href="index.html#features" onclick="closeMobileNav()">Features</a><a href="index.html#how-it-works" onclick="closeMobileNav()">How It Works</a><a href="index.html#pricing" onclick="closeMobileNav()">Pricing</a><a href="blog.html" onclick="closeMobileNav()">Blog</a><a href="index.html#faq" onclick="closeMobileNav()">FAQ</a><a href="demo.html" onclick="closeMobileNav()">Book a Demo</a></div><div class="mobile-nav-cta"><a href="index.html">&larr; Back to Home</a></div></div>
     <section class="start-hero"><div class="container"><div class="start-content">
         <div class="start-header">
             <div class="start-badge"><span class="badge-dot"></span><span>7-Day Free Trial &bull; No Credit Card Required</span></div>
@@ -242,7 +139,7 @@
                         <div class="form-group"><label for="phone">Phone <span class="required">*</span></label><input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required><span class="help-text">We'll send SMS summaries here</span></div>
                         <div class="form-group"><label for="businessName">Business Name <span class="required">*</span></label><input type="text" id="businessName" name="businessName" placeholder="Your Business" required></div>
                         <div class="form-group"><label for="websiteUrl">Website URL <span style="color: var(--text-medium); font-weight: normal;">(optional)</span></label><input type="text" id="websiteUrl" name="websiteUrl" placeholder="yourbusiness.com"><span class="help-text">We'll train your AI on your website content</span></div>
-                        <div class="form-group"><label for="industry">Industry <span class="required">*</span></label><select id="industry" name="industry" required><option value="">Please select...</option><option value="home_services">Home Services (plumbing, HVAC, contractors)</option><option value="medical_dental">Medical</option><option value="dental">Dental</option><option value="legal">Legal Services</option><option value="professional_services">Professional Services (accounting, consulting)</option><option value="real_estate">Real Estate</option><option value="financial">Financial Services</option><option value="restaurants">Restaurants / Food Service</option><option value="salon_spa">Salon / Spa (hair, nails, skincare)</option><option value="fitness">Fitness / Gym / Wellness</option><option value="automotive">Automotive (repair, dealerships)</option><option value="retail">Retail / E-commerce</option></select></div>
+                        <div class="form-group"><label for="industry">Industry <span class="required">*</span></label><select id="industry" name="industry" required><option value="">Please select...</option><option value="home_services">Home Services (plumbing, HVAC, contractors)</option><option value="medical">Medical</option><option value="dental">Dental & Orthodontics</option><option value="legal">Legal Services</option><option value="professional_services">Professional Services (accounting, consulting)</option><option value="real_estate">Real Estate</option><option value="financial">Financial Services</option><option value="restaurants">Restaurants / Food Service</option><option value="salon_spa">Salon / Spa (hair, nails, skincare)</option><option value="fitness">Fitness / Gym / Wellness</option><option value="automotive">Automotive (repair, dealerships)</option><option value="retail">Retail / E-commerce</option></select></div>
                         <div class="form-row"><div class="form-group"><label for="businessCity">City <span class="required">*</span></label><input type="text" id="businessCity" name="businessCity" placeholder="Atlanta" required></div><div class="form-group"><label for="businessState">State <span class="required">*</span></label><input type="text" id="businessState" name="businessState" placeholder="GA" maxlength="2" required></div></div>
                         <div class="form-group"><label for="referralSource">How did you hear about us? <span class="required">*</span></label><select id="referralSource" name="referralSource" required><option value="">Please select...</option><option value="Google Search">Google Search</option><option value="AI Recommendation">AI Recommendation (ChatGPT, Claude, etc.)</option><option value="Social Media">Social Media</option><option value="Friend/Colleague">Friend/Colleague</option><option value="Advertisement">Advertisement</option><option value="Blog/Article">Blog/Article</option><option value="Other">Other</option></select><div id="otherReferralGroup"><input type="text" id="otherReferral" name="otherReferral" placeholder="Please specify..."></div></div>
                         <button type="submit" class="submit-btn" id="submitBtn"><span id="btnText">Start Free Trial &rarr;</span><span id="btnSpinner" class="spinner" style="display: none;"></span></button>
@@ -275,7 +172,7 @@
             </div>
         </div>
     </div></div></section>
-    <footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-col"><div class="footer-logo"><img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird" class="logo-image"></div><p class="footer-tagline">AI-powered call answering, appointment booking & instant summaries for small businesses.</p><div class="footer-contact"><p>Atlanta, GA</p><p><a href="tel:+15055945806">(505) 594-5806</a></p><p><a href="mailto:support@callbirdai.com">support@callbirdai.com</a></p></div></div><div class="footer-col"><h4>Product</h4><ul class="footer-links"><li><a href="index.html#features">Features</a></li><li><a href="index.html#how-it-works">How It Works</a></li><li><a href="index.html#pricing">Pricing</a></li><li><a href="index.html#faq">FAQ</a></li></ul></div><div class="footer-col"><h4>Industries</h4><ul class="footer-links"><li><a href="home-services-ai-receptionist.html">Home Services</a></li><li><a href="dental-ai-receptionist.html">Medical & Dental</a></li><li><a href="restaurants-ai-receptionist.html">Restaurants</a></li><li><a href="legal-ai-receptionist.html">Legal</a></li><li><a href="professional-services-ai-receptionist.html">Professional Services</a></li><li><a href="retail-ai-receptionist.html">Retail</a></li><li><a href="veterinary-ai-receptionist.html">Veterinary</a></li></ul></div><div class="footer-col"><h4>Company</h4><ul class="footer-links"><li><a href="mailto:support@callbirdai.com">Contact</a></li><li><a href="blog.html">Blog</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-and-conditions.html">Terms & Conditions</a></li></ul></div></div><div class="footer-bottom"><p>&copy; 2026 CallBird AI. All Rights Reserved.</p><p>A2P 10DLC Compliant &bull; SOC 2 Type II Certified</p></div></div></footer>
+    <footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-col"><div class="footer-logo"><img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird" class="logo-image"></div><p class="footer-tagline">AI-powered call answering, appointment booking & instant summaries for small businesses.</p><div class="footer-contact"><p>Atlanta, GA</p><p><a href="tel:+15055945806">(505) 594-5806</a></p><p><a href="mailto:support@callbirdai.com">support@callbirdai.com</a></p></div></div><div class="footer-col"><h4>Product</h4><ul class="footer-links"><li><a href="index.html#features">Features</a></li><li><a href="index.html#how-it-works">How It Works</a></li><li><a href="index.html#pricing">Pricing</a></li><li><a href="index.html#faq">FAQ</a></li></ul></div><div class="footer-col"><h4>Industries</h4><ul class="footer-links"><li><a href="home-services-ai-receptionist.html">Home Services</a></li><li><a href="dental-ai-receptionist.html">Medical & Dental</a></li><li><a href="restaurants-ai-receptionist.html">Restaurants</a></li><li><a href="legal-ai-receptionist.html">Legal</a></li><li><a href="professional-services-ai-receptionist.html">Professional Services</a></li><li><a href="retail-ai-receptionist.html">Retail</a></li><li><a href="veterinary-ai-receptionist.html">Veterinary</a></li></ul></div><div class="footer-col"><h4>Company</h4><ul class="footer-links"><li><a href="mailto:support@callbirdai.com">Contact</a></li><li><a href="blog.html">Blog</a></li><li><a href="demo.html">Book a Demo</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-and-conditions.html">Terms & Conditions</a></li></ul></div></div><div class="footer-bottom"><p>&copy; 2026 CallBird AI. All Rights Reserved.</p><p>A2P 10DLC Compliant &bull; SOC 2 Type II Certified</p></div></div></footer>
     <script>
         function openMobileNav(){document.getElementById('mobileNavOverlay').classList.add('active');document.getElementById('mobileNavPanel').classList.add('active');document.body.style.overflow='hidden';}
         function closeMobileNav(){document.getElementById('mobileNavOverlay').classList.remove('active');document.getElementById('mobileNavPanel').classList.remove('active');document.body.style.overflow='';}
