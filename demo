@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-M9WVK3WD');</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book a free demo with CallBird AI. See how our AI receptionist answers calls, books appointments, and sends instant summaries for your business.">
+    <link rel="icon" type="image/png" href="https://i.imgur.com/qwyQQW5.png">
+    <link rel="apple-touch-icon" href="https://i.imgur.com/qwyQQW5.png">
+    <link rel="shortcut icon" href="https://i.imgur.com/qwyQQW5.png">
+    <meta name="theme-color" content="#122092">
+    <title>Book a Demo - CallBird AI</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* Global 80% scale — DESKTOP ONLY */
+        @media (min-width: 769px) { html { zoom: 0.8; -moz-transform: scale(0.8); -moz-transform-origin: 0 0; } }
+
+        /* MOBILE OVERFLOW FIX */
+        html { overflow-x: hidden; width: 100%; }
+        body { overflow-x: hidden; width: 100%; max-width: 100%; }
+        @media (max-width: 768px) {
+            .container { max-width: 100% !important; overflow: hidden !important; box-sizing: border-box !important; padding: 0 1rem !important; }
+        }
+
+        /* ── Demo Page Layout ── */
+        .demo-hero {
+            padding: 8rem 0 2rem;
+            margin-top: 4rem;
+            background: linear-gradient(135deg, #f9f9f7 0%, #ffffff 100%);
+        }
+        .demo-page-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            animation: fadeInUp 0.6s ease-out;
+        }
+        .demo-page-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(18, 32, 146, 0.1);
+            border-radius: var(--radius-full);
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+        .demo-page-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+        .demo-page-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-medium);
+            max-width: 700px;
+            margin: 0 auto 1rem;
+        }
+
+        /* ── Two-column grid ── */
+        .demo-grid {
+            display: grid;
+            grid-template-columns: 1fr 420px;
+            gap: 3rem;
+            align-items: start;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* ── Calendly embed container ── */
+        .calendly-container {
+            background: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-xl);
+            overflow: hidden;
+            animation: fadeInUp 0.6s ease-out 0.2s both;
+        }
+        .calendly-container .calendly-inline-widget {
+            min-height: 660px;
+        }
+
+        /* ── Right sidebar — reasons to book ── */
+        .demo-sidebar {
+            animation: fadeInUp 0.6s ease-out 0.3s both;
+        }
+        .demo-sidebar-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            box-shadow: var(--shadow-md);
+            margin-bottom: 1.5rem;
+        }
+        .demo-sidebar-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1.25rem;
+            color: var(--text-dark);
+        }
+        .demo-checklist {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .demo-checklist li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            font-size: 0.9375rem;
+            color: var(--text-medium);
+            line-height: 1.5;
+        }
+        .demo-checklist li svg {
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        /* ── Call-to-action card ── */
+        .demo-cta-card {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0d1666 100%);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            color: white;
+            text-align: center;
+        }
+        .demo-cta-card h3 {
+            color: white;
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+        .demo-cta-card p {
+            color: rgba(255,255,255,0.85);
+            font-size: 0.9375rem;
+            margin-bottom: 1.25rem;
+        }
+        .demo-cta-phone {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-full);
+            font-weight: 700;
+            font-size: 1.125rem;
+            transition: all 0.2s ease;
+        }
+        .demo-cta-phone:hover {
+            background: rgba(255,255,255,0.3);
+            color: white;
+            transform: scale(1.03);
+        }
+
+        /* ── Trust row ── */
+        .demo-trust-row {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 2.5rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 0.6s ease-out 0.4s both;
+        }
+        .demo-trust-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        .demo-trust-item svg {
+            color: var(--success-color);
+        }
+
+        /* ── Mobile nav (same as start.html) ── */
+        .mobile-nav-overlay { display: none; position: fixed; inset: 0; z-index: 999; background: rgba(0,0,0,0.5); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }
+        .mobile-nav-overlay.active { display: block; }
+        .mobile-nav-panel { position: fixed; top: 0; right: 0; bottom: 0; width: 280px; max-width: 85vw; background: white; z-index: 1000; transform: translateX(100%); transition: transform 0.3s ease; display: flex; flex-direction: column; box-shadow: -4px 0 20px rgba(0,0,0,0.15); }
+        .mobile-nav-panel.active { transform: translateX(0); }
+        .mobile-nav-header { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.25rem; border-bottom: 1px solid #e5e7eb; }
+        .mobile-nav-header img { height: 32px; }
+        .mobile-nav-close { width: 36px; height: 36px; border: none; background: #f3f4f6; border-radius: 8px; font-size: 1.25rem; cursor: pointer; display: flex; align-items: center; justify-content: center; color: #374151; }
+        .mobile-nav-links { flex: 1; padding: 1rem 0; overflow-y: auto; }
+        .mobile-nav-links a { display: block; padding: 0.875rem 1.25rem; color: var(--text-dark); font-size: 1rem; font-weight: 500; text-decoration: none; transition: background 0.15s; }
+        .mobile-nav-links a:hover { background: #f9fafb; }
+        .mobile-nav-cta { padding: 1rem 1.25rem; border-top: 1px solid #e5e7eb; }
+        .mobile-nav-cta a { display: block; text-align: center; padding: 0.875rem; background: var(--primary-color); color: white; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 0.9375rem; }
+
+        /* ── Footer overrides ── */
+        .footer { background: #122092 !important; color: #fff !important; }
+        .footer a { color: rgba(255,255,255,0.85) !important; }
+        .footer a:hover { color: #fff !important; }
+        .footer h4 { color: #f6b828 !important; }
+        .footer-tagline { color: rgba(255,255,255,0.7) !important; }
+        .footer-bottom { border-top-color: rgba(255,255,255,0.15) !important; color: rgba(255,255,255,0.6) !important; }
+
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* ── Responsive ── */
+        @media (max-width: 968px) {
+            .demo-grid {
+                grid-template-columns: 1fr !important;
+                gap: 2rem !important;
+            }
+            .demo-sidebar { order: -1; }
+        }
+        @media (max-width: 768px) {
+            html, body { overflow-x: hidden !important; max-width: 100% !important; width: 100% !important; }
+            .demo-hero { padding: 5rem 0 1.5rem !important; margin-top: 0 !important; }
+            .demo-page-title { font-size: 1.5rem !important; line-height: 1.3 !important; }
+            .demo-page-subtitle { font-size: 0.9375rem !important; padding: 0 0.5rem !important; }
+            .demo-grid { gap: 1.5rem !important; }
+            .calendly-container { border-radius: 12px !important; }
+            .calendly-container .calendly-inline-widget { min-height: 580px; }
+            .demo-sidebar-card { padding: 1.25rem !important; }
+            .demo-sidebar-card h3 { font-size: 1.0625rem !important; }
+            .demo-checklist li { font-size: 0.8125rem !important; }
+            .demo-cta-card { padding: 1.5rem !important; }
+            .demo-cta-phone { font-size: 1rem !important; padding: 0.625rem 1.25rem !important; }
+            .demo-trust-row { gap: 1rem !important; padding: 1rem !important; margin-top: 1.5rem !important; }
+            .demo-trust-item { font-size: 0.75rem !important; }
+            body .nav-links { display: none !important; }
+            body .mobile-menu-toggle { display: flex !important; }
+            body .container { padding-left: 1rem !important; padding-right: 1rem !important; max-width: 100% !important; box-sizing: border-box !important; }
+        }
+        @media (max-width: 480px) {
+            .demo-hero { padding: 4.5rem 0 1rem !important; }
+            .demo-page-title { font-size: 1.375rem !important; }
+            .demo-page-badge { font-size: 0.75rem !important; padding: 0.375rem 0.75rem !important; }
+        }
+    </style>
+</head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M9WVK3WD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <!-- ═══ NAVIGATION ═══ -->
+    <nav class="navbar"><div class="container"><div class="nav-content">
+        <div class="logo"><img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird" class="logo-image"></div>
+        <ul class="nav-links">
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="index.html#how-it-works">How It Works</a></li>
+            <li><a href="index.html#pricing">Pricing</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a href="demo.html" class="btn-ghost">Book a Demo</a>
+            <a href="start.html" class="btn-primary">Start Free Trial</a>
+        </div>
+        <button class="mobile-menu-toggle" aria-label="Toggle menu" onclick="openMobileNav()">
+            <span></span><span></span><span></span>
+        </button>
+    </div></div></nav>
+
+    <!-- ═══ MOBILE NAV ═══ -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay" onclick="closeMobileNav()"></div>
+    <div class="mobile-nav-panel" id="mobileNavPanel">
+        <div class="mobile-nav-header">
+            <img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird">
+            <button class="mobile-nav-close" onclick="closeMobileNav()">&times;</button>
+        </div>
+        <div class="mobile-nav-links">
+            <a href="index.html#features" onclick="closeMobileNav()">Features</a>
+            <a href="index.html#how-it-works" onclick="closeMobileNav()">How It Works</a>
+            <a href="index.html#pricing" onclick="closeMobileNav()">Pricing</a>
+            <a href="blog.html" onclick="closeMobileNav()">Blog</a>
+            <a href="index.html#faq" onclick="closeMobileNav()">FAQ</a>
+            <a href="demo.html" onclick="closeMobileNav()">Book a Demo</a>
+        </div>
+        <div class="mobile-nav-cta">
+            <a href="start.html">Start Free Trial &rarr;</a>
+        </div>
+    </div>
+
+    <!-- ═══ MAIN CONTENT ═══ -->
+    <section class="demo-hero"><div class="container">
+
+        <div class="demo-page-header">
+            <div class="demo-page-badge">
+                <span class="badge-dot"></span>
+                <span>Free 15-Minute Demo &bull; No Commitment</span>
+            </div>
+            <h1 class="demo-page-title">See CallBird AI in Action</h1>
+            <p class="demo-page-subtitle">Pick a time below and we'll walk you through a live demo tailored to your business. You'll see exactly how CallBird answers calls, books appointments, and sends instant summaries.</p>
+        </div>
+
+        <div class="demo-grid">
+
+            <!-- ── Calendly Embed ── -->
+            <div class="calendly-container">
+                <div class="calendly-inline-widget" data-url="https://calendly.com/gibsonthompson1/30min?hide_gdpr_banner=1&primary_color=122092" style="min-width:320px;height:660px;"></div>
+            </div>
+
+            <!-- ── Sidebar ── -->
+            <div class="demo-sidebar">
+
+                <div class="demo-sidebar-card">
+                    <h3>What You'll See:</h3>
+                    <ul class="demo-checklist">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            <span><strong>Live call demo</strong> — hear the AI receptionist answer a real call for your industry</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            <span><strong>Instant text summary</strong> — see the SMS you get the moment a call ends</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            <span><strong>Dashboard walkthrough</strong> — call logs, recordings, transcripts, and settings</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            <span><strong>Calendar integration</strong> — how appointments get booked automatically</span>
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            <span><strong>Your questions answered</strong> — pricing, setup, custom training, anything</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="demo-cta-card">
+                    <h3>Prefer to Talk Now?</h3>
+                    <p>Skip the form — call us directly and we'll walk you through it on the spot.</p>
+                    <a href="tel:+15055945806" class="demo-cta-phone">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        (505) 594-5806
+                    </a>
+                </div>
+
+                <div class="demo-sidebar-card" style="background: var(--bg-light); box-shadow: none; border: 1px solid var(--border-color);">
+                    <h3 style="font-size: 1rem; margin-bottom: 0.75rem;">After You Book:</h3>
+                    <ul class="demo-checklist" style="gap: 0.75rem;">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>You'll get an email confirmation immediately</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>A calendar invite with a phone/Zoom link</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <span>A reminder 24 hours before your demo</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- ── Trust row ── -->
+        <div class="demo-trust-row">
+            <div class="demo-trust-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                No Credit Card Required
+            </div>
+            <div class="demo-trust-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                7-Day Free Trial After Demo
+            </div>
+            <div class="demo-trust-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Setup in Under 10 Minutes
+            </div>
+            <div class="demo-trust-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                Cancel Anytime
+            </div>
+        </div>
+
+    </div></section>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="footer"><div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="footer-logo"><img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird" class="logo-image"></div>
+                <p class="footer-tagline">AI-powered call answering, appointment booking & instant summaries for small businesses.</p>
+                <div class="footer-contact">
+                    <p>Atlanta, GA</p>
+                    <p><a href="tel:+15055945806">(505) 594-5806</a></p>
+                    <p><a href="mailto:support@callbirdai.com">support@callbirdai.com</a></p>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Product</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html#features">Features</a></li>
+                    <li><a href="index.html#how-it-works">How It Works</a></li>
+                    <li><a href="index.html#pricing">Pricing</a></li>
+                    <li><a href="index.html#faq">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Industries</h4>
+                <ul class="footer-links">
+                    <li><a href="home-services-ai-receptionist.html">Home Services</a></li>
+                    <li><a href="dental-ai-receptionist.html">Medical & Dental</a></li>
+                    <li><a href="restaurants-ai-receptionist.html">Restaurants</a></li>
+                    <li><a href="legal-ai-receptionist.html">Legal</a></li>
+                    <li><a href="professional-services-ai-receptionist.html">Professional Services</a></li>
+                    <li><a href="retail-ai-receptionist.html">Retail</a></li>
+                    <li><a href="veterinary-ai-receptionist.html">Veterinary</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul class="footer-links">
+                    <li><a href="mailto:support@callbirdai.com">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="demo.html">Book a Demo</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 CallBird AI. All Rights Reserved.</p>
+            <p>A2P 10DLC Compliant &bull; SOC 2 Type II Certified</p>
+        </div>
+    </div></footer>
+
+    <!-- ═══ SCRIPTS ═══ -->
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    <script>
+        function openMobileNav(){document.getElementById('mobileNavOverlay').classList.add('active');document.getElementById('mobileNavPanel').classList.add('active');document.body.style.overflow='hidden';}
+        function closeMobileNav(){document.getElementById('mobileNavOverlay').classList.remove('active');document.getElementById('mobileNavPanel').classList.remove('active');document.body.style.overflow='';}
+        window.dataLayer=window.dataLayer||[];
+        window.dataLayer.push({'event':'demo_page_view','page_type':'demo_booking'});
+    </script>
+</body>
+</html>
