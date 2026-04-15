@@ -471,7 +471,7 @@
             .price-amount {
                 font-size: 2.5rem !important;
             }
-            /* Keep Start Free Trial, just hide Call Us on tiny screens */
+            /* Keep Start Free Trial, just hide Book a Demo on tiny screens */
             .btn-ghost.btn-small,
             .nav-actions .btn-ghost {
                 display: none !important;
@@ -524,7 +524,7 @@
                     <li><a href="#faq">FAQ</a></li>
                 </ul>
                 <div class="nav-actions">
-                    <a href="tel:+15055945806" class="btn-ghost">Call Us</a>
+                    <a href="demo.html" class="btn-ghost">Book a Demo</a>
                     <a href="/start" class="btn-primary">Start Free Trial</a>
                 </div>
                 <button class="mobile-menu-toggle" aria-label="Toggle menu" onclick="openMobileNav()">
@@ -549,7 +549,7 @@
             <a href="#pricing" onclick="closeMobileNav()">Pricing</a>
             <a href="blog.html" onclick="closeMobileNav()">Blog</a>
             <a href="#faq" onclick="closeMobileNav()">FAQ</a>
-            <a href="tel:+15055945806" onclick="closeMobileNav()">Call Us: (505) 594-5806</a>
+            <a href="demo.html" onclick="closeMobileNav()">Book a Demo</a>
         </div>
         <div class="mobile-nav-cta">
             <a href="/start">Start Free Trial</a>
@@ -639,157 +639,40 @@
             </div>
 
             <div class="audio-grid">
-                <!-- Audio Player 1 -->
                 <div class="audio-card">
                     <div class="audio-header">
-                        <div class="audio-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
-                            </svg>
-                        </div>
-                        <div class="audio-info">
-                            <h3>Emergency Plumbing Call</h3>
-                            <span class="audio-time">0:52 • 6:42 PM</span>
-                        </div>
+                        <div class="audio-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg></div>
+                        <div class="audio-info"><h3>Emergency Plumbing Call</h3><span class="audio-time">0:52 • 6:42 PM</span></div>
                     </div>
-                    <div class="audio-player">
-                        <button class="play-btn" onclick="toggleAudio('audio1')">
-                            <span class="play-icon">▶</span>
-                        </button>
-                        <div class="audio-progress">
-                            <div class="audio-progress-bar" id="progress1"></div>
-                        </div>
-                        <span class="audio-duration">0:52</span>
-                        <audio id="audio1" preload="none">
-                            <source src="audio/sample1.mp3" type="audio/mpeg">
-                        </audio>
-                    </div>
-                    <div class="audio-transcript">
-                        <p><strong>Customer:</strong> "I know it's after five PM. I have a burst pipe, and there's water leaking in the floor."</p>
-                        <p><strong>CallBird:</strong> "Oh, no! That sounds urgent. What's your address so we can send someone right away?"</p>
-                    </div>
-                    <p class="audio-caption">
-                        This after-hours emergency was handled in under a minute. CallBird collected the address, scheduled the dispatch, and sent the owner a text alert—automatically.
-                    </p>
+                    <div class="audio-player"><button class="play-btn" onclick="toggleAudio('audio1')"><span class="play-icon">▶</span></button><div class="audio-progress"><div class="audio-progress-bar" id="progress1"></div></div><span class="audio-duration">0:52</span><audio id="audio1" preload="none"><source src="audio/sample1.mp3" type="audio/mpeg"></audio></div>
+                    <div class="audio-transcript"><p><strong>Customer:</strong> "I know it's after five PM. I have a burst pipe, and there's water leaking in the floor."</p><p><strong>CallBird:</strong> "Oh, no! That sounds urgent. What's your address so we can send someone right away?"</p></div>
+                    <p class="audio-caption">This after-hours emergency was handled in under a minute. CallBird collected the address, scheduled the dispatch, and sent the owner a text alert—automatically.</p>
                 </div>
-
-                <!-- Audio Player 2 -->
                 <div class="audio-card">
                     <div class="audio-header">
-                        <div class="audio-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M12 2a7 7 0 0 0-7 7c0 1.5.5 3.5 2 5l5 5 5-5c1.5-1.5 2-3.5 2-5a7 7 0 0 0-7-7z"></path>
-                                <path d="M12 9v0"></path>
-                                <circle cx="12" cy="9" r="1" fill="#122092"></circle>
-                            </svg>
-                        </div>
-                        <div class="audio-info">
-                            <h3>Dental Appointment Booking</h3>
-                            <span class="audio-time">1:08 • 2:34 PM</span>
-                        </div>
+                        <div class="audio-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 0-7 7c0 1.5.5 3.5 2 5l5 5 5-5c1.5-1.5 2-3.5 2-5a7 7 0 0 0-7-7z"></path><path d="M12 9v0"></path><circle cx="12" cy="9" r="1" fill="#122092"></circle></svg></div>
+                        <div class="audio-info"><h3>Dental Appointment Booking</h3><span class="audio-time">1:08 • 2:34 PM</span></div>
                     </div>
-                    <div class="audio-player">
-                        <button class="play-btn" onclick="toggleAudio('audio2')">
-                            <span class="play-icon">▶</span>
-                        </button>
-                        <div class="audio-progress">
-                            <div class="audio-progress-bar" id="progress2"></div>
-                        </div>
-                        <span class="audio-duration">1:08</span>
-                        <audio id="audio2" preload="none">
-                            <source src="audio/sample2.mp3" type="audio/mpeg">
-                        </audio>
-                    </div>
-                    <div class="audio-transcript">
-                        <p><strong>Customer:</strong> "Hi! I would like to book an appointment for teeth cleaning."</p>
-                        <p><strong>CallBird:</strong> "Great. We have morning appointments available. Would Tuesday at nine AM or Wednesday at eight thirty AM work better for you?"</p>
-                    </div>
-                    <p class="audio-caption">
-                        CallBird checked the calendar in real-time, offered available slots, booked the appointment, collected patient details, and sent a confirmation text—all in 72 seconds. No front desk staff needed.
-                    </p>
+                    <div class="audio-player"><button class="play-btn" onclick="toggleAudio('audio2')"><span class="play-icon">▶</span></button><div class="audio-progress"><div class="audio-progress-bar" id="progress2"></div></div><span class="audio-duration">1:08</span><audio id="audio2" preload="none"><source src="audio/sample2.mp3" type="audio/mpeg"></audio></div>
+                    <div class="audio-transcript"><p><strong>Customer:</strong> "Hi! I would like to book an appointment for teeth cleaning."</p><p><strong>CallBird:</strong> "Great. We have morning appointments available. Would Tuesday at nine AM or Wednesday at eight thirty AM work better for you?"</p></div>
+                    <p class="audio-caption">CallBird checked the calendar in real-time, offered available slots, booked the appointment, collected patient details, and sent a confirmation text—all in 72 seconds. No front desk staff needed.</p>
                 </div>
-
-                <!-- Audio Player 3 -->
                 <div class="audio-card">
                     <div class="audio-header">
-                        <div class="audio-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
-                                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
-                                <line x1="6" y1="1" x2="6" y2="4"></line>
-                                <line x1="10" y1="1" x2="10" y2="4"></line>
-                                <line x1="14" y1="1" x2="14" y2="4"></line>
-                            </svg>
-                        </div>
-                        <div class="audio-info">
-                            <h3>Restaurant Menu Inquiry</h3>
-                            <span class="audio-time">0:41 • 7:14 PM</span>
-                        </div>
+                        <div class="audio-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg></div>
+                        <div class="audio-info"><h3>Restaurant Menu Inquiry</h3><span class="audio-time">0:41 • 7:14 PM</span></div>
                     </div>
-                    <div class="audio-player">
-                        <button class="play-btn" onclick="toggleAudio('audio3')">
-                            <span class="play-icon">▶</span>
-                        </button>
-                        <div class="audio-progress">
-                            <div class="audio-progress-bar" id="progress3"></div>
-                        </div>
-                        <span class="audio-duration">0:41</span>
-                        <audio id="audio3" preload="none">
-                            <source src="audio/sample3.mp3" type="audio/mpeg">
-                        </audio>
-                    </div>
-                    <div class="audio-transcript">
-                        <p><strong>Customer:</strong> "Hi. I would like to book a reservation for four people at seven PM on Monday night."</p>
-                        <p><strong>CallBird:</strong> "We're open five to ten Tuesday through Sunday. How about seven on Tuesday instead?"</p>
-                    </div>
-                    <p class="audio-caption">
-                        The customer asked for Monday, but CallBird knew the restaurant is closed Mondays. It smoothly offered Tuesday at 7 PM instead, took the reservation, and confirmed—all in under 60 seconds."
-                    </p>
+                    <div class="audio-player"><button class="play-btn" onclick="toggleAudio('audio3')"><span class="play-icon">▶</span></button><div class="audio-progress"><div class="audio-progress-bar" id="progress3"></div></div><span class="audio-duration">0:41</span><audio id="audio3" preload="none"><source src="audio/sample3.mp3" type="audio/mpeg"></audio></div>
+                    <div class="audio-transcript"><p><strong>Customer:</strong> "Hi. I would like to book a reservation for four people at seven PM on Monday night."</p><p><strong>CallBird:</strong> "We're open five to ten Tuesday through Sunday. How about seven on Tuesday instead?"</p></div>
+                    <p class="audio-caption">The customer asked for Monday, but CallBird knew the restaurant is closed Mondays. It smoothly offered Tuesday at 7 PM instead, took the reservation, and confirmed—all in under 60 seconds."</p>
                 </div>
             </div>
 
-            <!-- Live Stats -->
             <div class="live-stats">
-                <div class="stat-item">
-                    <div class="stat-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-                        </svg>
-                    </div>
-                    <div class="stat-number">10 min</div>
-                    <div class="stat-label">Setup Time</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <polyline points="12 6 12 12 16 14"></polyline>
-                        </svg>
-                    </div>
-                    <div class="stat-number">1.2 sec</div>
-                    <div class="stat-label">Avg Response Time</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                            <line x1="16" y1="2" x2="16" y2="6"></line>
-                            <line x1="8" y1="2" x2="8" y2="6"></line>
-                            <line x1="3" y1="10" x2="21" y2="10"></line>
-                        </svg>
-                    </div>
-                    <div class="stat-number" data-count="200">200+</div>
-                    <div class="stat-label">Businesses Served</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path>
-                        </svg>
-                    </div>
-                    <div class="stat-number">96%</div>
-                    <div class="stat-label">Customer Satisfaction</div>
-                </div>
+                <div class="stat-item"><div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></div><div class="stat-number">10 min</div><div class="stat-label">Setup Time</div></div>
+                <div class="stat-item"><div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div><div class="stat-number">1.2 sec</div><div class="stat-label">Avg Response Time</div></div>
+                <div class="stat-item"><div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div><div class="stat-number" data-count="200">200+</div><div class="stat-label">Businesses Served</div></div>
+                <div class="stat-item"><div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg></div><div class="stat-number">96%</div><div class="stat-label">Customer Satisfaction</div></div>
             </div>
         </div>
     </section>
@@ -797,60 +680,18 @@
     <!-- Problem/Solution Section -->
     <section class="problem-solution">
         <div class="container">
-            <div class="section-header">
-                <h2>You're Losing Customers Every Time Your Phone Rings</h2>
-            </div>
-
+            <div class="section-header"><h2>You're Losing Customers Every Time Your Phone Rings</h2></div>
             <div class="problems-grid">
-                <div class="problem-card">
-                    <div class="problem-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <line x1="15" y1="9" x2="9" y2="15"></line>
-                            <line x1="9" y1="9" x2="15" y2="15"></line>
-                        </svg>
-                    </div>
-                    <h3>62% of Business Calls Go Unanswered</h3>
-                    <p>"You're on a job, with a customer, or driving. The call goes to voicemail."</p>
-                </div>
-                <div class="problem-card">
-                    <div class="problem-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <line x1="15" y1="9" x2="9" y2="15"></line>
-                            <line x1="9" y1="9" x2="15" y2="15"></line>
-                        </svg>
-                    </div>
-                    <h3>Hiring a Receptionist Costs $3,000+/Month</h3>
-                    <p>"You can't afford full-time staff, but you need someone to answer professionally."</p>
-                </div>
-                <div class="problem-card">
-                    <div class="problem-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <line x1="15" y1="9" x2="9" y2="15"></line>
-                            <line x1="9" y1="9" x2="15" y2="15"></line>
-                        </svg>
-                    </div>
-                    <h3>Traditional Answering Services Cost $300-500/Mo</h3>
-                    <p>"They're scripted, robotic, and can't book appointments or access your calendar."</p>
-                </div>
+                <div class="problem-card"><div class="problem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg></div><h3>62% of Business Calls Go Unanswered</h3><p>"You're on a job, with a customer, or driving. The call goes to voicemail."</p></div>
+                <div class="problem-card"><div class="problem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg></div><h3>Hiring a Receptionist Costs $3,000+/Month</h3><p>"You can't afford full-time staff, but you need someone to answer professionally."</p></div>
+                <div class="problem-card"><div class="problem-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg></div><h3>Traditional Answering Services Cost $300-500/Mo</h3><p>"They're scripted, robotic, and can't book appointments or access your calendar."</p></div>
             </div>
-
             <div class="solution-box">
                 <h2>CallBird Is Your AI Receptionist That Never Sleeps</h2>
-                <p class="solution-text">
-                    No more missed opportunities. No more paying thousands for staff. No more generic answering services.
-                </p>
-                <p class="solution-text">
-                    CallBird answers every call with a human-sounding AI trained specifically on your business. It books appointments, answers questions, and handles emergencies—24/7, 365 days a year.
-                </p>
-                <p class="solution-highlight">
-                    <strong>And here's the best part:</strong> Every conversation shows up in your CallBird app with a full transcript. Plus, you get an instant text summary the moment each call ends.
-                </p>
-                <p class="solution-text">
-                    You stay in control without being chained to your phone.
-                </p>
+                <p class="solution-text">No more missed opportunities. No more paying thousands for staff. No more generic answering services.</p>
+                <p class="solution-text">CallBird answers every call with a human-sounding AI trained specifically on your business. It books appointments, answers questions, and handles emergencies—24/7, 365 days a year.</p>
+                <p class="solution-highlight"><strong>And here's the best part:</strong> Every conversation shows up in your CallBird app with a full transcript. Plus, you get an instant text summary the moment each call ends.</p>
+                <p class="solution-text">You stay in control without being chained to your phone.</p>
             </div>
         </div>
     </section>
@@ -858,183 +699,33 @@
     <!-- How It Works Section -->
     <section id="how-it-works" class="how-it-works">
         <div class="container">
-            <div class="section-header">
-                <h2>From Signup to Your First Call: Under 10 Minutes</h2>
-                <p class="subtitle">No, Really. We Timed It.</p>
-            </div>
-
+            <div class="section-header"><h2>From Signup to Your First Call: Under 10 Minutes</h2><p class="subtitle">No, Really. We Timed It.</p></div>
             <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-number">1</div>
-                    <div class="step-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                            <polyline points="14 2 14 8 20 8"></polyline>
-                            <line x1="16" y1="13" x2="8" y2="13"></line>
-                            <line x1="16" y1="17" x2="8" y2="17"></line>
-                            <polyline points="10 9 9 9 8 9"></polyline>
-                        </svg>
-                    </div>
-                    <h3>Tell Us About Your Business</h3>
-                    <p>2-minute signup form. Just your business name, industry, and phone number. That's it.</p>
-                    <div class="step-time">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 1rem; height: 1rem; margin-right: 0.25rem; vertical-align: middle;">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <polyline points="12 6 12 12 16 14"></polyline>
-                        </svg>
-                        2 minutes
-                    </div>
-                </div>
-
-                <div class="step-card">
-                    <div class="step-number">2</div>
-                    <div class="step-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
-                            <rect x="9" y="9" width="6" height="6"></rect>
-                            <line x1="9" y1="1" x2="9" y2="4"></line>
-                            <line x1="15" y1="1" x2="15" y2="4"></line>
-                            <line x1="9" y1="20" x2="9" y2="23"></line>
-                            <line x1="15" y1="20" x2="15" y2="23"></line>
-                            <line x1="20" y1="9" x2="23" y2="9"></line>
-                            <line x1="20" y1="14" x2="23" y2="14"></line>
-                            <line x1="1" y1="9" x2="4" y2="9"></line>
-                            <line x1="1" y1="14" x2="4" y2="14"></line>
-                        </svg>
-                    </div>
-                    <h3>We Build Your AI Receptionist</h3>
-                    <p>Our system reads your website, learns your services, and creates your custom AI voice. You can customize the greeting, tone, and what it says.</p>
-                    <div class="step-time">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 1rem; height: 1rem; margin-right: 0.25rem; vertical-align: middle;">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <polyline points="12 6 12 12 16 14"></polyline>
-                        </svg>
-                        5 minutes
-                    </div>
-                </div>
-
-                <div class="step-card">
-                    <div class="step-number">3</div>
-                    <div class="step-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                        </svg>
-                    </div>
-                    <h3>Forward Your Calls</h3>
-                    <p>We give you a dedicated CallBird number, or forward your existing business line to us. Works with any phone system.</p>
-                    <div class="step-time">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 1rem; height: 1rem; margin-right: 0.25rem; vertical-align: middle;">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <polyline points="12 6 12 12 16 14"></polyline>
-                        </svg>
-                        30 seconds
-                    </div>
-                </div>
-
-                <div class="step-card">
-                    <div class="step-number">4</div>
-                    <div class="step-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-                            <line x1="12" y1="18" x2="12.01" y2="18"></line>
-                        </svg>
-                    </div>
-                    <h3>Download the CallBird App</h3>
-                    <p>Available on iOS and Android. See every conversation, listen to call recordings, read transcripts, and manage appointments—all in one place.</p>
-                    <div class="step-time">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 1rem; height: 1rem; margin-right: 0.25rem; vertical-align: middle;">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <polyline points="12 6 12 12 16 14"></polyline>
-                        </svg>
-                        2 minutes
-                    </div>
-                </div>
+                <div class="step-card"><div class="step-number">1</div><div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></div><h3>Tell Us About Your Business</h3><p>2-minute signup form. Just your business name, industry, and phone number. That's it.</p><div class="step-time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 1rem; height: 1rem; margin-right: 0.25rem; vertical-align: middle;"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>2 minutes</div></div>
+                <div class="step-card"><div class="step-number">2</div><div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg></div><h3>We Build Your AI Receptionist</h3><p>Our system reads your website, learns your services, and creates your custom AI voice. You can customize the greeting, tone, and what it says.</p><div class="step-time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 1rem; height: 1rem; margin-right: 0.25rem; vertical-align: middle;"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>5 minutes</div></div>
+                <div class="step-card"><div class="step-number">3</div><div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div><h3>Forward Your Calls</h3><p>We give you a dedicated CallBird number, or forward your existing business line to us. Works with any phone system.</p><div class="step-time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 1rem; height: 1rem; margin-right: 0.25rem; vertical-align: middle;"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>30 seconds</div></div>
+                <div class="step-card"><div class="step-number">4</div><div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg></div><h3>Download the CallBird App</h3><p>Available on iOS and Android. See every conversation, listen to call recordings, read transcripts, and manage appointments—all in one place.</p><div class="step-time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 1rem; height: 1rem; margin-right: 0.25rem; vertical-align: middle;"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>2 minutes</div></div>
             </div>
-
-            <div class="cta-box">
-                <a href="/start" class="btn-large btn-primary">Start Your 7-Day Free Trial</a>
-                <p class="cta-subtext">No credit card required. Your AI receptionist is ready in 10 minutes.</p>
-            </div>
+            <div class="cta-box"><a href="/start" class="btn-large btn-primary">Start Your 7-Day Free Trial</a><p class="cta-subtext">No credit card required. Your AI receptionist is ready in 10 minutes.</p></div>
         </div>
     </section>
 
     <!-- CallBird App Section -->
     <section class="app-showcase">
         <div class="container">
-            <div class="section-header">
-                <h2>See Every Conversation. Manage Everything from Your Phone.</h2>
-                <p>Unlike old-school answering services that just take messages, CallBird gives you a complete command center for every customer interaction.</p>
-            </div>
-
+            <div class="section-header"><h2>See Every Conversation. Manage Everything from Your Phone.</h2><p>Unlike old-school answering services that just take messages, CallBird gives you a complete command center for every customer interaction.</p></div>
             <div class="app-features">
-                <div class="app-screenshot">
-                    <div class="dashboard-mockup">
-                        <img src="https://i.imgur.com/Y3X06He.png" alt="CallBird Dashboard - Call Management Interface" class="dashboard-image">
-                    </div>
-                </div>
-
+                <div class="app-screenshot"><div class="dashboard-mockup"><img src="https://i.imgur.com/Y3X06He.png" alt="CallBird Dashboard - Call Management Interface" class="dashboard-image"></div></div>
                 <div class="app-benefits">
-                    <div class="benefit-item">
-                        <div class="benefit-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-                                <line x1="12" y1="18" x2="12.01" y2="18"></line>
-                            </svg>
-                        </div>
-                        <h3>Mobile App</h3>
-                        <p>iOS & Android. Access anywhere, anytime. Manage calls on the go.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <div class="benefit-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                            </svg>
-                        </div>
-                        <h3>Call Recordings</h3>
-                        <p>Listen to any call anytime. Review quality, train staff, or settle disputes.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <div class="benefit-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <line x1="18" y1="20" x2="18" y2="10"></line>
-                                <line x1="12" y1="20" x2="12" y2="4"></line>
-                                <line x1="6" y1="20" x2="6" y2="14"></line>
-                            </svg>
-                        </div>
-                        <h3>Analytics Dashboard</h3>
-                        <p>Track call volume, peak times, conversion rates, and customer satisfaction.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <div class="benefit-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
-                                <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
-                            </svg>
-                        </div>
-                        <h3>Instant Alerts</h3>
-                        <p>Get text notifications for every call with customer details and actions taken.</p>
-                    </div>
+                    <div class="benefit-item"><div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg></div><h3>Mobile App</h3><p>iOS & Android. Access anywhere, anytime. Manage calls on the go.</p></div>
+                    <div class="benefit-item"><div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div><h3>Call Recordings</h3><p>Listen to any call anytime. Review quality, train staff, or settle disputes.</p></div>
+                    <div class="benefit-item"><div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg></div><h3>Analytics Dashboard</h3><p>Track call volume, peak times, conversion rates, and customer satisfaction.</p></div>
+                    <div class="benefit-item"><div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg></div><h3>Instant Alerts</h3><p>Get text notifications for every call with customer details and actions taken.</p></div>
                 </div>
             </div>
-
-            <!-- SMS Notification Example -->
             <div class="sms-example">
-                <div class="sms-mockup">
-                    <div class="sms-header">Messages</div>
-                    <div class="sms-content">
-                        <div class="sms-message">
-                            <strong>CallBird</strong>
-                            <p>New call from Sarah Martinez at 2:47pm</p>
-                            <p><strong>Requested:</strong> House painting estimate<br>
-                            <strong>Phone:</strong> (555) 123-4567<br>
-                            <strong>Appointment booked:</strong> Thursday 3/14 at 10am</p>
-                            <a href="#" class="sms-link">View Full Call in App →</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="sms-caption">
-                    <p><strong>You get a text summary within seconds of each call ending.</strong> Never miss important details.</p>
-                </div>
+                <div class="sms-mockup"><div class="sms-header">Messages</div><div class="sms-content"><div class="sms-message"><strong>CallBird</strong><p>New call from Sarah Martinez at 2:47pm</p><p><strong>Requested:</strong> House painting estimate<br><strong>Phone:</strong> (555) 123-4567<br><strong>Appointment booked:</strong> Thursday 3/14 at 10am</p><a href="#" class="sms-link">View Full Call in App →</a></div></div></div>
+                <div class="sms-caption"><p><strong>You get a text summary within seconds of each call ending.</strong> Never miss important details.</p></div>
             </div>
         </div>
     </section>
@@ -1042,47 +733,14 @@
     <!-- Features Section -->
     <section id="features" class="features">
         <div class="container">
-            <div class="section-header">
-                <h2>Everything You Need. Nothing You Don't.</h2>
-            </div>
-
+            <div class="section-header"><h2>Everything You Need. Nothing You Don't.</h2></div>
             <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div>
-                    <h3>Smart Appointment Booking</h3>
-                    <p>Your AI accesses your Google Calendar, Outlook, or our built-in scheduler in real-time. Customers book appointments during the call. You get a calendar invite. They get a confirmation text.</p>
-                    <div class="feature-integrations"><span>✓ Google Calendar</span><span>✓ Outlook</span><span>✓ Apple Calendar</span></div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></div>
-                    <h3>Instant Text Summaries</h3>
-                    <p>The second a call ends, you get a text with customer name and contact info, what they wanted, what action was taken, and a link to full transcript.</p>
-                    <p class="feature-highlight">No more digging through voicemails or missed call lists.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><polyline points="7 23 3 19 7 15"></polyline><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg></div>
-                    <h3>Emergency Call Transfer</h3>
-                    <p>CallBird knows when to loop you in. Urgent calls, complex questions, or VIP customers get transferred immediately to your cell phone—with full context so you know what the call is about.</p>
-                    <div class="feature-example">Example: "Transfer all calls with 'emergency' in them"</div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 0-8 8c0 5.4 7 11.5 7.3 11.8a1 1 0 0 0 1.4 0C13 21.5 20 15.4 20 10a8 8 0 0 0-8-8z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
-                    <h3>Industry-Specific Training</h3>
-                    <p>We don't give you a generic AI. Your CallBird is trained on your website content, service list and pricing, FAQ answers, and booking policies.</p>
-                    <p class="feature-highlight">It answers questions accurately because it knows YOUR business.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></div>
-                    <h3>After-Hours Coverage</h3>
-                    <p>Most new customers call outside 9-5. CallBird answers at 11pm on Saturday just as professionally as 2pm on Tuesday.</p>
-                    <div class="feature-stat"><strong>Real stat:</strong> 34% of booked appointments happen after 6pm or on weekends</div>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg></div>
-                    <h3>Call Recording & Transcripts</h3>
-                    <p>Every single call is recorded (downloadable MP3), transcribed word-for-word, searchable in your app, and stored securely for 90 days.</p>
-                    <p class="feature-use">Perfect for training, quality control, or settling disputes.</p>
-                </div>
+                <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div><h3>Smart Appointment Booking</h3><p>Your AI accesses your Google Calendar, Outlook, or our built-in scheduler in real-time. Customers book appointments during the call. You get a calendar invite. They get a confirmation text.</p><div class="feature-integrations"><span>✓ Google Calendar</span><span>✓ Outlook</span><span>✓ Apple Calendar</span></div></div>
+                <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></div><h3>Instant Text Summaries</h3><p>The second a call ends, you get a text with customer name and contact info, what they wanted, what action was taken, and a link to full transcript.</p><p class="feature-highlight">No more digging through voicemails or missed call lists.</p></div>
+                <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><polyline points="7 23 3 19 7 15"></polyline><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg></div><h3>Emergency Call Transfer</h3><p>CallBird knows when to loop you in. Urgent calls, complex questions, or VIP customers get transferred immediately to your cell phone—with full context so you know what the call is about.</p><div class="feature-example">Example: "Transfer all calls with 'emergency' in them"</div></div>
+                <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 0-8 8c0 5.4 7 11.5 7.3 11.8a1 1 0 0 0 1.4 0C13 21.5 20 15.4 20 10a8 8 0 0 0-8-8z"></path><circle cx="12" cy="10" r="3"></circle></svg></div><h3>Industry-Specific Training</h3><p>We don't give you a generic AI. Your CallBird is trained on your website content, service list and pricing, FAQ answers, and booking policies.</p><p class="feature-highlight">It answers questions accurately because it knows YOUR business.</p></div>
+                <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></div><h3>After-Hours Coverage</h3><p>Most new customers call outside 9-5. CallBird answers at 11pm on Saturday just as professionally as 2pm on Tuesday.</p><div class="feature-stat"><strong>Real stat:</strong> 34% of booked appointments happen after 6pm or on weekends</div></div>
+                <div class="feature-card"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg></div><h3>Call Recording & Transcripts</h3><p>Every single call is recorded (downloadable MP3), transcribed word-for-word, searchable in your app, and stored securely for 90 days.</p><p class="feature-use">Perfect for training, quality control, or settling disputes.</p></div>
             </div>
         </div>
     </section>
@@ -1090,71 +748,14 @@
     <!-- Industries Section -->
     <section class="industries">
         <div class="container">
-            <div class="section-header">
-                <h2>Built for Small Businesses Who Can't Afford to Miss Calls</h2>
-            </div>
-
+            <div class="section-header"><h2>Built for Small Businesses Who Can't Afford to Miss Calls</h2></div>
             <div class="industries-grid">
-                <a href="home-services-ai-receptionist.html" style="text-decoration: none;">
-                    <div class="industry-card">
-                        <div class="industry-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg></div>
-                        <h3>Home Services</h3>
-                        <p class="industry-subtitle">Plumbers • Electricians • HVAC • Contractors</p>
-                        <p>"CallBird books service calls, handles emergency requests, and collects job details while you're on site."</p>
-                        <div class="industry-result"><strong>Average result:</strong> 23 more appointments/month</div>
-                        <div style="margin-top: 1rem; color: var(--primary-color); font-weight: 600;">Learn More for Contractors →</div>
-                    </div>
-                </a>
-                <a href="dental-ai-receptionist.html" style="text-decoration: none;">
-                    <div class="industry-card">
-                        <div class="industry-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 0-7 7c0 1.5.5 3.5 2 5l5 5 5-5c1.5-1.5 2-3.5 2-5a7 7 0 0 0-7-7z"></path><circle cx="12" cy="9" r="1" fill="#122092"></circle></svg></div>
-                        <h3>Medical & Dental</h3>
-                        <p class="industry-subtitle">Dentists • Doctors • Chiropractors • Therapists</p>
-                        <p>"HIPAA-compliant appointment booking. Patients get confirmed without tying up your front desk."</p>
-                        <div class="industry-result"><strong>Average result:</strong> 40% fewer no-shows</div>
-                        <div style="margin-top: 1rem; color: var(--primary-color); font-weight: 600;">Learn More for Dentists →</div>
-                    </div>
-                </a>
-                <a href="restaurants-ai-receptionist.html" style="text-decoration: none;">
-                    <div class="industry-card">
-                        <div class="industry-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg></div>
-                        <h3>Restaurants & Food</h3>
-                        <p class="industry-subtitle">Restaurants • Cafes • Catering • Food Trucks</p>
-                        <p>"Answer questions about hours, menu items, dietary options, and take-out availability 24/7."</p>
-                        <div class="industry-result"><strong>Average result:</strong> 15% increase in orders</div>
-                        <div style="margin-top: 1rem; color: var(--primary-color); font-weight: 600;">Learn More for Restaurants →</div>
-                    </div>
-                </a>
-                <a href="professional-services-ai-receptionist.html" style="text-decoration: none;">
-                    <div class="industry-card">
-                        <div class="industry-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg></div>
-                        <h3>Professional Services</h3>
-                        <p class="industry-subtitle">Lawyers • Accountants • Consultants • Coaches</p>
-                        <p>"Qualify leads, book consultations, and screen calls so you only talk to serious prospects."</p>
-                        <div class="industry-result"><strong>Average result:</strong> 3x more consultations</div>
-                        <div style="margin-top: 1rem; color: var(--primary-color); font-weight: 600;">Learn More for Professional Services →</div>
-                    </div>
-                </a>
-                <a href="retail-ai-receptionist.html" style="text-decoration: none;">
-                    <div class="industry-card">
-                        <div class="industry-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></div>
-                        <h3>Retail & E-Commerce</h3>
-                        <p class="industry-subtitle">Local shops • Boutiques • Service businesses</p>
-                        <p>"Answer product questions, store hours, and availability while you help in-store customers."</p>
-                        <div class="industry-result"><strong>Average result:</strong> 28% less abandonment</div>
-                        <div style="margin-top: 1rem; color: var(--primary-color); font-weight: 600;">Learn More for Retail →</div>
-                    </div>
-                </a>
-                <a href="veterinary-ai-receptionist.html" style="text-decoration: none;">
-                    <div class="industry-card">
-                        <div class="industry-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 5.172C10 3.782 8.423 2.679 6.5 3c-2.823.47-4.113 6.006-4 7 .08.703 1.725 1.722 3.656 1 1.261-.472 1.96-1.45 2.344-2.5"></path><path d="M14.267 5.172c0-1.39 1.577-2.493 3.5-2.172 2.823.47 4.113 6.006 4 7-.08.703-1.725 1.722-3.656 1-1.261-.472-1.855-1.45-2.239-2.5"></path><path d="M8 14v.5"></path><path d="M16 14v.5"></path><path d="M11.25 16.25h1.5L12 17l-.75-.75z"></path><path d="M4.42 11.247A13.152 13.152 0 0 0 4 14.556C4 18.728 7.582 21 12 21s8-2.272 8-6.444c0-1.061-.162-2.2-.493-3.309m-9.243-6.082A8.801 8.801 0 0 1 12 5c.78 0 1.5.108 2.161.306"></path></svg></div>
-                        <h3>Veterinary Clinics</h3>
-                        <p class="industry-subtitle">Vets • Animal Hospitals • Grooming</p>
-                        <p>"Book appointments, triage emergency cases, and refill prescription requests automatically."</p>
-                        <div class="industry-result"><strong>Average result:</strong> 50+ hours saved/month</div>
-                        <div style="margin-top: 1rem; color: var(--primary-color); font-weight: 600;">Learn More for Veterinary →</div>
-                    </div>
-                </a>
+                <a href="home-services-ai-receptionist.html" style="text-decoration: none;"><div class="industry-card"><div class="industry-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg></div><h3>Home Services</h3><p class="industry-subtitle">Plumbers • Electricians • HVAC • Contractors</p><p>"CallBird books service calls, handles emergency requests, and collects job details while you're on site."</p><div class="industry-result"><strong>Average result:</strong> 23 more appointments/month</div><div style="margin-top: 1rem; color: var(--primary-color); font-weight: 600;">Learn More for Contractors →</div></div></a>
+                <a href="dental-ai-receptionist.html" style="text-decoration: none;"><div class="industry-card"><div class="industry-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 0-7 7c0 1.5.5 3.5 2 5l5 5 5-5c1.5-1.5 2-3.5 2-5a7 7 0 0 0-7-7z"></path><circle cx="12" cy="9" r="1" fill="#122092"></circle></svg></div><h3>Medical & Dental</h3><p class="industry-subtitle">Dentists • Doctors • Chiropractors • Therapists</p><p>"HIPAA-compliant appointment booking. Patients get confirmed without tying up your front desk."</p><div class="industry-result"><strong>Average result:</strong> 40% fewer no-shows</div><div style="margin-top: 1rem; color: var(--primary-color); font-weight: 600;">Learn More for Dentists →</div></div></a>
+                <a href="restaurants-ai-receptionist.html" style="text-decoration: none;"><div class="industry-card"><div class="industry-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg></div><h3>Restaurants & Food</h3><p class="industry-subtitle">Restaurants • Cafes • Catering • Food Trucks</p><p>"Answer questions about hours, menu items, dietary options, and take-out availability 24/7."</p><div class="industry-result"><strong>Average result:</strong> 15% increase in orders</div><div style="margin-top: 1rem; color: var(--primary-color); font-weight: 600;">Learn More for Restaurants →</div></div></a>
+                <a href="professional-services-ai-receptionist.html" style="text-decoration: none;"><div class="industry-card"><div class="industry-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg></div><h3>Professional Services</h3><p class="industry-subtitle">Lawyers • Accountants • Consultants • Coaches</p><p>"Qualify leads, book consultations, and screen calls so you only talk to serious prospects."</p><div class="industry-result"><strong>Average result:</strong> 3x more consultations</div><div style="margin-top: 1rem; color: var(--primary-color); font-weight: 600;">Learn More for Professional Services →</div></div></a>
+                <a href="retail-ai-receptionist.html" style="text-decoration: none;"><div class="industry-card"><div class="industry-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></div><h3>Retail & E-Commerce</h3><p class="industry-subtitle">Local shops • Boutiques • Service businesses</p><p>"Answer product questions, store hours, and availability while you help in-store customers."</p><div class="industry-result"><strong>Average result:</strong> 28% less abandonment</div><div style="margin-top: 1rem; color: var(--primary-color); font-weight: 600;">Learn More for Retail →</div></div></a>
+                <a href="veterinary-ai-receptionist.html" style="text-decoration: none;"><div class="industry-card"><div class="industry-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 5.172C10 3.782 8.423 2.679 6.5 3c-2.823.47-4.113 6.006-4 7 .08.703 1.725 1.722 3.656 1 1.261-.472 1.96-1.45 2.344-2.5"></path><path d="M14.267 5.172c0-1.39 1.577-2.493 3.5-2.172 2.823.47 4.113 6.006 4 7-.08.703-1.725 1.722-3.656 1-1.261-.472-1.855-1.45-2.239-2.5"></path><path d="M8 14v.5"></path><path d="M16 14v.5"></path><path d="M11.25 16.25h1.5L12 17l-.75-.75z"></path><path d="M4.42 11.247A13.152 13.152 0 0 0 4 14.556C4 18.728 7.582 21 12 21s8-2.272 8-6.444c0-1.061-.162-2.2-.493-3.309m-9.243-6.082A8.801 8.801 0 0 1 12 5c.78 0 1.5.108 2.161.306"></path></svg></div><h3>Veterinary Clinics</h3><p class="industry-subtitle">Vets • Animal Hospitals • Grooming</p><p>"Book appointments, triage emergency cases, and refill prescription requests automatically."</p><div class="industry-result"><strong>Average result:</strong> 50+ hours saved/month</div><div style="margin-top: 1rem; color: var(--primary-color); font-weight: 600;">Learn More for Veterinary →</div></div></a>
             </div>
         </div>
     </section>
@@ -1162,20 +763,10 @@
     <!-- Comparison Table -->
     <section class="comparison">
         <div class="container">
-            <div class="section-header">
-                <h2>Why CallBird Beats Every Other Option</h2>
-            </div>
+            <div class="section-header"><h2>Why CallBird Beats Every Other Option</h2></div>
             <div class="comparison-table-wrapper">
                 <table class="comparison-table">
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th class="highlight-col"><div class="table-header-highlight">CallBird</div></th>
-                            <th>Human Receptionist</th>
-                            <th>Ruby/Smith.ai</th>
-                            <th>Just Voicemail</th>
-                        </tr>
-                    </thead>
+                    <thead><tr><th></th><th class="highlight-col"><div class="table-header-highlight">CallBird</div></th><th>Human Receptionist</th><th>Ruby/Smith.ai</th><th>Just Voicemail</th></tr></thead>
                     <tbody>
                         <tr><td><strong>Monthly Cost</strong></td><td class="highlight-col"><strong>$99-499</strong></td><td>$3,000-4,500</td><td>$299-600</td><td>$0</td></tr>
                         <tr><td><strong>Setup Time</strong></td><td class="highlight-col"><strong>10 min</strong></td><td>2-4 weeks</td><td>3-5 days</td><td>Instant</td></tr>
@@ -1189,71 +780,18 @@
                     </tbody>
                 </table>
             </div>
-            <div class="comparison-summary">
-                <h3>The Bottom Line</h3>
-                <p><strong>You have three choices:</strong></p>
-                <ol>
-                    <li><strong>Hire staff:</strong> Professional, but $36,000-54,000 per year + benefits + time off</li>
-                    <li><strong>Traditional answering service:</strong> Available 24/7, but generic, can't book appointments, $300-600/month</li>
-                    <li><strong>CallBird:</strong> Custom AI trained on your business, books appointments, texts you summaries, all from an app—starting at $99/month</li>
-                </ol>
-                <p class="comparison-conclusion">The choice is obvious.</p>
-            </div>
+            <div class="comparison-summary"><h3>The Bottom Line</h3><p><strong>You have three choices:</strong></p><ol><li><strong>Hire staff:</strong> Professional, but $36,000-54,000 per year + benefits + time off</li><li><strong>Traditional answering service:</strong> Available 24/7, but generic, can't book appointments, $300-600/month</li><li><strong>CallBird:</strong> Custom AI trained on your business, books appointments, texts you summaries, all from an app—starting at $99/month</li></ol><p class="comparison-conclusion">The choice is obvious.</p></div>
         </div>
     </section>
 
     <!-- Testimonials Section -->
     <section class="testimonials">
         <div class="container">
-            <div class="section-header">
-                <h2>Join 200+ Businesses Who Never Miss a Call</h2>
-            </div>
+            <div class="section-header"><h2>Join 200+ Businesses Who Never Miss a Call</h2></div>
             <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                    </div>
-                    <h3>"We were missing 30% of our calls before CallBird"</h3>
-                    <p>"Now every patient gets through, our appointment book stays full, and I'm not chained to the front desk. The text summaries alone are worth it. I know exactly who called and what they need before I even call back."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
-                        <div class="author-info"><strong>Dr. Sarah Chen</strong><span>Riverside Dental Practice</span><span class="author-stats">CallBird customer since December 2025</span></div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                    </div>
-                    <h3>"Setup literally took 8 minutes"</h3>
-                    <p>"I signed up, forwarded my phone, and CallBird was answering calls before I finished lunch. The first call it took was a $3,200 kitchen remodel job. Paid for itself before I even got home that day."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
-                        <div class="author-info"><strong>Carlos Martinez</strong><span>Elite Home Renovations</span><span class="author-stats">CallBird customer since February 2026</span></div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                        <svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                    </div>
-                    <h3>"Emergency calls get through, routine stuff is handled"</h3>
-                    <p>"As a vet, I need to know immediately when there's a real emergency. CallBird transfers those to me right away, but handles appointment bookings and prescription refills on its own. My front desk staff loves it because the phone isn't ringing off the hook all day."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
-                        <div class="author-info"><strong>Dr. James Park</strong><span>Oakwood Animal Hospital</span><span class="author-stats">CallBird customer since October 2025</span></div>
-                    </div>
-                </div>
+                <div class="testimonial-card"><div class="testimonial-rating"><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div><h3>"We were missing 30% of our calls before CallBird"</h3><p>"Now every patient gets through, our appointment book stays full, and I'm not chained to the front desk. The text summaries alone are worth it. I know exactly who called and what they need before I even call back."</p><div class="testimonial-author"><div class="author-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div><div class="author-info"><strong>Dr. Sarah Chen</strong><span>Riverside Dental Practice</span><span class="author-stats">CallBird customer since December 2025</span></div></div></div>
+                <div class="testimonial-card"><div class="testimonial-rating"><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div><h3>"Setup literally took 8 minutes"</h3><p>"I signed up, forwarded my phone, and CallBird was answering calls before I finished lunch. The first call it took was a $3,200 kitchen remodel job. Paid for itself before I even got home that day."</p><div class="testimonial-author"><div class="author-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div><div class="author-info"><strong>Carlos Martinez</strong><span>Elite Home Renovations</span><span class="author-stats">CallBird customer since February 2026</span></div></div></div>
+                <div class="testimonial-card"><div class="testimonial-rating"><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1.25rem; height: 1.25rem;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></div><h3>"Emergency calls get through, routine stuff is handled"</h3><p>"As a vet, I need to know immediately when there's a real emergency. CallBird transfers those to me right away, but handles appointment bookings and prescription refills on its own. My front desk staff loves it because the phone isn't ringing off the hook all day."</p><div class="testimonial-author"><div class="author-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="#122092" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div><div class="author-info"><strong>Dr. James Park</strong><span>Oakwood Animal Hospital</span><span class="author-stats">CallBird customer since October 2025</span></div></div></div>
             </div>
         </div>
     </section>
@@ -1261,71 +799,20 @@
     <!-- Pricing Section -->
     <section id="pricing" class="pricing">
         <div class="container">
-            <div class="section-header">
-                <h2>Simple Pricing. No Hidden Fees.</h2>
-                <p>All plans include the CallBird app, text summaries, call recordings, and 7-day free trial.</p>
-            </div>
+            <div class="section-header"><h2>Simple Pricing. No Hidden Fees.</h2><p>All plans include the CallBird app, text summaries, call recordings, and 7-day free trial.</p></div>
             <div class="pricing-grid">
-                <div class="pricing-card">
-                    <div class="pricing-header"><h3>Starter</h3><div class="pricing-price"><span class="price-currency">$</span><span class="price-amount">99</span><span class="price-period">/month</span></div><p class="pricing-subtitle">Perfect for solo operators and small teams</p></div>
-                    <ul class="pricing-features">
-                        <li>✓ Up to 50 calls per month</li>
-                        <li>✓ Basic appointment booking</li>
-                        <li>✓ Emergency call transfer</li>
-                        <li>✓ Text summaries after each call</li>
-                        <li>✓ Call recordings & transcripts</li>
-                        <li>✓ Business hours routing</li>
-                        <li>✓ Website knowledge base training</li>
-                        <li>✓ Email support</li>
-                    </ul>
-                    <a href="/start" class="btn-pricing">Start 7-Day Free Trial</a>
-                </div>
-                <div class="pricing-card pricing-popular">
-                    <div class="pricing-badge"><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1rem; height: 1rem; margin-right: 0.25rem; vertical-align: middle;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>Most Popular</div>
-                    <div class="pricing-header"><h3>Professional</h3><div class="pricing-price"><span class="price-currency">$</span><span class="price-amount">249</span><span class="price-period">/month</span></div><p class="pricing-subtitle">For growing businesses with higher call volume</p></div>
-                    <ul class="pricing-features">
-                        <li><strong>Everything in Starter, plus:</strong></li>
-                        <li>✓ 2 team members / users</li>
-                        <li>✓ Up to 500 calls per month</li>
-                        <li>✓ Advanced appointment booking</li>
-                        <li>✓ Google Calendar integration</li>
-                        <li>✓ Custom business hours routing</li>
-                        <li>✓ Priority call transfer rules</li>
-                        <li>✓ Custom FAQ & knowledge base editing</li>
-                        <li>✓ Spam call filtering</li>
-                        <li>✓ Priority email + call support</li>
-                    </ul>
-                    <a href="/start" class="btn-pricing btn-primary">Start 7-Day Free Trial</a>
-                    <p class="pricing-recommendation">Most businesses choose Professional</p>
-                </div>
-                <div class="pricing-card">
-                    <div class="pricing-header"><h3>Enterprise</h3><div class="pricing-price"><span class="price-currency">$</span><span class="price-amount">499</span><span class="price-period">/month</span></div><p class="pricing-subtitle">For high-volume and multi-location operations</p></div>
-                    <ul class="pricing-features">
-                        <li><strong>Everything in Professional, plus:</strong></li>
-                        <li>✓ Unlimited calls per month</li>
-                        <li>✓ Custom AI voice & personality training</li>
-                        <li>✓ Multi-language support</li>
-                        <li>✓ Caller recognition & VIP routing</li>
-                        <li>✓ Dedicated account manager</li>
-                        <li>✓ Custom reporting & analytics</li>
-                        <li>✓ API access</li>
-                    </ul>
-                    <div class="pricing-note">Best value for high call volume</div>
-                    <a href="/start" class="btn-pricing">Start 7-Day Free Trial</a>
-                </div>
+                <div class="pricing-card"><div class="pricing-header"><h3>Starter</h3><div class="pricing-price"><span class="price-currency">$</span><span class="price-amount">99</span><span class="price-period">/month</span></div><p class="pricing-subtitle">Perfect for solo operators and small teams</p></div><ul class="pricing-features"><li>✓ Up to 50 calls per month</li><li>✓ Basic appointment booking</li><li>✓ Emergency call transfer</li><li>✓ Text summaries after each call</li><li>✓ Call recordings & transcripts</li><li>✓ Business hours routing</li><li>✓ Website knowledge base training</li><li>✓ Email support</li></ul><a href="/start" class="btn-pricing">Start 7-Day Free Trial</a></div>
+                <div class="pricing-card pricing-popular"><div class="pricing-badge"><svg viewBox="0 0 24 24" fill="#f59e0b" stroke="#f59e0b" stroke-width="1" style="width: 1rem; height: 1rem; margin-right: 0.25rem; vertical-align: middle;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>Most Popular</div><div class="pricing-header"><h3>Professional</h3><div class="pricing-price"><span class="price-currency">$</span><span class="price-amount">249</span><span class="price-period">/month</span></div><p class="pricing-subtitle">For growing businesses with higher call volume</p></div><ul class="pricing-features"><li><strong>Everything in Starter, plus:</strong></li><li>✓ 2 team members / users</li><li>✓ Up to 500 calls per month</li><li>✓ Advanced appointment booking</li><li>✓ Google Calendar integration</li><li>✓ Custom business hours routing</li><li>✓ Priority call transfer rules</li><li>✓ Custom FAQ & knowledge base editing</li><li>✓ Spam call filtering</li><li>✓ Priority email + call support</li></ul><a href="/start" class="btn-pricing btn-primary">Start 7-Day Free Trial</a><p class="pricing-recommendation">Most businesses choose Professional</p></div>
+                <div class="pricing-card"><div class="pricing-header"><h3>Enterprise</h3><div class="pricing-price"><span class="price-currency">$</span><span class="price-amount">499</span><span class="price-period">/month</span></div><p class="pricing-subtitle">For high-volume and multi-location operations</p></div><ul class="pricing-features"><li><strong>Everything in Professional, plus:</strong></li><li>✓ Unlimited calls per month</li><li>✓ Custom AI voice & personality training</li><li>✓ Multi-language support</li><li>✓ Caller recognition & VIP routing</li><li>✓ Dedicated account manager</li><li>✓ Custom reporting & analytics</li><li>✓ API access</li></ul><div class="pricing-note">Best value for high call volume</div><a href="/start" class="btn-pricing">Start 7-Day Free Trial</a></div>
             </div>
-            <div class="pricing-guarantee">
-                <p><strong>All plans include:</strong> 7-day free trial (no credit card required) • Cancel anytime (no contracts) • Setup in under 10 minutes • 30-day money-back guarantee • Free migration support</p>
-            </div>
+            <div class="pricing-guarantee"><p><strong>All plans include:</strong> 7-day free trial (no credit card required) • Cancel anytime (no contracts) • Setup in under 10 minutes • 30-day money-back guarantee • Free migration support</p></div>
         </div>
     </section>
 
     <!-- FAQ Section -->
     <section id="faq" class="faq">
         <div class="container">
-            <div class="section-header">
-                <h2>Questions? We've Got Answers.</h2>
-            </div>
+            <div class="section-header"><h2>Questions? We've Got Answers.</h2></div>
             <div class="faq-grid">
                 <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)"><span>How quickly can I get my AI phone number?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Your CallBird number is ready within <strong>10 minutes</strong> of completing signup. That's not a typo—10 minutes from signup to answering your first call.</p><p><strong>Here's the timeline:</strong></p><ul><li>Minute 1-2: You fill out the signup form</li><li>Minute 3-7: We create your AI and train it on your website</li><li>Minute 8-9: You get your phone number and forward settings</li><li>Minute 10: Your first call is answered by CallBird</li></ul><p>Some customers have gotten their first real customer call within 15 minutes of signing up.</p></div></div>
                 <div class="faq-item"><button class="faq-question" onclick="toggleFAQ(this)"><span>Does CallBird integrate with my existing calendar?</span><span class="faq-icon">+</span></button><div class="faq-answer"><p>Yes! CallBird works with:</p><ul><li>Google Calendar (easiest integration)</li><li>Microsoft Outlook</li><li>Apple Calendar</li><li>CallBird's built-in calendar</li></ul><p><strong>When CallBird books an appointment, it:</strong></p><ol><li>Checks your calendar for availability in real-time</li><li>Books the appointment</li><li>Sends you a calendar invite</li><li>Texts the customer a confirmation</li><li>Sends you a text summary</li></ol></div></div>
@@ -1356,10 +843,7 @@
                         <div class="cta-benefits"><span>✓ Setup in 10 minutes</span><span>✓ No credit card required</span><span>✓ Cancel anytime</span></div>
                     </div>
                 </div>
-                <div class="final-trust">
-                    <p><strong>Join 200+ businesses using CallBird:</strong></p>
-                    <div class="trust-stats"><span>✓ 96% customer satisfaction</span><span>✓ 30-day money-back guarantee</span><span>✓ A2P 10DLC compliant</span></div>
-                </div>
+                <div class="final-trust"><p><strong>Join 200+ businesses using CallBird:</strong></p><div class="trust-stats"><span>✓ 96% customer satisfaction</span><span>✓ 30-day money-back guarantee</span><span>✓ A2P 10DLC compliant</span></div></div>
             </div>
         </div>
     </section>
@@ -1368,14 +852,10 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-col">
-                    <div class="footer-logo"><img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird" class="logo-image"></div>
-                    <p class="footer-tagline">AI-powered call answering, appointment booking & instant summaries for small businesses.</p>
-                    <div class="footer-contact"><p>Atlanta, GA</p><p><a href="tel:+15055945806">(505) 594-5806</a></p><p><a href="mailto:support@callbirdai.com">support@callbirdai.com</a></p></div>
-                </div>
+                <div class="footer-col"><div class="footer-logo"><img src="https://i.imgur.com/qwyQQW5.png" alt="CallBird" class="logo-image"></div><p class="footer-tagline">AI-powered call answering, appointment booking & instant summaries for small businesses.</p><div class="footer-contact"><p>Atlanta, GA</p><p><a href="tel:+15055945806">(505) 594-5806</a></p><p><a href="mailto:support@callbirdai.com">support@callbirdai.com</a></p></div></div>
                 <div class="footer-col"><h4>Product</h4><ul class="footer-links"><li><a href="#features">Features</a></li><li><a href="#how-it-works">How It Works</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#faq">FAQ</a></li></ul></div>
                 <div class="footer-col"><h4>Industries</h4><ul class="footer-links"><li><a href="home-services-ai-receptionist.html">Home Services</a></li><li><a href="dental-ai-receptionist.html">Medical & Dental</a></li><li><a href="restaurants-ai-receptionist.html">Restaurants</a></li><li><a href="legal-ai-receptionist.html">Legal</a></li><li><a href="professional-services-ai-receptionist.html">Professional Services</a></li><li><a href="retail-ai-receptionist.html">Retail</a></li><li><a href="veterinary-ai-receptionist.html">Veterinary</a></li></ul></div>
-                <div class="footer-col"><h4>Company</h4><ul class="footer-links"><li><a href="mailto:support@callbirdai.com">Contact</a></li><li><a href="blog.html">Blog</a></li><li><a href="https://myvoiceaiconnect.com" target="_blank" rel="noopener">White Label</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-and-conditions.html">Terms & Conditions</a></li></ul></div>
+                <div class="footer-col"><h4>Company</h4><ul class="footer-links"><li><a href="mailto:support@callbirdai.com">Contact</a></li><li><a href="blog.html">Blog</a></li><li><a href="demo.html">Book a Demo</a></li><li><a href="https://myvoiceaiconnect.com" target="_blank" rel="noopener">White Label</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms-and-conditions.html">Terms & Conditions</a></li></ul></div>
             </div>
             <div class="footer-bottom"><p>&copy; 2026 CallBird AI. All Rights Reserved.</p><p>A2P 10DLC Compliant • SOC 2 Type II Certified</p></div>
         </div>
@@ -1414,54 +894,12 @@
         "@context": "https://schema.org",
         "@type": "FAQPage",
         "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "How quickly can I get my AI phone number?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Your CallBird number is ready within 10 minutes of completing signup. You fill out the signup form in 2 minutes, we create your AI and train it on your website in 5 minutes, you get your phone number and forward settings in 2 minutes, and your first call is answered by CallBird. Some customers have gotten their first real customer call within 15 minutes of signing up."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Does CallBird integrate with my existing calendar?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Yes. CallBird works with Google Calendar, Microsoft Outlook, Apple Calendar, and CallBird's built-in calendar. When CallBird books an appointment, it checks your calendar for availability in real-time, books the appointment, sends you a calendar invite, texts the customer a confirmation, and sends you a text summary."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "What happens if CallBird gets a call it can't handle?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "CallBird has three built-in safety nets: Instant Transfer for emergencies or complex questions where CallBird transfers the call to your cell phone immediately with full context, Take a Message where CallBird collects their name, number, email, and reason for calling if you're unavailable, and Smart Escalation where you can set rules like transfer all calls with emergency in them or transfer VIP customers automatically. 96% of calls are fully handled by AI, and the other 4% get transferred with full context."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "How does the AI know about my business?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "During setup, CallBird reads your website to learn about your services, pricing, hours, and location. It asks you key questions about your most common customer inquiries and greeting preferences. It learns your booking rules and stores your FAQs with custom Q&A pairs. You can update the AI knowledge base anytime in the app. Add new services, change pricing, update hours in about 30 seconds."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Can I customize how CallBird answers calls?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Absolutely. You control the greeting with custom greetings you write yourself, the voice with male or female options and friendly, professional, or casual tones, the responses including what services to mention first and how to handle pricing questions, and business rules like hours of operation, appointment lengths, buffer time, and blackout dates. Everything is editable in the CallBird app and changes take effect in under 60 seconds."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "Do I need to change my phone number?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "No. You have three options: Use CallBird's dedicated number on your website, Google Business Profile, and ads while keeping your existing number. Forward your existing business number to CallBird so all calls go through CallBird first. Or use the Hybrid approach, which is the most popular, where you forward your main line to CallBird when you're busy or closed and keep answering directly when you're available. You can toggle forwarding on and off from the CallBird app."
-                }
-            }
+            {"@type": "Question", "name": "How quickly can I get my AI phone number?", "acceptedAnswer": {"@type": "Answer", "text": "Your CallBird number is ready within 10 minutes of completing signup. You fill out the signup form in 2 minutes, we create your AI and train it on your website in 5 minutes, you get your phone number and forward settings in 2 minutes, and your first call is answered by CallBird. Some customers have gotten their first real customer call within 15 minutes of signing up."}},
+            {"@type": "Question", "name": "Does CallBird integrate with my existing calendar?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. CallBird works with Google Calendar, Microsoft Outlook, Apple Calendar, and CallBird's built-in calendar. When CallBird books an appointment, it checks your calendar for availability in real-time, books the appointment, sends you a calendar invite, texts the customer a confirmation, and sends you a text summary."}},
+            {"@type": "Question", "name": "What happens if CallBird gets a call it can't handle?", "acceptedAnswer": {"@type": "Answer", "text": "CallBird has three built-in safety nets: Instant Transfer for emergencies or complex questions where CallBird transfers the call to your cell phone immediately with full context, Take a Message where CallBird collects their name, number, email, and reason for calling if you're unavailable, and Smart Escalation where you can set rules like transfer all calls with emergency in them or transfer VIP customers automatically. 96% of calls are fully handled by AI, and the other 4% get transferred with full context."}},
+            {"@type": "Question", "name": "How does the AI know about my business?", "acceptedAnswer": {"@type": "Answer", "text": "During setup, CallBird reads your website to learn about your services, pricing, hours, and location. It asks you key questions about your most common customer inquiries and greeting preferences. It learns your booking rules and stores your FAQs with custom Q&A pairs. You can update the AI knowledge base anytime in the app. Add new services, change pricing, update hours in about 30 seconds."}},
+            {"@type": "Question", "name": "Can I customize how CallBird answers calls?", "acceptedAnswer": {"@type": "Answer", "text": "Absolutely. You control the greeting with custom greetings you write yourself, the voice with male or female options and friendly, professional, or casual tones, the responses including what services to mention first and how to handle pricing questions, and business rules like hours of operation, appointment lengths, buffer time, and blackout dates. Everything is editable in the CallBird app and changes take effect in under 60 seconds."}},
+            {"@type": "Question", "name": "Do I need to change my phone number?", "acceptedAnswer": {"@type": "Answer", "text": "No. You have three options: Use CallBird's dedicated number on your website, Google Business Profile, and ads while keeping your existing number. Forward your existing business number to CallBird so all calls go through CallBird first. Or use the Hybrid approach, which is the most popular, where you forward your main line to CallBird when you're busy or closed and keep answering directly when you're available. You can toggle forwarding on and off from the CallBird app."}}
         ]
     }
     </script>
@@ -1473,7 +911,6 @@
 
     <!-- Main JavaScript -->
     <script>
-        // Mobile nav functions
         function openMobileNav() {
             document.getElementById('mobileNavOverlay').classList.add('active');
             document.getElementById('mobileNavPanel').classList.add('active');
@@ -1484,148 +921,28 @@
             document.getElementById('mobileNavPanel').classList.remove('active');
             document.body.style.overflow = '';
         }
-
-        // Audio Player Functions
         function toggleAudio(audioId) {
             const audio = document.getElementById(audioId);
             const allAudios = document.querySelectorAll('audio');
-            
-            allAudios.forEach(a => {
-                if (a.id !== audioId && !a.paused) {
-                    a.pause();
-                    updatePlayButton(a.id, false);
-                }
-            });
-
+            allAudios.forEach(a => { if (a.id !== audioId && !a.paused) { a.pause(); updatePlayButton(a.id, false); } });
             if (audio.paused) {
-                audio.play();
-                updatePlayButton(audioId, true);
-                
-                audio.addEventListener('timeupdate', function() {
-                    const progress = (audio.currentTime / audio.duration) * 100;
-                    const progressBar = document.getElementById('progress' + audioId.replace('audio', ''));
-                    if (progressBar) {
-                        progressBar.style.width = progress + '%';
-                    }
-                });
-
-                audio.addEventListener('ended', function() {
-                    updatePlayButton(audioId, false);
-                    const progressBar = document.getElementById('progress' + audioId.replace('audio', ''));
-                    if (progressBar) {
-                        progressBar.style.width = '0%';
-                    }
-                });
-            } else {
-                audio.pause();
-                updatePlayButton(audioId, false);
-            }
+                audio.play(); updatePlayButton(audioId, true);
+                audio.addEventListener('timeupdate', function() { const progress = (audio.currentTime / audio.duration) * 100; const progressBar = document.getElementById('progress' + audioId.replace('audio', '')); if (progressBar) { progressBar.style.width = progress + '%'; } });
+                audio.addEventListener('ended', function() { updatePlayButton(audioId, false); const progressBar = document.getElementById('progress' + audioId.replace('audio', '')); if (progressBar) { progressBar.style.width = '0%'; } });
+            } else { audio.pause(); updatePlayButton(audioId, false); }
         }
-
-        function updatePlayButton(audioId, isPlaying) {
-            const btn = document.querySelector(`[onclick="toggleAudio('${audioId}')"]`);
-            if (btn) {
-                btn.querySelector('.play-icon').textContent = isPlaying ? '⏸' : '▶';
-            }
-        }
-
-        function showAudioSamples() {
-            document.getElementById('sample-calls').scrollIntoView({ behavior: 'smooth' });
-        }
-
-        // FAQ Toggle
-        function toggleFAQ(button) {
-            const faqItem = button.parentElement;
-            const isActive = faqItem.classList.contains('active');
-            
-            document.querySelectorAll('.faq-item').forEach(item => {
-                item.classList.remove('active');
-            });
-            
-            if (!isActive) {
-                faqItem.classList.add('active');
-            }
-        }
-
-        // Sticky CTA
-        window.addEventListener('scroll', function() {
-            const stickyCta = document.getElementById('sticky-cta');
-            const hero = document.querySelector('.hero');
-            const footer = document.querySelector('.footer');
-            
-            if (stickyCta && hero && footer) {
-                const heroBottom = hero.getBoundingClientRect().bottom;
-                const footerTop = footer.getBoundingClientRect().top;
-                const windowHeight = window.innerHeight;
-                
-                if (heroBottom < 0 && footerTop > windowHeight) {
-                    stickyCta.classList.add('visible');
-                } else {
-                    stickyCta.classList.remove('visible');
-                }
-            }
-        });
-
-        // Exit Intent Popup
+        function updatePlayButton(audioId, isPlaying) { const btn = document.querySelector(`[onclick="toggleAudio('${audioId}')"]`); if (btn) { btn.querySelector('.play-icon').textContent = isPlaying ? '⏸' : '▶'; } }
+        function showAudioSamples() { document.getElementById('sample-calls').scrollIntoView({ behavior: 'smooth' }); }
+        function toggleFAQ(button) { const faqItem = button.parentElement; const isActive = faqItem.classList.contains('active'); document.querySelectorAll('.faq-item').forEach(item => { item.classList.remove('active'); }); if (!isActive) { faqItem.classList.add('active'); } }
+        window.addEventListener('scroll', function() { const stickyCta = document.getElementById('sticky-cta'); const hero = document.querySelector('.hero'); const footer = document.querySelector('.footer'); if (stickyCta && hero && footer) { const heroBottom = hero.getBoundingClientRect().bottom; const footerTop = footer.getBoundingClientRect().top; const windowHeight = window.innerHeight; if (heroBottom < 0 && footerTop > windowHeight) { stickyCta.classList.add('visible'); } else { stickyCta.classList.remove('visible'); } } });
         let popupShown = false;
-        document.addEventListener('mouseout', function(e) {
-            if (!popupShown && e.clientY < 0) {
-                document.getElementById('exit-popup').classList.add('active');
-                popupShown = true;
-            }
-        });
-
-        function closePopup() {
-            document.getElementById('exit-popup').classList.remove('active');
-        }
-
-        document.getElementById('exit-popup').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closePopup();
-            }
-        });
-
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closePopup();
-            }
-        });
-
-        // Stat Counter Animation
-        function animateCounters() {
-            const counters = document.querySelectorAll('[data-count]');
-            counters.forEach(counter => {
-                const target = parseInt(counter.getAttribute('data-count'));
-                const suffix = counter.textContent.replace(/[0-9]/g, '');
-                let current = 0;
-                const increment = target / 50;
-                const timer = setInterval(() => {
-                    current += increment;
-                    if (current >= target) {
-                        counter.textContent = target + suffix;
-                        clearInterval(timer);
-                    } else {
-                        counter.textContent = Math.ceil(current) + suffix;
-                    }
-                }, 30);
-            });
-        }
-
-        // Intersection Observer for animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    if (entry.target.classList.contains('live-stats')) {
-                        animateCounters();
-                    }
-                    entry.target.classList.add('animate-in');
-                }
-            });
-        }, { threshold: 0.2 });
-
-        document.querySelectorAll('.live-stats, .step-card, .feature-card, .industry-card, .testimonial-card').forEach(el => {
-            observer.observe(el);
-        });
+        document.addEventListener('mouseout', function(e) { if (!popupShown && e.clientY < 0) { document.getElementById('exit-popup').classList.add('active'); popupShown = true; } });
+        function closePopup() { document.getElementById('exit-popup').classList.remove('active'); }
+        document.getElementById('exit-popup').addEventListener('click', function(e) { if (e.target === this) { closePopup(); } });
+        document.addEventListener('keydown', function(e) { if (e.key === 'Escape') { closePopup(); } });
+        function animateCounters() { const counters = document.querySelectorAll('[data-count]'); counters.forEach(counter => { const target = parseInt(counter.getAttribute('data-count')); const suffix = counter.textContent.replace(/[0-9]/g, ''); let current = 0; const increment = target / 50; const timer = setInterval(() => { current += increment; if (current >= target) { counter.textContent = target + suffix; clearInterval(timer); } else { counter.textContent = Math.ceil(current) + suffix; } }, 30); }); }
+        const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { if (entry.target.classList.contains('live-stats')) { animateCounters(); } entry.target.classList.add('animate-in'); } }); }, { threshold: 0.2 });
+        document.querySelectorAll('.live-stats, .step-card, .feature-card, .industry-card, .testimonial-card').forEach(el => { observer.observe(el); });
     </script>
 </body>
 </html>
