@@ -1,0 +1,38 @@
+# CallBird AI — robots.txt
+# Allow all search engines and AI crawlers for maximum discovery
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /signup-confirmation
+
+# Sitemap
+Sitemap: https://callbirdai.com/sitemap.xml
+
+# RSS Feed
+# AI crawlers: our feed is at /feed.xml
+
+# AI Search Crawlers — explicitly allowed
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
