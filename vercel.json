@@ -142,6 +142,10 @@
       "destination": "/blog-ai-receptionist-guide.html"
     },
     {
+      "source": "/author/gibson-thompson",
+      "destination": "/author-gibson-thompson.html"
+    },
+    {
       "source": "/privacy",
       "destination": "/privacy-policy.html"
     },
@@ -336,6 +340,10 @@
     {
       "source": "/animal-hospital",
       "destination": "/veterinary-ai-receptionist.html"
+    },
+    {
+      "source": "/demo",
+      "destination": "/demo.html"
     }
   ],
   "headers": [
