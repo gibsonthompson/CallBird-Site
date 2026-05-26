@@ -6,8 +6,17 @@
     <link>https://callbirdai.com/blog</link>
     <description>Expert guides, industry insights, and resources from CallBird AI.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 24 May 2026 06:22:31 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 26 May 2026 06:25:45 GMT</lastBuildDate>
     <atom:link href="https://callbirdai.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>AI Receptionist for Accounting Firms [2026]</title>
+      <link>https://callbirdai.com/blog-ai-receptionist-for-accounting-firms</link>
+      <guid isPermaLink="true">https://callbirdai.com/blog-ai-receptionist-for-accounting-firms</guid>
+      <pubDate>Tue, 26 May 2026 00:00:00 GMT</pubDate>
+      <description>Accounting firms lose money twice on every call — missed revenue and interrupted billable hours. See how CallBird AI ($99/mo) solves both problems.</description>
+      <author>support@callbirdai.com (Gibson Thompson)</author>
+      <category>industry</category>
+    </item>
     <item>
       <title>AI Receptionist for Landscaping Companies [2026]</title>
       <link>https://callbirdai.com/blog-ai-receptionist-for-landscaping-companies</link>
@@ -225,6 +234,15 @@
       <category>guide</category>
     </item>
     <item>
+      <title>Callbird Vs Aira</title>
+      <link>https://callbirdai.com/blog-callbird-vs-aira</link>
+      <guid isPermaLink="true">https://callbirdai.com/blog-callbird-vs-aira</guid>
+      <pubDate>Sat, 14 Mar 2026 00:00:00 GMT</pubDate>
+      <description>Callbird Vs Aira</description>
+      <author>support@callbirdai.com (Gibson Thompson)</author>
+      <category>comparison</category>
+    </item>
+    <item>
       <title>Callbird Vs Goodcall</title>
       <link>https://callbirdai.com/blog-callbird-vs-goodcall</link>
       <guid isPermaLink="true">https://callbirdai.com/blog-callbird-vs-goodcall</guid>
@@ -232,15 +250,6 @@
       <description>Callbird Vs Goodcall</description>
       <author>support@callbirdai.com (Gibson Thompson)</author>
       <category>comparison</category>
-    </item>
-    <item>
-      <title>Best Ai Receptionist Restaurants</title>
-      <link>https://callbirdai.com/blog-best-ai-receptionist-restaurants</link>
-      <guid isPermaLink="true">https://callbirdai.com/blog-best-ai-receptionist-restaurants</guid>
-      <pubDate>Sat, 14 Mar 2026 00:00:00 GMT</pubDate>
-      <description>Best Ai Receptionist Restaurants</description>
-      <author>support@callbirdai.com (Gibson Thompson)</author>
-      <category>industry</category>
     </item>
     <item>
       <title>Best Ai Answering Service</title>
@@ -257,6 +266,15 @@
       <guid isPermaLink="true">https://callbirdai.com/blog-best-ai-receptionist-plumbers</guid>
       <pubDate>Sat, 14 Mar 2026 00:00:00 GMT</pubDate>
       <description>Best Ai Receptionist Plumbers</description>
+      <author>support@callbirdai.com (Gibson Thompson)</author>
+      <category>industry</category>
+    </item>
+    <item>
+      <title>Best Ai Receptionist Restaurants</title>
+      <link>https://callbirdai.com/blog-best-ai-receptionist-restaurants</link>
+      <guid isPermaLink="true">https://callbirdai.com/blog-best-ai-receptionist-restaurants</guid>
+      <pubDate>Sat, 14 Mar 2026 00:00:00 GMT</pubDate>
+      <description>Best Ai Receptionist Restaurants</description>
       <author>support@callbirdai.com (Gibson Thompson)</author>
       <category>industry</category>
     </item>
@@ -306,24 +324,6 @@
       <category>about</category>
     </item>
     <item>
-      <title>Callbird Vs Aira</title>
-      <link>https://callbirdai.com/blog-callbird-vs-aira</link>
-      <guid isPermaLink="true">https://callbirdai.com/blog-callbird-vs-aira</guid>
-      <pubDate>Sat, 14 Mar 2026 00:00:00 GMT</pubDate>
-      <description>Callbird Vs Aira</description>
-      <author>support@callbirdai.com (Gibson Thompson)</author>
-      <category>comparison</category>
-    </item>
-    <item>
-      <title>Best Ai Receptionist Chiropractors</title>
-      <link>https://callbirdai.com/blog-best-ai-receptionist-chiropractors</link>
-      <guid isPermaLink="true">https://callbirdai.com/blog-best-ai-receptionist-chiropractors</guid>
-      <pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate>
-      <description>Best Ai Receptionist Chiropractors</description>
-      <author>support@callbirdai.com (Gibson Thompson)</author>
-      <category>industry</category>
-    </item>
-    <item>
       <title>Best Ai Receptionist Property Management</title>
       <link>https://callbirdai.com/blog-best-ai-receptionist-property-management</link>
       <guid isPermaLink="true">https://callbirdai.com/blog-best-ai-receptionist-property-management</guid>
@@ -340,6 +340,15 @@
       <description>Callbird Vs Dialzara</description>
       <author>support@callbirdai.com (Gibson Thompson)</author>
       <category>comparison</category>
+    </item>
+    <item>
+      <title>Best Ai Receptionist Chiropractors</title>
+      <link>https://callbirdai.com/blog-best-ai-receptionist-chiropractors</link>
+      <guid isPermaLink="true">https://callbirdai.com/blog-best-ai-receptionist-chiropractors</guid>
+      <pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate>
+      <description>Best Ai Receptionist Chiropractors</description>
+      <author>support@callbirdai.com (Gibson Thompson)</author>
+      <category>industry</category>
     </item>
     <item>
       <title>CallBird vs Rosie AI: Pricing, Features &amp; Which Saves More [2026]</title>
@@ -360,13 +369,13 @@
       <category>industry</category>
     </item>
     <item>
-      <title>Best AI Receptionist for Real Estate Agents: 5 Options Compared [2026]</title>
-      <link>https://callbirdai.com/blog-best-ai-receptionist-real-estate</link>
-      <guid isPermaLink="true">https://callbirdai.com/blog-best-ai-receptionist-real-estate</guid>
+      <title>What Is Ai Receptionist</title>
+      <link>https://callbirdai.com/blog-what-is-ai-receptionist</link>
+      <guid isPermaLink="true">https://callbirdai.com/blog-what-is-ai-receptionist</guid>
       <pubDate>Thu, 08 Jan 2026 00:00:00 GMT</pubDate>
-      <description>Best AI Receptionist for Real Estate Agents: 5 Options Compared [2026]</description>
+      <description>What Is Ai Receptionist</description>
       <author>support@callbirdai.com (Gibson Thompson)</author>
-      <category>industry</category>
+      <category>guide</category>
     </item>
     <item>
       <title>Ai Vs Virtual Receptionist Vs Answering Service</title>
@@ -387,13 +396,13 @@
       <category>industry</category>
     </item>
     <item>
-      <title>What Is Ai Receptionist</title>
-      <link>https://callbirdai.com/blog-what-is-ai-receptionist</link>
-      <guid isPermaLink="true">https://callbirdai.com/blog-what-is-ai-receptionist</guid>
+      <title>Best AI Receptionist for Real Estate Agents: 5 Options Compared [2026]</title>
+      <link>https://callbirdai.com/blog-best-ai-receptionist-real-estate</link>
+      <guid isPermaLink="true">https://callbirdai.com/blog-best-ai-receptionist-real-estate</guid>
       <pubDate>Thu, 08 Jan 2026 00:00:00 GMT</pubDate>
-      <description>What Is Ai Receptionist</description>
+      <description>Best AI Receptionist for Real Estate Agents: 5 Options Compared [2026]</description>
       <author>support@callbirdai.com (Gibson Thompson)</author>
-      <category>guide</category>
+      <category>industry</category>
     </item>
     <item>
       <title>Contractor Missed Calls Cost</title>
@@ -405,20 +414,20 @@
       <category>cost-analysis</category>
     </item>
     <item>
-      <title>How Contractors Handle Emergency Calls 24/7 Without a Receptionist [2026]</title>
-      <link>https://callbirdai.com/blog-emergency-calls-contractors</link>
-      <guid isPermaLink="true">https://callbirdai.com/blog-emergency-calls-contractors</guid>
-      <pubDate>Thu, 01 Jan 2026 00:00:00 GMT</pubDate>
-      <description>How Contractors Handle Emergency Calls 24/7 Without a Receptionist [2026]</description>
-      <author>support@callbirdai.com (Gibson Thompson)</author>
-      <category>guide</category>
-    </item>
-    <item>
       <title>After-Hours Answering for Contractors: Capture Every Emergency Call [2026]</title>
       <link>https://callbirdai.com/blog-after-hours-answering-contractors</link>
       <guid isPermaLink="true">https://callbirdai.com/blog-after-hours-answering-contractors</guid>
       <pubDate>Thu, 01 Jan 2026 00:00:00 GMT</pubDate>
       <description>After-Hours Answering for Contractors: Capture Every Emergency Call [2026]</description>
+      <author>support@callbirdai.com (Gibson Thompson)</author>
+      <category>guide</category>
+    </item>
+    <item>
+      <title>How Contractors Handle Emergency Calls 24/7 Without a Receptionist [2026]</title>
+      <link>https://callbirdai.com/blog-emergency-calls-contractors</link>
+      <guid isPermaLink="true">https://callbirdai.com/blog-emergency-calls-contractors</guid>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 GMT</pubDate>
+      <description>How Contractors Handle Emergency Calls 24/7 Without a Receptionist [2026]</description>
       <author>support@callbirdai.com (Gibson Thompson)</author>
       <category>guide</category>
     </item>
@@ -432,22 +441,13 @@
       <category>guide</category>
     </item>
     <item>
-      <title>Callbird Vs Ruby Receptionists</title>
-      <link>https://callbirdai.com/blog-callbird-vs-ruby-receptionists</link>
-      <guid isPermaLink="true">https://callbirdai.com/blog-callbird-vs-ruby-receptionists</guid>
+      <title>Best AI Receptionist for Dental Practices: Pricing &amp; Features [2026]</title>
+      <link>https://callbirdai.com/blog-best-ai-receptionist-dentists</link>
+      <guid isPermaLink="true">https://callbirdai.com/blog-best-ai-receptionist-dentists</guid>
       <pubDate>Thu, 25 Dec 2025 00:00:00 GMT</pubDate>
-      <description>Callbird Vs Ruby Receptionists</description>
+      <description>Best AI Receptionist for Dental Practices: Pricing &amp; Features [2026]</description>
       <author>support@callbirdai.com (Gibson Thompson)</author>
-      <category>comparison</category>
-    </item>
-    <item>
-      <title>CallBird vs Smith.ai: Pricing, Call Limits &amp; Feature Comparison [2026]</title>
-      <link>https://callbirdai.com/blog-callbird-vs-smith-ai</link>
-      <guid isPermaLink="true">https://callbirdai.com/blog-callbird-vs-smith-ai</guid>
-      <pubDate>Thu, 25 Dec 2025 00:00:00 GMT</pubDate>
-      <description>CallBird vs Smith.ai: Pricing, Call Limits &amp; Feature Comparison [2026]</description>
-      <author>support@callbirdai.com (Gibson Thompson)</author>
-      <category>comparison</category>
+      <category>industry</category>
     </item>
     <item>
       <title>Best Ai Receptionist Lawyers</title>
@@ -468,13 +468,13 @@
       <category>how-to</category>
     </item>
     <item>
-      <title>Best AI Receptionist for Dental Practices: Pricing &amp; Features [2026]</title>
-      <link>https://callbirdai.com/blog-best-ai-receptionist-dentists</link>
-      <guid isPermaLink="true">https://callbirdai.com/blog-best-ai-receptionist-dentists</guid>
+      <title>CallBird vs Smith.ai: Pricing, Call Limits &amp; Feature Comparison [2026]</title>
+      <link>https://callbirdai.com/blog-callbird-vs-smith-ai</link>
+      <guid isPermaLink="true">https://callbirdai.com/blog-callbird-vs-smith-ai</guid>
       <pubDate>Thu, 25 Dec 2025 00:00:00 GMT</pubDate>
-      <description>Best AI Receptionist for Dental Practices: Pricing &amp; Features [2026]</description>
+      <description>CallBird vs Smith.ai: Pricing, Call Limits &amp; Feature Comparison [2026]</description>
       <author>support@callbirdai.com (Gibson Thompson)</author>
-      <category>industry</category>
+      <category>comparison</category>
     </item>
     <item>
       <title>Contractors Ai Receptionist</title>
@@ -484,6 +484,15 @@
       <description>Contractors Ai Receptionist</description>
       <author>support@callbirdai.com (Gibson Thompson)</author>
       <category>guide</category>
+    </item>
+    <item>
+      <title>Callbird Vs Ruby Receptionists</title>
+      <link>https://callbirdai.com/blog-callbird-vs-ruby-receptionists</link>
+      <guid isPermaLink="true">https://callbirdai.com/blog-callbird-vs-ruby-receptionists</guid>
+      <pubDate>Thu, 25 Dec 2025 00:00:00 GMT</pubDate>
+      <description>Callbird Vs Ruby Receptionists</description>
+      <author>support@callbirdai.com (Gibson Thompson)</author>
+      <category>comparison</category>
     </item>
     <item>
       <title>AI Receptionist for Small Business: How It Works, What It Costs [2026]</title>
