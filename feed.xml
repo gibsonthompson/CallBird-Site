@@ -6,8 +6,17 @@
     <link>https://callbirdai.com/blog</link>
     <description>Expert guides, industry insights, and resources from CallBird AI.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 19 Jul 2026 06:25:47 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jul 2026 06:22:30 GMT</lastBuildDate>
     <atom:link href="https://callbirdai.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>How to Route Emergency Calls with AI [2026 Guide]</title>
+      <link>https://callbirdai.com/blog-how-to-route-emergency-calls-with-ai</link>
+      <guid isPermaLink="true">https://callbirdai.com/blog-how-to-route-emergency-calls-with-ai</guid>
+      <pubDate>Wed, 22 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Most AI emergency call routing fails because of bad classification, not bad technology. Here&apos;s the 3-tier framework that fixes it for service businesses.</description>
+      <author>support@callbirdai.com (Gibson Thompson)</author>
+      <category>how-to</category>
+    </item>
     <item>
       <title>AI Receptionist for Optometrists [2026 Guide]</title>
       <link>https://callbirdai.com/blog-ai-receptionist-for-optometrists</link>
@@ -324,15 +333,6 @@
       <category>how-to</category>
     </item>
     <item>
-      <title>Ai Receptionist Vs Chatbot</title>
-      <link>https://callbirdai.com/blog-ai-receptionist-vs-chatbot</link>
-      <guid isPermaLink="true">https://callbirdai.com/blog-ai-receptionist-vs-chatbot</guid>
-      <pubDate>Wed, 08 Apr 2026 00:00:00 GMT</pubDate>
-      <description>Ai Receptionist Vs Chatbot</description>
-      <author>support@callbirdai.com (Gibson Thompson)</author>
-      <category>comparison</category>
-    </item>
-    <item>
       <title>How To Set Up Ai Receptionist</title>
       <link>https://callbirdai.com/blog-how-to-set-up-ai-receptionist</link>
       <guid isPermaLink="true">https://callbirdai.com/blog-how-to-set-up-ai-receptionist</guid>
@@ -342,20 +342,20 @@
       <category>how-to</category>
     </item>
     <item>
-      <title>Best Ai Receptionist Pest Control</title>
-      <link>https://callbirdai.com/blog-best-ai-receptionist-pest-control</link>
-      <guid isPermaLink="true">https://callbirdai.com/blog-best-ai-receptionist-pest-control</guid>
-      <pubDate>Thu, 02 Apr 2026 00:00:00 GMT</pubDate>
-      <description>Best Ai Receptionist Pest Control</description>
+      <title>Ai Receptionist Vs Chatbot</title>
+      <link>https://callbirdai.com/blog-ai-receptionist-vs-chatbot</link>
+      <guid isPermaLink="true">https://callbirdai.com/blog-ai-receptionist-vs-chatbot</guid>
+      <pubDate>Wed, 08 Apr 2026 00:00:00 GMT</pubDate>
+      <description>Ai Receptionist Vs Chatbot</description>
       <author>support@callbirdai.com (Gibson Thompson)</author>
-      <category>industry</category>
+      <category>comparison</category>
     </item>
     <item>
-      <title>Best Ai Receptionist Auto Repair</title>
-      <link>https://callbirdai.com/blog-best-ai-receptionist-auto-repair</link>
-      <guid isPermaLink="true">https://callbirdai.com/blog-best-ai-receptionist-auto-repair</guid>
+      <title>Best Ai Receptionist Insurance</title>
+      <link>https://callbirdai.com/blog-best-ai-receptionist-insurance</link>
+      <guid isPermaLink="true">https://callbirdai.com/blog-best-ai-receptionist-insurance</guid>
       <pubDate>Thu, 02 Apr 2026 00:00:00 GMT</pubDate>
-      <description>Best Ai Receptionist Auto Repair</description>
+      <description>Best Ai Receptionist Insurance</description>
       <author>support@callbirdai.com (Gibson Thompson)</author>
       <category>industry</category>
     </item>
@@ -369,11 +369,20 @@
       <category>guide</category>
     </item>
     <item>
-      <title>Best Ai Receptionist Insurance</title>
-      <link>https://callbirdai.com/blog-best-ai-receptionist-insurance</link>
-      <guid isPermaLink="true">https://callbirdai.com/blog-best-ai-receptionist-insurance</guid>
+      <title>Best Ai Receptionist Auto Repair</title>
+      <link>https://callbirdai.com/blog-best-ai-receptionist-auto-repair</link>
+      <guid isPermaLink="true">https://callbirdai.com/blog-best-ai-receptionist-auto-repair</guid>
       <pubDate>Thu, 02 Apr 2026 00:00:00 GMT</pubDate>
-      <description>Best Ai Receptionist Insurance</description>
+      <description>Best Ai Receptionist Auto Repair</description>
+      <author>support@callbirdai.com (Gibson Thompson)</author>
+      <category>industry</category>
+    </item>
+    <item>
+      <title>Best Ai Receptionist Pest Control</title>
+      <link>https://callbirdai.com/blog-best-ai-receptionist-pest-control</link>
+      <guid isPermaLink="true">https://callbirdai.com/blog-best-ai-receptionist-pest-control</guid>
+      <pubDate>Thu, 02 Apr 2026 00:00:00 GMT</pubDate>
+      <description>Best Ai Receptionist Pest Control</description>
       <author>support@callbirdai.com (Gibson Thompson)</author>
       <category>industry</category>
     </item>
