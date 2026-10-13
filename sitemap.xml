@@ -32,7 +32,7 @@
   </url>
 
   <!-- Blog Index -->
-  <url><loc>https://callbirdai.com/blog</loc><lastmod>2026-10-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://callbirdai.com/blog</loc><lastmod>2026-10-13</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 
   <!-- ==================== BLOG POSTS ==================== -->
 
@@ -544,6 +544,13 @@
   <url>
     <loc>https://callbirdai.com/blog-ai-receptionist-for-optometry-practices</loc>
     <lastmod>2026-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://callbirdai.com/blog-ai-receptionist-for-electricians-winter-season</loc>
+    <lastmod>2026-10-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
